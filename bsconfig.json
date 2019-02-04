@@ -1,0 +1,19 @@
+{
+  "name": "divertise-asia-site",
+  "sources": {
+    "dir" : "src",
+    "subdirs" : true
+  },
+  "package-specs": [{
+    "module": "commonjs",
+    "in-source": false
+  }],
+  "suffix": ".bs.js",
+  "namespace": true,
+  "bs-dependencies": [
+    "reason-react",
+    "bs-css"
+  ],
+  "reason": { "react-jsx": 2 },
+  "refmt": 3
+}
