@@ -22,7 +22,7 @@ let make =
         top: [
           Children(List.toArray([
             <nav className="nav -text-right">
-                /* <Logo /> */
+                <Logo />
                 <input type_="checkbox" />
                 <div className="nav-icon">
                     <div />
