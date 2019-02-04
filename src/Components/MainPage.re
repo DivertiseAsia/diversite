@@ -21,8 +21,8 @@ let make =
       pageEnds={
         top: [
           Children(List.toArray([
-            <div className="nav -text-right">
-                <Logo />
+            <nav className="nav -text-right">
+                /* <Logo /> */
                 <input type_="checkbox" />
                 <div className="nav-icon">
                     <div />
@@ -35,7 +35,7 @@ let make =
                     <Link href="">(string("Contact"))</Link>
                     <Link href="">(string("Careers"))</Link>
                 </div> 
-            </div>,
+            </nav>,
             extraPageEndsElement,
           ]))
         ],
