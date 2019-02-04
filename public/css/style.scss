@@ -59,3 +59,147 @@ a {
 .-space-between {justify-content: space-between;}
 .-align-items-baseline{ align-items: baseline;}
 .-line-height { line-height: 0.5em}
+
+/* ------------- Navigation Bar ------------- */
+
+.nav {
+  width: 100vw;
+  padding: 1em 2em;
+  border-bottom: solid 1px var(--border-grey);
+  box-sizing: border-box;
+  z-index: 99;
+  height: var(--header-height);
+  background-color: #fff;
+}
+.nav a {
+  padding: 0.5em 2em;
+  display: inline-flex;
+  transition: 0.2s;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--text-mid);
+}
+.nav .nav-container > div {
+  display: inline-block;
+}
+.logo, .logo-link, .logo-small, .about_logo {
+  max-height: 3em;
+  margin-top: -0.2em;
+  float: left;
+}
+.logo-auth {
+  max-height: 5em;
+}
+.-logo-white {
+  max-height: 5em;
+}
+.logo-small {
+  display: none;
+}
+.nav-container {
+  background: var(--bg-white);
+  z-index: 200;
+  transition: 0.4s;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.nav-container-loggedin {
+  padding-top: 0.5em;
+}
+/* ------ Navigation Link Animation ------ */
+
+.nav a:hover, .btn-drop:hover {
+  color: var(--main-color);
+  cursor: pointer;
+}
+.nav a:not(.logo-link):not(.btn)::after, .btn-drop::after {
+  background: var(--accent-color1);
+  height: 0;
+  width: 3px;
+  /* content: ""; hiding animation for now */
+  position: relative;
+  transition: 0.4s;
+  margin-left: 5px;
+  vertical-align: top;
+  display: inline-block;
+ }
+ .nav a:not(.btn):hover::after, .btn-drop:hover::after {
+  height: 1.2em;
+}
+/* ----- Amazing Nav Icon Toggle Animation ------*/
+
+.nav-icon {
+  /* display: inline-block; */
+  display: none;
+  width: 2.7em;
+  height: 2.7em;
+}
+.nav-icon div {
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: var(--main-color);
+  margin: 5px 0;
+  transition: 0.4s;
+}
+.nav input {
+  width: 40px;
+  height: 3em;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+}
+.nav input:checked ~ div div:nth-child(1) {
+  transform: rotate(45deg)translate(7px,7px);
+}
+.nav input:checked ~ div div:nth-child(2) {
+  transform: rotate(-45deg);
+}
+.nav input:checked ~ div div:nth-child(3) {
+  height: 0;
+}
+
+/* ------------------ RESPONSIVE ------------------*/
+/* -------- Big Desktops --------*/
+@media only screen
+and (min-width: 1800px) {}
+
+/* -------- Tablets Landscape & Small Desktops ---------*/
+@media only screen
+and (max-width: 1200px) {}
+
+/* -------- Tablets Portrait ---------*/
+@media only screen
+and (max-width: 900px) {
+/* Tablet Nav*/
+.nav-icon {
+  display: inline-block;
+}
+.nav-container {
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  box-sizing: border-box;
+  text-align: center;
+  height: 0;
+  margin-top: 0.5em
+}
+.nav input:checked ~ .nav-container {
+  height: 90vh;
+  display: block;
+  box-shadow: 2px 2px 12px 0px #cecece;
+  box-shadow: 2px 10px 12px 0px rgba(0,0,0,0.2);
+  border-bottom: solid 1px var(--border-grey);
+  padding: 4em 1em;
+  margin: 1em 0;
+}
+}
+
+/* -------- Phones ---------*/
+@media only screen
+and (max-width: 600px) {}
+
+/* -------- Small Phones ---------*/
+@media only screen
+and (max-width: 400px) {}
