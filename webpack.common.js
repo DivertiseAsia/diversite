@@ -10,7 +10,7 @@ const outputDir = path.join(__dirname, "docs/");
 
 let versioning = null;
 
-let publicPath = '/';
+let publicPath = '';
 if (process.env.PUBLIC_PATH) {
   publicPath = process.env.PUBLIC_PATH;
 }
