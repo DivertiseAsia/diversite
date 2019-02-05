@@ -83,6 +83,7 @@ a {
 .-text-left { text-align: left; }
 .-font-weight-bold { font-weight: $font-weight-bold; }
 .-text-underline { text-decoration: underline; }
+.-text-underline-none { text-decoration: none; }
 .-text-uppercase { text-transform: uppercase; }
 .-lineheight-large { line-height: 2em; }
 .-lineheight-small { line-height: 0em; }
@@ -104,9 +105,10 @@ a {
 
 /* ------------- ul li ------------- */
 ul li {
+  list-style-type: none;
   color: $text-color1;
 }
-
+a:hover { text-decoration: none; }
 /* ------------- Bootstrap Elements --------------*/
 
 .container {
