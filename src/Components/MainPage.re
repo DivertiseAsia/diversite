@@ -1,5 +1,4 @@
 open ReasonReact;
-open Page;
 open Belt;
 [@bs.module] external social_fb : string = "../../../../public/images/facebook.svg";
 [@bs.module] external social_in : string = "../../../../public/images/linkedin.svg";
