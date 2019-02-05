@@ -74,9 +74,6 @@ a {
 
 /* ------------- Default Classes ------------- */
 
-.bg-gradient-color1 { background: linear-gradient( #2d506d 70%, #1b4059)}
-.bg-gradient-color2 { background: linear-gradient( #52c4bb , #14918a)}
-
 .-text-small { font-size: .7em; }
 .-text-small-title { font-size: 0.9em;}
 .-text-center { text-align: center; }
@@ -86,11 +83,13 @@ a {
 .-lineheight-small { line-height: 0em; }
 .bg-gradient-color1 { background: linear-gradient( #2d506d 70%, #1b4059)}
 .bg-gradient-color2 { background: linear-gradient( #52c4bb , #14918a)}
-
+.bg-gradient-header { background: linear-gradient( #2d506d 70%, #1b4059); color: $text-white;}
 .-boxshadow {
     box-shadow: 2px 2px 12px 0px #cecece;
     box-shadow: 2px 2px 12px 0px rgba(0,0,0,0.2);
 }
+
+.text-white { color: $text-white;}
 
 /* ------------- Navigation Bar ------------- */
 
@@ -208,27 +207,8 @@ nav.nav {
   display: inline;
 }
 
-<<<<<<< HEAD
-
-/*------- Footer --------*/
-.footer {
-  width: 100vw;
-  height: 150px;
-  background-color: #149992;
-  text-align: center;
-  p { color: #78D1C7;}
-}
-.icon-social img{
-  height: 5%;
-  max-height: 40px;
-  margin: 40px 10px 20px 10px;
-  display: inline;
-}
-
-/* ------------------ RESPONSIVE ------------------*/
-=======
 /* ------------------------------------ RESPONSIVE --------------------------------------*/
->>>>>>> c80e738f9f3ac8da91f748da27d48816e16abbcf
+
 /* -------- Big Desktops --------*/
 @media only screen
 and (min-width: 1800px) {}
