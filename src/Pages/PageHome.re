@@ -6,6 +6,9 @@ let component = ReasonReact.statelessComponent("PageHome");
 [@bs.module] external ourgoal3 : string = "../../../../public/images/flexible.png";
 [@bs.module] external homeapp : string = "../../../../public/images/home-app.png";
 [@bs.module] external homeweb : string = "../../../../public/images/home-website.png";
+[@bs.module] external techcon : string = "../../../../public/images/letushelp-tech.png";
+[@bs.module] external optimize : string = "../../../../public/images/letushelp-optimize.png";
+[@bs.module] external launch : string = "../../../../public/images/letushelp-launch.png";
 
 let make = (_children) => {
   ...component,
@@ -48,6 +51,34 @@ let make = (_children) => {
         <FrontPageSection title="Artifiial Intelligence" imageURL=ourgoal1 href=Links.home>(string("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla porttitor massa id neque aliquam vestibulum morbi blandit. Accumsan tortor posuere ac ut consequat semper viverra nam. Ultricies mi eget mauris pharetra et ultrices. Nisl suscipit adipiscing bibendu")) </FrontPageSection>
         <FrontPageSection title="Virtual Reality" imageURL=homeapp href=Links.home>(string("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla porttitor massa id neque aliquam vestibulum morbi blandit. Accumsan tortor posuere ac ut consequat semper viverra nam. Ultricies mi eget mauris pharetra et ultrices. Nisl suscipit adipiscing bibendu")) </FrontPageSection>
         <FrontPageSection title="Games" imageURL=homeweb href=Links.home>(string("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla porttitor massa id neque aliquam vestibulum morbi blandit. Accumsan tortor posuere ac ut consequat semper viverra nam. Ultricies mi eget mauris pharetra et ultrices. Nisl suscipit adipiscing bibendu")) </FrontPageSection>
+      </div>
+      <div className="section-letushelp">
+        <div className="container -text-center">
+          <h3 className="-text-uppercase pb-5 pt-5">(string("Let Us Help You"))</h3>
+          <div className="row"> 
+            <div className="col-sm-4 letushelp_col"> 
+              <div>
+                <h5>(string("Tech Consultant"))</h5>
+                <ImageBackground src=techcon />
+                <p>(string("Something about we have tech specialist....."))</p>
+              </div>
+            </div>
+            <div className="col-sm-4 letushelp_col"> 
+              <div>
+                <h5>(string("Launch your idea"))</h5>
+                <ImageBackground src=launch />
+                <p>(string("If you have a product idea but don’t know where to begin, our team of developers will help make your idea come to live."))</p>
+              </div>
+            </div>
+            <div className="col-sm-4 letushelp_col"> 
+              <div>
+                <h5>(string("Bussimess Optimization"))</h5>
+                <ImageBackground src=optimize />
+                <p>(string("Something about moving your business online to optimize it"))</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </MainPage>;
   },

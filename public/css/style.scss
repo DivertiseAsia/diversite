@@ -332,6 +332,25 @@ nav .logo-link {
   h4, .content { color: $text-color1 }
   .btn { @include btn(transparent, $bg-color1, $bg-color1) }
 }
+.section-letushelp {
+  background: $bg-gradient2;
+  .letushelp_col {
+    > div {
+      background-color: $text-color2-light;
+      height: 400px;
+      text-align: center;
+      border-radius: $border-radius;
+      padding: 40px;
+    }
+    h5 { text-transform: uppercase; }
+    .image-background {
+      background-size: contain;
+      height: 180px;
+      width: 50%;
+      margin: auto;
+    }
+  }
+}
 /* ------------ Internship Page ------------ */
 .intership-list {
   .image-background {
