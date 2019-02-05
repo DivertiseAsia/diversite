@@ -7,8 +7,10 @@ let make = (_children) => {
   render: _self => {
     <MainPage className="page-home">
       <div className="hero">
-        <h2>(string("Technical partner for startups in Asia"))</h2>
-        <p>(string("specialize in Artificial Intelligence, VR, and other cutting-edge technologies.")) </p>
+        <div className="container">
+          <h1>(string("Technical partner for startups in Asia"))</h1>
+          <p>(string("specialize in Artificial Intelligence, VR, and other cutting-edge technologies.")) </p>
+        </div>
       </div>
       <FrontPageSection title="test" imageURL="logo.png" href=Links.home>(string("hello")) </FrontPageSection>
     </MainPage>;

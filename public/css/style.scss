@@ -2,9 +2,10 @@ $font-size-small: 1rem;
 $font-size-medium: 2rem;
 $font-weight-normal: 300;
 $font-weight-medium: 400;
-$font-weight-bold: 500;
+$font-weight-bold: 700;
 $font-default: 'Open Sans', sans-serif;
 $font-header: 'Orkney', sans-serif;
+$lineheigh: 1.8em;
 
 $bg-grey: #eaeaea;
 $bg-color1: #2d506d;
@@ -35,12 +36,14 @@ html {
   color: $text-color1;
   font-family: $font-default;
   font-weight: $font-weight-normal;
+  line-height: $lineheigh;
 }
 * {
   padding: 0;
   margin: 0;
   font-family: $font-default;
   font-weight: $font-weight-normal;
+  line-height: $lineheigh;
 }
 
 h1 { font-size: 2.5em; }
@@ -53,6 +56,7 @@ h1, h2, h3, h4, h5, h6 {
   color: $text-color1;
   font-family: $font-header;
   font-weight: $font-weight-bold;
+  line-height: 1.4em;
 }
 a {
   text-decoration: none;
@@ -263,6 +267,22 @@ nav .logo-link {
   background-size: cover;
 
   height: 100vh;
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  .container {
+    max-width: 600px;
+    margin-left: 50px;
+  }
+  h1 {
+    text-transform: uppercase;
+    color: $text-white;
+    text-shadow: $text-shadow;
+  }
+  p {
+    color: $text-white;
+    text-shadow: $text-shadow;
+  }
 }
 
 /* ------------------------------------ RESPONSIVE --------------------------------------*/
@@ -303,6 +323,12 @@ and (max-width: 768px) {
     display: flex;
     box-shadow: 2px 2px 12px 0px #cecece;
     box-shadow: 2px 10px 12px 0px rgba(0,0,0,0.2);
+  }
+  /*Tablet - Home Page*/
+  .hero {
+    height: 60vh;
+    h1 { font-size: 2rem }
+    .container { margin: auto; }
   }
 }
 
