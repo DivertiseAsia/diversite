@@ -12,7 +12,8 @@
   "namespace": true,
   "bs-dependencies": [
     "reason-react",
-    "bs-css"
+    "bs-css",
+    "@divertiseasia/bs-divertise-core-components"
   ],
   "reason": { "react-jsx": 2 },
   "refmt": 3
