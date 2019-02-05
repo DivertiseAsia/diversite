@@ -67,7 +67,7 @@ let make = (_children) => {
               <div>
                 <h5>(string("Launch your idea"))</h5>
                 <ImageBackground src=launch />
-                <p>(string("If you have a product idea but don’t know where to begin, our team of developers will help make your idea come to live."))</p>
+                <p>(string("If you have a product idea but don't know where to begin, our team of developers will help make your idea come to live."))</p>
               </div>
             </div>
             <div className="col-sm-4 letushelp_col"> 
