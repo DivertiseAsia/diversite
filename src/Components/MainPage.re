@@ -1,7 +1,9 @@
 open ReasonReact;
 open Page;
 open Belt;
-
+[@bs.module] external social_fb : string = "../../../../public/images/facebook.svg";
+[@bs.module] external social_in : string = "../../../../public/images/linkedin.svg";
+[@bs.module] external social_mail : string = "../../../../public/images/email.svg";
 let component = ReasonReact.statelessComponent("MainPageRe");
 
 let make =

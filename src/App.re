@@ -23,6 +23,8 @@ let make = _children => {
   render: ({state: {route}}) => {
     switch (route.path) {
     | ([x]) when routeMatches(x, Links.home) => <PageHome />
+    | ([x]) when routeMatches(x, Links.internship) => <PageInternship />
+    | ([x]) when routeMatches(x, Links.careers) => <PageCareers />
     | _ => <PageHome />
     };
   },
