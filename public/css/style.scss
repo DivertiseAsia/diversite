@@ -118,13 +118,10 @@ nav.nav {
 .nav .nav-container > div {
   display: inline-block;
 }
-.logo, .logo-link, .logo-small, .about_logo {
+nav .logo, .logo-link {
   max-height: 3em;
   margin-top: -0.2em;
   float: left;
-}
-.logo-auth {
-  max-height: 5em;
 }
 .-logo-white {
   max-height: 5em;
@@ -211,27 +208,8 @@ nav.nav {
   display: inline;
 }
 
-<<<<<<< HEAD
-
-/*------- Footer --------*/
-.footer {
-  width: 100vw;
-  height: 150px;
-  background-color: #149992;
-  text-align: center;
-  p { color: #78D1C7;}
-}
-.icon-social img{
-  height: 5%;
-  max-height: 40px;
-  margin: 40px 10px 20px 10px;
-  display: inline;
-}
-
-/* ------------------ RESPONSIVE ------------------*/
-=======
 /* ------------------------------------ RESPONSIVE --------------------------------------*/
->>>>>>> c80e738f9f3ac8da91f748da27d48816e16abbcf
+
 /* -------- Big Desktops --------*/
 @media only screen
 and (min-width: 1800px) {}
