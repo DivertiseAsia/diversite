@@ -52,7 +52,7 @@ let make =
         <div className="social-media">
           <Link isExternal=(true) target="_blank" href="https://www.facebook.com/DivertiseAsia/" className="icon-social"><img src=social_fb /></Link>
           <Link isExternal=(true) target="_blank" href="https://www.linkedin.com/company/divertiseasia" className="icon-social"><img src=social_in /></Link>
-          <Link isExternal=(true) target="_blank" href="contact@divertise.asia" className="icon-social"><img src=social_mail /></Link>
+          <Link isExternal=(true) href="mailto:contact@divertise.asia" className="icon-social"><img src=social_mail /></Link>
         </div>
         <p>{ReasonReact.string({j| © 2017 Divertise Asia.Co.,Ltd |j})}</p>
       </div>
