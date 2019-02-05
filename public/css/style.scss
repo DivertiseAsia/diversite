@@ -17,6 +17,8 @@ $border-grey: #eaeaea;
 $border-default: solid 1px;
 $border-radius: 20px;
 
+$text-shadow: 2px 2px 2px black;
+
 $transition: all 0.3s ease-out;
 
 $header-height: 60px;
@@ -110,7 +112,7 @@ a {
 
 .nav {
   width: 100vw;
-  padding: 1em 2em;
+  padding: 15px;
   box-sizing: border-box;
   z-index: 99;
   height: $header-height;
@@ -131,10 +133,14 @@ nav.nav {
 .nav .nav-container > div {
   display: inline-block;
 }
-nav .logo, .logo-link {
-  max-height: 3em;
+nav .logo-link {
+  height: $header-height - 20px;
   margin-top: -0.2em;
   float: left;
+  padding: 0;
+  .logo {
+    height: $header-height - 20px;
+  }
 }
 .-logo-white {
   max-height: 5em;
@@ -152,6 +158,7 @@ nav .logo, .logo-link {
 .nav-container-loggedin {
   padding-top: 0.5em;
 }
+
 /* ------ Navigation Link Animation ------ */
 
 .nav a:hover, .btn-drop:hover {
@@ -222,9 +229,23 @@ nav .logo, .logo-link {
 }
 /* ------------------------------------ PAGES -----------------------------------*/
 /* ------------ Home Page ------------ */
+/* spectial Home Page Nav */
+.page-home {
+  .page-end-top {
+    position: absolute;
+  }
+  .nav {
+    background: transparent;
+    a:not(.logo-link) {
+      text-shadow: $text-shadow;
+    }
+  }
+}
 .hero {
+  /* Remove background styling when replace with the real codes */
   background-image: url('../images/hero-placeholder.png');
   background-size: cover;
+
   height: 100vh;
 }
 
