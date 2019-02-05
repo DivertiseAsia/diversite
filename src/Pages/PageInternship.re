@@ -54,9 +54,9 @@ let make = (_children) => {
         <div className="container pt-5 pb-4"> 
           <div className="row d-block text-center text-white">
             <h2 className="text-white">{string("READY TO APPLY?")}</h2>
-            <div className="d-flex justify-content-center ">
+            <div className="d-flex justify-content-center flex-wrap">
               <p>{string("Send us your resume and porfolio to ")}</p>
-              <a className="pr-1 pl-1 -font-weight-bold text-color1 -text-underline-none" href="#"> {string("careers@divertise.asia")} </a>
+              <p><a className="pr-1 pl-1 -font-weight-bold text-color1 -text-underline-none" href="contact@divertise.asia"> {string("careers@divertise.asia")} </a></p>
               <p>{string("and we'll get back to you soon!")}</p>
             </div>
             <p className="-text-small-title text-color1">{string("*Please include your prefered start - end date of the internship in the email")}</p>
