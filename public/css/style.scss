@@ -13,16 +13,23 @@ $bg-color2: #23a399;
 $text-white: white;
 $text-color1: #2d506d;
 $text-color2:#23a399;
+$text-color2-light: #a4dad4;
 $border-grey: #eaeaea;
 
-$border-default: solid 1px;
-$border-radius: 20px;
+$bg-gradient1: linear-gradient( #2d506d 70%, #1b4059);
+$bg-gradient2: linear-gradient( #52c4bb , #14918a);
+$bg-gradient-white: linear-gradient( #ffffff 70% , #dedede);
+
+$border-default: solid 2px;
+$border-radius: 8px;
 
 $text-shadow: 2px 2px 2px grey;
 
 $transition: all 0.3s ease-out;
 
 $header-height: 60px;
+$frontpage-section-img-height: 350px;
+$frontpage-section-height: 300px; 
 
 html, body, #container {
   min-width: 100vw;
@@ -94,8 +101,8 @@ a {
 .-text-uppercase { text-transform: uppercase; }
 .-lineheight-large { line-height: 2em; }
 .-lineheight-small { line-height: 0em; }
-.bg-gradient-color1 { background: linear-gradient( #2d506d 70%, #1b4059)}
-.bg-gradient-color2 { background: linear-gradient( #52c4bb , #14918a)}
+.bg-gradient-color1 { background: $bg-gradient1; }
+.bg-gradient-color2 { background: $bg-gradient2; }
 
 .-boxshadow {
     box-shadow: 2px 2px 12px 0px #cecece;
@@ -105,12 +112,10 @@ a {
 .text-white { color: $text-white; }
 .text-color1 { color: $text-color1 !important; }
 
-/* ------------- Icon ------------- */
 .icon svg {
   height: 35px;
 }
 
-/* ------------- ul li ------------- */
 ul li {
   list-style-type: none;
   color: $text-color1;
@@ -125,9 +130,9 @@ a:hover { text-decoration: none; }
 
 /* -------------- Project Elements ----------------*/
 
-.bg-gradient-header { 
-  background: linear-gradient( #2d506d 70%, #1b4059); 
-  color: $text-white;
+.image-background { 
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* ------------- Navigation Bar ------------- */
@@ -288,8 +293,45 @@ nav .logo-link {
   }
 }
 .section-ourgoal {
+  .image-background {
+    height: 80px;
+    background-size: contain;
+  }
 }
-
+.frontpage-section {
+  background: $bg-gradient1;
+  height: $frontpage-section-height;
+  overflow: visible;
+  > div {
+    padding: 0 60px;
+    width: 100vw;
+    margin: auto;
+    max-width: 1200px;
+  }
+  .row { justify-content: space-between; }
+  .image-background {
+    height: $frontpage-section-img-height;
+    width: $frontpage-section-img-height * 1.5;
+    background-size: contain;
+    margin-top: $frontpage-section-height/2 - $frontpage-section-img-height/2;
+  }
+  h4 {
+    text-transform: uppercase;
+    color: $text-white; 
+  }
+  .content { color: $text-color2-light; }
+  .btn { 
+    @include btn(transparent, $text-color2-light, $text-color2-light);
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.frontpage-section:nth-child(even) {
+  background: $bg-gradient-white;
+  .row { flex-direction: row-reverse; }
+  h4, .content { color: $text-color1 }
+  .btn { @include btn(transparent, $bg-color1, $bg-color1) }
+}
 /* ------------ Internship Page ------------ */
 .intership-list {
   .image-background {
