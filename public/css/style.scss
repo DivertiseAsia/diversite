@@ -81,8 +81,11 @@ a {
 .-text-center { text-align: center; }
 .-text-right { text-align: right; }
 .-text-left { text-align: left; }
+.-font-weight-bold { font-weight: $font-weight-bold; }
 .-text-underline { text-decoration: underline; }
+.-text-underline-none { text-decoration: none; }
 .-text-uppercase { text-transform: uppercase; }
+.-lineheight-large { line-height: 2em; }
 .-lineheight-small { line-height: 0em; }
 .bg-gradient-color1 { background: linear-gradient( #2d506d 70%, #1b4059)}
 .bg-gradient-color2 { background: linear-gradient( #52c4bb , #14918a)}
@@ -92,8 +95,20 @@ a {
     box-shadow: 2px 2px 12px 0px rgba(0,0,0,0.2);
 }
 
-.text-white { color: $text-white;}
+.text-white { color: $text-white; }
+.text-color1 { color: $text-color1 !important; }
 
+/* ------------- Icon ------------- */
+.icon svg {
+  height: 35px;
+}
+
+/* ------------- ul li ------------- */
+ul li {
+  list-style-type: none;
+  color: $text-color1;
+}
+a:hover { text-decoration: none; }
 /* ------------- Bootstrap Elements --------------*/
 
 .container {
