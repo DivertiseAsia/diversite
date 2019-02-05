@@ -17,9 +17,11 @@ $border-grey: #eaeaea;
 $border-default: solid 1px;
 $border-radius: 20px;
 
+$text-shadow: 2px 2px 2px black;
+
 $transition: all 0.3s ease-out;
 
-$header-height: 80px;
+$header-height: 60px;
 
 html, body, #container {
   min-width: 100vw;
@@ -81,10 +83,12 @@ a {
 .-text-left { text-align: left; }
 .-font-weight-bold { font-weight: $font-weight-bold; }
 .-text-underline { text-decoration: underline; }
+.-text-uppercase { text-transform: uppercase; }
 .-lineheight-large { line-height: 2em; }
 .-lineheight-small { line-height: 0em; }
 .bg-gradient-color1 { background: linear-gradient( #2d506d 70%, #1b4059)}
 .bg-gradient-color2 { background: linear-gradient( #52c4bb , #14918a)}
+
 .-boxshadow {
     box-shadow: 2px 2px 12px 0px #cecece;
     box-shadow: 2px 2px 12px 0px rgba(0,0,0,0.2);
@@ -103,15 +107,29 @@ ul li {
   color: $text-color1;
 }
 
+/* ------------- Bootstrap Elements --------------*/
+
+.container {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+/* -------------- Project Elements ----------------*/
+
+.bg-gradient-header { 
+  background: linear-gradient( #2d506d 70%, #1b4059); 
+  color: $text-white;
+}
+
 /* ------------- Navigation Bar ------------- */
 
 .nav {
   width: 100vw;
-  padding: 1em 2em;
+  padding: 15px;
   box-sizing: border-box;
   z-index: 99;
   height: $header-height;
-  background: transparent;
+  background: $bg-color1;
 }
 nav.nav {
   display: block;
@@ -119,21 +137,23 @@ nav.nav {
 .nav a {
   padding: 0.5em 2em;
   display: inline-flex;
-  transition: 0.2s;
+  transition: $transition;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: $font-weight-medium;
   color: $text-white;
+  font-family: $font-header;
 }
 .nav .nav-container > div {
   display: inline-block;
 }
-.logo, .logo-link, .logo-small, .about_logo {
-  max-height: 3em;
+nav .logo-link {
+  height: $header-height - 20px;
   margin-top: -0.2em;
   float: left;
-}
-.logo-auth {
-  max-height: 5em;
+  padding: 0;
+  .logo {
+    height: $header-height - 20px;
+  }
 }
 .-logo-white {
   max-height: 5em;
@@ -151,11 +171,13 @@ nav.nav {
 .nav-container-loggedin {
   padding-top: 0.5em;
 }
+
 /* ------ Navigation Link Animation ------ */
 
 .nav a:hover, .btn-drop:hover {
-  color: $text-color1;
   cursor: pointer;
+  text-decoration: none;
+  font-weight: $font-weight-bold;
 }
 .nav a:not(.logo-link):not(.btn)::after, .btn-drop::after {
   background: $bg-grey;
@@ -218,6 +240,27 @@ nav.nav {
   margin: 40px 10px 20px 10px;
   display: inline;
 }
+/* ------------------------------------ PAGES -----------------------------------*/
+/* ------------ Home Page ------------ */
+/* spectial Home Page Nav */
+.page-home {
+  .page-end-top {
+    position: absolute;
+  }
+  .nav {
+    background: transparent;
+    a:not(.logo-link) {
+      text-shadow: $text-shadow;
+    }
+  }
+}
+.hero {
+  /* Remove background styling when replace with the real codes */
+  background-image: url('../images/hero-placeholder.png');
+  background-size: cover;
+
+  height: 100vh;
+}
 
 /* ------------------------------------ RESPONSIVE --------------------------------------*/
 
@@ -243,17 +286,14 @@ and (max-width: 768px) {
     box-sizing: border-box;
     text-align: center;
     height: 0;
-    margin-top: 0.5em;
+    margin-top: 0;
     background: $bg-color1;
   }
   .nav input:checked ~ .nav-container {
-    height: 90vh;
+    height: 50vh;
     display: block;
     box-shadow: 2px 2px 12px 0px #cecece;
     box-shadow: 2px 10px 12px 0px rgba(0,0,0,0.2);
-    border-bottom: solid 1px $border-grey;
-    padding: 4em 1em;
-    margin: 1em 0;
   }
 }
 
