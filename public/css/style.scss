@@ -216,7 +216,7 @@ and (max-width: 1200px) {}
 
 /* -------- Tablets Portrait ---------*/
 @media only screen
-and (max-width: 900px) {
+and (max-width: 768px) {
   /* Tablet Nav*/
   .nav-icon {
     display: inline-block;
@@ -244,7 +244,7 @@ and (max-width: 900px) {
 
 /* -------- Phones ---------*/
 @media only screen
-and (max-width: 600px) {}
+and (max-width: 576px) {}
 
 /* -------- Small Phones ---------*/
 @media only screen
