@@ -54,6 +54,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font-header;
   font-weight: $font-weight-bold;
 }
+p { 
+  color: $text-color1; 
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -264,6 +267,24 @@ nav .logo-link {
   height: 100vh;
 }
 
+
+.intership-list {
+  .image-background {
+    padding: 70px 0 40px 0;
+    background-color: #2d506d;
+    color: white;
+    height: 180px;
+  }
+  h4{ color: $text-white;}
+  .read-details { display: none; }
+}
+.intership-list:hover {
+  .read-details { 
+    display: block; 
+    transition: 0.5s ease;
+    color: $text-color2;
+  }
+}
 /* ------------------------------------ RESPONSIVE --------------------------------------*/
 
 /* -------- Big Desktops --------*/
