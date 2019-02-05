@@ -29,6 +29,7 @@
   "devDependencies": {
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
+    "@divertiseasia/bs-divertise-core-components": "^0.1.15",
     "babel-loader": "^8.0.4",
     "bs-platform": "^4.0.7",
     "clean-webpack-plugin": "^0.1.19",
