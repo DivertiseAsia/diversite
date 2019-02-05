@@ -1,7 +1,10 @@
 $font-size-small: 1rem;
 $font-size-medium: 2rem;
 $font-weight-normal: 300;
+$font-weight-medium: 400;
 $font-weight-bold: 500;
+$font-default: 'Open Sans', sans-serif;
+$font-header: 'Orkney', sans-serif;
 
 $bg-grey: #eaeaea;
 $bg-color1: #2d506d;
@@ -10,6 +13,11 @@ $text-white: white;
 $text-color1: #2d506d;
 $text-color2:#23a399;
 $border-grey: #eaeaea;
+
+$border-default: solid 1px;
+$border-radius: 20px;
+
+$transition: all 0.3s ease-out;
 
 $header-height: 80px;
 
@@ -23,13 +31,13 @@ html, body, #container {
 html {
   font-size: 14px;
   color: $text-color1;
-  font-family: 'Open Sans', sans-serif;
+  font-family: $font-default;
   font-weight: $font-weight-normal;
 }
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: $font-default;
   font-weight: $font-weight-normal;
 }
 
@@ -41,12 +49,29 @@ h5 { font-size: 1.2em; }
 h6 { font-size: 1em; }
 h1, h2, h3, h4, h5, h6 {
   color: $text-color1;
-  font-family: 'Orkney', sans-serif;
+  font-family: $font-header;
+  font-weight: $font-weight-bold;
 }
 a {
   text-decoration: none;
   color: inherit;
 }
+
+.btn {
+  border-radius: $border-radius;
+  padding: 8px;
+  min-width: 100px;
+  border: $border-default;
+  transition: $transition;
+  margin: 20px auto;
+}
+@mixin btn($btn-bg-color, $btn-border-color, $btn-text-color) {
+  background-color: $btn-bg-color;
+  border-color: $btn-border-color;
+  color: $btn-text-color;
+}
+.btn-line-color1 { @include btn(transparent, $bg-color1, $bg-color1) }
+
 /* ------------- Default Classes ------------- */
 
 .-text-small { font-size: .7em; }
