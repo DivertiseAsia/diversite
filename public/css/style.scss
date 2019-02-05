@@ -17,7 +17,7 @@ $border-grey: #eaeaea;
 $border-default: solid 1px;
 $border-radius: 20px;
 
-$text-shadow: 2px 2px 2px black;
+$text-shadow: 2px 2px 2px grey;
 
 $transition: all 0.3s ease-out;
 
@@ -129,6 +129,8 @@ nav.nav {
   font-weight: $font-weight-medium;
   color: $text-white;
   font-family: $font-header;
+  flex-direction: column;
+  align-items: center;
 }
 .nav .nav-container > div {
   display: inline-block;
@@ -158,27 +160,26 @@ nav .logo-link {
 .nav-container-loggedin {
   padding-top: 0.5em;
 }
-
+.nav a::after, .btn-drop::after {
+  content: "";
+}
 /* ------ Navigation Link Animation ------ */
 
 .nav a:hover, .btn-drop:hover {
   cursor: pointer;
   text-decoration: none;
-  font-weight: $font-weight-bold;
 }
 .nav a:not(.logo-link):not(.btn)::after, .btn-drop::after {
-  background: $bg-grey;
-  height: 0;
-  width: 3px;
+  background: $text-white;
+  height: 1.5px;
+  margin-top: 2px;
+  width: 0;
   /* content: ""; hiding animation for now */
-  position: relative;
-  transition: 0.4s;
-  margin-left: 5px;
-  vertical-align: top;
-  display: inline-block;
+  display: block;
+  transition: $transition;
  }
  .nav a:not(.btn):hover::after, .btn-drop:hover::after {
-  height: 1.2em;
+  width: 35px;
 }
 /* ----- Amazing Nav Icon Toggle Animation ------*/
 
