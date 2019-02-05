@@ -1,7 +1,10 @@
 $font-size-small: 1rem;
 $font-size-medium: 2rem;
 $font-weight-normal: 300;
+$font-weight-medium: 400;
 $font-weight-bold: 500;
+$font-default: 'Open Sans', sans-serif;
+$font-header: 'Orkney', sans-serif;
 
 $bg-grey: #eaeaea;
 $bg-color1: #2d506d;
@@ -10,6 +13,11 @@ $text-white: white;
 $text-color1: #2d506d;
 $text-color2:#23a399;
 $border-grey: #eaeaea;
+
+$border-default: solid 1px;
+$border-radius: 20px;
+
+$transition: all 0.3s ease-out;
 
 $header-height: 80px;
 
@@ -23,13 +31,13 @@ html, body, #container {
 html {
   font-size: 14px;
   color: $text-color1;
-  font-family: sans-serif;
+  font-family: $font-default;
   font-weight: $font-weight-normal;
 }
 * {
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: $font-default;
   font-weight: $font-weight-normal;
 }
 
@@ -40,12 +48,30 @@ h4 { font-size: 1.4em; }
 h5 { font-size: 1.2em; }
 h6 { font-size: 1em; }
 h1, h2, h3, h4, h5, h6 {
-  color: blue;
+  color: $text-color1;
+  font-family: $font-header;
+  font-weight: $font-weight-bold;
 }
 a {
   text-decoration: none;
   color: inherit;
 }
+
+.btn {
+  border-radius: $border-radius;
+  padding: 8px;
+  min-width: 100px;
+  border: $border-default;
+  transition: $transition;
+  margin: 20px auto;
+}
+@mixin btn($btn-bg-color, $btn-border-color, $btn-text-color) {
+  background-color: $btn-bg-color;
+  border-color: $btn-border-color;
+  color: $btn-text-color;
+}
+.btn-line-color1 { @include btn(transparent, $bg-color1, $bg-color1) }
+
 /* ------------- Default Classes ------------- */
 
 .bg-gradient-color1 { background: linear-gradient( #2d506d 70%, #1b4059)}
@@ -58,6 +84,8 @@ a {
 .-text-left { text-align: left; }
 .-text-underline { text-decoration: underline; }
 .-lineheight-small { line-height: 0em; }
+.bg-gradient-color1 { background: linear-gradient( #2d506d 70%, #1b4059)}
+.bg-gradient-color2 { background: linear-gradient( #52c4bb , #14918a)}
 
 .-boxshadow {
     box-shadow: 2px 2px 12px 0px #cecece;
@@ -165,7 +193,22 @@ nav.nav {
 .nav input:checked ~ div div:nth-child(3) {
   height: 0;
 }
+/*------------------------- Footer -----------------------*/
+.footer {
+  width: 100vw;
+  height: 150px;
+  background-color: #149992;
+  text-align: center;
+  p { color: #78D1C7;}
+}
+.icon-social img{
+  height: 5%;
+  max-height: 40px;
+  margin: 40px 10px 20px 10px;
+  display: inline;
+}
 
+<<<<<<< HEAD
 
 /*------- Footer --------*/
 .footer {
@@ -183,6 +226,9 @@ nav.nav {
 }
 
 /* ------------------ RESPONSIVE ------------------*/
+=======
+/* ------------------------------------ RESPONSIVE --------------------------------------*/
+>>>>>>> c80e738f9f3ac8da91f748da27d48816e16abbcf
 /* -------- Big Desktops --------*/
 @media only screen
 and (min-width: 1800px) {}
