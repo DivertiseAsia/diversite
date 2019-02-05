@@ -3,6 +3,15 @@ $font-size-medium: 2rem;
 $font-weight-normal: 300;
 $font-weight-bold: 500;
 
+$bg-grey: #eaeaea;
+$bg-color1: #23a399;
+$text-white: white;
+$text-color1: #2d506d;
+$text-color2:#23a399;
+$border-grey: #eaeaea;
+
+$header-height: 80px;
+
 html, body, #container {
   min-width: 100vw;
   min-height: 100vh;
@@ -12,7 +21,7 @@ html, body, #container {
 }
 html {
   font-size: 14px;
-  color: var(--text-dark);
+  color: $text-color1;
   font-family: sans-serif;
   font-weight: $font-weight-normal;
 }
@@ -38,24 +47,162 @@ a {
 }
 /* ------------- Default Classes ------------- */
 
-.-width-section { width: 80vw; max-width: 1200px; min-width: 300px; }
-.-margin-top-small { margin-top: 1em;}
-.-margin-left-header { margin-left: -15px;}
-.-margin-right-header { margin-right: -15px;}
 .-text-small { font-size: .7em; }
 .-text-small-title { font-size: 0.9em;}
-.-text-large-sale-summary {font-size: 1.5em;}
-.-padding-btn-width-small {padding: 0.2em;}
-.-padding-top-pipeline-header { padding-top: 0.8em;}
-.-padding-header { padding-top: 2em;}
-.-padding-left { padding-left: 1em;}
-.-padding-right { padding-right: 1em;}
-.-padding-right-none { padding-right: 0;}
-.-padding-left-small { padding-left: 0.5em;}
-.-padding-right-small { padding-right: 0.5em;}
-.-padding-right-btn { padding-right: 15px;}
-.-padding-left-large { padding-left: 3em;}
-.-padding-right-large { padding-right: 3em;}
-.-space-between {justify-content: space-between;}
-.-align-items-baseline{ align-items: baseline;}
-.-line-height { line-height: 0.5em}
+.-text-center { text-align: center; }
+.-text-right { text-align: right; }
+.-text-left { text-align: left; }
+.-text-underline { text-decoration: underline; }
+.-lineheight-small { line-height: 0em; }
+
+.-boxshadow {
+    box-shadow: 2px 2px 12px 0px #cecece;
+    box-shadow: 2px 2px 12px 0px rgba(0,0,0,0.2);
+}
+
+/* ------------- Navigation Bar ------------- */
+
+.nav {
+  width: 100vw;
+  padding: 1em 2em;
+  box-sizing: border-box;
+  z-index: 99;
+  height: $header-height;
+  background: transparent;
+}
+nav.nav {
+  display: block;
+}
+.nav a {
+  padding: 0.5em 2em;
+  display: inline-flex;
+  transition: 0.2s;
+  cursor: pointer;
+  font-weight: bold;
+  color: $text-white;
+}
+.nav .nav-container > div {
+  display: inline-block;
+}
+.logo, .logo-link, .logo-small, .about_logo {
+  max-height: 3em;
+  margin-top: -0.2em;
+  float: left;
+}
+.logo-auth {
+  max-height: 5em;
+}
+.-logo-white {
+  max-height: 5em;
+}
+.logo-small {
+  display: none;
+}
+.nav-container {
+  background: transparent;
+  z-index: 200;
+  transition: 0.4s;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.nav-container-loggedin {
+  padding-top: 0.5em;
+}
+/* ------ Navigation Link Animation ------ */
+
+.nav a:hover, .btn-drop:hover {
+  color: $text-color1;
+  cursor: pointer;
+}
+.nav a:not(.logo-link):not(.btn)::after, .btn-drop::after {
+  background: $bg-grey;
+  height: 0;
+  width: 3px;
+  /* content: ""; hiding animation for now */
+  position: relative;
+  transition: 0.4s;
+  margin-left: 5px;
+  vertical-align: top;
+  display: inline-block;
+ }
+ .nav a:not(.btn):hover::after, .btn-drop:hover::after {
+  height: 1.2em;
+}
+/* ----- Amazing Nav Icon Toggle Animation ------*/
+
+.nav-icon {
+  /* display: inline-block; */
+  display: none;
+  width: 2.7em;
+  height: 2.7em;
+}
+.nav-icon div {
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: $text-white;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+.nav input {
+  width: 40px;
+  height: 3em;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+}
+.nav input:checked ~ div div:nth-child(1) {
+  transform: rotate(45deg)translate(7px,7px);
+}
+.nav input:checked ~ div div:nth-child(2) {
+  transform: rotate(-45deg);
+}
+.nav input:checked ~ div div:nth-child(3) {
+  height: 0;
+}
+
+/* ------------------ RESPONSIVE ------------------*/
+/* -------- Big Desktops --------*/
+@media only screen
+and (min-width: 1800px) {}
+
+/* -------- Tablets Landscape & Small Desktops ---------*/
+@media only screen
+and (max-width: 1200px) {}
+
+/* -------- Tablets Portrait ---------*/
+@media only screen
+and (max-width: 900px) {
+  /* Tablet Nav*/
+  .nav-icon {
+    display: inline-block;
+  }
+  .nav-container {
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    box-sizing: border-box;
+    text-align: center;
+    height: 0;
+    margin-top: 0.5em;
+    background: $bg-color1;
+  }
+  .nav input:checked ~ .nav-container {
+    height: 90vh;
+    display: block;
+    box-shadow: 2px 2px 12px 0px #cecece;
+    box-shadow: 2px 10px 12px 0px rgba(0,0,0,0.2);
+    border-bottom: solid 1px $border-grey;
+    padding: 4em 1em;
+    margin: 1em 0;
+  }
+}
+
+/* -------- Phones ---------*/
+@media only screen
+and (max-width: 600px) {}
+
+/* -------- Small Phones ---------*/
+@media only screen
+and (max-width: 400px) {}
