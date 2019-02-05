@@ -84,13 +84,27 @@ a {
 .-lineheight-small { line-height: 0em; }
 .bg-gradient-color1 { background: linear-gradient( #2d506d 70%, #1b4059)}
 .bg-gradient-color2 { background: linear-gradient( #52c4bb , #14918a)}
-.bg-gradient-header { background: linear-gradient( #2d506d 70%, #1b4059); color: $text-white;}
+
 .-boxshadow {
     box-shadow: 2px 2px 12px 0px #cecece;
     box-shadow: 2px 2px 12px 0px rgba(0,0,0,0.2);
 }
 
 .text-white { color: $text-white;}
+
+/* ------------- Bootstrap Elements --------------*/
+
+.container {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+/* -------------- Project Elements ----------------*/
+
+.bg-gradient-header { 
+  background: linear-gradient( #2d506d 70%, #1b4059); 
+  color: $text-white;
+}
 
 /* ------------- Navigation Bar ------------- */
 
