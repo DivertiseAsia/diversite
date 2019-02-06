@@ -112,6 +112,9 @@ a {
     box-shadow: 2px 2px 12px 0px #cecece;
     box-shadow: 2px 2px 12px 0px rgba(0,0,0,0.2);
 }
+.-text-header-shadow{
+  text-shadow: 5px 5px 12px #252525;
+}
 
 .text-white { color: $text-white; }
 .text-color1 { color: $text-color1 !important; }
