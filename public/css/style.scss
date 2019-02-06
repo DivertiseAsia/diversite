@@ -10,6 +10,7 @@ $lineheigh: 1.8em;
 $bg-grey: #eaeaea;
 $bg-color1: #2d506d;
 $bg-color2: #23a399;
+$bg-color2-dark: #14918a;
 $text-white: white;
 $text-color1: #2d506d;
 $text-color2:#23a399;
@@ -245,7 +246,7 @@ nav .logo-link {
 .footer {
   width: 100vw;
   height: 150px;
-  background-color: #149992;
+  background-color: $bg-color2-dark;
   text-align: center;
   p { color: #78D1C7;}
 }
@@ -261,6 +262,7 @@ nav .logo-link {
 .page-home {
   .page-end-top {
     position: absolute;
+    z-index: 99;
   }
   .nav {
     background: transparent;
@@ -268,6 +270,14 @@ nav .logo-link {
       text-shadow: $text-shadow;
     }
   }
+}
+.homepage_menu-bg {
+  height: $header-height;
+  width: 100vw;
+  background: $bg-color2;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 .hero {
   /* Remove background styling when replace with the real codes */
@@ -278,6 +288,9 @@ nav .logo-link {
   padding-top: 50px;
   display: flex;
   align-items: center;
+  /* For Nav Menu Background */
+  z-index: 2;
+  position: relative;
   .container {
     max-width: 600px;
     margin-left: 50px;
@@ -310,10 +323,11 @@ nav .logo-link {
   }
   .row { justify-content: space-between; }
   .image-background {
-    height: $frontpage-section-img-height;
-    width: $frontpage-section-img-height * 1.5;
+    height: 100%;
+    width: 100%;
     background-size: contain;
-    margin-top: $frontpage-section-height/2 - $frontpage-section-img-height/2;
+    position: relative;
+    top: -50px;
   }
   h4 {
     text-transform: uppercase;
@@ -395,18 +409,24 @@ and (max-width: 768px) {
     height: 0;
     margin-top: 0;
     background: $bg-color1;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    top: 0;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0;
     a {
       width: 100vw;
     }
   }
   .nav input:checked ~ .nav-container {
     height: 300px;
-    display: flex;
+    pointer-events: initial;
     box-shadow: 2px 2px 12px 0px #cecece;
     box-shadow: 2px 10px 12px 0px rgba(0,0,0,0.2);
+    opacity: 1;
   }
   /*Tablet - Home Page*/
   .hero {
