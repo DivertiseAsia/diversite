@@ -44,7 +44,7 @@ let make = (_children) => {
         </div>
       </div>
       <div className="section-ourwork-header">
-        <div className="container -text-center">
+        <div className="container -text-center -text-uppercase pb-5 pt-5">
           <h3>(string("What We Cand Do"))</h3>           
         </div>
       </div>

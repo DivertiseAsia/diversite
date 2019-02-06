@@ -15,7 +15,8 @@ let make =
   ...component,
   render: _self => {
     <div className={"frontpage-section " ++ Js.Option.getWithDefault("frontpage-section-default", className)}>
-      <div className="row">
+      <div>
+      <div className="row pb-3">
         <div className="col-sm-6">
           <ImageBackground src=(imageURL)/>
         </div>
@@ -24,6 +25,7 @@ let make =
           <div className="content"> ...children </div>
           <Link className="btn" href=(href)>(string("See All Project")) </Link>
         </div>
+      </div>
       </div>
     </div>;
   },

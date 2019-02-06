@@ -313,7 +313,6 @@ nav .logo-link {
 }
 .frontpage-section {
   background: $bg-gradient1;
-  height: $frontpage-section-height;
   overflow: visible;
   > div {
     padding: 0 60px;
@@ -323,8 +322,8 @@ nav .logo-link {
   }
   .row { justify-content: space-between; }
   .image-background {
-    height: 100%;
-    width: 100%;
+    min-height: 300px;
+    min-width: 300px;
     background-size: contain;
     position: relative;
     top: -50px;
@@ -340,6 +339,24 @@ nav .logo-link {
     padding-left: 40px;
   }
 }
+
+/*
+.frontpage-section {
+  background: $bg-gradient1;
+  overflow: visible;
+  .frontpage-section_col {
+    width: 40vw;
+    height: 300px;
+    min-width: 280px;
+  }
+  .image-background {
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    position: relative;
+    top: -50px;
+  }
+}*/
 .frontpage-section:nth-child(even) {
   background: $bg-gradient-white;
   .row { flex-direction: row-reverse; }
