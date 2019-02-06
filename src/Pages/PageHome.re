@@ -25,8 +25,7 @@ let make = (_children) => {
         <div className="container">
           <h3 className="pt-5">(string("Our goal is to be the technical partner for startups in Asia"))</h3>
           <p className="pt-5 pb-5">(string("especially those wanting to specialize in Artificial Intelligence, Games & VR, and other cutting-edge technologies."))</p>
-          <div className="row flex-wrap justify-content-center"> 
-          <div>
+          <div className="row flex-wrap justify-content-center">
             <div className="col-sm-4 pb-5 -text-center"> 
               <ImageBackground className="mb-3" src=ourgoal1 />
               <h6>(string("Applications & Platforms")) </h6>
@@ -39,7 +38,6 @@ let make = (_children) => {
               <ImageBackground className="mb-3" src=ourgoal3 />
               <h6>(string("Virtual Reality")) </h6>
             </div>
-          </div>
           </div>
         </div>
       </div>
