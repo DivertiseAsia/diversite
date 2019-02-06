@@ -10,7 +10,7 @@ let make = (_children) => {
   ...component,
   render: _self => {
     <MainPage>
-    <div className="section-header bg-gradient-color1"> 
+    <div className="section-header bg-gradient-color2"> 
       <div className="container py-5"> 
         <div className="row d-flex align-items-baseline">
           <h1 className="text-white pr-3 letter-spacing -text-uppercase -text-header-shadow"> {string("Creers")}</h1>
