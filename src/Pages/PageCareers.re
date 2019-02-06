@@ -13,7 +13,7 @@ let make = (_children) => {
     <div className="section-header bg-gradient-color1"> 
       <div className="container py-5"> 
         <div className="row d-flex align-items-baseline">
-          <h1 className="text-white pr-3"> {string("CAREERS")}</h1>
+          <h1 className="text-white pr-3 letter-spacing"> {string("CAREERS")}</h1>
         </div>
       </div>
     </div>

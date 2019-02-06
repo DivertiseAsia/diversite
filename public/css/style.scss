@@ -114,6 +114,7 @@ a {
 
 .text-white { color: $text-white; }
 .text-color1 { color: $text-color1 !important; }
+.letter-spacing { letter-spacing: 0.15em; }
 
 .icon svg {
   height: 35px;
@@ -144,7 +145,7 @@ a:hover { text-decoration: none; }
 }
 
 .section-header {
-  clip-path: polygon(0 0, 100% 0, 100% 55%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
 }
 /* ------------- Navigation Bar ------------- */
 
