@@ -31,6 +31,7 @@ $transition: all 0.3s ease-out;
 $header-height: 60px;
 $frontpage-section-img-height: 350px;
 $frontpage-section-height: 300px; 
+$scrollbar-width: 0.5vw;
 
 html, body, #container {
   min-width: 100vw;
@@ -143,15 +144,17 @@ a:hover { text-decoration: none; }
   background-position: center;
   background-size: cover;
 }
+/* to make scroll bar work */
 .page-content-container {
   overflow-x: hidden !important;
+  width: 100vw;
 }
-
+.main-content { width: 100vw; }
 ::-webkit-scrollbar {
-  width: 1vw;
+  width: $scrollbar-width;
 }
 ::-webkit-scrollbar-track-piece  {
-    background-color: #C2D2E4;
+  width: 0;
 }
 ::-webkit-scrollbar-thumb:vertical {
     border-radius: $border-radius;
@@ -163,7 +166,7 @@ a:hover { text-decoration: none; }
 /* ------------- Navigation Bar ------------- */
 
 .nav {
-  width: 100vw;
+  width: 100vw - $scrollbar-width;
   padding: 15px;
   box-sizing: border-box;
   z-index: 99;
@@ -299,7 +302,7 @@ nav .logo-link {
 }
 .homepage_menu-bg {
   height: $header-height;
-  width: 100vw;
+  width: 100vw - $scrollbar-width;
   background: $bg-color2;
   position: fixed;
   top: 0;
