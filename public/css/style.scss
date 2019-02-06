@@ -323,7 +323,7 @@ nav .logo-link {
   .row { justify-content: space-between; }
   .image-background {
     width: 100%;
-    height: 100%;
+    height: 130%;
     min-height: 215px;
     min-width: 215px;
     background-size: contain;
@@ -454,6 +454,11 @@ and (max-width: 768px) {
     height: 60vh;
     h1 { font-size: 2rem }
     .container { margin: auto; }
+  }
+  .frontpage-section {
+    .image-background {
+      background-position: center;
+    }
   }
 }
 
