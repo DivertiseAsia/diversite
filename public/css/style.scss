@@ -2,26 +2,35 @@ $font-size-small: 1rem;
 $font-size-medium: 2rem;
 $font-weight-normal: 300;
 $font-weight-medium: 400;
-$font-weight-bold: 500;
+$font-weight-bold: 700;
 $font-default: 'Open Sans', sans-serif;
 $font-header: 'Orkney', sans-serif;
+$lineheigh: 1.8em;
 
 $bg-grey: #eaeaea;
 $bg-color1: #2d506d;
 $bg-color2: #23a399;
+$bg-color2-dark: #14918a;
 $text-white: white;
 $text-color1: #2d506d;
 $text-color2:#23a399;
+$text-color2-light: #a4dad4;
 $border-grey: #eaeaea;
 
-$border-default: solid 1px;
-$border-radius: 20px;
+$bg-gradient1: linear-gradient( #2d506d 70%, #1b4059);
+$bg-gradient2: linear-gradient( #52c4bb , #14918a);
+$bg-gradient-white: linear-gradient( #ffffff 70% , #dedede);
 
-$text-shadow: 2px 2px 2px black;
+$border-default: solid 2px;
+$border-radius: 8px;
+
+$text-shadow: 2px 2px 2px grey;
 
 $transition: all 0.3s ease-out;
 
 $header-height: 60px;
+$frontpage-section-img-height: 350px;
+$frontpage-section-height: 300px; 
 
 html, body, #container {
   min-width: 100vw;
@@ -35,12 +44,14 @@ html {
   color: $text-color1;
   font-family: $font-default;
   font-weight: $font-weight-normal;
+  line-height: $lineheigh;
 }
 * {
   padding: 0;
   margin: 0;
   font-family: $font-default;
   font-weight: $font-weight-normal;
+  line-height: $lineheigh;
 }
 
 h1 { font-size: 2.5em; }
@@ -53,6 +64,10 @@ h1, h2, h3, h4, h5, h6 {
   color: $text-color1;
   font-family: $font-header;
   font-weight: $font-weight-bold;
+  line-height: 1.4em;
+}
+p { 
+  color: $text-color1; 
 }
 a {
   text-decoration: none;
@@ -87,26 +102,35 @@ a {
 .-text-uppercase { text-transform: uppercase; }
 .-lineheight-large { line-height: 2em; }
 .-lineheight-small { line-height: 0em; }
-.bg-gradient-color1 { background: linear-gradient( #2d506d 70%, #1b4059)}
-.bg-gradient-color2 { background: linear-gradient( #52c4bb , #14918a)}
+.-border-radius { border-radius: $border-radius; }
+.-bg-grey { background-color: $bg-grey; }
+.-bg-color1 { background-color: $bg-color1}
+.bg-gradient-color1 { background: $bg-gradient1; }
+.bg-gradient-color2 { background: $bg-gradient2; }
 
 .-boxshadow {
     box-shadow: 2px 2px 12px 0px #cecece;
     box-shadow: 2px 2px 12px 0px rgba(0,0,0,0.2);
 }
+.-text-header-shadow{
+  text-shadow: 5px 5px 13px #4e4e4e;
+}
 
 .text-white { color: $text-white; }
 .text-color1 { color: $text-color1 !important; }
+.letter-spacing { letter-spacing: 0.1em; }
 
-/* ------------- Icon ------------- */
 .icon svg {
   height: 35px;
 }
+.icon-bag svg, .icon-clock svg {
+  height: 40px ;
+}
 
-/* ------------- ul li ------------- */
 ul li {
   list-style-type: none;
   color: $text-color1;
+  line-height: 2em;
 }
 a:hover { text-decoration: none; }
 /* ------------- Bootstrap Elements --------------*/
@@ -115,14 +139,32 @@ a:hover { text-decoration: none; }
   padding-left: 60px;
   padding-right: 60px;
 }
-
 /* -------------- Project Elements ----------------*/
 
-.bg-gradient-header { 
-  background: linear-gradient( #2d506d 70%, #1b4059); 
-  color: $text-white;
+.image-background { 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.page-content-container {
+  overflow-x: hidden !important;
 }
 
+::-webkit-scrollbar {
+  width: 1vw;
+}
+::-webkit-scrollbar-track-piece  {
+    background-color: #C2D2E4;
+}
+::-webkit-scrollbar-thumb:vertical {
+    border-radius: $border-radius;
+    background-color: grey;
+}
+.section-header {
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+  z-index: -10;
+  position: relative;
+}
 /* ------------- Navigation Bar ------------- */
 
 .nav {
@@ -144,6 +186,8 @@ nav.nav {
   font-weight: $font-weight-medium;
   color: $text-white;
   font-family: $font-header;
+  flex-direction: column;
+  align-items: center;
 }
 .nav .nav-container > div {
   display: inline-block;
@@ -173,27 +217,26 @@ nav .logo-link {
 .nav-container-loggedin {
   padding-top: 0.5em;
 }
-
+.nav a::after, .btn-drop::after {
+  content: "";
+}
 /* ------ Navigation Link Animation ------ */
 
 .nav a:hover, .btn-drop:hover {
   cursor: pointer;
   text-decoration: none;
-  font-weight: $font-weight-bold;
 }
 .nav a:not(.logo-link):not(.btn)::after, .btn-drop::after {
-  background: $bg-grey;
-  height: 0;
-  width: 3px;
+  background: $text-white;
+  height: 1.5px;
+  margin-top: 2px;
+  width: 0;
   /* content: ""; hiding animation for now */
-  position: relative;
-  transition: 0.4s;
-  margin-left: 5px;
-  vertical-align: top;
-  display: inline-block;
+  display: block;
+  transition: $transition;
  }
  .nav a:not(.btn):hover::after, .btn-drop:hover::after {
-  height: 1.2em;
+  width: 35px;
 }
 /* ----- Amazing Nav Icon Toggle Animation ------*/
 
@@ -230,9 +273,9 @@ nav .logo-link {
 }
 /*------------------------- Footer -----------------------*/
 .footer {
-  width: 100vw;
+  width: 100%;
   height: 150px;
-  background-color: #149992;
+  background-color: $bg-color2-dark;
   text-align: center;
   p { color: #78D1C7;}
 }
@@ -245,6 +288,9 @@ nav .logo-link {
 /* ------------------------------------ PAGES -----------------------------------*/
 /* ------------ Home Page ------------ */
 /* spectial Home Page Nav */
+.page-end-top {
+  z-index: 99;
+}
 .page-home {
   .page-end-top {
     position: absolute;
@@ -256,14 +302,196 @@ nav .logo-link {
     }
   }
 }
+.homepage_menu-bg {
+  height: $header-height;
+  width: 100vw;
+  background: $bg-color2;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
 .hero {
   /* Remove background styling when replace with the real codes */
   background-image: url('../images/hero-placeholder.png');
   background-size: cover;
 
   height: 100vh;
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  /* For Nav Menu Background */
+  z-index: 2;
+  position: relative;
+  .container {
+    max-width: 600px;
+    margin-left: 50px;
+  }
+  h1 {
+    text-transform: uppercase;
+    color: $text-white;
+    text-shadow: $text-shadow;
+  }
+  p {
+    color: $text-white;
+    text-shadow: $text-shadow;
+  }
 }
 
+.section-ourgoal {
+  .image-background {
+    height: 80px;
+    background-size: contain;
+  }
+}
+.frontpage-section {
+  background: $bg-gradient1;
+  overflow: visible;
+  > div {
+    padding: 0 60px;
+    width: 100vw;
+    margin: auto;
+    max-width: 1200px;
+  }
+  .row { justify-content: space-between; }
+  .image-background {
+    width: 100%;
+    height: 130%;
+    min-height: 215px;
+    min-width: 215px;
+    background-size: contain;
+    background-position: 50% 0;
+    position: relative;
+    top: -15px;
+    margin: auto;
+  }
+  h4 {
+    text-transform: uppercase;
+    color: $text-white; 
+  }
+  .content { color: $text-color2-light; }
+  .btn { 
+    @include btn(transparent, $text-color2-light, $text-color2-light);
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+/*
+.frontpage-section {
+  background: $bg-gradient1;
+  overflow: visible;
+  .frontpage-section_col {
+    width: 40vw;
+    height: 300px;
+    min-width: 280px;
+  }
+  .image-background {
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    position: relative;
+    top: -50px;
+  }
+}*/
+.frontpage-section:nth-child(even) {
+  background: $bg-gradient-white;
+  .row { flex-direction: row-reverse; }
+  h4, .content { color: $text-color1 }
+  .btn { @include btn(transparent, $bg-color1, $bg-color1) }
+}
+.section-letushelp {
+  background: $bg-gradient2;
+  .letushelp_col {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    > div {
+      background-color: $text-color2-light;
+      height: 100%;
+      text-align: center;
+      border-radius: $border-radius;
+      padding: 40px;
+    }
+    h5 { text-transform: uppercase; }
+    .image-background {
+      background-size: contain;
+      height: 180px;
+      width: 50%;
+      margin: auto;
+    }
+  }
+}
+
+/* ------------ Internship Page ------------ */
+.footer-intern { margin-bottom: -2px; }
+.internship-program {
+  padding: 20px;
+}
+.internship-list {
+  .image-background {
+    padding: 68px 0 40px 0;
+    background-color: #2d506d;
+    color: white;
+    height: 200px;
+    border-radius : $border-radius;
+    opacity: 0.5;
+  }
+  .read-details { opacity: 0; padding-left: 15px; }
+  .program-list-container {
+    position: relative;
+  }
+  .program-list-container:hover {
+    transition: $transition;
+    .image-background {
+      opacity: 0.2;
+      transition: $transition;
+    }
+    .read-details {
+      opacity: 1;
+      z-index: 5;
+      color: $text-color2;
+      font-weight: bold;
+      transition: $transition;
+    }
+  }
+  .content-program {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    margin-top: 70px;
+    h4 { 
+      color: $text-white;
+      padding-left: 20px;
+      padding-top: 10px;
+    }
+  }
+}
+.looking-for h3, h6{
+  color: $text-white;
+}
+.icon-title {
+  padding-top: 25px;
+}
+.footer-title {
+  background: linear-gradient(#149992, #14918a);
+  margin-bottom: -1px;
+  padding: 30px 60px 20px 60px;
+  text-align: center;
+  a{
+    font-weight: $font-weight-bold;
+    padding-left: 5px;
+  }
+  a:hover{
+    font-weight: $font-weight-bold;
+    color: $text-white;
+  }
+  p { color: $text-white ;}
+}
+.team-benefits {
+  padding: 10px 30px;
+}
+.program-text-title {
+  margin: 0 auto;
+}
 /* ------------------------------------ RESPONSIVE --------------------------------------*/
 
 /* -------- Big Desktops --------*/
@@ -290,19 +518,57 @@ and (max-width: 768px) {
     height: 0;
     margin-top: 0;
     background: $bg-color1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0;
+    a {
+      width: 100vw;
+    }
   }
   .nav input:checked ~ .nav-container {
-    height: 50vh;
-    display: block;
+    height: 300px;
+    pointer-events: initial;
     box-shadow: 2px 2px 12px 0px #cecece;
     box-shadow: 2px 10px 12px 0px rgba(0,0,0,0.2);
+    opacity: 1;
+  }
+  /*Tablet - Home Page*/
+  .hero {
+    height: 60vh;
+    h1 { font-size: 2rem }
+    .container { margin: auto; }
+  }
+  .frontpage-section {
+    .image-background {
+      background-position: center;
+    }
+  }
+  .section-letushelp .col-sm-4 > div {
+    padding: 20px;
   }
 }
 
 /* -------- Phones ---------*/
 @media only screen
-and (max-width: 576px) {}
+and (max-width: 576px) {
+  .team-benefits {
+    padding: 15px 10px;
+  }
+}
 
 /* -------- Small Phones ---------*/
 @media only screen
-and (max-width: 400px) {}
+and (max-width: 400px) {
+  .internship-list .content-program h4 {
+    padding-left: 10px;
+    font-size: 16px;
+  }
+  .ul-li-padding-none {
+    padding: 15px 0 !important;
+  }
+}
