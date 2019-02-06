@@ -136,7 +136,6 @@ a:hover { text-decoration: none; }
   padding-left: 60px;
   padding-right: 60px;
 }
-
 /* -------------- Project Elements ----------------*/
 
 .image-background { 
@@ -144,7 +143,20 @@ a:hover { text-decoration: none; }
   background-position: center;
   background-size: cover;
 }
+.page-content-container {
+  overflow-x: hidden !important;
+}
 
+::-webkit-scrollbar {
+  width: 1vw;
+}
+::-webkit-scrollbar-track-piece  {
+    background-color: #C2D2E4;
+}
+::-webkit-scrollbar-thumb:vertical {
+    border-radius: $border-radius;
+    background-color: grey;
+}
 .section-header {
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
   z-index: -10;
@@ -273,10 +285,12 @@ nav .logo-link {
 /* ------------------------------------ PAGES -----------------------------------*/
 /* ------------ Home Page ------------ */
 /* spectial Home Page Nav */
+.page-end-top {
+  z-index: 99;
+}
 .page-home {
   .page-end-top {
     position: absolute;
-    z-index: 99;
   }
   .nav {
     background: transparent;
