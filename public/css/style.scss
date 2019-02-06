@@ -115,7 +115,7 @@ a {
 
 .text-white { color: $text-white; }
 .text-color1 { color: $text-color1 !important; }
-.letter-spacing { letter-spacing: 0.15em; }
+.letter-spacing { letter-spacing: 0.1em; }
 
 .icon svg {
   height: 35px;
@@ -147,6 +147,8 @@ a:hover { text-decoration: none; }
 
 .section-header {
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+  z-index: -10;
+  position: relative;
 }
 /* ------------- Navigation Bar ------------- */
 
@@ -403,7 +405,7 @@ nav .logo-link {
 }
 
 /* ------------ Internship Page ------------ */
-.footer-intern { margin-bottom: -1px; }
+.footer-intern { margin-bottom: -2px; }
 .intership-program {
   padding: 20px;
 }
@@ -453,7 +455,7 @@ nav .logo-link {
   padding-top: 25px;
 }
 .footer-title {
-  background: linear-gradient( #149992 , #149992);
+  background: linear-gradient(#149992, #14918a);
   margin-bottom: -1px;
   padding: 30px 60px 20px 60px;
   text-align: center;
@@ -468,7 +470,10 @@ nav .logo-link {
   p { color: $text-white ;}
 }
 .team-benefits {
-  padding: 10px 40px;
+  padding: 10px 30px;
+}
+.program-text-title {
+  margin: 0 auto;
 }
 /* ------------------------------------ RESPONSIVE --------------------------------------*/
 

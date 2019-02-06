@@ -27,8 +27,7 @@ let make = (_children) => {
       </div>
       <div className="row d-block text-center">
         <h3>{string("INTERSHIP PROGRAM")}</h3>
-        <p>{string("We focus on finding creative ways to work with games and AI. You will get a chance to get")}</p>
-        <p>{string("your hands on game development and work closely with our friendly team of developers and designers.")}</p>
+        <p className="col-md-10 col-sm-12 program-text-title">{string("We focus on finding creative ways to work with games and AI. You will get a chance to get your hands on game development and work closely with our friendly team of developers and designers.")}</p>
         <div className="row">
           <InternshipProgram iconType=Code title="GAMES & AI DEV" imageURL=type3 href=Links.careers className="image-background"> </InternshipProgram>
           <InternshipProgram iconType=Pen title="ART & DESIGN" imageURL=type4 href=Links.careers> </InternshipProgram>
