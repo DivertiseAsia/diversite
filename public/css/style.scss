@@ -144,7 +144,7 @@ a:hover { text-decoration: none; }
   background-position: center;
   background-size: cover;
 }
-/* to make scroll bar work */
+/* scrollbar width */
 .page-content-container {
   overflow-x: hidden !important;
   width: 100vw;
@@ -414,7 +414,7 @@ nav .logo-link {
       background-size: contain;
       height: 180px;
       width: 50%;
-      margin: auto;
+      margin: 20px auto;
     }
   }
 }
@@ -463,8 +463,10 @@ nav .logo-link {
     }
   }
 }
-.looking-for h3, h6{
-  color: $text-white;
+.looking-for { 
+    h3, h6{
+    color: $text-white;
+  }
 }
 .icon-title {
   padding-top: 25px;
