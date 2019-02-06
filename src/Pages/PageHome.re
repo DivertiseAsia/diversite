@@ -20,11 +20,12 @@ let make = (_children) => {
           <p>(string("specialize in Artificial Intelligence, VR, and other cutting-edge technologies.")) </p>
         </div>
       </div>
+      <div className="homepage_menu-bg" />
       <div className="section-ourgoal -text-center">
         <div className="container">
           <h3 className="pt-5">(string("Our goal is to be the technical partner for startups in Asia"))</h3>
           <p className="pt-5 pb-5">(string("especially those wanting to specialize in Artificial Intelligence, Games & VR, and other cutting-edge technologies."))</p>
-          <div className="row flex-wrap justify-content-center"> 
+          <div className="row flex-wrap justify-content-center">
             <div className="col-sm-4 pb-5 -text-center"> 
               <ImageBackground className="mb-3" src=ourgoal1 />
               <h6>(string("Applications & Platforms")) </h6>
@@ -41,7 +42,7 @@ let make = (_children) => {
         </div>
       </div>
       <div className="section-ourwork-header">
-        <div className="container -text-center">
+        <div className="container -text-center -text-uppercase pb-5 pt-5">
           <h3>(string("What We Cand Do"))</h3>           
         </div>
       </div>
@@ -56,23 +57,23 @@ let make = (_children) => {
         <div className="container -text-center">
           <h3 className="-text-uppercase pb-5 pt-5">(string("Let Us Help You"))</h3>
           <div className="row"> 
-            <div className="col-sm-4 letushelp_col"> 
+            <div className="col-sm-12 col-md-4 letushelp_col"> 
               <div>
                 <h5>(string("Tech Consultant"))</h5>
                 <ImageBackground src=techcon />
                 <p>(string("Something about we have tech specialist....."))</p>
               </div>
             </div>
-            <div className="col-sm-4 letushelp_col"> 
+            <div className="col-sm-12 col-md-4 letushelp_col"> 
               <div>
                 <h5>(string("Launch your idea"))</h5>
                 <ImageBackground src=launch />
                 <p>(string("If you have a product idea but don't know where to begin, our team of developers will help make your idea come to live."))</p>
               </div>
             </div>
-            <div className="col-sm-4 letushelp_col"> 
+            <div className="col-sm-12 col-md-4 letushelp_col"> 
               <div>
-                <h5>(string("Bussimess Optimization"))</h5>
+                <h5>(string("Business Optimization"))</h5>
                 <ImageBackground src=optimize />
                 <p>(string("Something about moving your business online to optimize it"))</p>
               </div>
