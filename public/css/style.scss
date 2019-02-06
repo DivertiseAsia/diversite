@@ -102,6 +102,9 @@ a {
 .-text-uppercase { text-transform: uppercase; }
 .-lineheight-large { line-height: 2em; }
 .-lineheight-small { line-height: 0em; }
+.-border-radius { border-radius: $border-radius; }
+.-bg-grey { background-color: $bg-grey; }
+.-bg-color1 { background-color: $bg-color1}
 .bg-gradient-color1 { background: $bg-gradient1; }
 .bg-gradient-color2 { background: $bg-gradient2; }
 
@@ -112,14 +115,19 @@ a {
 
 .text-white { color: $text-white; }
 .text-color1 { color: $text-color1 !important; }
+.letter-spacing { letter-spacing: 0.15em; }
 
 .icon svg {
   height: 35px;
+}
+.icon-bag svg, .icon-clock svg {
+  height: 40px ;
 }
 
 ul li {
   list-style-type: none;
   color: $text-color1;
+  line-height: 2em;
 }
 a:hover { text-decoration: none; }
 /* ------------- Bootstrap Elements --------------*/
@@ -133,6 +141,7 @@ a:hover { text-decoration: none; }
 .image-background { 
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 .page-content-container {
   overflow-x: hidden !important;
@@ -147,6 +156,9 @@ a:hover { text-decoration: none; }
 ::-webkit-scrollbar-thumb:vertical {
     border-radius: $border-radius;
     background-color: grey;
+}
+.section-header {
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
 }
 /* ------------- Navigation Bar ------------- */
 
@@ -319,6 +331,7 @@ nav .logo-link {
     text-shadow: $text-shadow;
   }
 }
+
 .section-ourgoal {
   .image-background {
     height: 80px;
@@ -402,23 +415,74 @@ nav .logo-link {
     }
   }
 }
+
 /* ------------ Internship Page ------------ */
+.footer-intern { margin-bottom: -1px; }
+.intership-program {
+  padding: 20px;
+}
 .intership-list {
   .image-background {
-    padding: 70px 0 40px 0;
+    padding: 68px 0 40px 0;
     background-color: #2d506d;
     color: white;
-    height: 180px;
+    height: 200px;
+    border-radius : $border-radius;
+    opacity: 0.5;
   }
-  h4{ color: $text-white;}
-  .read-details { display: none; }
+  .read-details { opacity: 0; padding-left: 15px; }
+  .program-list-container {
+    position: relative;
+  }
+  .program-list-container:hover {
+    transition: $transition;
+    .image-background {
+      opacity: 0.2;
+      transition: $transition;
+    }
+    .read-details {
+      opacity: 1;
+      z-index: 5;
+      color: $text-color2;
+      font-weight: bold;
+      transition: $transition;
+    }
+  }
+  .content-program {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    margin-top: 70px;
+    h4 { 
+      color: $text-white;
+      padding-left: 20px;
+      padding-top: 10px;
+    }
+  }
 }
-.intership-list:hover {
-  .read-details { 
-    display: block; 
-    transition: 0.5s ease;
-    color: $text-color2;
+.looking-for h3, h6{
+  color: $text-white;
+}
+.icon-title {
+  padding-top: 25px;
+}
+.footer-title {
+  background: linear-gradient( #149992 , #149992);
+  margin-bottom: -1px;
+  padding: 30px 60px 20px 60px;
+  text-align: center;
+  a{
+    font-weight: $font-weight-bold;
+    padding-left: 5px;
   }
+  a:hover{
+    font-weight: $font-weight-bold;
+    color: $text-white;
+  }
+  p { color: $text-white ;}
+}
+.team-benefits {
+  padding: 10px 40px;
 }
 /* ------------------------------------ RESPONSIVE --------------------------------------*/
 
@@ -483,7 +547,11 @@ and (max-width: 768px) {
 
 /* -------- Phones ---------*/
 @media only screen
-and (max-width: 576px) {}
+and (max-width: 576px) {
+  .team-benefits {
+    padding: 15px 10px;
+  }
+}
 
 /* -------- Small Phones ---------*/
 @media only screen

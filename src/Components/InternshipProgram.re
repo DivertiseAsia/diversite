@@ -11,17 +11,24 @@ let make =
       ~title: string,
       ~imageURL: string,
       ~href: string,
+      ~iconType: iconType,
       children: array(ReasonReact.reactElement)
     ) => {
   ...component,
   render: _self => {
-    <div className={"col-6 intership-program " ++ Js.Option.getWithDefault("intership-program-default", className)}>
+    <div className={"col-md-6 col-xs-12 intership-program " ++ Js.Option.getWithDefault("intership-program-default", className)}>
         <Link className="intership-list" href=(href)>
-            <ImageBackground src=(imageURL)>
-                <h4>(string(title))</h4>
-                <div className="content"> ...children </div>
-                <p className="read-details">(string("Read details >"))</p>
-            </ImageBackground>
+            <div className="program-list-container -border-radius -bg-color1">
+                <div className="content-program">
+                    <div className="d-flex justify-content-center">
+                        <Icon iconType=(iconType) />
+                        <h4>(string(title))</h4>
+                    </div>
+                    <p className="read-details">(string("Read details >"))</p>
+                </div>
+                <ImageBackground src=(imageURL)>
+                </ImageBackground>
+            </div>
         </Link>
     </div>;
   },
