@@ -18,7 +18,7 @@ let make = (_children) => {
       <div className="container"> 
           <div className="row pt-5 d-block">
             <h3><Icon className="mr-4" iconType=Pen />{string("What are the requirements?")}</h3>
-              <ul className="p-4 pl-5 -lineheight-large">
+              <ul className="ul-li-padding-none p-4 pl-5 -lineheight-large">
                 <li> {string("- Thai citizen")}</li>
                 <li> {string("- Strong communication skills")}</li>
                 <li> {string("- Minimum 2.50 GPA")}</li>
@@ -31,7 +31,7 @@ let make = (_children) => {
           </div>
           <div className="row pt-5 d-block">
             <h3><Icon className="mr-4" iconType=Pen />{string("What will I be doing?")}</h3>
-              <ul className="p-4 pl-5 -lineheight-large">
+              <ul className="ul-li-padding-none p-4 pl-5 -lineheight-large">
                 <li> {string("- Working in game/ai projects")}</li>
                 <li> {string("- Learn new skills and implement them into your projects.")}</li>
                 <li> {string("- Work at our office at BTS Chidlom station Monday-Friday 10:00-8:00")}</li>
@@ -44,10 +44,10 @@ let make = (_children) => {
           </div>
           <div className="row pt-5 d-block">
           <h3><Icon className="mr-4" iconType=Pen />{string("When can I start?")}</h3>
-            <ul className="p-4 pl-5">
+            <div className="ul-li-padding-none p-4 pl-5">
               <p> {string("It is recomended to apply 1-2 months prior to start date.")}</p>
               <p> {string("You are required to apply for minimum of 2 months")}</p>
-            </ul>
+            </div>
         </div>
       </div>
       <div className="footer-intern bg-gradient-color2"> 

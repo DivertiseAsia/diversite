@@ -20,7 +20,7 @@ let make =
         <Link className="intership-list" href=(href)>
             <div className="program-list-container -border-radius -bg-color1">
                 <div className="content-program">
-                    <div className="d-flex justify-content-center">
+                    <div className="d-flex justify-content-center align-items-center">
                         <Icon iconType=(iconType) />
                         <h4>(string(title))</h4>
                     </div>

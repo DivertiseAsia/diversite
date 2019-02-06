@@ -560,4 +560,12 @@ and (max-width: 576px) {
 
 /* -------- Small Phones ---------*/
 @media only screen
-and (max-width: 400px) {}
+and (max-width: 400px) {
+  .intership-list .content-program h4 {
+    padding-left: 10px;
+    font-size: 16px;
+  }
+  .ul-li-padding-none {
+    padding: 15px 0 !important;
+  }
+}
