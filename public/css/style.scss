@@ -2,9 +2,10 @@ $font-size-small: 1rem;
 $font-size-medium: 2rem;
 $font-weight-normal: 300;
 $font-weight-medium: 400;
-$font-weight-bold: 500;
+$font-weight-bold: 700;
 $font-default: 'Open Sans', sans-serif;
 $font-header: 'Orkney', sans-serif;
+$lineheigh: 1.8em;
 
 $bg-grey: #eaeaea;
 $bg-color1: #2d506d;
@@ -12,16 +13,23 @@ $bg-color2: #23a399;
 $text-white: white;
 $text-color1: #2d506d;
 $text-color2:#23a399;
+$text-color2-light: #a4dad4;
 $border-grey: #eaeaea;
 
-$border-default: solid 1px;
-$border-radius: 20px;
+$bg-gradient1: linear-gradient( #2d506d 70%, #1b4059);
+$bg-gradient2: linear-gradient( #52c4bb , #14918a);
+$bg-gradient-white: linear-gradient( #ffffff 70% , #dedede);
 
-$text-shadow: 2px 2px 2px black;
+$border-default: solid 2px;
+$border-radius: 8px;
+
+$text-shadow: 2px 2px 2px grey;
 
 $transition: all 0.3s ease-out;
 
 $header-height: 60px;
+$frontpage-section-img-height: 350px;
+$frontpage-section-height: 300px; 
 
 html, body, #container {
   min-width: 100vw;
@@ -35,12 +43,14 @@ html {
   color: $text-color1;
   font-family: $font-default;
   font-weight: $font-weight-normal;
+  line-height: $lineheigh;
 }
 * {
   padding: 0;
   margin: 0;
   font-family: $font-default;
   font-weight: $font-weight-normal;
+  line-height: $lineheigh;
 }
 
 h1 { font-size: 2.5em; }
@@ -53,6 +63,7 @@ h1, h2, h3, h4, h5, h6 {
   color: $text-color1;
   font-family: $font-header;
   font-weight: $font-weight-bold;
+  line-height: 1.4em;
 }
 p { 
   color: $text-color1; 
@@ -90,10 +101,11 @@ a {
 .-text-uppercase { text-transform: uppercase; }
 .-lineheight-large { line-height: 2em; }
 .-lineheight-small { line-height: 0em; }
+
 .-bg-grey { background-color: $bg-grey; }
 .-bg-color1 { background-color: $bg-color1}
-.bg-gradient-color1 { background: linear-gradient( #2d506d 70%, #1b4059)}
-.bg-gradient-color2 { background: linear-gradient( #52c4bb , #14918a)}
+.bg-gradient-color1 { background: $bg-gradient1; }
+.bg-gradient-color2 { background: $bg-gradient2; }
 
 .-boxshadow {
     box-shadow: 2px 2px 12px 0px #cecece;
@@ -103,8 +115,6 @@ a {
 .text-white { color: $text-white; }
 .text-color1 { color: $text-color1 !important; }
 
-
-/* ------------- Icon ------------- */
 .icon svg {
   height: 35px;
 }
@@ -112,7 +122,6 @@ a {
   height: 40px ;
 }
 
-/* ------------- ul li a ------------- */
 ul li {
   list-style-type: none;
   color: $text-color1;
@@ -127,9 +136,9 @@ a:hover { text-decoration: none; }
 
 /* -------------- Project Elements ----------------*/
 
-.bg-gradient-header { 
-  background: linear-gradient( #2d506d 70%, #1b4059); 
-  color: $text-white;
+.image-background { 
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* ------------- Navigation Bar ------------- */
@@ -153,6 +162,8 @@ nav.nav {
   font-weight: $font-weight-medium;
   color: $text-white;
   font-family: $font-header;
+  flex-direction: column;
+  align-items: center;
 }
 .nav .nav-container > div {
   display: inline-block;
@@ -182,27 +193,26 @@ nav .logo-link {
 .nav-container-loggedin {
   padding-top: 0.5em;
 }
-
+.nav a::after, .btn-drop::after {
+  content: "";
+}
 /* ------ Navigation Link Animation ------ */
 
 .nav a:hover, .btn-drop:hover {
   cursor: pointer;
   text-decoration: none;
-  font-weight: $font-weight-bold;
 }
 .nav a:not(.logo-link):not(.btn)::after, .btn-drop::after {
-  background: $bg-grey;
-  height: 0;
-  width: 3px;
+  background: $text-white;
+  height: 1.5px;
+  margin-top: 2px;
+  width: 0;
   /* content: ""; hiding animation for now */
-  position: relative;
-  transition: 0.4s;
-  margin-left: 5px;
-  vertical-align: top;
-  display: inline-block;
+  display: block;
+  transition: $transition;
  }
  .nav a:not(.btn):hover::after, .btn-drop:hover::after {
-  height: 1.2em;
+  width: 35px;
 }
 /* ----- Amazing Nav Icon Toggle Animation ------*/
 
@@ -271,6 +281,82 @@ nav .logo-link {
   background-size: cover;
 
   height: 100vh;
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  .container {
+    max-width: 600px;
+    margin-left: 50px;
+  }
+  h1 {
+    text-transform: uppercase;
+    color: $text-white;
+    text-shadow: $text-shadow;
+  }
+  p {
+    color: $text-white;
+    text-shadow: $text-shadow;
+  }
+}
+
+.section-ourgoal {
+  .image-background {
+    height: 80px;
+    background-size: contain;
+  }
+}
+.frontpage-section {
+  background: $bg-gradient1;
+  height: $frontpage-section-height;
+  overflow: visible;
+  > div {
+    padding: 0 60px;
+    width: 100vw;
+    margin: auto;
+    max-width: 1200px;
+  }
+  .row { justify-content: space-between; }
+  .image-background {
+    height: $frontpage-section-img-height;
+    width: $frontpage-section-img-height * 1.5;
+    background-size: contain;
+    margin-top: $frontpage-section-height/2 - $frontpage-section-img-height/2;
+  }
+  h4 {
+    text-transform: uppercase;
+    color: $text-white; 
+  }
+  .content { color: $text-color2-light; }
+  .btn { 
+    @include btn(transparent, $text-color2-light, $text-color2-light);
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.frontpage-section:nth-child(even) {
+  background: $bg-gradient-white;
+  .row { flex-direction: row-reverse; }
+  h4, .content { color: $text-color1 }
+  .btn { @include btn(transparent, $bg-color1, $bg-color1) }
+}
+.section-letushelp {
+  background: $bg-gradient2;
+  .letushelp_col {
+    > div {
+      background-color: $text-color2-light;
+      height: 400px;
+      text-align: center;
+      border-radius: $border-radius;
+      padding: 40px;
+    }
+    h5 { text-transform: uppercase; }
+    .image-background {
+      background-size: contain;
+      height: 180px;
+      width: 50%;
+      margin: auto;
+    }
+  }
 }
 
 /* ------------ Internship Page ------------ */
@@ -338,12 +424,24 @@ and (max-width: 768px) {
     height: 0;
     margin-top: 0;
     background: $bg-color1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    a {
+      width: 100vw;
+    }
   }
   .nav input:checked ~ .nav-container {
-    height: 50vh;
-    display: block;
+    height: 300px;
+    display: flex;
     box-shadow: 2px 2px 12px 0px #cecece;
     box-shadow: 2px 10px 12px 0px rgba(0,0,0,0.2);
+  }
+  /*Tablet - Home Page*/
+  .hero {
+    height: 60vh;
+    h1 { font-size: 2rem }
+    .container { margin: auto; }
   }
 }
 
