@@ -9,9 +9,9 @@ let make = (_children) => {
     <MainPage>
       <div className="section-header bg-gradient-color1"> 
         <div className="container py-5"> 
-          <div className="row d-flex align-items-baseline">
-            <h1 className="text-white pr-3 letter-spacing"> {string("INTERNSHIP")}</h1>
-            <h2 className="text-white letter-spacing">{string("-  ART & DESIGN")}</h2>
+          <div className="row d-flex align-items-baseline -text-uppercase">
+            <h1 className="text-white pr-3 letter-spacing"> {string("Internship")}</h1>
+            <h2 className="text-white letter-spacing">{string("-  Art & Design")}</h2>
           </div>
         </div>
       </div>
@@ -53,7 +53,7 @@ let make = (_children) => {
       <div className="footer-intern bg-gradient-color2"> 
         <div className="container pt-5 pb-4"> 
           <div className="row d-block text-center text-white">
-            <h2 className="text-white">{string("READY TO APPLY?")}</h2>
+            <h2 className="text-white -text-uppercase">{string("Ready To Apply?")}</h2>
             <div className="d-flex justify-content-center flex-wrap">
               <p>{string("Send us your resume and porfolio to ")}</p>
               <p><a className="pr-1 pl-1 -font-weight-bold text-color1 -text-underline-none" href="contact@divertise.asia"> {string("careers@divertise.asia")} </a></p>

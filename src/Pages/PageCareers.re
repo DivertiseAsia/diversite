@@ -13,20 +13,20 @@ let make = (_children) => {
     <div className="section-header bg-gradient-color1"> 
       <div className="container py-5"> 
         <div className="row d-flex align-items-baseline">
-          <h1 className="text-white pr-3 letter-spacing"> {string("CAREERS")}</h1>
+          <h1 className="text-white pr-3 letter-spacing -text-uppercase"> {string("Creers")}</h1>
         </div>
       </div>
     </div>
     <div className="container"> 
-      <div className="row py-5 d-block text-center">
-        <h3>{string("POSITIONS AT DIVERTISE ASIA")}</h3>
+      <div className="row py-5 d-block text-center -text-uppercase">
+        <h3>{string("Positions at Divertise Asia")}</h3>
         <div className="row pt-5">
-          <InternshipProgram iconType=Code title="DELVELOPER" imageURL=type1 href=Links.careers> </InternshipProgram>
+          <InternshipProgram iconType=Code title="DEVELOPER" imageURL=type1 href=Links.careers> </InternshipProgram>
           <InternshipProgram iconType=Pen title="DESIGN ENGINEER" imageURL=type2 href=Links.careers> </InternshipProgram>
         </div> 
       </div>
       <div className="row d-block text-center">
-        <h3>{string("INTERSHIP PROGRAM")}</h3>
+        <h3 className="-text-uppercase">{string("Internship Program")}</h3>
         <p className="col-md-10 col-sm-12 program-text-title">{string("We focus on finding creative ways to work with games and AI. You will get a chance to get your hands on game development and work closely with our friendly team of developers and designers.")}</p>
         <div className="row">
           <InternshipProgram iconType=Code title="GAMES & AI DEV" imageURL=type3 href=Links.careers className="image-background"> </InternshipProgram>
@@ -55,7 +55,7 @@ let make = (_children) => {
     </div>
     <div className="-bg-color1 ">
     <div className="container pt-5 text-center looking-for">
-      <h3 className="-text-uppercase">{string("TEAM BENEFITS")}</h3>
+      <h3 className="-text-uppercase">{string("Team Benefits")}</h3>
       <div className="row py-5 justify-content-center">
         <div className="col-6 col-md pb-3 team-benefits"> 
           <Icon iconType=Laptop />

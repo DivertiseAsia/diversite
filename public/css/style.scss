@@ -420,10 +420,10 @@ nav .logo-link {
 
 /* ------------ Internship Page ------------ */
 .footer-intern { margin-bottom: -2px; }
-.intership-program {
+.internship-program {
   padding: 20px;
 }
-.intership-list {
+.internship-list {
   .image-background {
     padding: 68px 0 40px 0;
     background-color: #2d506d;
@@ -561,7 +561,7 @@ and (max-width: 576px) {
 /* -------- Small Phones ---------*/
 @media only screen
 and (max-width: 400px) {
-  .intership-list .content-program h4 {
+  .internship-list .content-program h4 {
     padding-left: 10px;
     font-size: 16px;
   }

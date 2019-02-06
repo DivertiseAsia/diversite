@@ -16,8 +16,8 @@ let make =
     ) => {
   ...component,
   render: _self => {
-    <div className={"col-md-6 col-xs-12 intership-program " ++ Js.Option.getWithDefault("intership-program-default", className)}>
-        <Link className="intership-list" href=(href)>
+    <div className={"col-md-6 col-xs-12 internship-program " ++ Js.Option.getWithDefault("internship-program-default", className)}>
+        <Link className="internship-list" href=(href)>
             <div className="program-list-container -border-radius -bg-color1">
                 <div className="content-program">
                     <div className="d-flex justify-content-center align-items-center">
