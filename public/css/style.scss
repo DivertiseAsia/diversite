@@ -302,9 +302,10 @@ nav .logo-link {
 }
 .homepage_menu-bg {
   height: $header-height;
-  width: 100vw - $scrollbar-width;
+  margin-top: - $header-height;
+  width: 100%;
   background: $bg-color2;
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 1;
 }
