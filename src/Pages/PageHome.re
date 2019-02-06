@@ -57,23 +57,23 @@ let make = (_children) => {
         <div className="container -text-center">
           <h3 className="-text-uppercase pb-5 pt-5">(string("Let Us Help You"))</h3>
           <div className="row"> 
-            <div className="col-sm-4 letushelp_col"> 
+            <div className="col-sm-12 col-md-4 letushelp_col"> 
               <div>
                 <h5>(string("Tech Consultant"))</h5>
                 <ImageBackground src=techcon />
                 <p>(string("Something about we have tech specialist....."))</p>
               </div>
             </div>
-            <div className="col-sm-4 letushelp_col"> 
+            <div className="col-sm-12 col-md-4 letushelp_col"> 
               <div>
                 <h5>(string("Launch your idea"))</h5>
                 <ImageBackground src=launch />
                 <p>(string("If you have a product idea but don't know where to begin, our team of developers will help make your idea come to live."))</p>
               </div>
             </div>
-            <div className="col-sm-4 letushelp_col"> 
+            <div className="col-sm-12 col-md-4 letushelp_col"> 
               <div>
-                <h5>(string("Bussimess Optimization"))</h5>
+                <h5>(string("Business Optimization"))</h5>
                 <ImageBackground src=optimize />
                 <p>(string("Something about moving your business online to optimize it"))</p>
               </div>
