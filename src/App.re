@@ -25,6 +25,7 @@ let make = _children => {
     | ([x]) when routeMatches(x, Links.home) => <PageHome />
     | ([x]) when routeMatches(x, Links.internship) => <PageInternship />
     | ([x]) when routeMatches(x, Links.careers) => <PageCareers />
+    | ([x]) when routeMatches(x, Links.ourwork) => <PageOurWork />
     | _ => <PageHome />
     };
   },
