@@ -8,7 +8,7 @@ let component = ReasonReact.statelessComponent("PageOurWork");
 let make = (_children) => {
   ...component,
   render: _self => {
-    <MainPage>
+    <MainPage className="page-ourwork">
     <div className="section-header bg-gradient-color1"> 
       <div className="container py-5"> 
         <div className="row d-flex align-items-baseline">

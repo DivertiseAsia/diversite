@@ -155,6 +155,8 @@ a:hover { text-decoration: none; }
 .main-content { width: 100vw; }
 ::-webkit-scrollbar {
   width: $scrollbar-width;
+  background-color: white;
+  z-index: 99;
 }
 ::-webkit-scrollbar-track-piece  {
   width: 0;
@@ -500,6 +502,15 @@ nav .logo-link {
 }
 
 /* ---------- Portfolio Page ----------- */
+
+.page-ourwork .page-content-container {
+  z-index: 0;
+}
+.page-ourwork .section-header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
 .section-portfolio {
   padding-top: 60px;
   padding-bottom: 60px;
