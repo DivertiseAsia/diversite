@@ -113,10 +113,13 @@ a {
     box-shadow: 2px 2px 12px 0px #cecece;
     box-shadow: 2px 2px 12px 0px rgba(0,0,0,0.2);
 }
+.-text-header-shadow{
+  text-shadow: 5px 5px 13px #4e4e4e;
+}
 
 .text-white { color: $text-white; }
 .text-color1 { color: $text-color1 !important; }
-.letter-spacing { letter-spacing: 0.15em; }
+.letter-spacing { letter-spacing: 0.1em; }
 
 .icon svg {
   height: 35px;
@@ -162,6 +165,8 @@ a:hover { text-decoration: none; }
 }
 .section-header {
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+  z-index: -10;
+  position: relative;
 }
 /* ------------- Navigation Bar ------------- */
 
@@ -421,11 +426,11 @@ nav .logo-link {
 }
 
 /* ------------ Internship Page ------------ */
-.footer-intern { margin-bottom: -1px; }
-.intership-program {
+.footer-intern { margin-bottom: -2px; }
+.internship-program {
   padding: 20px;
 }
-.intership-list {
+.internship-list {
   .image-background {
     padding: 68px 0 40px 0;
     background-color: #2d506d;
@@ -473,7 +478,7 @@ nav .logo-link {
   padding-top: 25px;
 }
 .footer-title {
-  background: linear-gradient( #149992 , #149992);
+  background: linear-gradient(#149992, #14918a);
   margin-bottom: -1px;
   padding: 30px 60px 20px 60px;
   text-align: center;
@@ -488,7 +493,10 @@ nav .logo-link {
   p { color: $text-white ;}
 }
 .team-benefits {
-  padding: 10px 40px;
+  padding: 10px 30px;
+}
+.program-text-title {
+  margin: 0 auto;
 }
 /* ------------------------------------ RESPONSIVE --------------------------------------*/
 
@@ -561,4 +569,12 @@ and (max-width: 576px) {
 
 /* -------- Small Phones ---------*/
 @media only screen
-and (max-width: 400px) {}
+and (max-width: 400px) {
+  .internship-list .content-program h4 {
+    padding-left: 10px;
+    font-size: 16px;
+  }
+  .ul-li-padding-none {
+    padding: 15px 0 !important;
+  }
+}
