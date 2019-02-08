@@ -2,7 +2,7 @@ open ReasonReact;
 
 let component = ReasonReact.statelessComponent("PageOurWork");
 [@bs.module] external phoneportrait : string = "../../../../public/images/port_phone-portrait.png";
-[@bs.module] external desktop : string = "../../../../public/images/port_desktop.png";
+[@bs.module] external desktop : string = "../../../../public/images/port_desktop.gif";
 [@bs.module] external iconhtml5 : string = "../../../../public/images/html5-logo.png";
 [@bs.module] external phonehorizon : string = "../../../../public/images/port_phone-horizontal.png";
 [@bs.module] external tablet : string = "../../../../public/images/port_tablet-hotizontal.png";
