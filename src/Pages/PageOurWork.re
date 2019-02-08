@@ -3,7 +3,6 @@ open ReasonReact;
 let component = ReasonReact.statelessComponent("PageOurWork");
 [@bs.module] external phoneportrait : string = "../../../../public/images/port_phone-portrait.png";
 [@bs.module] external desktop : string = "../../../../public/images/port_desktop.png";
-[@bs.module] external iconhtml5 : string = "../../../../public/images/html5-logo.png";
 [@bs.module] external phonehorizon : string = "../../../../public/images/port_phone-horizontal.png";
 [@bs.module] external tablet : string = "../../../../public/images/port_tablet-hotizontal.png";
 
@@ -44,8 +43,9 @@ let make = (_children) => {
           <h2>(string("Ketawa Pet Friendly Hotel Website"))</h2>
           <div className="row">
             <div className="col-md-8 port_icon-container">
-              <div className="port_icon"> <Icon iconType=Code /> </div>
-              <div className="port_icon"> <ImageBackground src=iconhtml5 /> </div>
+              <TechIcon tech="python" />
+              <TechIcon tech="html5" />
+              <TechIcon tech="graphic design" />
               <div className="port_icon port_icon-color2"> <h6>(string("Graphic Designs"))</h6> </div>
             </div>
             <div className="col-md-4 -text-right">
@@ -67,7 +67,6 @@ let make = (_children) => {
           <div className="row">
             <div className="col-md-8 port_icon-container">
               <div className="port_icon"> <Icon iconType=Code /> </div>
-              <div className="port_icon"> <ImageBackground src=iconhtml5 /> </div>
               <div className="port_icon port_icon-color2"> <h6>(string("Graphic Designs"))</h6> </div>
             </div>
             <div className="col-md-4 -text-right">
@@ -85,7 +84,6 @@ let make = (_children) => {
           <div className="row">
             <div className="col-md-8 port_icon-container">
               <div className="port_icon"> <Icon iconType=Code /> </div>
-              <div className="port_icon"> <ImageBackground src=iconhtml5 /> </div>
               <div className="port_icon port_icon-color2"> <h6>(string("Graphic Designs"))</h6> </div>
             </div>
             <div className="col-md-4 -text-right">
