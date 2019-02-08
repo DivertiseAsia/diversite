@@ -2,10 +2,12 @@ open ReasonReact;
 
 let component = ReasonReact.statelessComponent("PageOurWork");
 [@bs.module] external phoneportrait : string = "../../../../public/images/port_phone-portrait.png";
-[@bs.module] external desktop : string = "../../../../public/images/port_desktop.gif";
+[@bs.module] external desktop : string = "../../../../public/images/port_desktop.png";
 [@bs.module] external iconhtml5 : string = "../../../../public/images/html5-logo.png";
 [@bs.module] external phonehorizon : string = "../../../../public/images/port_phone-horizontal.png";
 [@bs.module] external tablet : string = "../../../../public/images/port_tablet-hotizontal.png";
+[@bs.module] external ketawadesktop : string = "../../../../public/images/website-ketawa-d.jpg";
+[@bs.module] external desktopstand : string = "../../../../public/images/port_desktop-stand.png";
 
 let make = (_children) => {
   ...component,
@@ -34,29 +36,38 @@ let make = (_children) => {
     </div>
     <div className="buffer" />
     <div>
-      <PortfolioSection title="Ketawa Pet Friendly Hotel Website" href="http://www.ketawahotel.com/" linkText="Visit Website">(string("Some Texts")) </PortfolioSection>
-      <div className="section-portfolio">
-        <div className="container">
-          <div className="port_img-container row">
-            <ImageBackground className="port_img img-phone-portrait col-4" src=phoneportrait />
-            <ImageBackground className="port_img img-desktop col-8" src=desktop />
-          </div>
-          <h2>(string("Ketawa Pet Friendly Hotel Website"))</h2>
-          <div className="row">
-            <div className="col-md-8 port_icon-container">
-              <div className="port_icon"> <Icon iconType=Code /> </div>
-              <div className="port_icon"> <ImageBackground src=iconhtml5 /> </div>
-              <div className="port_icon port_icon-color2"> <h6>(string("Graphic Designs"))</h6> </div>
+    <div className="section-portfolio">
+    <div className="container">
+      <div className="port_img-container row">
+        <ImageBackground className="port_img img-phone-portrait col-4" src=phoneportrait />
+        <div className="col-8">
+          <div className="desktop-container">
+            <div className="desktop">
+              <div className="desktop-frame">
+                <ImageBackground className="port_desktop-scroll scroll-long" src=ketawadesktop />
+              </div>
+              <div className="desktop-bottom-frame" />
             </div>
-            <div className="col-md-4 -text-right">
-              <Link className="" href="">(string("Visit Website >"))</Link>
-            </div>
-          </div>
-          <div className="port_texts">
-            <p>(string("Divertise Asia website concept is simplicity with a drop of fun and friendliness. The website is currently aimed at prospective employees. As such, we highlight our values and projects. It is coded in pure HTML and Javascript, however the CSS is a result of a SCSS file. The full source code and hosting is located on Github."))</p>
+            <ImageBackground className="desktop-stand" src=desktopstand />
           </div>
         </div>
       </div>
+      <h2>(string("Ketawa Pet Friendly Hotel Website"))</h2>
+      <div className="row">
+        <div className="col-md-8 port_icon-container">
+          <div className="port_icon"> <Icon iconType=Code /> </div>
+          <div className="port_icon"> <ImageBackground src=iconhtml5 /> </div>
+          <div className="port_icon port_icon-color2"> <h6>(string("Graphic Designs"))</h6> </div>
+        </div>
+        <div className="col-md-4 -text-right">
+          <Link className="" href="">(string("Visit Website >"))</Link>
+        </div>
+      </div>
+      <div className="port_texts">
+        <p>(string("Divertise Asia website concept is simplicity with a drop of fun and friendliness. The website is currently aimed at prospective employees. As such, we highlight our values and projects. It is coded in pure HTML and Javascript, however the CSS is a result of a SCSS file. The full source code and hosting is located on Github."))</p>
+      </div>
+    </div>
+  </div>
       <div className="section-portfolio">
         <div className="container">
           <div className="port_img-container row">

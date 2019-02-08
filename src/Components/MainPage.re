@@ -31,10 +31,10 @@ let make =
                     <div />
                 </div>
                 <div className="nav-container">
-                    <Link href="">(string("Home"))</Link>
-                    <Link href="">(string("Our Work"))</Link>
+                    <Link href=Links.home>(string("Home"))</Link>
+                    <Link href=Links.ourwork>(string("Our Work"))</Link>
                     <Link href="">(string("Contact"))</Link>
-                    <Link href="">(string("Careers"))</Link>
+                    <Link href=Links.careers>(string("Careers"))</Link>
                 </div> 
             </nav>,
             extraPageEndsElement,
