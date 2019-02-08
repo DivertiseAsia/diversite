@@ -33,7 +33,6 @@ let make = (_children) => {
     </div>
     <div className="buffer" />
     <div>
-      <PortfolioSection title="Ketawa Pet Friendly Hotel Website" href="http://www.ketawahotel.com/" linkText="Visit Website">(string("Some Texts")) </PortfolioSection>
       <div className="section-portfolio">
         <div className="container">
           <div className="port_img-container row">
