@@ -7,7 +7,7 @@ let make =
       ~className: option(string)=?,
       ~title: string,
       ~subtitle: option(string)=?,
-      _children
+      children
     ) => {
   ...component,
   render: _self => {
@@ -22,6 +22,9 @@ let make =
             }
           }
         </div>
+      </div>
+      <div className="container nav">
+        ...children
       </div>
     </div>;
   },
