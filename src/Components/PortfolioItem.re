@@ -29,6 +29,7 @@ type portfolioItem = {
 let make =
     (
       ~item:portfolioItem,
+      _children
     ) => {
   ...component,
   render: _self => {
@@ -38,15 +39,27 @@ let make =
           {
             (Belt.List.map(
                 item.images,
-                img => <PortfolioImage item={img} />
+                img => <PortfolioImage key={img.src} item={img} />
             )|> Belt.List.toArray |> ReasonReact.array)
           }
-          <ImageBackground className="port_img img-phone-portrait col-4" src=phoneportrait />
-          <ImageBackground className="port_img img-desktop col-8" src=desktop />
         </div>
         <h2>(string(item.title))</h2>
-        <div className="port_text content"> ...item.body </div>
-        <p className="port_link-seemore">(string("Read More >"))</p>
+        <div className="row">
+            <div className="col-md-8 port_icon-container">
+              {
+                (Belt.List.map(
+                  item.technologies,
+                  tech => <TechIcon key={tech} tech={tech} />
+                )|> Belt.List.toArray |> ReasonReact.array)
+              }
+            </div>
+            <div className="col-md-4 -text-right">
+              <Link className=" btn btn-line-color1" href="">(string("Get the Game Now"))</Link>
+            </div>
+        </div>
+        <div className="port_texts">
+          ...item.body
+        </div>
       </div>
     </div>;
   },
