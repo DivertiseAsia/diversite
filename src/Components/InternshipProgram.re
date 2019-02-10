@@ -1,6 +1,4 @@
 open ReasonReact;
-open Page;
-open Belt;
 open Icon;
 
 let component = ReasonReact.statelessComponent("InternshipProgram");
@@ -12,7 +10,7 @@ let make =
       ~imageURL: string,
       ~href: string,
       ~iconType: iconType,
-      children: array(ReasonReact.reactElement)
+      _children
     ) => {
   ...component,
   render: _self => {

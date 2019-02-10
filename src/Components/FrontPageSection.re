@@ -1,6 +1,4 @@
 open ReasonReact;
-open Page;
-open Belt;
 
 let component = ReasonReact.statelessComponent("FrontPageSection");
 
