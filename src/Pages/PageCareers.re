@@ -10,13 +10,7 @@ let make = (_children) => {
   ...component,
   render: _self => {
     <MainPage>
-    <div className="section-header bg-gradient-color2"> 
-      <div className="container py-5"> 
-        <div className="row d-flex align-items-baseline">
-          <h1 className="text-white pr-3 letter-spacing -text-uppercase -text-header-shadow"> {string("Careers")}</h1>
-        </div>
-      </div>
-    </div>
+      <PageHeader title="Careers" className="bg-gradient-color2" />
     <div className="container"> 
       <div className="row py-5 d-block text-center -text-uppercase">
         <h3>{string("Positions at Divertise Asia")}</h3>
