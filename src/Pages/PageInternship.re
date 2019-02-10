@@ -34,7 +34,7 @@ let make = (_children) => {
               <ul className="ul-li-padding-none ul-li-dash p-4 pl-5 -lineheight-large">
                 <li> {string("Working in game/ai projects")}</li>
                 <li> {string("Learn new skills and implement them into your projects.")}</li>
-                <li> {string("Work at our office at BTS Chidlom station Monday-Friday 10:00-8:00")}</li>
+                <li> {string("Work at our office at BTS Chidlom station Monday-Friday 10:00-18:00")}</li>
                 <li> {string("Hangout or play games together!")}</li>
                 <li> {string("Experience with computer graphic software (ex. Adobe Photoshop, Adobe illustrator etc.)")}</li>
                 <li> {string("Some experience with 3D or 2D art")}</li>
