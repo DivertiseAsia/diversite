@@ -41,7 +41,7 @@ let make = (_children) => {
     <div className="container">
       <div className="port_img-container row">
         <div className="col-8">
-          <PortfolioImage className="whay" pItem=(testItem) />
+          <PortfolioImage className="whay" item=(testItem) />
         </div>
       </div>
       <h2>(string("Ketawa Pet Friendly Hotel Website"))</h2>

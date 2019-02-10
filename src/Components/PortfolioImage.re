@@ -32,7 +32,7 @@ let getImageBorderImage = (borderType: portfolioImageBorder) => {
 let make =
     (
       ~className:option(string)=?,
-      ~pItem:portfolioImage,
+      ~item:portfolioImage,
       _children
     ) => {
   ...component,
@@ -42,15 +42,15 @@ let make =
       " " ++ 
       Js.Option.getWithDefault("", className) ++
       " " ++
-      Js.Option.getWithDefault("", pItem.className)}
+      Js.Option.getWithDefault("", item.className)}
     >
       <div className="desktop">
         <div className="desktop-frame">
-          <ImageBackground className="port_desktop-scroll scroll-long" src=pItem.src />
+          <ImageBackground className="port_desktop-scroll scroll-long" src=item.src />
         </div>
         <div className="desktop-bottom-frame" />
       </div>
-      <ImageBackground className="desktop-stand" src=getImageBorderImage(pItem.border) />
+      <ImageBackground className="desktop-stand" src=getImageBorderImage(item.border) />
     </div>
   },
 };
