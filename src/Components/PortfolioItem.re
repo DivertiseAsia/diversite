@@ -1,19 +1,8 @@
 open ReasonReact;
+open PortfolioImage;
 
 let component = ReasonReact.statelessComponent("PortfolioItemRe");
 
-type portfolioImageBorder =
-  | PhonePortrait
-  | PhoneLandscape
-  | Desktop
-  | Tablet
-;
-
-type portfolioImage = {
-  src: string,
-  border: portfolioImageBorder,
-  className: option(string),
-};
 type portfolioLinkType = 
   | Default
   | AppStore
@@ -46,6 +35,12 @@ let make =
     <div className={"section-portfolio " ++ Js.Option.getWithDefault("section-portfolio-default", item.className)}>
       <div className="container">
         <div className="port_img-container row">
+          {
+            (Belt.List.map(
+                item.images,
+                img => <PortfolioImage item={img} />
+            )|> Belt.List.toArray |> ReasonReact.array)
+          }
           <ImageBackground className="port_img img-phone-portrait col-4" src=phoneportrait />
           <ImageBackground className="port_img img-desktop col-8" src=desktop />
         </div>
