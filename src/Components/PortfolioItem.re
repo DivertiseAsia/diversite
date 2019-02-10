@@ -1,6 +1,4 @@
 open ReasonReact;
-open Page;
-open Belt;
 
 let component = ReasonReact.statelessComponent("PortfolioItemRe");
 
@@ -36,8 +34,8 @@ type portfolioItem = {
   technologies: list(string),
   body: array(ReasonReact.reactElement),
 };
-[@bs.module] external phoneportrait : string = "../../../../public/images/port_phone-portrait.png";
-[@bs.module] external desktop : string = "../../../../public/images/port_desktop.png";
+[@bs.module] external phoneportrait : string = "../../../../public/images/borders/port_phone-portrait.png";
+[@bs.module] external desktop : string = "../../../../public/images/borders/port_desktop.png";
 
 let make =
     (

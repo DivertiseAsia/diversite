@@ -1,6 +1,4 @@
 open ReasonReact;
-open Page;
-open Belt;
 
 let component = ReasonReact.statelessComponent("PortfolioImage");
 
@@ -17,26 +15,42 @@ type portfolioImage = {
   className: option(string),
 };
 
-[@bs.module] external phonePortraitImage : string = "../../../../public/images/port_phone-portrait.png";
-[@bs.module] external desktopImage : string = "../../../../public/images/port_desktop.png";
+[@bs.module] external phonePortraitImage : string = "../../../../public/images/borders/port_phone-portrait.png";
+[@bs.module] external phoneLandscapeImage : string = "../../../../public/images/borders/port_phone-horizontal.png";
+[@bs.module] external desktopImage : string = "../../../../public/images/borders/port_desktop.png";
+[@bs.module] external tabletHorizontalImage : string = "../../../../public/images/borders/port_tablet-hotizontal.png";
 
 let getImageBorderImage = (borderType: portfolioImageBorder) => {
   switch (borderType) {
   | PhonePortrait => phonePortraitImage
+  | PhoneLandscape => phoneLandscapeImage
   | Desktop => desktopImage
-  | _ => desktopImage
+  | Tablet => tabletHorizontalImage
   };
 }
 
 let make =
     (
-      ~item:portfolioImage,
-      ~className:option(string),
+      ~className:option(string)=?,
+      ~pItem:portfolioImage,
+      _children
     ) => {
   ...component,
   render: _self => {
-    <div className={"section-portfolio " ++ Js.Option.getWithDefault("section-portfolio-default", className)}>
-      <ImageBackground className="port_img img-phone-portrait col-4" src=getImageBorderImage(item.border) />
-    </div>;
+    <div className={
+      "desktop-container" ++
+      " " ++ 
+      Js.Option.getWithDefault("", className) ++
+      " " ++
+      Js.Option.getWithDefault("", pItem.className)}
+    >
+      <div className="desktop">
+        <div className="desktop-frame">
+          <ImageBackground className="port_desktop-scroll scroll-long" src=pItem.src />
+        </div>
+        <div className="desktop-bottom-frame" />
+      </div>
+      <ImageBackground className="desktop-stand" src=getImageBorderImage(pItem.border) />
+    </div>
   },
 };

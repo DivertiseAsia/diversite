@@ -1,12 +1,14 @@
 open ReasonReact;
+open PortfolioImage;
 
 let component = ReasonReact.statelessComponent("PageOurWork");
-[@bs.module] external phoneportrait : string = "../../../../public/images/port_phone-portrait.png";
-[@bs.module] external desktop : string = "../../../../public/images/port_desktop.png";
-[@bs.module] external phonehorizon : string = "../../../../public/images/port_phone-horizontal.png";
-[@bs.module] external tablet : string = "../../../../public/images/port_tablet-hotizontal.png";
-[@bs.module] external ketawadesktop : string = "../../../../public/images/website-ketawa-d.jpg";
-[@bs.module] external desktopstand : string = "../../../../public/images/port_desktop-stand.png";
+[@bs.module] external ketawadesktop : string = "../../../../public/projects/website-ketawa-d.jpg";
+
+let testItem:portfolioImage = {
+  src: ketawadesktop,
+  border:Desktop,
+  className: None
+};
 
 let make = (_children) => {
   ...component,
@@ -38,17 +40,8 @@ let make = (_children) => {
     <div className="section-portfolio">
     <div className="container">
       <div className="port_img-container row">
-        <ImageBackground className="port_img img-phone-portrait col-4" src=phoneportrait />
         <div className="col-8">
-          <div className="desktop-container">
-            <div className="desktop">
-              <div className="desktop-frame">
-                <ImageBackground className="port_desktop-scroll scroll-long" src=ketawadesktop />
-              </div>
-              <div className="desktop-bottom-frame" />
-            </div>
-            <ImageBackground className="desktop-stand" src=desktopstand />
-          </div>
+          <PortfolioImage className="whay" pItem=(testItem) />
         </div>
       </div>
       <h2>(string("Ketawa Pet Friendly Hotel Website"))</h2>
@@ -71,8 +64,8 @@ let make = (_children) => {
       <div className="section-portfolio">
         <div className="container">
           <div className="port_img-container row">
-            <ImageBackground className="port_img img-phone-portrait col-5 mr-5" src=phonehorizon />
-            <ImageBackground className="port_img img-desktop col-6" src=tablet />
+            <ImageBackground className="port_img img-phone-portrait col-5 mr-5" src=ketawadesktop />
+            <ImageBackground className="port_img img-desktop col-6" src=ketawadesktop />
           </div>
           <h2>(string("Kiki On the Run"))</h2>
           <div className="row">
