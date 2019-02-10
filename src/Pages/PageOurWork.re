@@ -1,14 +1,23 @@
 open ReasonReact;
-open PortfolioImage;
+open PortfolioItem;
 
 let component = ReasonReact.statelessComponent("PageOurWork");
 [@bs.module] external ketawadesktop : string = "../../../../public/projects/website-ketawa-d.jpg";
 
-let testItem:portfolioImage = {
-  src: ketawadesktop,
-  border:Desktop,
-  className: None
-};
+let ketawaPortfolio:portfolioItem = {
+  title: "Ketawa Pet Friendly Hotel Website",
+  className: None,
+  images: [
+    {
+      src: ketawadesktop,
+      border:Desktop,
+      className: None
+    }
+  ],
+  links: [],
+  technologies: ["Graphic Design"],
+  body: ([<div>(string("Some body text"))</div>] |> Belt.List.toArray),
+}
 
 let make = (_children) => {
   ...component,
@@ -37,30 +46,7 @@ let make = (_children) => {
     </div>
     <div className="buffer" />
     <div>
-    <div className="section-portfolio">
-    <div className="container">
-      <div className="port_img-container row">
-        <div className="col-8">
-          <PortfolioImage className="whay" item=(testItem) />
-        </div>
-      </div>
-      <h2>(string("Ketawa Pet Friendly Hotel Website"))</h2>
-      <div className="row">
-        <div className="col-md-8 port_icon-container">
-          <TechIcon tech="python" />
-          <TechIcon tech="html5" />
-          <TechIcon tech="graphic design" />
-          <div className="port_icon port_icon-color2"> <h6>(string("Graphic Designs"))</h6> </div>
-        </div>
-        <div className="col-md-4 -text-right">
-          <Link className="" href="">(string("Visit Website >"))</Link>
-        </div>
-      </div>
-      <div className="port_texts">
-        <p>(string("Divertise Asia website concept is simplicity with a drop of fun and friendliness. The website is currently aimed at prospective employees. As such, we highlight our values and projects. It is coded in pure HTML and Javascript, however the CSS is a result of a SCSS file. The full source code and hosting is located on Github."))</p>
-      </div>
-    </div>
-  </div>
+    <PortfolioItem item=(ketawaPortfolio) />
       <div className="section-portfolio">
         <div className="container">
           <div className="port_img-container row">
