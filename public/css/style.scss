@@ -134,6 +134,9 @@ ul li {
   color: $text-color1;
   line-height: 2em;
 }
+ul.ul-li-dash li:before {
+  content: "- ";
+}
 a:hover { text-decoration: none; }
 /* ------------- Bootstrap Elements --------------*/
 

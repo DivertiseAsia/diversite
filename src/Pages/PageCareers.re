@@ -10,13 +10,7 @@ let make = (_children) => {
   ...component,
   render: _self => {
     <MainPage>
-    <div className="section-header bg-gradient-color2"> 
-      <div className="container py-5"> 
-        <div className="row d-flex align-items-baseline">
-          <h1 className="text-white pr-3 letter-spacing -text-uppercase -text-header-shadow"> {string("Creers")}</h1>
-        </div>
-      </div>
-    </div>
+      <PageHeader title="Careers" className="bg-gradient-color2" />
     <div className="container"> 
       <div className="row py-5 d-block text-center -text-uppercase">
         <h3>{string("Positions at Divertise Asia")}</h3>
@@ -29,7 +23,7 @@ let make = (_children) => {
         <h3 className="-text-uppercase">{string("Internship Program")}</h3>
         <p className="col-md-10 col-sm-12 program-text-title">{string("We focus on finding creative ways to work with games and AI. You will get a chance to get your hands on game development and work closely with our friendly team of developers and designers.")}</p>
         <div className="row">
-          <InternshipProgram iconType=Code title="GAMES & AI DEV" imageURL=type3 href=Links.careers className="image-background"> </InternshipProgram>
+          <InternshipProgram iconType=Code title="APP & AI DEV" imageURL=type3 href=Links.careers className="image-background"> </InternshipProgram>
           <InternshipProgram iconType=Pen title="ART & DESIGN" imageURL=type4 href=Links.careers> </InternshipProgram>
         </div> 
       </div>
@@ -76,7 +70,6 @@ let make = (_children) => {
         <div className="col-6 col-md pb-3 team-benefits"> 
           <Icon iconType=Game />
           <h6 className="icon-title">{string("PC, consoles, and VR games at office")}</h6>
-          /* <h6 className="">{string("VR games at office")}</h6> */
         </div>
       </div>
     </div>
