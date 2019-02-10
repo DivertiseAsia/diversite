@@ -17,6 +17,7 @@ type portfolioImage = {
 
 [@bs.module] external phonePortraitImage : string = "../../../../public/images/borders/port_phone-portrait.png";
 [@bs.module] external phoneLandscapeImage : string = "../../../../public/images/borders/port_phone-horizontal.png";
+[@bs.module] external desktopStandImage : string = "../../../../public/images/borders/port_desktop-stand.png";
 [@bs.module] external desktopImage : string = "../../../../public/images/borders/port_desktop.png";
 [@bs.module] external tabletHorizontalImage : string = "../../../../public/images/borders/port_tablet-hotizontal.png";
 
@@ -50,7 +51,7 @@ let make =
         </div>
         <div className="desktop-bottom-frame" />
       </div>
-      <ImageBackground className="desktop-stand" src=getImageBorderImage(item.border) />
+      <ImageBackground className="desktop-stand" src=desktopStandImage />
     </div>
   },
 };
