@@ -10,8 +10,32 @@ let ketawaPortfolio:portfolioItem = {
   images: [
     {
       src: ketawadesktop,
+      border:PhonePortrait,
+      className: Some("col-3")
+    },
+    {
+      src: ketawadesktop,
       border:Desktop,
-      className: None
+      className: Some("col-7")
+    }
+  ],
+  links: [],
+  technologies: ["Graphic Design"],
+  body: ([<div>(string("Some body text"))</div>] |> Belt.List.toArray),
+}
+let kikiiPortfolio:portfolioItem = {
+  title: "Kikii on the Run",
+  className: None,
+  images: [
+    {
+      src: ketawadesktop,
+      border:PhoneLandscape,
+      className: Some("col-5")
+    },
+    {
+      src: ketawadesktop,
+      border:Tablet,
+      className: Some("col-7")
     }
   ],
   links: [],
@@ -47,6 +71,7 @@ let make = (_children) => {
     <div className="buffer" />
     <div>
     <PortfolioItem item=(ketawaPortfolio) />
+    <PortfolioItem item=(kikiiPortfolio) />
       <div className="section-portfolio">
         <div className="container">
           <div className="port_img-container row">
