@@ -39,17 +39,18 @@ let make =
   ...component,
   render: _self => {
     <div className={
-      "desktop-container" ++
+      "portimg-container" ++
       " " ++ 
       Js.Option.getWithDefault("", className) ++
       " " ++
       Js.Option.getWithDefault("", item.className)}
     >
-      <div className="desktop">
-        <div className="desktop-frame">
-          <ImageBackground className="port_desktop-scroll scroll-long" src=item.src />
+      <div className="portimg">
+        <div className="portimg_frame-before" />
+        <div className="portimg_frame">
+          <ImageBackground className="portimg-scroll scroll-long" src=item.src />
         </div>
-        <div className="desktop-bottom-frame" />
+        <div className="portimg_frame-after" />
       </div>
       <ImageBackground className="desktop-stand" src=desktopStandImage />
     </div>
