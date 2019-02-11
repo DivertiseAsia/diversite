@@ -45,10 +45,10 @@ let make =
       " " ++
       Js.Option.getWithDefault("", item.className)}
     >
-      <div className="portimg">
-        <div className="portimg_frame-before" />
+      <div className="portimg portimg-phone">
         <div className="portimg_frame">
-          <ImageBackground className="portimg-scroll scroll-long" src=item.src />
+          <div className="portimg_scroll-before" />
+          <ImageBackground className="portimg_scroll scroll-long" src=item.src />
         </div>
         <div className="portimg_frame-after" />
       </div>
