@@ -35,7 +35,7 @@ let kikiiPortfolio:portfolioItem = {
     {
       src: ketawadesktop,
       border:Tablet,
-      className: Some("col-7")
+      className: Some("col-6")
     }
   ],
   links: [],
