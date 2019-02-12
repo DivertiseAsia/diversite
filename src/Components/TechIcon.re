@@ -1,9 +1,30 @@
 open ReasonReact;
 [@bs.module] external iconhtml5 : string = "../../../../public/images/html5-logo.png";
+[@bs.module] external iconpython : string = "../../../../public/images/tech-icon/tech-icon_python.png";
+[@bs.module] external iconandroid : string = "../../../../public/images/tech-icon/tech-icon_android.png";
+[@bs.module] external iconcircleci : string = "../../../../public/images/tech-icon/tech-icon_circleci.png";
+[@bs.module] external iconcocos : string = "../../../../public/images/tech-icon/tech-icon_cocos.png";
+[@bs.module] external iconcss : string = "../../../../public/images/tech-icon/tech-icon_css.png";
+[@bs.module] external icondjango : string = "../../../../public/images/tech-icon/tech-icon_django.png";
+[@bs.module] external iconfirebase : string = "../../../../public/images/tech-icon/tech-icon_firebase.png";
+[@bs.module] external icongit : string = "../../../../public/images/tech-icon/tech-icon_git.png";
+[@bs.module] external iconios : string = "../../../../public/images/tech-icon/tech-icon_ios.png";
+[@bs.module] external iconjs : string = "../../../../public/images/tech-icon/tech-icon_js.png";
+[@bs.module] external iconunity : string = "../../../../public/images/tech-icon/tech-icon_unity.png";
 
 type techIconType =
   | HTML5
   | Python
+  | Android
+  | Circleci
+  | Cocos
+  | CSS
+  | Django
+  | Firebase
+  | Git
+  | Ios
+  | Js
+  | Unity
   | Other(string)
 ;
 
@@ -17,6 +38,16 @@ let mapStringToTechIconType = (icon: string) =>
   switch (Js.String.toLowerCase(icon)) {
   | "python" => Python
   | "html5" => HTML5
+  | "android" => Android
+  | "circleci" => Circleci
+  | "cocos" => Cocos
+  | "css" => CSS
+  | "django" => Django
+  | "firebase" => Firebase
+  | "git" => Git
+  | "ios" => Ios
+  | "js" => Js
+  | "unity" => Unity
   | x => Other(x)
 };
 
@@ -26,14 +57,39 @@ let mapIcon = (icon) =>
     <ImageBackground src=iconhtml5 />
   )}
   | Python => {techIconType: icon, className: "python", content:(
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 83.96 83.96">
-        <defs><style>(string(".cls-1{fill:#fff;}.cls-2{fill:#eaeaea;}"))</style></defs>
-        <g id="Layer_2"><g id="text">
-            <path className="cls-1" d="M42,0A42,42,0,1,0,84,42,42,42,0,0,0,42,0Zm0,49.09A7.13,7.13,0,0,1,34.86,42a7,7,0,0,1,1.51-4.34,6.84,6.84,0,0,1,3-2.25V8.69a2.64,2.64,0,0,1,5.27,0V35.38a7.12,7.12,0,0,1,4,4H67.71a2.64,2.64,0,0,1,0,5.27H48.58A7.18,7.18,0,0,1,42,49.09Z"/>
-            <path className="cls-2" d="M71,72.29A42,42,0,0,1,11.65,12.92L36.37,37.63A7,7,0,0,0,34.86,42,7.13,7.13,0,0,0,42,49.09a7,7,0,0,0,4.35-1.5Z"/>
-        </g></g>
-    </svg>
+    <ImageBackground src=iconpython />
   )}
+  | Android => {techIconType: icon, className: "android", content:(
+    <ImageBackground src=iconandroid />
+  )}
+  | Circleci => {techIconType: icon, className: "circleci", content:(
+    <ImageBackground src=iconcircleci />
+  )}
+  | Cocos => {techIconType: icon, className: "cocos", content:(
+    <ImageBackground src=iconcocos />
+  )}
+  | CSS => {techIconType: icon, className: "css", content:(
+    <ImageBackground src=iconcss />
+  )}
+  | Django => {techIconType: icon, className: "django", content:(
+    <ImageBackground src=icondjango />
+  )}
+  | Firebase => {techIconType: icon, className: "firebase", content:(
+    <ImageBackground src=iconfirebase />
+  )}
+  | Git => {techIconType: icon, className: "git", content:(
+    <ImageBackground src=icongit />
+  )}
+  | Ios => {techIconType: icon, className: "ios", content:(
+    <ImageBackground src=iconios />
+  )}
+  | Js => {techIconType: icon, className: "js", content:(
+    <ImageBackground src=iconjs />
+  )}
+  | Unity => {techIconType: icon, className: "unity", content:(
+    <ImageBackground src=iconunity />
+  )}
+  
   | Other(x) => {techIconType: icon, className: "color2", content:(
     <h6>(string(x))</h6>
   )}

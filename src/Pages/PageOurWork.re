@@ -20,7 +20,7 @@ let ketawaPortfolio:portfolioItem = {
     }
   ],
   links: [],
-  technologies: ["Graphic Design", "html5", "python"],
+  technologies: ["Graphic Design", "html5", "python", "unity", "js", "circleci"],
   body: ([<div>(string("Some body text"))</div>] |> Belt.List.toArray),
 }
 let kikiiPortfolio:portfolioItem = {
