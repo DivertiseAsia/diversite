@@ -42,6 +42,30 @@ let kikiiPortfolio:portfolioItem = {
   technologies: ["Graphic Design"],
   body: ([<div>(string("Some body text"))</div>] |> Belt.List.toArray),
 }
+let microgamesPortfolio:portfolioItem = {
+  title: "Microgames",
+  className: None,
+  images: [
+    {
+      src: ketawadesktop,
+      border:PhonePortrait,
+      className: Some("col-4")
+    },
+    {
+      src: ketawadesktop,
+      border:PhonePortrait,
+      className: Some("col-4")
+    },
+    {
+      src: ketawadesktop,
+      border:PhonePortrait,
+      className: Some("col-4")
+    }
+  ],
+  links: [],
+  technologies: ["Graphic Design"],
+  body: ([<div>(string("Some body text"))</div>] |> Belt.List.toArray),
+}
 
 let make = (_children) => {
   ...component,
@@ -72,44 +96,7 @@ let make = (_children) => {
     <div>
     <PortfolioItem item=(ketawaPortfolio) />
     <PortfolioItem item=(kikiiPortfolio) />
-      <div className="section-portfolio">
-        <div className="container">
-          <div className="port_img-container row">
-            <ImageBackground className="port_img img-phone-portrait col-5 mr-5" src=ketawadesktop />
-            <ImageBackground className="port_img img-desktop col-6" src=ketawadesktop />
-          </div>
-          <h2>(string("Kiki On the Run"))</h2>
-          <div className="row">
-            <div className="col-md-8 port_icon-container">
-              <div className="port_icon"> <Icon iconType=Code /> </div>
-              <div className="port_icon port_icon-color2"> <h6>(string("Graphic Designs"))</h6> </div>
-            </div>
-            <div className="col-md-4 -text-right">
-              <Link className=" btn btn-line-color1" href="">(string("Get the Game Now"))</Link>
-            </div>
-          </div>
-          <div className="port_texts">
-            <p>(string("Divertise Asia website concept is simplicity with a drop of fun and friendliness. The website is currently aimed at prospective employees. As such, we highlight our values and projects. It is coded in pure HTML and Javascript, however the CSS is a result of a SCSS file. The full source code and hosting is located on Github."))</p>
-          </div>
-        </div>
-      </div>
-      <div className="section-portfolio">
-        <div className="container">
-          <h2>(string("Chess Playing AI Project"))</h2>
-          <div className="row">
-            <div className="col-md-8 port_icon-container">
-              <div className="port_icon"> <Icon iconType=Code /> </div>
-              <div className="port_icon port_icon-color2"> <h6>(string("Graphic Designs"))</h6> </div>
-            </div>
-            <div className="col-md-4 -text-right">
-              <Link className=" btn btn-line-color1" href="">(string("Read Our Paper"))</Link>
-            </div>
-          </div>
-          <div className="port_texts">
-            <p>(string("Divertise Asia website concept is simplicity with a drop of fun and friendliness. The website is currently aimed at prospective employees. As such, we highlight our values and projects. It is coded in pure HTML and Javascript, however the CSS is a result of a SCSS file. The full source code and hosting is located on Github."))</p>
-          </div>
-        </div>
-      </div>
+    <PortfolioItem item=(microgamesPortfolio) />
     </div>
     </MainPage>;
   },

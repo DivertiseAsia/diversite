@@ -585,10 +585,6 @@ nav .logo-link {
   margin-bottom: 30px;
   justify-content: space-around;
   align-items: center;
-  .port_img {
-    // height: 440px;
-    background-size: contain;
-  }
 }
 .scroll-long { transition: all 15s; }
 
@@ -654,27 +650,31 @@ nav .logo-link {
   }
  }
 /* Phone Portrait portimg-container style */
-.phone-portrait .portimg-container {
-  .portimg {
-    .portimg_frame {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      background: #D9D9D9;
-      border: solid 2px #C4C4C4;
-      padding: 11% 3% 16% 3%;
-      border-radius: 30px;
-    }
-    .portimg_scroll {
-      padding-bottom: 190%;
-      border: $border-default #C4C4C4;
-    }
-    .portimg_scroll-before {
-      width: 30%;
-      height: 2.5px;
-      background: #c4c4c4;
-      margin-bottom: 5%;
+.phone-portrait {
+  max-width: 300px;
+  margin: auto;
+  .portimg-container {
+    .portimg {
+      .portimg_frame {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background: #D9D9D9;
+        border: solid 2px #C4C4C4;
+        padding: 11% 3% 16% 3%;
+        border-radius: 30px;
+      }
+      .portimg_scroll {
+        padding-bottom: 170%;
+        border: $border-default #C4C4C4;
+      }
+      .portimg_scroll-before {
+        width: 30%;
+        height: 2.5px;
+        background: #c4c4c4;
+        margin-bottom: 5%;
+      }
     }
   }
 }
@@ -933,4 +933,6 @@ and (max-width: 400px) {
   .nav-icon-arrow {
     h6 { font-size: 0.8rem; }
   }
+  /* Small Phone Port */
+  .phone-portrait { padding: 0; }
 }
