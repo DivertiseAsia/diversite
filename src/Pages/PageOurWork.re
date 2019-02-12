@@ -66,6 +66,14 @@ let microgamesPortfolio:portfolioItem = {
   technologies: ["Graphic Design"],
   body: ([<div>(string("Some body text"))</div>] |> Belt.List.toArray),
 }
+let aiPortfolio:portfolioItem = {
+  title: "Chess Playing AI",
+  className: None,
+  images: [],
+  links: [],
+  technologies: ["Graphic Design"],
+  body: ([<div>(string("Some body text"))</div>] |> Belt.List.toArray),
+}
 
 let make = (_children) => {
   ...component,
@@ -97,6 +105,7 @@ let make = (_children) => {
     <PortfolioItem item=(ketawaPortfolio) />
     <PortfolioItem item=(kikiiPortfolio) />
     <PortfolioItem item=(microgamesPortfolio) />
+    <PortfolioItem item=(aiPortfolio) />
     </div>
     </MainPage>;
   },
