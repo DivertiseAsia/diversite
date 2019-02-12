@@ -28,7 +28,7 @@ $text-shadow: 2px 2px 2px grey;
 
 $transition: all 0.3s ease-out;
 
-$header-height: 60px;
+$header-height: 65px;
 $frontpage-section-img-height: 350px;
 $frontpage-section-height: 300px; 
 $scrollbar-width: 0.5vw;
@@ -173,6 +173,10 @@ a:hover { text-decoration: none; }
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
   z-index: -10;
   position: relative;
+  margin-top: -1px;
+  .nav {
+    background: unset;
+  }
 }
 /* ------------- Navigation Bar ------------- */
 
@@ -238,10 +242,11 @@ nav .logo-link {
 .nav a:not(.logo-link):not(.btn)::after, .btn-drop::after {
   background: $text-white;
   height: 1.5px;
-  margin-top: 2px;
+  margin-top: 1.5px;
   width: 0;
   /* content: ""; hiding animation for now */
   display: block;
+  box-shadow: $text-shadow;
   transition: $transition;
  }
  .nav a:not(.btn):hover::after, .btn-drop:hover::after {
