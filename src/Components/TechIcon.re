@@ -34,7 +34,7 @@ let mapIcon = (icon) =>
         </g></g>
     </svg>
   )}
-  | Other(x) => {techIconType: icon, className: x, content:(
+  | Other(x) => {techIconType: icon, className: "color2", content:(
     <h6>(string(x))</h6>
   )}
 }
