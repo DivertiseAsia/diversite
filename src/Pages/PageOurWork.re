@@ -79,11 +79,7 @@ let make = (_children) => {
   ...component,
   render: _self => {
     <MainPage className="page-ourwork">
-    <div className="ourwork_section-header-content bg-gradient-color1"> 
-      <div className="container align-items-baseline">
-        <h1 className="text-white letter-spacing -text-uppercase -text-header-shadow"> {string("Our Work")}</h1>
-      </div>
-      <div className="container page-ourwork_nav nav">
+    <PageHeader title="Our Works" className="bg-gradient-color1">
         <input type_="checkbox" />
         <div className="nav-icon nav-icon-arrow"> 
           <h6>(string("Applications & Platforms")) </h6>
@@ -96,10 +92,7 @@ let make = (_children) => {
             <Link href="">(string("Virtual Reality"))</Link>
             <Link href="">(string("Games"))</Link>
         </div> 
-      </div>
-    </div>
-    <div className="ourwork_section-header section-header bg-gradient-color1">
-    </div>
+    </ PageHeader>
     <div className="buffer" />
     <div>
     <PortfolioItem item=(ketawaPortfolio) />
