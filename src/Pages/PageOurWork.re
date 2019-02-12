@@ -11,12 +11,12 @@ let ketawaPortfolio:portfolioItem = {
     {
       src: ketawadesktop,
       border:PhonePortrait,
-      className: Some("col-3")
+      className: Some("col-4")
     },
     {
       src: ketawadesktop,
       border:Desktop,
-      className: Some("col-7")
+      className: Some("col-8")
     }
   ],
   links: [],
@@ -35,7 +35,7 @@ let kikiiPortfolio:portfolioItem = {
     {
       src: ketawadesktop,
       border:Tablet,
-      className: Some("col-6")
+      className: Some("col-7")
     }
   ],
   links: [],

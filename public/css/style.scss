@@ -594,7 +594,7 @@ nav .logo-link {
 
 /* Default portimg-container style */
 .portimg-container {
-  width: 100%;
+  width: 90%;
   height: 100%;
   margin: auto;
   display: flex;
@@ -662,7 +662,7 @@ nav .logo-link {
       justify-content: space-around;
       align-items: center;
       background: #D9D9D9;
-      border: solid 4px #C4C4C4;
+      border: solid 2px #C4C4C4;
       padding: 11% 3% 16% 3%;
       border-radius: 30px;
     }
@@ -686,9 +686,9 @@ nav .logo-link {
       border: $border-default #C4C4C4;
     }
     .portimg_scroll-before {
-      width: 2.5px;
-      height: 30%;
-      min-height: 50px;
+      width: 1%;
+      height: 20px;
+      //min-height: 50px;
       background: #c4c4c4;
       margin: 0;
       margin-right: 5%;
@@ -699,7 +699,7 @@ nav .logo-link {
       justify-content: space-around;
       align-items: center;
       background: #D9D9D9;
-      border: solid 4px #C4C4C4;
+      border: solid 2px #C4C4C4;
       padding: 2% 10% 2% 6%;
       border-radius: 30px;
     }
@@ -710,13 +710,13 @@ nav .logo-link {
   .portimg {
     .portimg_scroll {
       padding-bottom: 65%;
-      border: $border-default #C4C4C4;
+      //border: $border-default #686163;
     }
     .portimg_scroll-before {
-      width: 3px;
+      width: 1%;
       height: 30%;
-      min-height: 50px;
-      background: #c4c4c4;
+      min-height: 30px;
+      background: #686163;
       margin: 0;
       margin-right: 2%;
     }
@@ -725,8 +725,8 @@ nav .logo-link {
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
-      background: #D9D9D9;
-      border: solid 4px #C4C4C4;
+      background: #231F20;
+      //border: solid 4px #686163;
       padding: 2% 6% 2% 4%;
       border-radius: 30px;
     }
@@ -734,7 +734,7 @@ nav .logo-link {
 }
 
 .portimg-container:hover {
-  width: 105%;
+  width: 95%;
   .scroll-long { background-position: bottom; }
 }
 
@@ -772,6 +772,10 @@ nav .logo-link {
 .port_icon-color2 {
   background: radial-gradient(#52c4bb , #14918a);
 }
+.port_btn {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 /* ------------------------------------ RESPONSIVE --------------------------------------*/
 
 /* -------- Big Desktops --------*/
@@ -780,7 +784,18 @@ and (min-width: 1800px) {}
 
 /* -------- Tablets Landscape & Small Desktops ---------*/
 @media only screen
-and (max-width: 1200px) {}
+and (max-width: 1200px) {
+  /* Small Desktop Portfolio */
+  .phone-landscape, .phone-portrait, .tablet-landscape {
+    .portimg-container .portimg {
+      .portimg_frame { 
+        border-radius: 18px;
+        border-width: 1px; 
+      }
+      .portimg_scroll { border-width: 1px; }
+    }
+  }
+}
 
 /* -------- Tablets Portrait ---------*/
 @media only screen
@@ -840,13 +855,24 @@ and (max-width: 768px) {
     width: unset;
     padding: 30px 0;
   }
-  .portimg .portimg_frame {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+  .desktop .portimg-container .portimg {
+    .portimg_frame {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+    .portimg_frame-after {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
   }
-  .portimg .portimg_frame-after {
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+  .phone-landscape, .phone-portrait, .tablet-landscape {
+    .portimg-container .portimg {
+      .portimg_frame { 
+        border-radius: 10px;
+        border-width: 1px; 
+      }
+      .portimg_scroll { border-width: 1px; }
+    }
   }
 }
 
@@ -864,6 +890,30 @@ and (max-width: 576px) {
   }
   .section-portfolio {
     h2 { font-size: 1.6rem;}
+  }
+  /* Phone Portfolio */
+  .phone-landscape, .tablet-landscape { padding: 0; }
+  .desktop .portimg-container .portimg {
+    .portimg_frame {
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+    .portimg_frame-after {
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+  }
+  .phone-landscape, .phone-portrait, .tablet-landscape {
+    .portimg-container .portimg {
+      .portimg_frame { 
+        border-radius: 5px;
+        border-width: 1px; 
+      }
+      .portimg_scroll { border-width: 0.5px; }
+    }
+  }
+  .port_btn {
+    width: 100%;
   }
 }
 

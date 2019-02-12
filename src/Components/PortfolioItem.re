@@ -54,7 +54,7 @@ let make =
               }
             </div>
             <div className="col-md-4 -text-right">
-              <Link className=" btn btn-line-color1" href="">(string("Get the Game Now"))</Link>
+              <Link className=" port_btn btn btn-line-color1" href="">(string("Get the Game Now"))</Link>
             </div>
         </div>
         <div className="port_texts">
