@@ -25,7 +25,7 @@ type techIconType =
   | Ios
   | Js
   | Unity
-  | Other(string)
+  | Other(string, string)
 ;
 
 type techIcon = {
@@ -48,7 +48,8 @@ let mapStringToTechIconType = (icon: string) =>
   | "ios" => Ios
   | "js" => Js
   | "unity" => Unity
-  | x => Other(x)
+  | "graphic design" | "2d animation" => Other(icon, "color2")
+  | x => Other(x, x)
 };
 
 let mapIcon = (icon) =>
@@ -90,7 +91,7 @@ let mapIcon = (icon) =>
     <ImageBackground src=iconunity />
   )}
   
-  | Other(x) => {techIconType: icon, className: "color2", content:(
+  | Other(x, className) => {techIconType: icon, className: className, content:(
     <h6>(string(x))</h6>
   )}
 }
