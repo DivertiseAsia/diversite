@@ -7,14 +7,7 @@ let make = (_children) => {
   ...component,
   render: _self => {
     <MainPage>
-      <div className="section-header bg-gradient-color2"> 
-        <div className="container py-5"> 
-          <div className="row d-flex align-items-baseline -text-uppercase">
-            <h1 className="text-white pr-3 letter-spacing -text-header-shadow"> {string("Internship")}</h1>
-            <h2 className="text-white letter-spacing -text-header-shadow">{string("-  Art & Design")}</h2>
-          </div>
-        </div>
-      </div>
+      <PageHeader title="Internship" subtitle="Art & Design" className="bg-gradient-color2" />
       <div className="container"> 
           <div className="row pt-5 d-block">
             <h3><Icon className="mr-4" iconType=Pen />{string("What are the requirements?")}</h3>

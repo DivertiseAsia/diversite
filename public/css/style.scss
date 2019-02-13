@@ -4,7 +4,7 @@ $font-weight-normal: 300;
 $font-weight-medium: 400;
 $font-weight-bold: 700;
 $font-default: 'Open Sans', sans-serif;
-$font-header: 'Orkney', sans-serif;
+$font-header: 'OrkneyRegular', sans-serif;
 $lineheigh: 1.8em;
 
 $bg-grey: #eaeaea;
@@ -28,10 +28,11 @@ $text-shadow: 2px 2px 2px grey;
 
 $transition: all 0.3s ease-out;
 
-$header-height: 60px;
+$header-height: 65px;
 $frontpage-section-img-height: 350px;
 $frontpage-section-height: 300px; 
 $scrollbar-width: 0.5vw;
+$section-header-height: 190px;
 
 html, body, #container {
   min-width: 100vw;
@@ -158,6 +159,8 @@ a:hover { text-decoration: none; }
 .main-content { width: 100vw; }
 ::-webkit-scrollbar {
   width: $scrollbar-width;
+  background-color: white;
+  z-index: 99;
 }
 ::-webkit-scrollbar-track-piece  {
   width: 0;
@@ -170,6 +173,10 @@ a:hover { text-decoration: none; }
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
   z-index: -10;
   position: relative;
+  margin-top: -1px;
+  .nav {
+    background: unset;
+  }
 }
 /* ------------- Navigation Bar ------------- */
 
@@ -235,10 +242,11 @@ nav .logo-link {
 .nav a:not(.logo-link):not(.btn)::after, .btn-drop::after {
   background: $text-white;
   height: 1.5px;
-  margin-top: 2px;
+  margin-top: 1.5px;
   width: 0;
   /* content: ""; hiding animation for now */
   display: block;
+  box-shadow: $text-shadow;
   transition: $transition;
  }
  .nav a:not(.btn):hover::after, .btn-drop:hover::after {
@@ -501,6 +509,297 @@ nav .logo-link {
 .program-text-title {
   margin: 0 auto;
 }
+
+/* ---------- Portfolio Page ----------- */
+
+.page-ourwork .page-content-container {
+  z-index: 0;
+}
+.page-ourwork .section-header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  height: $section-header-height;
+  margin-top: -2px;
+}
+.ourwork_section-header-content {
+  background: transparent;
+  margin-top: 3rem;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: $section-header-height - 90px;
+}
+/* Portfolio Nav */
+.page-ourwork_nav {
+  background: transparent;
+  margin-top: 10px;
+  margin-bottom: 3rem;
+  width: 100%;
+  padding: 0 60px;
+  input {
+    width: 250px;
+  }
+  .nav-icon {
+    width: 250px;
+    * { display: inline-block; }
+    h6 {
+      color: $text-white;
+      text-transform: uppercase;
+    }
+    .icon {
+      transition: $transition;
+      height: 20px;
+      width: 20px;
+      margin-left: 5px;
+      svg {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    a {
+      text-transform: uppercase;
+      padding: 0;
+    }
+    a.current {
+      font-weight: $font-weight-bold;
+      text-shadow: $text-shadow;
+    }
+  }
+}
+.nav input:checked ~ .nav-icon-arrow .icon {
+  transform: rotate(180deg)translate(-10px,-10px);
+}
+.page-ourwork .buffer {
+  height: $section-header-height;
+  width: 100%;
+}
+.section-portfolio {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  h3 { margin-bottom: 30px; }
+}
+.section-portfolio:nth-child(even) { background-color: $bg-grey; } 
+.port_img-container {
+  text-align: center;
+  margin-bottom: 30px;
+  justify-content: space-around;
+  align-items: center;
+}
+.scroll-long { transition: all 15s; }
+
+/* Default portimg-container style */
+.portimg-container {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  transition: $transition;
+  > * {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  .portimg {
+    width: 100%;
+    .portimg_scroll {
+      height: 0;
+      width: 100%;
+      max-width: unset;
+      background-color: grey;
+      background-position: top;
+    }
+  }
+}
+/* Desktop portimg-container style */
+.desktop .portimg-container {
+  .portimg {
+    .portimg_frame {
+      background: black;
+      padding: 4%;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+    .portimg_scroll {
+      padding-bottom: 60%;
+    }
+    .portimg_frame-after {
+      width: 100%;
+      height: 0;
+      padding-bottom: 8%;
+      background: linear-gradient( -30deg, #e0e1e3, #a3a4a9 );
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+  }
+  .portimg::after {
+    content: "";
+    background: url('../images/borders/port_desktop-stand.png');
+    background-repeat: no-repeat;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-top: 24%;
+    background-size: contain;
+    background-position: top;
+    margin-top: -2px;
+    z-index: -2;
+  }
+ }
+/* Phone Portrait portimg-container style */
+.phone-portrait {
+  max-width: 300px;
+  margin: auto;
+  .portimg-container {
+    .portimg {
+      .portimg_frame {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background: #D9D9D9;
+        border: solid 2px #C4C4C4;
+        padding: 11% 3% 16% 3%;
+        border-radius: 30px;
+      }
+      .portimg_scroll {
+        padding-bottom: 170%;
+        border: $border-default #C4C4C4;
+      }
+      .portimg_scroll-before {
+        width: 30%;
+        height: 2.5px;
+        background: #c4c4c4;
+        margin-bottom: 5%;
+      }
+    }
+  }
+}
+/* Phone Landscape portimg-container style */
+.phone-landscape .portimg-container {
+  .portimg {
+    .portimg_scroll {
+      padding-bottom: 50%;
+      border: $border-default #C4C4C4;
+    }
+    .portimg_scroll-before {
+      width: 1%;
+      height: 20px;
+      //min-height: 50px;
+      background: #c4c4c4;
+      margin: 0;
+      margin-right: 5%;
+    }
+    .portimg_frame {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      background: #D9D9D9;
+      border: solid 2px #C4C4C4;
+      padding: 2% 10% 2% 6%;
+      border-radius: 30px;
+    }
+  }
+}
+/* Tablet Landscape portimg-container style */
+.tablet-landscape .portimg-container {
+  .portimg {
+    .portimg_scroll {
+      padding-bottom: 65%;
+      //border: $border-default #686163;
+    }
+    .portimg_scroll-before {
+      width: 1%;
+      height: 30%;
+      min-height: 30px;
+      background: #686163;
+      margin: 0;
+      margin-right: 2%;
+    }
+    .portimg_frame {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      background: #231F20;
+      //border: solid 4px #686163;
+      padding: 2% 6% 2% 4%;
+      border-radius: 30px;
+    }
+  }
+}
+
+.portimg-container::after {
+  content: "";
+  display: block;
+  width: 120%;
+  margin-left: -10%;
+  margin-top: 15%;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  filter: blur(10px);
+  border-radius: 50%;
+  opacity: 0;
+  transition: $transition;
+}
+.desktop .portimg-container::after {
+  margin: auto;
+  margin-top: -7px;
+  width: 70%;
+}
+.portimg-container:hover {
+  width: 95%;
+  .scroll-long { background-position: bottom; }
+}
+.portimg-container:hover::after { opacity: 1; }
+
+.port_icon-container {
+  vertical-align: middle;
+  display: flex;
+  flex-wrap: wrap;
+}
+.tech-icon {
+  background: radial-gradient(#2d506d, #1b4059);
+  width: 50px;
+  height: 50px;
+  border-radius: $border-radius;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  h6 {
+    color: $text-white;
+    text-transform: uppercase;
+    font-size: 8px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .icon {
+    max-width: 40px;
+    max-height: 40px;
+  }
+  .image-background {
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+  }
+}
+.tech-icon-color2 {
+  background: radial-gradient(#52c4bb , #14918a);
+}
+.port_btn {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 /* ------------------------------------ RESPONSIVE --------------------------------------*/
 
 /* -------- Big Desktops --------*/
@@ -509,7 +808,18 @@ and (min-width: 1800px) {}
 
 /* -------- Tablets Landscape & Small Desktops ---------*/
 @media only screen
-and (max-width: 1200px) {}
+and (max-width: 1200px) {
+  /* Small Desktop Portfolio */
+  .phone-landscape, .phone-portrait, .tablet-landscape {
+    .portimg-container .portimg {
+      .portimg_frame { 
+        border-radius: 18px;
+        border-width: 1px; 
+      }
+      .portimg_scroll { border-width: 1px; }
+    }
+  }
+}
 
 /* -------- Tablets Portrait ---------*/
 @media only screen
@@ -560,6 +870,34 @@ and (max-width: 768px) {
   .section-letushelp .col-sm-4 > div {
     padding: 20px;
   }
+  /* Tablet Portfolio */
+  .page-ourwork_nav .nav-container {
+    background: $bg-color1;
+    z-index: 99;
+    position: absolute;
+    top: $section-header-height * 0.5;
+    width: unset;
+    padding: 30px 0;
+  }
+  .desktop .portimg-container .portimg {
+    .portimg_frame {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+    .portimg_frame-after {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  }
+  .phone-landscape, .phone-portrait, .tablet-landscape {
+    .portimg-container .portimg {
+      .portimg_frame { 
+        border-radius: 10px;
+        border-width: 1px; 
+      }
+      .portimg_scroll { border-width: 1px; }
+    }
+  }
 }
 
 /* -------- Phones ---------*/
@@ -567,6 +905,39 @@ and (max-width: 768px) {
 and (max-width: 576px) {
   .team-benefits {
     padding: 15px 10px;
+  }
+  /* Phone - Portfolio Page */
+  .port_img-container {
+    .port_img {
+      height: 180px;
+    }
+  }
+  .section-portfolio {
+    h2 { font-size: 1.6rem;}
+  }
+  /* Phone Portfolio */
+  .phone-landscape, .tablet-landscape { padding: 0; }
+  .desktop .portimg-container .portimg {
+    .portimg_frame {
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+    .portimg_frame-after {
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+  }
+  .phone-landscape, .phone-portrait, .tablet-landscape {
+    .portimg-container .portimg {
+      .portimg_frame { 
+        border-radius: 5px;
+        border-width: 1px; 
+      }
+      .portimg_scroll { border-width: 0.5px; }
+    }
+  }
+  .port_btn {
+    width: 100%;
   }
 }
 
@@ -580,4 +951,12 @@ and (max-width: 400px) {
   .ul-li-padding-none {
     padding: 15px 0 !important;
   }
+  .ourwork_section-header-content {
+    h1 { font-size: 2rem; }
+  }
+  .nav-icon-arrow {
+    h6 { font-size: 0.8rem; }
+  }
+  /* Small Phone Port */
+  .phone-portrait { padding: 0; }
 }
