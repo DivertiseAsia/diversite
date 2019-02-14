@@ -4,6 +4,11 @@ open PortfolioItem;
 let component = ReasonReact.statelessComponent("PageOurWork");
 [@bs.module] external ketawadesktop : string = "../../../../public/projects/website-ketawa-d.jpg";
 
+/* --------------------- Apps --------------------------*/
+
+/* --------------------- AI -----------------------------*/
+
+/* ----------------------- Websites ---------------------*/
 let ketawaPortfolio:portfolioItem = {
   title: "Ketawa Pet Friendly Hotel Website",
   className: None,
@@ -20,9 +25,42 @@ let ketawaPortfolio:portfolioItem = {
     }
   ],
   links: [],
-  technologies: ["Graphic Design", "2d animation", "html5", "python", "unity", "js", "circleci"],
-  body: ([<div>(string("Some body text"))</div>] |> Belt.List.toArray),
+  technologies: ["html5", "css", "Graphic Design", "web design" ],
+  body: ([
+    <div>
+      <p>(string("Ketawa Hotel is a pet friendly hotel and cafe. Ketawa is rebranding and it needs its website to change to match with the new Cooperate Identity. So we redesigned the website. It has a warm, cozy, friendly, but simple look and feel to represent the hotel's characteristic."))</p>
+      <p>(string("The site was built with HTML, Javascript, and styled with CSS in the framework of Bootstrap."))</p>
+    </div>
+  ] |> Belt.List.toArray),
 }
+let ketawaPortfolio:portfolioItem = {
+  title: "Ketawa Pet Friendly Hotel Website",
+  className: None,
+  images: [
+    {
+      src: ketawadesktop,
+      border:PhonePortrait,
+      className: Some("col-4")
+    },
+    {
+      src: ketawadesktop,
+      border:Desktop,
+      className: Some("col-8")
+    }
+  ],
+  links: [],
+  technologies: ["html5", "css", "Graphic Design", "web design" ],
+  body: ([
+    <div>
+      <p>(string("Ketawa Hotel is a pet friendly hotel and cafe. Ketawa is rebranding and it needs its website to change to match with the new Cooperate Identity. So we redesigned the website. It has a warm, cozy, friendly, but simple look and feel to represent the hotel's characteristic."))</p>
+      <p>(string("The site was built with HTML, Javascript, and styled with CSS in the framework of Bootstrap."))</p>
+    </div>
+  ] |> Belt.List.toArray),
+}
+
+/* ----------------------- Virtual Reality ---------------------- */
+
+/* ----------------------- Games ---------------------------*/
 let kikiiPortfolio:portfolioItem = {
   title: "Kikii on the Run",
   className: None,
