@@ -21,7 +21,7 @@ let make =
         <div className="col-sm-6 frontpage-section-texts pt-5"> 
           <h4>(string(title))</h4>
           <div className="content"> ...children </div>
-          <Link className="btn" href=(href)>(string("See All Project")) </Link>
+          <Link className="btn" href=Links.ourwork>(string("See All Project")) </Link>
         </div>
       </div>
       </div>

@@ -1,13 +1,13 @@
 open ReasonReact;
 
-let component = ReasonReact.statelessComponent("PageInternship");
+let component = ReasonReact.statelessComponent("PageCareersDeveloper");
 [@bs.module] external pen : string = "../../../../public/images/pen.png";
 
 let make = (_children) => {
   ...component,
   render: _self => {
     <MainPage>
-      <PageHeader title="Internship" subtitle="Art & Design" className="bg-gradient-color2" />
+      <PageHeader title="Careers" subtitle="Developer" className="bg-gradient-color1" />
       <div className="container"> 
           <div className="row pt-5 d-block">
             <h3><Icon className="mr-4" iconType=Pen />{string("What are the requirements?")}</h3>
@@ -52,7 +52,6 @@ let make = (_children) => {
               <p><Link className="pr-1 pl-1 -font-weight-bold text-color1 -text-underline-none" href="mailto:contact@divertise.asia"> {string("careers@divertise.asia")} </Link></p>
               <p>{string("and we'll get back to you soon!")}</p>
             </div>
-            <p className="-text-small-title text-color1">{string("*Please include your prefered start end date of the internship in the email")}</p>
           </div>
         </div>
       </div>

@@ -15,16 +15,16 @@ let make = (_children) => {
       <div className="row py-5 d-block text-center -text-uppercase">
         <h3>{string("Positions at Divertise Asia")}</h3>
         <div className="row pt-5">
-          <InternshipProgram iconType=Code title="DEVELOPER" imageURL=type1 href=Links.careers> </InternshipProgram>
-          <InternshipProgram iconType=Pen title="DESIGN ENGINEER" imageURL=type2 href=Links.careers> </InternshipProgram>
+          <InternshipProgram iconType=Code title="Developer" imageURL=type1 href=Links.careersdeveloper> </InternshipProgram>
+          <InternshipProgram iconType=Pen title="Design Engineer" imageURL=type2 href=Links.careersdesigner> </InternshipProgram>
         </div> 
       </div>
       <div className="row d-block text-center">
         <h3 className="-text-uppercase">{string("Internship Program")}</h3>
         <p className="col-md-10 col-sm-12 program-text-title">{string("We focus on finding creative ways to work with games and AI. You will get a chance to get your hands on game development and work closely with our friendly team of developers and designers.")}</p>
         <div className="row">
-          <InternshipProgram iconType=Code title="APP & AI DEV" imageURL=type3 href=Links.careers className="image-background"> </InternshipProgram>
-          <InternshipProgram iconType=Pen title="ART & DESIGN" imageURL=type4 href=Links.careers> </InternshipProgram>
+          <InternshipProgram iconType=Code title="App & Ai Dev" imageURL=type3 href=Links.internshipdeveloper className="image-background"> </InternshipProgram>
+          <InternshipProgram iconType=Pen title="Art & Design" imageURL=type4 href=Links.internshipdesign> </InternshipProgram>
         </div> 
       </div>
     </div>

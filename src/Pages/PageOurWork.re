@@ -4,12 +4,16 @@ open PortfolioItem;
 let component = ReasonReact.statelessComponent("PageOurWork");
 [@bs.module] external ketawadesktop : string = "../../../../public/projects/website-ketawa-d.jpg";
 [@bs.module] external adsoupapp : string = "../../../../public/projects/website-adsoup.jpg";
-[@bs.module] external copanelapp : string = "../../../../public/projects/website-adsoup.jpg";
+[@bs.module] external copanelapp : string = "../../../../public/projects/copanel.gif";
 [@bs.module] external eventcometapp : string = "../../../../public/projects/website-adsoup.jpg";
+[@bs.module] external mintcrowddesktop : string = "../../../../public/projects/mintcrowd.jpg";
+[@bs.module] external mintcrowdapp : string = "../../../../public/projects/mintcrowd-app.jpg";
 [@bs.module] external boneageai : string = "../../../../public/projects/website-adsoup.jpg";
 [@bs.module] external gameaione : string = "../../../../public/projects/website-adsoup.jpg";
 [@bs.module] external gameaitwo : string = "../../../../public/projects/website-adsoup.jpg";
 [@bs.module] external cvrl : string = "../../../../public/projects/website-adsoup.jpg";
+[@bs.module] external kikiigamephone: string = "../../../../public/projects/kikii-1.png";
+[@bs.module] external kikiigametablet: string = "../../../../public/projects/kikii-2.gif";
 /* --------------------- Apps --------------------------*/
 let adsoupPortfolio:portfolioItem = {
   title: "AdSoup",
@@ -63,18 +67,41 @@ let eventcometPortfolio:portfolioItem = {
   className: None,
   images: [
     {
-      src: copanelapp,
+      src: eventcometapp,
       border:PhonePortrait,
       className: Some("col-4")
     },
     {
-      src: copanelapp,
+      src: eventcometapp,
       border:Desktop,
       className: Some("col-8")
     }
   ],
   links: [],
   technologies: ["Aws", "Js", "Python", "Web design", "Ux", "Ui" ],
+  body: ([
+    <div>
+      <p>(string("Let us build the perfect app for your event"))</p>
+    </div>
+  ] |> Belt.List.toArray),
+}
+let mintcrowdPortfolio:portfolioItem = {
+  title: "Mint Crowd",
+  className: None,
+  images: [
+    {
+      src: mintcrowdapp,
+      border:PhonePortrait,
+      className: Some("col-4")
+    },
+    {
+      src: mintcrowddesktop,
+      border:Desktop,
+      className: Some("col-8")
+    }
+  ],
+  links: [],
+  technologies: ["Html", "Css", "Python", "Web design", "Ux", "Ui" ],
   body: ([
     <div>
       <p>(string("Let us build the perfect app for your event"))</p>
@@ -184,7 +211,7 @@ let willamalinPortfolio:portfolioItem = {
     </div>
   ] |> Belt.List.toArray),
 }
-let eastwesPortfolio:portfolioItem = {
+let eastwestPortfolio:portfolioItem = {
   title: "East Wes",
   className: None,
   images: [
@@ -232,12 +259,12 @@ let kikiiPortfolio:portfolioItem = {
   className: None,
   images: [
     {
-      src: ketawadesktop,
+      src: kikiigamephone,
       border:PhoneLandscape,
       className: Some("col-5")
     },
     {
-      src: ketawadesktop,
+      src: kikiigametablet,
       border:Tablet,
       className: Some("col-7")
     }
@@ -318,16 +345,16 @@ let make = (_children) => {
     <PortfolioItem item=(adsoupPortfolio) />
     <PortfolioItem item=(copanelPortfolio) />
     <PortfolioItem item=(eventcometPortfolio) />
+    <PortfolioItem item=(mintcrowdPortfolio) />
     <PortfolioItem item=(boneagePortfolio) />
     <PortfolioItem item=(gameaionePortfolio) />
     <PortfolioItem item=(gameaitwoPortfolio) />
-    <PortfolioItem item=(ketawaPortfolio) />
+    <PortfolioItem item=(vrPortfolio) />
     <PortfolioItem item=(ketawaPortfolio) />
     <PortfolioItem item=(willamalinPortfolio) />
+    <PortfolioItem item=(eastwestPortfolio) />
     <PortfolioItem item=(kikiiPortfolio) />
     <PortfolioItem item=(microgamesPortfolio) />
-    <PortfolioItem item=(ragaPortfolio) />
-    
     </div>
     </MainPage>;
   },
