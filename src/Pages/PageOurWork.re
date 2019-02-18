@@ -3,8 +3,10 @@ open PortfolioItem;
 
 let component = ReasonReact.statelessComponent("PageOurWork");
 [@bs.module] external ketawadesktop : string = "../../../../public/projects/website-ketawa-d.jpg";
-[@bs.module] external adsoupapp : string = "../../../../public/projects/website-adsoup.jpg";
-[@bs.module] external copanelapp : string = "../../../../public/projects/copanel.gif";
+[@bs.module] external adsoupdesktop : string = "../../../../public/projects/website-adsoup.jpg";
+[@bs.module] external adsoupapp : string = "../../../../public/projects/app-adsoup.jpg";
+[@bs.module] external copanelapp : string = "../../../../public/projects/app-copanel.jpg";
+[@bs.module] external copaneldesktop : string = "../../../../public/projects/website-copanel.jpg";
 [@bs.module] external eventcometapp : string = "../../../../public/projects/website-adsoup.jpg";
 [@bs.module] external mintcrowddesktop : string = "../../../../public/projects/mintcrowd.jpg";
 [@bs.module] external mintcrowdapp : string = "../../../../public/projects/mintcrowd-app.jpg";
@@ -25,17 +27,16 @@ let adsoupPortfolio:portfolioItem = {
       className: Some("col-4")
     },
     {
-      src: adsoupapp,
+      src: adsoupdesktop,
       border:Desktop,
       className: Some("col-8")
     }
   ],
   links: [],
-  technologies: ["Aws", "Js", "Python", "Web design", "Graphic Design", "Ux", "Ui" ],
+  technologies: ["Firebase", "Docker", "Aws", "Postgresql", "Js", "circleci", "android", "reason", "brand Identity" , "Ux/Ui" ],
   body: ([
     <div>
-      <p>(string("Adsoup is a sales CRM that aims to unife all social Messaging into one platform."))</p>
-      <p>(string("AdSoup Agency is a platform for marketing agency to manage their budget and track performance of campaigns for different client accounts at once. The agency can also email report sheets to client directly from this platform."))</p>
+      <p>(string("Adsoup Sales is an all-in-one platform where sales can communicate with thier leads from different comunication channels in one place, including Facebook and email. They also provide pipeline management and CRM functionality to manage customers account."))</p>
     </div>
   ] |> Belt.List.toArray),
 }
@@ -49,16 +50,16 @@ let copanelPortfolio:portfolioItem = {
       className: Some("col-4")
     },
     {
-      src: copanelapp,
+      src: copaneldesktop,
       border:Desktop,
       className: Some("col-8")
     }
   ],
   links: [],
-  technologies: ["Aws", "Js", "Python", "Web design", "Graphic Design", "Ux", "Ui" ],
+  technologies: ["Firebase", "Docker", "aws", "Postgresql", "Js", "Python", "Web design", "Graphic Design", "Ux", "Ui" ],
   body: ([
     <div>
-      <p>(string("Some body text"))</p>
+      <p>(string("CoPanel is time tracking application with the the ability to plan task ahead of time. This platform is design for a small to medium size team to track working time and create reports based on category and projects. "))</p>
     </div>
   ] |> Belt.List.toArray),
 }
