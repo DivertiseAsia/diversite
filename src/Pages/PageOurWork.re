@@ -14,7 +14,7 @@ let make = (_children) => {
         <input type_="checkbox" />
         <div className="nav-icon nav-icon-arrow"> 
           <h6>(string("Applications & Platforms")) </h6>
-          <Icon iconType=Code />
+          <Icon iconType=ArrowDown />
         </div>
         <div className="nav-container">
             <a href=Links.ourwork_appsandplatforms>(string("Applications & Platforms"))</a>
@@ -38,7 +38,7 @@ let make = (_children) => {
       <PortfolioItem key="gameaitwo" item=(gameaitwoPortfolio) />
       <PortfolioItem id="vr" key="vr" item=(vrPortfolio) />
       <PortfolioItem id="websites" key="ketawa" item=(ketawaPortfolio) />
-      <PortfolioItem key="willamailn" item=(willamalinPortfolio) />
+      <PortfolioItem key="willamailn" item=(wilaamalinPortfolio) />
       <PortfolioItem key="eastwest" item=(eastwestPortfolio) />
       <PortfolioItem id="games" key="kikii" item=(kikiiPortfolio) />
       <PortfolioItem key="micro" item=(microgamesPortfolio) />

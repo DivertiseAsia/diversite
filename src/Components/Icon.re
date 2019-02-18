@@ -10,6 +10,7 @@ type iconType =
   | Linkedin
   | Pen
   | Laptop
+  | ArrowDown
 ;
 
 type icon = {
@@ -30,6 +31,7 @@ let mapStringToIconType = (icon: string) =>
   | "linkedin" => Some(Linkedin)
   | "pen" => Some(Pen)
   | "laptop" => Some(Laptop)
+  | "arrowdown" => Some(ArrowDown)
   | _ => None
 };
 
@@ -137,6 +139,12 @@ let mapIcon = (icon) =>
             <path className="cls-1" d="M114.86,14.49v41.1a4.67,4.67,0,0,1-.21,1.41L41.5,9.75h68.62A4.74,4.74,0,0,1,114.86,14.49Z"/>
             <path className="cls-1" d="M125.93,4.74V64.29l-6.35-4.1c0-.12,0-.25,0-.39V10.27a4.73,4.73,0,0,0-4.74-4.74H35L26.41,0h94.77A4.74,4.74,0,0,1,125.93,4.74Z"/>
         </g></g>
+    </svg>
+ )}
+ | ArrowDown => {iconType: ArrowDown, className: "arrowdown", content:(
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.46 11.69">
+        <defs><style>(string(".cls-1{fill:#eaeaea;}"))</style></defs>
+        <g id="Layer_2"><g id="Layer_1-2"><path className="cls-1" d="M11.51,11.55a1.32,1.32,0,0,0,.56-.4l8.68-7.74a1.82,1.82,0,0,0,.7-1.29h0A1.84,1.84,0,0,0,20.33.2a1.88,1.88,0,0,0-2.17.34L10.75,7.18,3.34.54A1.84,1.84,0,0,0,1.22.19,1.65,1.65,0,0,0,.57.65,1.69,1.69,0,0,0,0,1.91a1.82,1.82,0,0,0,.21.86A1.44,1.44,0,0,0,.7,3.4l8.77,7.75A1.88,1.88,0,0,0,11.51,11.55Z"/></g></g>
     </svg>
  )}
 }
