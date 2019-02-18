@@ -57,7 +57,9 @@ let mapStringToTechIconType = (icon: string) =>
   | "postgresql" => Postgresql
   | "reason" => Reason
   | "unity" => Unity
-  | "aws" | "brand Identity" | "c++" | "c#" | "graphic design" | "2d animation" | "web design" | "game design" | "ux" | "ui"    => Other(icon, "color2")
+  | "brand Identity" | "graphic design" | "2d animation" | "web design" | "game design" | "2d art"    => Other(icon, "color2")
+  | "c++" | "aws" | "html"    => Other(icon, "text-big")
+  | "ux" | "ui"     => Other(icon, "color2-text-big")
   | x => Other(x, x)
 };
 
