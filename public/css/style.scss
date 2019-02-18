@@ -650,8 +650,7 @@ nav .logo-link {
     padding-top: 24%;
     background-size: contain;
     background-position: top;
-    margin-top: -2px;
-    z-index: -2;
+    margin-top: -1.5px;
   }
  }
 /* Phone Portrait portimg-container style */
@@ -776,6 +775,7 @@ nav .logo-link {
   justify-content: center;
   align-items: center;
   margin: 5px;
+  padding: 3px;
   h6 {
     color: $text-white;
     text-transform: uppercase;
