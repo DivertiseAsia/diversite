@@ -48,7 +48,7 @@ let mapStringToTechIconType = (icon: string) =>
   | "ios" => Ios
   | "js" => Js
   | "unity" => Unity
-  | "graphic design" | "2d animation" => Other(icon, "color2")
+  | "graphic design" | "2d animation" | "web design" => Other(icon, "color2")
   | x => Other(x, x)
 };
 
