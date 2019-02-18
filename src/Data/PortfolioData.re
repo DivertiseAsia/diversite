@@ -112,13 +112,7 @@ let mintcrowdPortfolio:portfolioItem = {
 let boneagePortfolio:portfolioItem = {
   title: "Bone Age",
   className: None,
-  images: [
-    {
-      src: boneageai,
-      border:PhonePortrait,
-      className: Some("col-12")
-    }
-  ],
+  images: [],
   links: [],
   technologies: ["Aws", "Js", "Python", "Graphic Design", "Ux", "Ui" ],
   body: ([
