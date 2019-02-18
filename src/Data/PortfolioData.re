@@ -18,15 +18,15 @@ open PortfolioItem;
 [@bs.module] external gameaione : string = "../../../../public/projects/website-adsoup.jpg";
 [@bs.module] external gameaitwo : string = "../../../../public/projects/website-adsoup.jpg";
 [@bs.module] external cvrl : string = "../../../../public/projects/website-adsoup.jpg";
-[@bs.module] external kikiigamephone: string = "../../../../public/projects/kikii-2.gif";
-[@bs.module] external kikiigametablet: string = "../../../../public/projects/kikii-1.png";
+[@bs.module] external kikiigamephone: string = "../../../../public/projects/game-kikii2.jpg";
+[@bs.module] external kikiigametablet: string = "../../../../public/projects/game-kikii1.png";
 [@bs.module] external microgames1 : string = "../../../../public/projects/game-microgames1.jpg";
 [@bs.module] external microgames2 : string = "../../../../public/projects/game-microgames2.jpg";
 [@bs.module] external microgames3 : string = "../../../../public/projects/game-microgames3.png";
 
 /* --------------------- Apps --------------------------*/
 let adsoupPortfolio:portfolioItem = {
-  title: "AdSoup",
+  title: "Adsoup",
   className: None,
   images: [
     {
@@ -195,7 +195,7 @@ let ketawaPortfolio:portfolioItem = {
       caption: "View Website"
     }
   ],
-  technologies: ["html5", "css", "Graphic Design", "web design" ],
+  technologies: ["html5", "css", "Js", "Graphic Design", "web design" ],
   body: ([
     <div>
       <p>(string("Ketawa Hotel is a pet friendly hotel and cafe. Ketawa is rebranding and it needs its website to change to match with the new Cooperate Identity. So we redesigned the website. It has a warm, cozy, friendly, but simple look and feel to represent the hotel's characteristic."))</p>
@@ -272,7 +272,7 @@ let vrPortfolio:portfolioItem = {
 /* ----------------------- Games ---------------------------*/
 let kikiiPortfolio:portfolioItem = {
   title: "Kikii on the Run",
-  className: None,
+  className: Some("kikii-image"),
   images: [
     {
       src: kikiigamephone,
