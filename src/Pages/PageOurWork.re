@@ -14,7 +14,7 @@ let make = (_children) => {
         <input type_="checkbox" />
         <div className="nav-icon nav-icon-arrow"> 
           <h6>(string("Applications & Platforms")) </h6>
-          <Icon iconType=Code />
+          <Icon iconType=ArrowDown />
         </div>
         <div className="nav-container">
             <a href=Links.ourwork_appsandplatforms>(string("Applications & Platforms"))</a>

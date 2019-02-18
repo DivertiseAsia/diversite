@@ -3,6 +3,10 @@ open PortfolioItem;
 
 [@bs.module] external ketawadesktop : string = "../../../../public/projects/website-ketawa-d.jpg";
 [@bs.module] external ketawaapp : string = "../../../../public/projects/app-ketawa.png";
+[@bs.module] external wilaamalindesktop : string = "../../../../public/projects/website-wilaamalin.png";
+[@bs.module] external wilaamalinapp : string = "../../../../public/projects/app-wilaamalin.png";
+[@bs.module] external eastwestdesktop : string = "../../../../public/projects/website-eastwest.png";
+[@bs.module] external eastwestapp : string = "../../../../public/projects/app-eastwest.png";
 [@bs.module] external adsoupapp : string = "../../../../public/projects/app-adsoup.jpg";
 [@bs.module] external adsoudesktop : string = "../../../../public/projects/website-adsoup.jpg";
 [@bs.module] external copanelapp : string = "../../../../public/projects/app-copanel.jpg";
@@ -204,12 +208,12 @@ let wilaamalinPortfolio:portfolioItem = {
   className: None,
   images: [
     {
-      src: ketawadesktop,
+      src: wilaamalinapp,
       border:PhonePortrait,
       className: Some("col-4")
     },
     {
-      src: ketawadesktop,
+      src: wilaamalindesktop,
       border:Desktop,
       className: Some("col-8")
     }
@@ -218,7 +222,8 @@ let wilaamalinPortfolio:portfolioItem = {
   technologies: ["html5", "css", "Graphic Design", "web design" ],
   body: ([
     <div>
-       <p>(string("Some body text"))</p>
+    <p>(string("Ketawa Hotel is a pet friendly hotel and cafe. Ketawa is rebranding and it needs its website to change to match with the new Cooperate Identity. So we redesigned the website. It has a warm, cozy, friendly, but simple look and feel to represent the hotel's characteristic."))</p>
+    <p>(string("The site was built with HTML, Javascript, and styled with CSS in the framework of Bootstrap."))</p>
     </div>
   ] |> Belt.List.toArray),
 }
@@ -227,12 +232,12 @@ let eastwestPortfolio:portfolioItem = {
   className: None,
   images: [
     {
-      src: ketawadesktop,
+      src: eastwestapp,
       border:PhonePortrait,
       className: Some("col-4")
     },
     {
-      src: ketawadesktop,
+      src: eastwestdesktop,
       border:Desktop,
       className: Some("col-8")
     }
