@@ -7,7 +7,12 @@ type action =
 
 let component = reducerComponent("App");
 
-let routeMatches = (x, link) => "/" ++ x == link;
+let routeMatches = (x:list(string), link:string) => {
+  let currentPath = List.fold_left((acc, s) => acc ++ "/" ++ s, "", x);
+  {
+    currentPath == link
+  };
+};
 
 let make = _children => {
   ...component,
@@ -22,13 +27,13 @@ let make = _children => {
   },
   render: ({state: {route}}) => {
     switch (route.path) {
-    | ([x]) when routeMatches(x, Links.home) => <PageHome />
-    | ([x]) when routeMatches(x, Links.careers) => <PageCareers />
-    | ([x]) when routeMatches(x, Links.internshipdesign) => <PageInternshipDesign />
-    | ([x]) when routeMatches(x, Links.internshipdeveloper) => <PageInternshipDev />
-    | ([x]) when routeMatches(x, Links.careersdesigner) => <PageCareersDesigner />
-    | ([x]) when routeMatches(x, Links.careersdeveloper) => <PageCareersDeveloper />
-    | ([x]) when routeMatches(x, Links.ourwork) => <PageOurWork />
+    | (x) when routeMatches(x, Links.home) => <PageHome />
+    | (x) when routeMatches(x, Links.careers) => <PageCareers />
+    | (x) when routeMatches(x, Links.internshipdesign) => <PageInternshipDesign />
+    | (x) when routeMatches(x, Links.internshipdeveloper) => <PageInternshipDev />
+    | (x) when routeMatches(x, "/career-designer") || routeMatches(x, Links.careersdesigner) => <PageCareersDesigner />
+    | (x) when routeMatches(x, "/career-developer") || routeMatches(x, Links.careersdeveloper) => <PageCareersDeveloper />
+    | (x) when routeMatches(x, Links.ourwork) => <PageOurWork />
     | _ => <PageHome />
     };
   },

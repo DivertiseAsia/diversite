@@ -1,7 +1,7 @@
 open ReasonReact;
-open PortfolioItem;
-
+open PortfolioData;
 let component = ReasonReact.statelessComponent("PageOurWork");
+<<<<<<< HEAD
 [@bs.module] external ketawadesktop : string = "../../../../public/projects/website-ketawa-d.jpg";
 [@bs.module] external adsoupdesktop : string = "../../../../public/projects/website-adsoup.jpg";
 [@bs.module] external adsoupapp : string = "../../../../public/projects/app-adsoup.jpg";
@@ -315,6 +315,8 @@ let ragaPortfolio:portfolioItem = {
   technologies: ["Graphic Design"],
   body: ([<div>(string("Some body text"))</div>] |> Belt.List.toArray),
 }
+=======
+>>>>>>> dc5566ab72548387e131e20406d4b86de8c31aa5
 
 let make = (_children) => {
   ...component,
@@ -331,11 +333,11 @@ let make = (_children) => {
           <Icon iconType=Code />
         </div>
         <div className="nav-container">
-            <Link className="current" href="">(string("Applications & Platforms"))</Link>
-            <Link href="">(string("Artificial Intelligence"))</Link>
-            <Link href="">(string("Websites"))</Link>
-            <Link href="">(string("Virtual Reality"))</Link>
-            <Link href="">(string("Games"))</Link>
+            <a href=Links.ourwork_appsandplatforms>(string("Applications & Platforms"))</a>
+            <a href=Links.ourwork_ai>(string("Artificial Intelligence"))</a>
+            <a href=Links.ourwork_websites>(string("Websites"))</a>
+            <a href=Links.ourwork_vr>(string("Virtual Reality"))</a>
+            <a href=Links.ourwork_games>(string("Games"))</a>
         </div> 
       </div>
     </div>
@@ -343,19 +345,19 @@ let make = (_children) => {
     </div>
     <div className="buffer" />
     <div>
-    <PortfolioItem item=(adsoupPortfolio) />
-    <PortfolioItem item=(copanelPortfolio) />
-    <PortfolioItem item=(eventcometPortfolio) />
-    <PortfolioItem item=(mintcrowdPortfolio) />
-    <PortfolioItem item=(boneagePortfolio) />
-    <PortfolioItem item=(gameaionePortfolio) />
-    <PortfolioItem item=(gameaitwoPortfolio) />
-    <PortfolioItem item=(vrPortfolio) />
-    <PortfolioItem item=(ketawaPortfolio) />
-    <PortfolioItem item=(willamalinPortfolio) />
-    <PortfolioItem item=(eastwestPortfolio) />
-    <PortfolioItem item=(kikiiPortfolio) />
-    <PortfolioItem item=(microgamesPortfolio) />
+      <PortfolioItem id="appsandplatforms" key="adsoup" item=(adsoupPortfolio) />
+      <PortfolioItem key="copanel" item=(copanelPortfolio) />
+      <PortfolioItem key="eventcomet" item=(eventcometPortfolio) />
+      <PortfolioItem key="mintcrowd" item=(mintcrowdPortfolio) />
+      <PortfolioItem id="ai" key="boneage" item=(boneagePortfolio) />
+      <PortfolioItem key="gameaione" item=(gameaionePortfolio) />
+      <PortfolioItem key="gameaitwo" item=(gameaitwoPortfolio) />
+      <PortfolioItem id="vr" key="vr" item=(vrPortfolio) />
+      <PortfolioItem id="websites" key="ketawa" item=(ketawaPortfolio) />
+      <PortfolioItem key="willamailn" item=(willamalinPortfolio) />
+      <PortfolioItem key="eastwest" item=(eastwestPortfolio) />
+      <PortfolioItem id="games" key="kikii" item=(kikiiPortfolio) />
+      <PortfolioItem key="micro" item=(microgamesPortfolio) />
     </div>
     </MainPage>;
   },

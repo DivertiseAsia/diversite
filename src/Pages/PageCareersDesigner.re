@@ -12,34 +12,30 @@ let make = (_children) => {
           <div className="row pt-5 d-block">
             <h3><Icon className="mr-4" iconType=Pen />{string("What are the requirements?")}</h3>
               <ul className="ul-li-padding-none ul-li-dash p-4 pl-5 -lineheight-large">
-                <li> {string("Thai citizen")}</li>
-                <li> {string("Strong communication skills")}</li>
-                <li> {string("Minimum 2.50 GPA")}</li>
-                <li> {string("Design-related major / Art and design background")}</li>
-                <li> {string("Experience with computer graphic software (ex. Adobe Photoshop, Adobe illustrator etc.)")}</li>
-                <li> {string("Some experience with 3D or 2D art")}</li>
-                <li> {string("Skills in digital illustration is prefered, but not required")}</li>
-                <li> {string("Portfolio is required")}</li>
+                <li> {string("1-3 years experienced with visual designs (Preferably web/UI designs)")}</li>
+                <li> {string("Proficient with Photoshop and Illustrator")}</li>
+                <li> {string("Keeping up with latest design trends")}</li>
+                <li> {string("Enjoy learning and willing to take on challenging tasks")}</li>
+                <li> {string("Good problem-solving skills")}</li>
+                <li> {string("Presentation skill")}</li>
+                <li> {string("Intermediate level of English or higher")}</li>
               </ul>
           </div>
           <div className="row pt-5 d-block">
             <h3><Icon className="mr-4" iconType=Pen />{string("What will I be doing?")}</h3>
               <ul className="ul-li-padding-none ul-li-dash p-4 pl-5 -lineheight-large">
-                <li> {string("Working in game/ai projects")}</li>
-                <li> {string("Learn new skills and implement them into your projects.")}</li>
-                <li> {string("Work at our office at BTS Chidlom station Monday-Friday 10:00-18:00")}</li>
-                <li> {string("Hangout or play games together!")}</li>
-                <li> {string("Experience with computer graphic software (ex. Adobe Photoshop, Adobe illustrator etc.)")}</li>
-                <li> {string("Some experience with 3D or 2D art")}</li>
-                <li> {string("Skills in digital illustration is prefered, but not required")}</li>
-                <li> {string("Portfolio is required")}</li>
+                <li> {string("UX/UI design for website and applications")}</li>
+                <li> {string("Wireframe development and create prototypes (Using Adobe XD, InVision etc.)")}</li>
+                <li> {string("Work closely with developers")}</li>
+                <li> {string("Graphic design")}</li>
+                <li> {string("Helping implement designs in HTML/CSS")}</li>
+                <li> {string("Attend client meeting in both Thai and English")}</li>
               </ul>
           </div>
           <div className="row pt-5 d-block">
           <h3><Icon className="mr-4" iconType=Pen />{string("When can I start?")}</h3>
             <div className="ul-li-padding-none p-4 pl-5">
-              <p> {string("It is recomended to apply 1-2 months prior to start date.")}</p>
-              <p> {string("You are required to apply for minimum of 2 months")}</p>
+              <p> {string("It is recommended to apply 1-2 months prior to start date.")}</p>
             </div>
         </div>
       </div>
