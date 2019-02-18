@@ -47,19 +47,19 @@ let make = (_children) => {
         </div>
       </div>
       <div>
-        <FrontPageSection title="Application and Platforms" imageURL=homeapp href=Links.home>
+        <FrontPageSection title="Application and Platforms" imageURL=homeapp href=Links.ourwork_appsandplatforms>
           (string("We create entire platforms and services from the ground up. These platforms typically live in a combination of places from app stores to the cloud."))
         </FrontPageSection>
-        <FrontPageSection title="Artificial Intelligence" imageURL=ourgoal1 href=Links.home>
+        <FrontPageSection title="Artificial Intelligence" imageURL=ourgoal1 href=Links.ourwork_ai>
           (string("Newer applications and services should always be considering AI into their product. Everyone at Divertise Asia learns how to use AI and we make sure we offer it to everyone we work with."))
         </FrontPageSection>
-        <FrontPageSection title="Virtual Reality" imageURL=homeapp href=Links.home>
+        <FrontPageSection title="Virtual Reality" imageURL=homeapp href=Links.ourwork_vr>
           (string("Creating applications in VR/AR will be one of the next big things. We are looking for ways to be at the forefront of the technology and have partnered with other companies in Asia to bring VR applications to life."))
         </FrontPageSection>
-        <FrontPageSection title="Games" imageURL=homeweb href=Links.home>
+        <FrontPageSection title="Games" imageURL=homeweb href=Links.ourwork_games>
           (string("We love bringing more fun into the world! We have made two of our own games and occasionally have internal game jams"))
         </FrontPageSection>
-        <FrontPageSection title="Websites" imageURL=homeweb href=Links.home>
+        <FrontPageSection title="Websites" imageURL=homeweb href=Links.ourwork_websites>
           (string("The world runs on the web and we can produce any website needed for it. We aim to create a balance between user content management and speed of development.")) 
         </FrontPageSection>
       </div>

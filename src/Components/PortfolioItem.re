@@ -28,12 +28,13 @@ type portfolioItem = {
 
 let make =
     (
+      ~id:option(string) = ?,
       ~item:portfolioItem,
       _children
     ) => {
   ...component,
   render: _self => {
-    <div className={"section-portfolio " ++ Js.Option.getWithDefault("section-portfolio-default", item.className)}>
+    <div ?id className={"section-portfolio " ++ Js.Option.getWithDefault("section-portfolio-default", item.className)}>
       <div className="container">
         <div className="port_img-container row">
           {

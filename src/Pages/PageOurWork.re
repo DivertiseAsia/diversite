@@ -17,11 +17,11 @@ let make = (_children) => {
           <Icon iconType=Code />
         </div>
         <div className="nav-container">
-            <Link className="current" href="">(string("Applications & Platforms"))</Link>
-            <Link href="">(string("Artificial Intelligence"))</Link>
-            <Link href="">(string("Websites"))</Link>
-            <Link href="">(string("Virtual Reality"))</Link>
-            <Link href="">(string("Games"))</Link>
+            <a href=Links.ourwork_appsandplatforms>(string("Applications & Platforms"))</a>
+            <a href=Links.ourwork_ai>(string("Artificial Intelligence"))</a>
+            <a href=Links.ourwork_websites>(string("Websites"))</a>
+            <a href=Links.ourwork_vr>(string("Virtual Reality"))</a>
+            <a href=Links.ourwork_games>(string("Games"))</a>
         </div> 
       </div>
     </div>
@@ -29,18 +29,18 @@ let make = (_children) => {
     </div>
     <div className="buffer" />
     <div>
-      <PortfolioItem key="adsoup" item=(adsoupPortfolio) />
+      <PortfolioItem id="appsandplatforms" key="adsoup" item=(adsoupPortfolio) />
       <PortfolioItem key="copanel" item=(copanelPortfolio) />
       <PortfolioItem key="eventcomet" item=(eventcometPortfolio) />
       <PortfolioItem key="mintcrowd" item=(mintcrowdPortfolio) />
-      <PortfolioItem key="boneage" item=(boneagePortfolio) />
+      <PortfolioItem id="ai" key="boneage" item=(boneagePortfolio) />
       <PortfolioItem key="gameaione" item=(gameaionePortfolio) />
       <PortfolioItem key="gameaitwo" item=(gameaitwoPortfolio) />
-      <PortfolioItem key="vr" item=(vrPortfolio) />
-      <PortfolioItem key="ketawa" item=(ketawaPortfolio) />
+      <PortfolioItem id="vr" key="vr" item=(vrPortfolio) />
+      <PortfolioItem id="websites" key="ketawa" item=(ketawaPortfolio) />
       <PortfolioItem key="willamailn" item=(willamalinPortfolio) />
       <PortfolioItem key="eastwest" item=(eastwestPortfolio) />
-      <PortfolioItem key="kikii" item=(kikiiPortfolio) />
+      <PortfolioItem id="games" key="kikii" item=(kikiiPortfolio) />
       <PortfolioItem key="micro" item=(microgamesPortfolio) />
     </div>
     </MainPage>;
