@@ -223,7 +223,7 @@ nav .logo-link {
 .nav-container {
   background: transparent;
   z-index: 200;
-  transition: 0.4s;
+  transition: all 0.4s ease 0.1s;
   overflow: hidden;
   box-sizing: border-box;
 }
