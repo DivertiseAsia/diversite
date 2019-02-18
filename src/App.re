@@ -31,8 +31,8 @@ let make = _children => {
     | (x) when routeMatches(x, Links.careers) => <PageCareers />
     | (x) when routeMatches(x, Links.internshipdesign) => <PageInternshipDesign />
     | (x) when routeMatches(x, Links.internshipdeveloper) => <PageInternshipDev />
-    | (x) when routeMatches(x, Links.careersdesigner) => <PageCareersDesigner />
-    | (x) when routeMatches(x, Links.careersdeveloper) => <PageCareersDeveloper />
+    | (x) when routeMatches(x, "/career-designer") || routeMatches(x, Links.careersdesigner) => <PageCareersDesigner />
+    | (x) when routeMatches(x, "/career-developer") || routeMatches(x, Links.careersdeveloper) => <PageCareersDeveloper />
     | (x) when routeMatches(x, Links.ourwork) => <PageOurWork />
     | _ => <PageHome />
     };
