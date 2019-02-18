@@ -797,6 +797,13 @@ nav .logo-link {
 .tech-icon-color2 {
   background: radial-gradient(#52c4bb , #14918a);
 }
+.tech-icon-text-big h6 {
+  font-size: 14px;
+}
+.tech-icon-color2-text-big {
+  background: radial-gradient(#52c4bb , #14918a);
+  h6 { font-size: 14px; }
+}
 .port_btn {
   padding-left: 20px;
   padding-right: 20px;
