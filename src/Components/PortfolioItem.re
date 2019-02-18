@@ -55,7 +55,28 @@ let make =
               }
             </div>
             <div className="col-md-4 -text-right">
-              <Link className=" port_btn btn btn-line-color1" href="">(string("Get the Game Now"))</Link>
+              {
+                (Belt.List.map(
+                  item.links,
+                  link => {
+                    let classNames = switch (link._type) {
+                      | Default => "btn-line-color1"
+                      | AppStore => "btn-app-store"
+                      | GooglePlay => "btn-google-play"
+                      | MiStore => "btn-mi-store"
+                    };
+                    <Link
+                      isExternal=(true)
+                      target="_blank"
+                      className={"port_btn btn " ++ classNames}
+                      key=link.href
+                      href=link.href
+                    >
+                      (string(link.caption))
+                    </Link>
+                  }
+                )|> Belt.List.toArray |> ReasonReact.array)
+              }
             </div>
         </div>
         <div className="port_texts">

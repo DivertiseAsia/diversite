@@ -179,7 +179,13 @@ let ketawaPortfolio:portfolioItem = {
       className: Some("col-8")
     }
   ],
-  links: [],
+  links: [
+    {
+      _type: Default,
+      href: "http://www.ketawahotel.com/",
+      caption: "View Website"
+    }
+  ],
   technologies: ["html5", "css", "Graphic Design", "web design" ],
   body: ([
     <div>
