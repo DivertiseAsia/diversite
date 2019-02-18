@@ -827,6 +827,9 @@ and (max-width: 1200px) {
       .portimg_scroll { border-width: 1px; }
     }
   }
+  .phone-portrait {
+    max-width: 200px;
+  }
 }
 
 /* -------- Tablets Portrait ---------*/
@@ -900,7 +903,7 @@ and (max-width: 768px) {
   .phone-landscape, .phone-portrait, .tablet-landscape {
     .portimg-container .portimg {
       .portimg_frame { 
-        border-radius: 10px;
+        border-radius: 15px;
         border-width: 1px; 
       }
       .portimg_scroll { border-width: 1px; }
@@ -938,7 +941,7 @@ and (max-width: 576px) {
   .phone-landscape, .phone-portrait, .tablet-landscape {
     .portimg-container .portimg {
       .portimg_frame { 
-        border-radius: 5px;
+        border-radius: 9px;
         border-width: 1px; 
       }
       .portimg_scroll { border-width: 0.5px; }
@@ -946,6 +949,9 @@ and (max-width: 576px) {
   }
   .port_btn {
     width: 100%;
+  }
+  .phone-portrait {
+    max-width: 150px;
   }
 }
 
