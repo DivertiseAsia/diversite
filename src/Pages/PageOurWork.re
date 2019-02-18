@@ -38,7 +38,7 @@ let make = (_children) => {
       <PortfolioItem key="gameaitwo" item=(gameaitwoPortfolio) />
       <PortfolioItem id="vr" key="vr" item=(vrPortfolio) />
       <PortfolioItem id="websites" key="ketawa" item=(ketawaPortfolio) />
-      <PortfolioItem key="willamailn" item=(willamalinPortfolio) />
+      <PortfolioItem key="willamailn" item=(wilaamalinPortfolio) />
       <PortfolioItem key="eastwest" item=(eastwestPortfolio) />
       <PortfolioItem id="games" key="kikii" item=(kikiiPortfolio) />
       <PortfolioItem key="micro" item=(microgamesPortfolio) />

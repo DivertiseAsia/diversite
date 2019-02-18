@@ -45,7 +45,7 @@ let make =
           }
         </div>
         <h2>(string(item.title))</h2>
-        <div className="row">
+        <div className="row py-4">
             <div className="col-md-8 port_icon-container">
               {
                 (Belt.List.map(
