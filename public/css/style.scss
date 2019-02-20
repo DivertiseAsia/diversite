@@ -302,6 +302,10 @@ nav .logo-link {
   margin: 40px 10px 20px 10px;
   display: inline;
 }
+.icon-social img:hover{
+  transform: rotate(360deg) scale(1.3);
+  transition: 0.7s;
+}
 /* ------------------------------------ PAGES -----------------------------------*/
 /* ------------ Home Page ------------ */
 /* spectial Home Page Nav */
@@ -585,6 +589,9 @@ nav .logo-link {
   padding-top: 60px;
   padding-bottom: 60px;
   h3 { margin-bottom: 30px; }
+  .btn-line-color1:hover {
+    border-color: unset;
+  }
 }
 .section-portfolio:nth-child(even) { background-color: $bg-grey; } 
 .port_img-container {
@@ -747,7 +754,7 @@ nav .logo-link {
   display: block;
   width: 120%;
   margin-left: -10%;
-  margin-top: 15%;
+  margin-top: 3%;
   height: 20px;
   background: rgba(0, 0, 0, 0.3);
   filter: blur(10px);
@@ -757,7 +764,7 @@ nav .logo-link {
 }
 .desktop .portimg-container::after {
   margin: auto;
-  margin-top: -7px;
+  margin-top: -70px;
   width: 70%;
 }
 .portimg-container:hover {
@@ -806,12 +813,14 @@ nav .logo-link {
 }
 .tech-icon-color2-text-big {
   background: radial-gradient(#52c4bb , #14918a);
-  h6 { font-size: 14px; }
+  h6 { font-size: 14px !important; }
 }
 .port_btn {
   padding-left: 20px;
   padding-right: 20px;
+  margin: 5px; 
 }
+
 /* ------------------------------------ RESPONSIVE --------------------------------------*/
 
 /* -------- Big Desktops --------*/
@@ -913,6 +922,9 @@ and (max-width: 768px) {
       .portimg_scroll { border-width: 1px; }
     }
   }
+  .desktop .portimg-container::after {
+    margin-top: -50px;
+  }
 }
 
 /* -------- Phones ---------*/
@@ -956,6 +968,9 @@ and (max-width: 576px) {
   }
   .phone-portrait {
     max-width: 150px;
+  }
+  .desktop .portimg-container::after {
+    margin-top: -20px;
   }
 }
 

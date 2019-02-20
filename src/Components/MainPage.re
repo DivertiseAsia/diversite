@@ -49,7 +49,7 @@ let make =
       <div className="main-content"> ...children </div>
       <div className="footer">
         <div className="social-media">
-          <Link isExternal=(true) target="_blank" href="https://www.facebook.com/DivertiseAsia/" className="icon-social"><img src=social_fb /></Link>
+          <Link isExternal=(true) target="_blank" href="https://www.facebook.com/DivertiseAsia/" className="icon-social social-fb"><img src=social_fb /></Link>
           <Link isExternal=(true) target="_blank" href="https://www.linkedin.com/company/divertiseasia" className="icon-social"><img src=social_in /></Link>
           <Link isExternal=(true) href="mailto:contact@divertise.asia" className="icon-social"><img src=social_mail /></Link>
         </div>
