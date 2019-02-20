@@ -40,11 +40,28 @@ let adsoupPortfolio:portfolioItem = {
       className: Some("col-8")
     }
   ],
-  links: [],
-  technologies: ["Firebase", "Docker", "aws", "Postgresql", "Js", "Python", "Web design", "Graphic Design", "Ux", "Ui" ],
+  links: [
+    {
+      _type: Default,
+      href: "https://adsoup.com/?ref=divertise.asia",
+      caption: "View Website"
+    },
+    {
+      _type: GooglePlay,
+      href: "https://play.google.com/store/apps/details?id=io.adsoup.sales.mobile",
+      caption: "Google Play"
+    },
+    {
+      _type: AppStore,
+      href: "https://itunes.apple.com/us/app/adsoup/id1415279019",
+      caption: "iTunes"
+    }
+  ],
+  technologies: ["React", "Python", "Reason", "Firebase", "Postgresql", "Android", "iOS", "Docker", "aws", "Web design", "Graphic Design", "Ux", "Ui" ],
   body: ([
     <div>
       <p>(string("Adsoup Sales is an all-in-one platform where sales can communicate with thier leads from different comunication channels in one place, including Facebook and email. They also provide pipeline management and CRM functionality to manage customers account."))</p>
+      <p>(string("Adsoup's main application is created in React and Firebase. The live chat component is built soley upon Firebase/Reason. The backend API and mailing fetching services are written in Python."))</p>
     </div>
   ] |> Belt.List.toArray),
 }
@@ -63,11 +80,18 @@ let copanelPortfolio:portfolioItem = {
       className: Some("col-8")
     }
   ],
-  links: [],
-  technologies: ["Firebase", "Docker", "aws", "Postgresql", "Js", "Python", "Web design", "Graphic Design", "Ux", "Ui" ],
+  links: [
+    {
+      _type: Default,
+      href: "http://copanel.io/?ref=divertise.asia",
+      caption: "View Website"
+    }
+  ],
+  technologies: ["React", "Js","Ruby", "Docker", "aws", "Postgresql", "Web design", "Graphic Design", "Ux", "Ui" ],
   body: ([
     <div>
-    <p>(string("CoPanel is time tracking application with the the ability to plan task ahead of time. This platform is design for a small to medium size team to track working time and create reports based on category and projects. "))</p>
+      <p>(string("CoPanel is a time tracking application with the the ability to plan tasks ahead of time. This platform is designed for a small to medium size team to track working time and create reports based on category and projects. "))</p>
+      <p>(string("The frontend is written in ReactJS and the backend is in Ruby. It is currently a free platform that supports both Thai and English"))</p>
     </div>
   ] |> Belt.List.toArray),
 }
@@ -86,11 +110,18 @@ let eventcometPortfolio:portfolioItem = {
       className: Some("col-8")
     }
   ],
-  links: [],
-  technologies: ["Aws", "Js", "Python", "Web design", "Ux", "Ui" ],
+  links: [
+    {
+      _type: Default,
+      href: "https://eventcomet.com/?ref=divertise.asia",
+      caption: "View Website"
+    }
+  ],
+  technologies: ["iOS", "Android", "Reason", "Ruby", "Docker", "Aws", "Web design", "Ux", "Ui" ],
   body: ([
     <div>
-      <p>(string("Let us build the perfect app for your event"))</p>
+      <p>(string("EventComet is an all-in-one event app solution. It was created to allow any event to have their own application. It allows event data to be updated even during the event."))</p>
+      <p>(string("It's written using ReasonML with the server in Ruby. The platform supports running on both Android and iOS."))</p>
     </div>
   ] |> Belt.List.toArray),
 }
@@ -109,11 +140,18 @@ let mintcrowdPortfolio:portfolioItem = {
       className: Some("col-8")
     }
   ],
-  links: [],
-  technologies: ["Html", "Css", "Python", "Web design", "Ux", "Ui" ],
+  links: [
+    {
+      _type: Default,
+      href: "https://mintcrowd.com/?ref=divertise.asia",
+      caption: "View Website"
+    }
+  ],
+  technologies: ["Reason", "Python", "Docker", "Aws", "Web design", "Ux", "Ui" ],
   body: ([
     <div>
-      <p>(string("Let us build the perfect app for your event"))</p>
+      <p>(string("Mint Crowd allows anyone to invest in property located in Asia. The site takes a crowdfunding approach to investing and aims at a Western market."))</p>
+      <p>(string("The site was built with Reason and the backend runs in Python."))</p>
     </div>
   ] |> Belt.List.toArray),
 }
@@ -122,11 +160,17 @@ let boneagePortfolio:portfolioItem = {
   title: "Bone Age",
   className: None,
   images: [],
-  links: [],
-  technologies: ["Aws", "Js", "Python", "Graphic Design", "Ux", "Ui" ],
+  links: [
+    {
+      _type: Default,
+      href: "#",
+      caption: "Paper Coming Soon"
+    }
+  ],
+  technologies: ["AI", "Research"],
   body: ([
     <div>
-      <p>(string("Some body text"))</p>
+      <p>(string("This project works to determine the age of a patient given their x-ray"))</p>
     </div>
   ] |> Belt.List.toArray),
 }
@@ -198,7 +242,7 @@ let ketawaPortfolio:portfolioItem = {
   ] |> Belt.List.toArray),
 }
 let wilaamalinPortfolio:portfolioItem = {
-  title: "Wilaa Malin",
+  title: "WilaaMalin",
   className: None,
   images: [
     {
@@ -212,17 +256,21 @@ let wilaamalinPortfolio:portfolioItem = {
       className: Some("col-8")
     }
   ],
-  links: [],
-  technologies: ["html5", "css", "Graphic Design", "web design" ],
+  links: [{
+    _type: Default,
+    href: "https://wilaamalin.com?ref=divertise.asia",
+    caption: "View Website"
+  }],
+  technologies: ["wordpress", "Graphic Design", "web design" ],
   body: ([
     <div>
-    <p>(string("Ketawa Hotel is a pet friendly hotel and cafe. Ketawa is rebranding and it needs its website to change to match with the new Cooperate Identity. So we redesigned the website. It has a warm, cozy, friendly, but simple look and feel to represent the hotel's characteristic."))</p>
-    <p>(string("The site was built with HTML, Javascript, and styled with CSS in the framework of Bootstrap."))</p>
+    <p>(string("WilaaMalin is a handmade pet toy store. They wanted to move their website to a platform they could more easily manage and have more control in."))</p>
+    <p>(string("The site was created in WordPress."))</p>
     </div>
   ] |> Belt.List.toArray),
 }
 let eastwestPortfolio:portfolioItem = {
-  title: "East Wes",
+  title: "East West Fitness",
   className: None,
   images: [
     {
@@ -236,11 +284,18 @@ let eastwestPortfolio:portfolioItem = {
       className: Some("col-8")
     }
   ],
-  links: [],
-  technologies: ["html5", "css", "Graphic Design", "web design" ],
+  links: [
+    {
+      _type: Default,
+      href: "https://eastwestfitness.com/?ref=divertise.asia",
+      caption: "View Website"
+    }
+  ],
+  technologies: ["Graphic Design", "web design", "Wordpress" ],
   body: ([
     <div>
-       <p>(string("Some body text"))</p>
+      <p>(string("East West Fitness is both a gym and fitness equipment provider located in Bangkok, Thailand. They wanted to a more professional website that they could manage on a daily basis."))</p>
+      <p>(string("The website was created in WordPress."))</p>
     </div>
   ] |> Belt.List.toArray),
 }
@@ -255,11 +310,18 @@ let vrPortfolio:portfolioItem = {
       className: Some("col-12")
     }
   ],
-  links: [],
-  technologies: [ "Graphic Design" ],
+  links: [
+    {
+      _type: Default,
+      href: "https://cvrl.asia/?ref=divertise.asia",
+      caption: "View Website"
+    }
+  ],
+  technologies: [ "VR", "Unity", "Android", "NodeJS" ],
   body: ([
     <div>
-      <p>(string("Some body text"))</p>
+      <p>(string("We have been working together as a partner with CVRL to help develop their VR catalog. We have worked with them to help create their property viewing platform. "))</p>
+      <p>(string("The products are mostly written in C# using the Unity engine. To see their platform in action please contact CVRL or Divertise Asia"))</p>
     </div>
   ] |> Belt.List.toArray),
 }
@@ -279,12 +341,23 @@ let kikiiPortfolio:portfolioItem = {
       className: Some("col-7")
     }
   ],
-  links: [],
-  technologies: ["Unity", "android", "ios" ,"Game Design", "2D Art", "2D Animation"],
+  links: [
+    {
+      _type: GooglePlay,
+      href: "https://play.google.com/store/apps/details?id=asia.divertise.soidog",
+      caption: "Google Play"
+    },
+    {
+      _type: AppStore,
+      href: "https://itunes.apple.com/th/app/kikii-on-the-run/id1282269153?mt=8",
+      caption: "iTunes"
+    }
+  ],
+  technologies: ["Unity","Game Design", "2D Art", "2D Animation", "android", "ios"],
   body: ([
     <div>
       <p>(string("A game with the ridiculous concept of a dog running, eating, and pooping in the streets of Bangkok. Inspired by the walk to our old office."))</p>
-      <p>(string("It’s written in C# using the Unity engine. The game is currently out on Android and IOS. It supports both Thai and English"))</p>
+      <p>(string("It's written in C# using the Unity engine. The game is currently out on Android and IOS. It supports both Thai and English"))</p>
     </div>
   ] |> Belt.List.toArray),
 }
@@ -308,8 +381,14 @@ let microgamesPortfolio:portfolioItem = {
       className: Some("col-4")
     }
   ],
-  links: [],
-  technologies: ["C++","Cocos","Game Design", "Ux/Ui", "2D Art", "2D Animation"],
+  links: [
+    {
+      _type: GooglePlay,
+      href: "https://play.google.com/store/apps/details?id=th.co.microgames",
+      caption: "Google Play"
+    }
+  ],
+  technologies: ["C++","Cocos", "Game Design", "Ux/Ui", "2D Art", "2D Animation", "Android"],
   body: ([
     <div>
       <p>(string("A 4-player game that takes place all on the same screen. It's made to be frantic for some quick downtime fun."))</p>
