@@ -56,6 +56,7 @@ let mapStringToTechIconType = (icon: string) =>
   | "js" => Js
   | "postgresql" => Postgresql
   | "reason" => Reason
+  | "react" => React
   | "unity" => Unity
   | "brand Identity" | "graphic design" | "2d animation" | "web design" | "game design" | "2d art"    => Other(icon, "color2")
   | "c++" | "aws" | "html"    => Other(icon, "text-big")
