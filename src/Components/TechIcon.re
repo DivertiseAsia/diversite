@@ -13,7 +13,11 @@ open ReasonReact;
 [@bs.module] external iconjs : string = "../../../../public/images/tech-icon/tech-icon_js.png";
 [@bs.module] external iconpostgresql : string = "../../../../public/images/tech-icon/tech-icon_postgresql.png";
 [@bs.module] external iconreason : string = "../../../../public/images/tech-icon/tech-icon_reason.png";
+[@bs.module] external iconreact : string = "../../../../public/images/tech-icon/tech-icon_react.png";
+[@bs.module] external iconnodejs : string = "../../../../public/images/tech-icon/tech-icon_nodejs.png";
 [@bs.module] external iconunity : string = "../../../../public/images/tech-icon/tech-icon_unity.png";
+[@bs.module] external iconruby : string = "../../../../public/images/tech-icon/tech-icon_ruby.png";
+[@bs.module] external iconwordpress : string = "../../../../public/images/tech-icon/tech-icon_wordpress.png";
 
 type techIconType =
   | HTML5
@@ -28,9 +32,13 @@ type techIconType =
   | Git
   | Ios
   | Js
+  | Nodejs
   | Postgresql
   | Reason
+  | React
+  | Ruby
   | Unity
+  | Wordpress
   | Other(string, string)
 ;
 
@@ -54,10 +62,13 @@ let mapStringToTechIconType = (icon: string) =>
   | "git" => Git
   | "ios" => Ios
   | "js" => Js
+  | "nodejs" => Nodejs
   | "postgresql" => Postgresql
   | "reason" => Reason
   | "react" => React
   | "unity" => Unity
+  | "ruby" => Ruby
+  | "wordpress" => Wordpress
   | "brand Identity" | "graphic design" | "2d animation" | "web design" | "game design" | "2d art"    => Other(icon, "color2")
   | "c++" | "aws" | "html"    => Other(icon, "text-big")
   | "ux" | "ui"     => Other(icon, "color2-text-big")
@@ -99,6 +110,9 @@ let mapIcon = (icon) =>
   | Ios => {techIconType: icon, className: "ios", content:(
     <ImageBackground src=iconios />
   )}
+  | Nodejs => {techIconType: icon, className: "nodejs", content:(
+  <ImageBackground src=iconnodejs />
+  )}
   | Js => {techIconType: icon, className: "js", content:(
     <ImageBackground src=iconjs />
   )}
@@ -108,10 +122,19 @@ let mapIcon = (icon) =>
   | Reason => {techIconType: icon, className: "reason", content:(
   <ImageBackground src=iconreason />
   )}
+  | React => {techIconType: icon, className: "react", content:(
+  <ImageBackground src=iconreact />
+  )}
+  | Ruby => {techIconType: icon, className: "ruby", content:(
+  <ImageBackground src=iconruby />
+  )}
   | Unity => {techIconType: icon, className: "unity", content:(
     <ImageBackground src=iconunity />
   )}
-  
+  | Wordpress => {techIconType: icon, className: "wordpress", content:(
+  <ImageBackground src=iconwordpress />
+)}
+
   | Other(x, className) => {techIconType: icon, className: className, content:(
     <h6>(string(x))</h6>
   )}
