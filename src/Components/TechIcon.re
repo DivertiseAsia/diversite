@@ -6,10 +6,13 @@ open ReasonReact;
 [@bs.module] external iconcocos : string = "../../../../public/images/tech-icon/tech-icon_cocos.png";
 [@bs.module] external iconcss : string = "../../../../public/images/tech-icon/tech-icon_css.png";
 [@bs.module] external icondjango : string = "../../../../public/images/tech-icon/tech-icon_django.png";
+[@bs.module] external icondocker : string = "../../../../public/images/tech-icon/tech-icon_docker.png";
 [@bs.module] external iconfirebase : string = "../../../../public/images/tech-icon/tech-icon_firebase.png";
 [@bs.module] external icongit : string = "../../../../public/images/tech-icon/tech-icon_git.png";
 [@bs.module] external iconios : string = "../../../../public/images/tech-icon/tech-icon_ios.png";
 [@bs.module] external iconjs : string = "../../../../public/images/tech-icon/tech-icon_js.png";
+[@bs.module] external iconpostgresql : string = "../../../../public/images/tech-icon/tech-icon_postgresql.png";
+[@bs.module] external iconreason : string = "../../../../public/images/tech-icon/tech-icon_reason.png";
 [@bs.module] external iconunity : string = "../../../../public/images/tech-icon/tech-icon_unity.png";
 
 type techIconType =
@@ -20,10 +23,13 @@ type techIconType =
   | Cocos
   | CSS
   | Django
+  | Docker
   | Firebase
   | Git
   | Ios
   | Js
+  | Postgresql
+  | Reason
   | Unity
   | Other(string, string)
 ;
@@ -43,12 +49,17 @@ let mapStringToTechIconType = (icon: string) =>
   | "cocos" => Cocos
   | "css" => CSS
   | "django" => Django
+  | "docker" => Docker
   | "firebase" => Firebase
   | "git" => Git
   | "ios" => Ios
   | "js" => Js
+  | "postgresql" => Postgresql
+  | "reason" => Reason
   | "unity" => Unity
-  | "graphic design" | "2d animation" | "web design" | "game design" | "ux" | "ui" | "c++" | "c#" | "aws" => Other(icon, "color2")
+  | "brand Identity" | "graphic design" | "2d animation" | "web design" | "game design" | "2d art"    => Other(icon, "color2")
+  | "c++" | "aws" | "html"    => Other(icon, "text-big")
+  | "ux" | "ui"     => Other(icon, "color2-text-big")
   | x => Other(x, x)
 };
 
@@ -75,6 +86,9 @@ let mapIcon = (icon) =>
   | Django => {techIconType: icon, className: "django", content:(
     <ImageBackground src=icondjango />
   )}
+  | Docker => {techIconType: icon, className: "docker", content:(
+  <ImageBackground src=icondocker />
+  )}
   | Firebase => {techIconType: icon, className: "firebase", content:(
     <ImageBackground src=iconfirebase />
   )}
@@ -86,6 +100,12 @@ let mapIcon = (icon) =>
   )}
   | Js => {techIconType: icon, className: "js", content:(
     <ImageBackground src=iconjs />
+  )}
+  | Postgresql => {techIconType: icon, className: "postgresql", content:(
+  <ImageBackground src=iconpostgresql />
+  )}
+  | Reason => {techIconType: icon, className: "reason", content:(
+  <ImageBackground src=iconreason />
   )}
   | Unity => {techIconType: icon, className: "unity", content:(
     <ImageBackground src=iconunity />
