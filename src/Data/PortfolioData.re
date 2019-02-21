@@ -23,6 +23,8 @@ open PortfolioItem;
 [@bs.module] external microgames1 : string = "../../../../public/projects/game-microgames1.jpg";
 [@bs.module] external microgames2 : string = "../../../../public/projects/game-microgames2.jpg";
 [@bs.module] external microgames3 : string = "../../../../public/projects/game-microgames3.png";
+[@bs.module] external cvrld : string = "../../../../public/projects/project-cvrl-desktop.jpg";
+[@bs.module] external cvrlp : string = "../../../../public/projects/project-cvrl-phone.jpg";
 
 /* --------------------- Apps --------------------------*/
 let adsoupPortfolio:portfolioItem = {
@@ -32,12 +34,12 @@ let adsoupPortfolio:portfolioItem = {
     {
       src: adsoupapp,
       border:PhonePortrait,
-      className: Some("col-4")
+      className: Some("col-4 port-no-scroll")
     },
     {
       src: adsoudesktop,
       border:Desktop,
-      className: Some("col-8")
+      className: Some("col-8 port-no-scroll")
     }
   ],
   links: [
@@ -72,12 +74,12 @@ let copanelPortfolio:portfolioItem = {
     {
       src: copanelapp,
       border:PhonePortrait,
-      className: Some("col-4")
+      className: Some("col-4 port-no-scroll")
     },
     {
       src: copaneldesktop,
       border:Desktop,
-      className: Some("col-8")
+      className: Some("col-8 port-no-scroll")
     }
   ],
   links: [
@@ -102,12 +104,12 @@ let eventcometPortfolio:portfolioItem = {
     {
       src: eventcometapp,
       border:PhonePortrait,
-      className: Some("col-4")
+      className: Some("col-4 port-no-scroll")
     },
     {
       src: eventcometapp,
       border:Desktop,
-      className: Some("col-8")
+      className: Some("col-8 port-no-scroll")
     }
   ],
   links: [
@@ -305,9 +307,14 @@ let vrPortfolio:portfolioItem = {
   className: None,
   images: [
     {
-      src: cvrl,
-      border:PhonePortrait,
-      className: Some("col-12")
+      src: cvrlp,
+      border:PhoneLandscape,
+      className: Some("col-6 port-no-scroll")
+    },
+    {
+      src: cvrld,
+      border:Desktop,
+      className: Some("col-6 port-no-scroll")
     }
   ],
   links: [
