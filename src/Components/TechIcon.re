@@ -14,6 +14,7 @@ open ReasonReact;
 [@bs.module] external iconpostgresql : string = "../../../../public/images/tech-icon/tech-icon_postgresql.png";
 [@bs.module] external iconreason : string = "../../../../public/images/tech-icon/tech-icon_reason.png";
 [@bs.module] external iconunity : string = "../../../../public/images/tech-icon/tech-icon_unity.png";
+[@bs.module] external iconwordpress : string = "../../../../public/images/tech-icon/tech-icon_wordpress.png";
 
 type techIconType =
   | HTML5
@@ -31,6 +32,7 @@ type techIconType =
   | Postgresql
   | Reason
   | Unity
+  | Wordpress
   | Other(string, string)
 ;
 
@@ -57,6 +59,7 @@ let mapStringToTechIconType = (icon: string) =>
   | "postgresql" => Postgresql
   | "reason" => Reason
   | "unity" => Unity
+  | "wordpress" => Wordpress
   | "brand Identity" | "graphic design" | "2d animation" | "web design" | "game design" | "2d art"    => Other(icon, "color2")
   | "c++" | "aws" | "html"    => Other(icon, "text-big")
   | "ux" | "ui"     => Other(icon, "color2-text-big")
@@ -109,6 +112,9 @@ let mapIcon = (icon) =>
   )}
   | Unity => {techIconType: icon, className: "unity", content:(
     <ImageBackground src=iconunity />
+  )}
+  | Wordpress => {techIconType: icon, className: "wordpress", content:(
+    <ImageBackground src=iconwordpress />
   )}
   
   | Other(x, className) => {techIconType: icon, className: className, content:(
