@@ -2,7 +2,7 @@ open ReasonReact;
 
 let component = ReasonReact.statelessComponent("PageHome");
 [@bs.module] external ourgoal1 : string = "../../../../public/images/icon-platforms.png";
-[@bs.module] external ourgoal2 : string = "../../../../public/images/flexible.png";
+[@bs.module] external ourgoal2 : string = "../../../../public/images/icon-ai.png";
 [@bs.module] external ourgoal3 : string = "../../../../public/images/icon-vr.png";
 [@bs.module] external homeapp : string = "../../../../public/images/home-app.png";
 [@bs.module] external homeweb : string = "../../../../public/images/home-website.png";
