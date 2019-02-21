@@ -11,8 +11,9 @@ open PortfolioItem;
 [@bs.module] external adsoudesktop : string = "../../../../public/projects/website-adsoup.jpg";
 [@bs.module] external copanelapp : string = "../../../../public/projects/app-copanel.jpg";
 [@bs.module] external copaneldesktop : string = "../../../../public/projects/website-copanel.jpg";
-[@bs.module] external eventcometapp : string = "../../../../public/projects/app-eventcomet.jpg";
-[@bs.module] external eventcometdesket : string = "../../../../public/projects/website-eventcomet.jpg";
+[@bs.module] external eventcometeventapp : string = "../../../../public/projects/app-eventcomet-event.jpg";
+[@bs.module] external eventcometscheduleapp : string = "../../../../public/projects/app-eventcomet-schedule.jpg";
+[@bs.module] external eventcometdateapp : string = "../../../../public/projects/app-eventcomet-date.jpg";
 [@bs.module] external mintcrowddesktop : string = "../../../../public/projects/mintcrowd.jpg";
 [@bs.module] external mintcrowdapp : string = "../../../../public/projects/mintcrowd-app.jpg";
 [@bs.module] external boneageai : string = "../../../../public/projects/website-adsoup.jpg";
@@ -101,14 +102,19 @@ let eventcometPortfolio:portfolioItem = {
   className: None,
   images: [
     {
-      src: eventcometapp,
+      src: eventcometeventapp,
       border:PhonePortrait,
       className: Some("col-4")
     },
     {
-      src: eventcometdesket,
-      border:Desktop,
-      className: Some("col-8")
+      src: eventcometscheduleapp,
+      border:PhonePortrait,
+      className: Some("col-4")
+    },
+    {
+      src: eventcometdateapp,
+      border:PhonePortrait,
+      className: Some("col-4")
     }
   ],
   links: [
