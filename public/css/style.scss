@@ -1003,6 +1003,18 @@ and (max-width: 576px) {
       .portimg_scroll { border-width: 0.5px; }
     }
   }
+  .port_btn-container {
+    margin-top: 50px;
+  }
+  .btn-google-play, .btn-app-store, .btn-mi-store {
+    border: none;
+    padding: 0;
+  }
+  .btn-google-play::before, .btn-app-store::before, .btn-mi-store::before {
+    height: 80px;
+    width: 100%;
+    margin-bottom: -20px;
+  }
   .port_btn {
     width: 100%;
   }

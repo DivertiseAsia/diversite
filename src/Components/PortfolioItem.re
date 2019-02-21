@@ -54,7 +54,7 @@ let make =
                 )|> Belt.List.toArray |> ReasonReact.array)
               }
             </div>
-            <div className="col-md-6 -text-right">
+            <div className="col-md-6 -text-right port_btn-container">
               {
                 (Belt.List.map(
                   item.links,
