@@ -34,12 +34,12 @@ let adsoupPortfolio:portfolioItem = {
     {
       src: adsoupapp,
       border:PhonePortrait,
-      className: Some("col-4 port-no-scroll")
+      className: Some("col-4 port-no-scroll portimg-adsoup-phone")
     },
     {
       src: adsoudesktop,
       border:Desktop,
-      className: Some("col-8 port-no-scroll")
+      className: Some("col-8 port-no-scroll portimg-adsoup-desktop")
     }
   ],
   links: [
@@ -74,12 +74,12 @@ let copanelPortfolio:portfolioItem = {
     {
       src: copanelapp,
       border:PhonePortrait,
-      className: Some("col-4 port-no-scroll")
+      className: Some("col-4 port-no-scroll portimg-copanel-phone")
     },
     {
       src: copaneldesktop,
       border:Desktop,
-      className: Some("col-8 port-no-scroll")
+      className: Some("col-8 port-no-scroll portimg-copanel-desktop")
     }
   ],
   links: [
@@ -104,12 +104,12 @@ let eventcometPortfolio:portfolioItem = {
     {
       src: eventcometapp,
       border:PhonePortrait,
-      className: Some("col-4 port-no-scroll")
+      className: Some("col-4 port-no-scroll portimg-eventcomet-phone")
     },
     {
       src: eventcometapp,
       border:Desktop,
-      className: Some("col-8 port-no-scroll")
+      className: Some("col-8 port-no-scroll portimg-eventcomet-desktop")
     }
   ],
   links: [
@@ -133,8 +133,8 @@ let mintcrowdPortfolio:portfolioItem = {
   images: [
     {
       src: mintcrowdapp,
-      border:PhonePortrait,
-      className: Some("col-4")
+      border:PhonePortraitBlack,
+      className: Some("col-4 scroll-25")
     },
     {
       src: mintcrowddesktop,
@@ -220,7 +220,7 @@ let ketawaPortfolio:portfolioItem = {
     {
       src: ketawaapp,
       border:PhonePortrait,
-      className: Some("col-4")
+      className: Some("col-4 scroll-25")
     },
     {
       src: ketawadesktop,
@@ -249,8 +249,8 @@ let wilaamalinPortfolio:portfolioItem = {
   images: [
     {
       src: wilaamalinapp,
-      border:PhonePortrait,
-      className: Some("col-4")
+      border:PhonePortraitBlack,
+      className: Some("col-4 scroll-30")
     },
     {
       src: wilaamalindesktop,
@@ -278,7 +278,7 @@ let eastwestPortfolio:portfolioItem = {
     {
       src: eastwestapp,
       border:PhonePortrait,
-      className: Some("col-4")
+      className: Some("col-4 scroll-30")
     },
     {
       src: eastwestdesktop,
@@ -309,7 +309,7 @@ let vrPortfolio:portfolioItem = {
     {
       src: cvrlp,
       border:PhoneLandscape,
-      className: Some("col-6 port-no-scroll")
+      className: Some("col-6 port-no-scroll portimg-cvrl-phone")
     },
     {
       src: cvrld,
@@ -339,7 +339,7 @@ let kikiiPortfolio:portfolioItem = {
   images: [
     {
       src: kikiigamephone,
-      border:PhoneLandscape,
+      border:PhoneLandscapeBlack,
       className: Some("col-5")
     },
     {

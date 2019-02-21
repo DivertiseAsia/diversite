@@ -593,6 +593,8 @@ nav .logo-link {
   align-items: center;
 }
 .scroll-long { transition: all 15s; }
+.scroll-25 .scroll-long { transition: all 25s; }
+.scroll-30 .scroll-long { transition: all 30s; }
 
 /* Default portimg-container style */
 .portimg-container {
@@ -710,6 +712,17 @@ nav .logo-link {
     }
   }
 }
+/* Phone Black */
+.phone-black .portimg-container {
+  .portimg {
+    .portimg_scroll { border: $border-default rgb(46, 46, 46); }
+    .portimg_scroll-before { background: rgb(46, 46, 46); }
+    .portimg_frame { 
+      background: rgb(0, 0, 0);
+      border: solid 2px rgb(46, 46, 46);;
+    }
+  }
+}
 /* Tablet Landscape portimg-container style */
 .tablet-landscape .portimg-container {
   .portimg {
@@ -765,6 +778,14 @@ nav .logo-link {
   .scroll-long { background-position: top; }
 }
 .portimg-container:hover::after { opacity: 1; }
+
+/* adjust proportion of each project img*/
+.portimg-adsoup-phone .portimg-container .portimg .portimg_scroll { padding-bottom: 178%; }
+//.portimg-eventcomet-phone .portimg-container .portimg .portimg_scroll { padding-bottom: 178%; }
+.portimg-adsoup-desktop .portimg-container .portimg .portimg_scroll { padding-bottom: 56%; }
+.portimg-copanel-desktop .portimg-container .portimg .portimg_scroll { padding-bottom: 56%; }
+//.portimg-eventcomet-desktop .portimg-container .portimg .portimg_scroll { padding-bottom: 56%; }
+.portimg-cvrl-phone .portimg-container .portimg .portimg_scroll { padding-bottom: 46%; }
 
 .port_icon-container {
   vertical-align: middle;

@@ -4,7 +4,9 @@ let component = ReasonReact.statelessComponent("PortfolioImage");
 
 type portfolioImageBorder =
   | PhonePortrait
+  | PhonePortraitBlack
   | PhoneLandscape
+  | PhoneLandscapeBlack
   | Desktop
   | Tablet
 ;
@@ -19,7 +21,9 @@ type portfolioImage = {
 let getImageBorderClass = (borderType: portfolioImageBorder) => {
   switch (borderType) {
   | PhonePortrait => "phone-portrait"
+  | PhonePortraitBlack => "phone-portrait phone-black"
   | PhoneLandscape => "phone-landscape"
+  | PhoneLandscapeBlack => "phone-landscape phone-black"
   | Desktop => "desktop"
   | Tablet => "tablet-landscape"
   };
