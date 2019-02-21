@@ -167,7 +167,7 @@ let boneagePortfolio:portfolioItem = {
       caption: "Paper Coming Soon"
     }
   ],
-  technologies: ["AI", "Research"],
+  technologies: ["tensorflow","numpy","scikitlearn","pandas","AI", "Research"],
   body: ([
     <div>
       <p>(string("This project works to determine the age of a patient given their x-ray"))</p>
