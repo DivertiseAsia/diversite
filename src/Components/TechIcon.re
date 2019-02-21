@@ -61,7 +61,7 @@ let mapStringToTechIconType = (icon: string) =>
   | "unity" => Unity
   | "wordpress" => Wordpress
   | "brand Identity" | "graphic design" | "2d animation" | "web design" | "game design" | "2d art"    => Other(icon, "color2")
-  | "c++" | "aws" | "html"    => Other(icon, "text-big")
+  | "c++" | "aws" | "html" | "vr" | "ai"    => Other(icon, "text-big")
   | "ux" | "ui"     => Other(icon, "color2-text-big")
   | x => Other(x, x)
 };

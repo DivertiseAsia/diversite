@@ -18,7 +18,7 @@ open PortfolioItem;
 [@bs.module] external gameaione : string = "../../../../public/projects/website-adsoup.jpg";
 [@bs.module] external gameaitwo : string = "../../../../public/projects/website-adsoup.jpg";
 [@bs.module] external cvrl : string = "../../../../public/projects/website-adsoup.jpg";
-[@bs.module] external kikiigamephone: string = "../../../../public/projects/kikii-2.gif";
+[@bs.module] external kikiigamephone: string = "../../../../public/projects/kikii-3.jpg";
 [@bs.module] external kikiigametablet: string = "../../../../public/projects/kikii-1.png";
 [@bs.module] external microgames1 : string = "../../../../public/projects/game-microgames1.jpg";
 [@bs.module] external microgames2 : string = "../../../../public/projects/game-microgames2.jpg";
@@ -233,7 +233,7 @@ let ketawaPortfolio:portfolioItem = {
       caption: "View Website"
     }
   ],
-  technologies: ["Graphic Design", "web design", "html5", "css" ],
+  technologies: [ "html5", "css", "Graphic Design", "web design" ],
   body: ([
     <div>
       <p>(string("Ketawa Hotel is a pet friendly hotel and cafe. Ketawa is rebranding and it needs its website to change to match with the new Cooperate Identity. So we redesigned the website. It has a warm, cozy, friendly, but simple look and feel to represent the hotel's characteristic."))</p>
@@ -291,7 +291,7 @@ let eastwestPortfolio:portfolioItem = {
       caption: "View Website"
     }
   ],
-  technologies: ["Graphic Design", "web design", "Wordpress" ],
+  technologies: [ "Wordpress", "Graphic Design", "web design" ],
   body: ([
     <div>
       <p>(string("East West Fitness is both a gym and fitness equipment provider located in Bangkok, Thailand. They wanted to a more professional website that they could manage on a daily basis."))</p>
@@ -353,7 +353,7 @@ let kikiiPortfolio:portfolioItem = {
       caption: "iTunes"
     }
   ],
-  technologies: ["Unity","Game Design", "2D Art", "2D Animation", "android", "ios"],
+  technologies: [ "android", "ios", "Unity","Game Design", "2D Art", "2D Animation" ],
   body: ([
     <div>
       <p>(string("A game with the ridiculous concept of a dog running, eating, and pooping in the streets of Bangkok. Inspired by the walk to our old office."))</p>
@@ -388,7 +388,7 @@ let microgamesPortfolio:portfolioItem = {
       caption: "Google Play"
     }
   ],
-  technologies: ["C++","Cocos", "Game Design", "Ux/Ui", "2D Art", "2D Animation", "Android"],
+  technologies: [ "C++","Cocos", "Android", "Game Design", "2D Art", "2D Animation", "ux", "ui" ],
   body: ([
     <div>
       <p>(string("A 4-player game that takes place all on the same screen. It's made to be frantic for some quick downtime fun."))</p>
