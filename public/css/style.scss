@@ -90,6 +90,7 @@ a {
   color: $btn-text-color;
 }
 .btn-line-color1 { @include btn(transparent, $bg-color1, $bg-color1) }
+.btn-line-color1:hover { @include btn($bg-color1, $bg-color1, $text-white) }
 
 /* ------------- Default Classes ------------- */
 
@@ -391,6 +392,7 @@ nav .logo-link {
     padding-right: 40px;
     padding-left: 40px;
   }
+  .btn:hover { @include btn( $text-color2-light , $text-color2-light, $text-color1); }
 }
 
 /*
@@ -415,6 +417,7 @@ nav .logo-link {
   .row { flex-direction: row-reverse; }
   h4, .content { color: $text-color1 }
   .btn { @include btn(transparent, $bg-color1, $bg-color1) }
+  .btn:hover { @include btn($bg-color1, $bg-color1, $text-white) }
 }
 .section-letushelp {
   background: $bg-gradient2;
