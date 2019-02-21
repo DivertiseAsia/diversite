@@ -42,11 +42,6 @@ let adsoupPortfolio:portfolioItem = {
   ],
   links: [
     {
-      _type: Default,
-      href: "https://adsoup.com/?ref=divertise.asia",
-      caption: "View Website"
-    },
-    {
       _type: GooglePlay,
       href: "https://play.google.com/store/apps/details?id=io.adsoup.sales.mobile",
       caption: "Google Play"
@@ -55,6 +50,11 @@ let adsoupPortfolio:portfolioItem = {
       _type: AppStore,
       href: "https://itunes.apple.com/us/app/adsoup/id1415279019",
       caption: "iTunes"
+    },
+    {
+      _type: Default,
+      href: "https://adsoup.com/?ref=divertise.asia",
+      caption: "View Website >"
     }
   ],
   technologies: ["React", "Python", "Reason", "Firebase", "Postgresql", "Android", "iOS", "Docker", "aws", "Web design", "Graphic Design", "Ux", "Ui" ],
@@ -84,7 +84,7 @@ let copanelPortfolio:portfolioItem = {
     {
       _type: Default,
       href: "http://copanel.io/?ref=divertise.asia",
-      caption: "View Website"
+      caption: "View Website >"
     }
   ],
   technologies: ["React", "Js","Ruby", "Docker", "aws", "Postgresql", "Web design", "Graphic Design", "Ux", "Ui" ],
@@ -114,7 +114,7 @@ let eventcometPortfolio:portfolioItem = {
     {
       _type: Default,
       href: "https://eventcomet.com/?ref=divertise.asia",
-      caption: "View Website"
+      caption: "View Website >"
     }
   ],
   technologies: ["iOS", "Android", "Reason", "Ruby", "Docker", "Aws", "Web design", "Ux", "Ui" ],
@@ -144,7 +144,7 @@ let mintcrowdPortfolio:portfolioItem = {
     {
       _type: Default,
       href: "https://mintcrowd.com/?ref=divertise.asia",
-      caption: "View Website"
+      caption: "View Website >"
     }
   ],
   technologies: ["Reason", "Python", "Docker", "Aws", "Web design", "Ux", "Ui" ],
@@ -230,7 +230,7 @@ let ketawaPortfolio:portfolioItem = {
     {
       _type: Default,
       href: "http://www.ketawahotel.com/",
-      caption: "View Website"
+      caption: "View Website >"
     }
   ],
   technologies: [ "html5", "css", "Graphic Design", "web design" ],
@@ -259,7 +259,7 @@ let wilaamalinPortfolio:portfolioItem = {
   links: [{
     _type: Default,
     href: "https://wilaamalin.com?ref=divertise.asia",
-    caption: "View Website"
+    caption: "View Website >"
   }],
   technologies: ["wordpress", "Graphic Design", "web design" ],
   body: ([
@@ -288,7 +288,7 @@ let eastwestPortfolio:portfolioItem = {
     {
       _type: Default,
       href: "https://eastwestfitness.com/?ref=divertise.asia",
-      caption: "View Website"
+      caption: "View Website >"
     }
   ],
   technologies: [ "Wordpress", "Graphic Design", "web design" ],
@@ -314,7 +314,7 @@ let vrPortfolio:portfolioItem = {
     {
       _type: Default,
       href: "https://cvrl.asia/?ref=divertise.asia",
-      caption: "View Website"
+      caption: "View Website >"
     }
   ],
   technologies: [ "VR", "Unity", "Android", "NodeJS" ],

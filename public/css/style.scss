@@ -807,6 +807,25 @@ nav .logo-link {
 .port_btn {
   padding-left: 20px;
   padding-right: 20px;
+  margin: 4px;
+}
+.btn-google-play::before, .btn-app-store::before, .btn-mi-store::before {
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40px;
+  width: 140px;
+  display: block;
+  position: relative;
+  margin-bottom: -1.4em;
+}
+.btn-google-play::before { background-image: url('../images/Banner_GooglePlay.png'); }
+.btn-app-store::before { background-image: url('../images/Banner_AppStore.png'); }
+.btn-mi-store::before { background-image: url('../images/Banner_MiStore.png'); }
+.btn-google-play, .btn-app-store, .btn-mi-store {
+  border: none;
+  padding: 0;
 }
 /* ------------------------------------ RESPONSIVE --------------------------------------*/
 
