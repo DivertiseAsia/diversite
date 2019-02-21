@@ -301,6 +301,10 @@ nav .logo-link {
   max-height: 40px;
   margin: 40px 10px 20px 10px;
   display: inline;
+  transition: $transition;
+}
+.icon-social:hover img {
+  opacity: 0.5;
 }
 /* ------------------------------------ PAGES -----------------------------------*/
 /* ------------ Home Page ------------ */
