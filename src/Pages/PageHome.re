@@ -6,6 +6,9 @@ let component = ReasonReact.statelessComponent("PageHome");
 [@bs.module] external ourgoal3 : string = "../../../../public/images/icon-vr.png";
 [@bs.module] external homeapp : string = "../../../../public/images/home-app.png";
 [@bs.module] external homeweb : string = "../../../../public/images/home-website.png";
+[@bs.module] external homeai : string = "../../../../public/images/home-ai-2.png";
+[@bs.module] external homevr : string = "../../../../public/images/home-vr.png";
+[@bs.module] external homegame : string = "../../../../public/images/home-game.png";
 [@bs.module] external techcon : string = "../../../../public/images/letushelp-tech.png";
 [@bs.module] external optimize : string = "../../../../public/images/letushelp-optimize.png";
 [@bs.module] external launch : string = "../../../../public/images/letushelp-launch.png";
@@ -50,17 +53,17 @@ let make = (_children) => {
         <FrontPageSection title="Application and Platforms" imageURL=homeapp href=Links.ourwork_appsandplatforms>
           (string("We create entire platforms and services from the ground up. These platforms typically live in a combination of places from app stores to the cloud."))
         </FrontPageSection>
-        <FrontPageSection title="Artificial Intelligence" imageURL=ourgoal1 href=Links.ourwork_ai>
+        <FrontPageSection title="Artificial Intelligence" imageURL=homeai href=Links.ourwork_ai>
           (string("Newer applications and services should always be considering AI into their product. Everyone at Divertise Asia learns how to use AI and we make sure we offer it to everyone we work with."))
-        </FrontPageSection>
-        <FrontPageSection title="Virtual Reality" imageURL=homeapp href=Links.ourwork_vr>
-          (string("Creating applications in VR/AR will be one of the next big things. We are looking for ways to be at the forefront of the technology and have partnered with other companies in Asia to bring VR applications to life."))
-        </FrontPageSection>
-        <FrontPageSection title="Games" imageURL=homeweb href=Links.ourwork_games>
-          (string("We love bringing more fun into the world! We have made two of our own games and occasionally have internal game jams"))
         </FrontPageSection>
         <FrontPageSection title="Websites" imageURL=homeweb href=Links.ourwork_websites>
           (string("The world runs on the web and we can produce any website needed for it. We aim to create a balance between user content management and speed of development.")) 
+        </FrontPageSection>
+        <FrontPageSection title="Virtual Reality" imageURL=homevr href=Links.ourwork_vr>
+          (string("Creating applications in VR/AR will be one of the next big things. We are looking for ways to be at the forefront of the technology and have partnered with other companies in Asia to bring VR applications to life."))
+        </FrontPageSection>
+        <FrontPageSection title="Games" imageURL=homegame href=Links.ourwork_games>
+          (string("We love bringing more fun into the world! We have made two of our own games and occasionally have internal game jams"))
         </FrontPageSection>
       </div>
       <div className="section-letushelp">
