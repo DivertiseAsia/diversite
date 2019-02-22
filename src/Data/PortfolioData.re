@@ -25,6 +25,8 @@ open PortfolioItem;
 [@bs.module] external microgames1 : string = "../../../../public/projects/game-microgames1.jpg";
 [@bs.module] external microgames2 : string = "../../../../public/projects/game-microgames2.jpg";
 [@bs.module] external microgames3 : string = "../../../../public/projects/game-microgames3.png";
+[@bs.module] external cvrld : string = "../../../../public/projects/project-cvrl-desktop.jpg";
+[@bs.module] external cvrlp : string = "../../../../public/projects/project-cvrl-phone.jpg";
 
 /* --------------------- Apps --------------------------*/
 let adsoupPortfolio:portfolioItem = {
@@ -34,20 +36,15 @@ let adsoupPortfolio:portfolioItem = {
     {
       src: adsoupapp,
       border:PhonePortrait,
-      className: Some("col-4")
+      className: Some("col-4 port-no-scroll portimg-adsoup-phone")
     },
     {
       src: adsoudesktop,
       border:Desktop,
-      className: Some("col-8")
+      className: Some("col-8 port-no-scroll portimg-adsoup-desktop")
     }
   ],
   links: [
-    {
-      _type: Default,
-      href: "https://adsoup.com/?ref=divertise.asia",
-      caption: "View Website"
-    },
     {
       _type: GooglePlay,
       href: "https://play.google.com/store/apps/details?id=io.adsoup.sales.mobile",
@@ -57,6 +54,11 @@ let adsoupPortfolio:portfolioItem = {
       _type: AppStore,
       href: "https://itunes.apple.com/us/app/adsoup/id1415279019",
       caption: "iTunes"
+    },
+    {
+      _type: Default,
+      href: "https://adsoup.com/?ref=divertise.asia",
+      caption: "View Website >"
     }
   ],
   technologies: ["React", "Python", "Reason", "Firebase", "Postgresql", "Android", "iOS", "Docker", "aws", "Web design", "Graphic Design", "Ux", "Ui" ],
@@ -74,19 +76,19 @@ let copanelPortfolio:portfolioItem = {
     {
       src: copanelapp,
       border:PhonePortrait,
-      className: Some("col-4")
+      className: Some("col-4 port-no-scroll portimg-copanel-phone")
     },
     {
       src: copaneldesktop,
       border:Desktop,
-      className: Some("col-8")
+      className: Some("col-8 port-no-scroll portimg-copanel-desktop")
     }
   ],
   links: [
     {
       _type: Default,
       href: "http://copanel.io/?ref=divertise.asia",
-      caption: "View Website"
+      caption: "View Website >"
     }
   ],
   technologies: ["React", "Js","Ruby", "Docker", "aws", "Postgresql", "Web design", "Graphic Design", "Ux", "Ui" ],
@@ -104,24 +106,24 @@ let eventcometPortfolio:portfolioItem = {
     {
       src: eventcometeventapp,
       border:PhonePortrait,
-      className: Some("col-4")
+      className: Some("col-4 port-no-scroll portimg-eventcomet-phone")
     },
     {
       src: eventcometscheduleapp,
       border:PhonePortrait,
-      className: Some("col-4")
+      className: Some("col-4 port-no-scroll portimg-eventcomet-phone")
     },
     {
       src: eventcometdateapp,
       border:PhonePortrait,
-      className: Some("col-4")
+      className: Some("col-4 port-no-scroll portimg-eventcomet-phone")
     }
   ],
   links: [
     {
       _type: Default,
       href: "https://eventcomet.com/?ref=divertise.asia",
-      caption: "View Website"
+      caption: "View Website >"
     }
   ],
   technologies: ["iOS", "Android", "Reason", "Ruby", "Docker", "Aws", "Web design", "Ux", "Ui" ],
@@ -138,8 +140,8 @@ let mintcrowdPortfolio:portfolioItem = {
   images: [
     {
       src: mintcrowdapp,
-      border:PhonePortrait,
-      className: Some("col-4")
+      border:PhonePortraitBlack,
+      className: Some("col-4 scroll-25 portimg-mintcrowd-phone")
     },
     {
       src: mintcrowddesktop,
@@ -151,7 +153,7 @@ let mintcrowdPortfolio:portfolioItem = {
     {
       _type: Default,
       href: "https://mintcrowd.com/?ref=divertise.asia",
-      caption: "View Website"
+      caption: "View Website >"
     }
   ],
   technologies: ["Reason", "Python", "Docker", "Aws", "Web design", "Ux", "Ui" ],
@@ -225,19 +227,19 @@ let ketawaPortfolio:portfolioItem = {
     {
       src: ketawaapp,
       border:PhonePortrait,
-      className: Some("col-4")
+      className: Some("col-4 scroll-25")
     },
     {
       src: ketawadesktop,
       border:Desktop,
-      className: Some("col-8")
+      className: Some("col-8 portimg-ketawa-desktop")
     }
   ],
   links: [
     {
       _type: Default,
       href: "http://www.ketawahotel.com/",
-      caption: "View Website"
+      caption: "View Website >"
     }
   ],
   technologies: ["html5", "css", "Js", "Graphic Design", "web design" ],
@@ -254,8 +256,8 @@ let wilaamalinPortfolio:portfolioItem = {
   images: [
     {
       src: wilaamalinapp,
-      border:PhonePortrait,
-      className: Some("col-4")
+      border:PhonePortraitBlack,
+      className: Some("col-4 scroll-30")
     },
     {
       src: wilaamalindesktop,
@@ -266,7 +268,7 @@ let wilaamalinPortfolio:portfolioItem = {
   links: [{
     _type: Default,
     href: "https://wilaamalin.com?ref=divertise.asia",
-    caption: "View Website"
+    caption: "View Website >"
   }],
   technologies: ["wordpress", "Graphic Design", "web design" ],
   body: ([
@@ -283,7 +285,7 @@ let eastwestPortfolio:portfolioItem = {
     {
       src: eastwestapp,
       border:PhonePortrait,
-      className: Some("col-4")
+      className: Some("col-4 scroll-30")
     },
     {
       src: eastwestdesktop,
@@ -295,10 +297,10 @@ let eastwestPortfolio:portfolioItem = {
     {
       _type: Default,
       href: "https://eastwestfitness.com/?ref=divertise.asia",
-      caption: "View Website"
+      caption: "View Website >"
     }
   ],
-  technologies: ["Graphic Design", "web design", "Wordpress" ],
+  technologies: [ "Wordpress", "Graphic Design", "web design" ],
   body: ([
     <div>
       <p>(string("East West Fitness is both a gym and fitness equipment provider located in Bangkok, Thailand. They wanted to a more professional website that they could manage on a daily basis."))</p>
@@ -312,16 +314,21 @@ let vrPortfolio:portfolioItem = {
   className: None,
   images: [
     {
-      src: cvrl,
-      border:PhonePortrait,
-      className: Some("col-12")
+      src: cvrlp,
+      border:PhoneLandscape,
+      className: Some("col-6 port-no-scroll portimg-cvrl-phone")
+    },
+    {
+      src: cvrld,
+      border:Desktop,
+      className: Some("col-6 port-no-scroll")
     }
   ],
   links: [
     {
       _type: Default,
       href: "https://cvrl.asia/?ref=divertise.asia",
-      caption: "View Website"
+      caption: "View Website >"
     }
   ],
   technologies: [ "VR", "Unity", "Android", "NodeJS" ],
@@ -339,13 +346,13 @@ let kikiiPortfolio:portfolioItem = {
   images: [
     {
       src: kikiigamephone,
-      border:PhoneLandscape,
-      className: Some("col-5")
+      border:PhoneLandscapeBlack,
+      className: Some("portimg-kikii-phone col-5 port-no-scroll")
     },
     {
       src: kikiigametablet,
       border:Tablet,
-      className: Some("col-7")
+      className: Some("col-7 port-no-scroll")
     }
   ],
   links: [
@@ -360,7 +367,7 @@ let kikiiPortfolio:portfolioItem = {
       caption: "iTunes"
     }
   ],
-  technologies: ["Unity","Game Design", "2D Art", "2D Animation", "android", "ios"],
+  technologies: [ "android", "ios", "Unity","Game Design", "2D Art", "2D Animation" ],
   body: ([
     <div>
       <p>(string("A game with the ridiculous concept of a dog running, eating, and pooping in the streets of Bangkok. Inspired by the walk to our old office."))</p>
@@ -395,7 +402,7 @@ let microgamesPortfolio:portfolioItem = {
       caption: "Google Play"
     }
   ],
-  technologies: ["C++","Cocos", "Game Design", "Ux/Ui", "2D Art", "2D Animation", "Android"],
+  technologies: [ "C++","Cocos", "Android", "Game Design", "2D Art", "2D Animation", "ux", "ui" ],
   body: ([
     <div>
       <p>(string("A 4-player game that takes place all on the same screen. It's made to be frantic for some quick downtime fun."))</p>

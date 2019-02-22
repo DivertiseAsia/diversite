@@ -5,6 +5,9 @@ let component = ReasonReact.statelessComponent("PageCareers");
 [@bs.module] external type2 : string = "../../../../public/images/position-design.jpg";
 [@bs.module] external type3 : string = "../../../../public/images/position-game.jpg";
 [@bs.module] external type4 : string = "../../../../public/images/position-art.jpg";
+[@bs.module] external flexible : string = "../../../../public/images/flexible.png";
+[@bs.module] external lovelearn : string = "../../../../public/images/lovelearning.png";
+[@bs.module] external openminded : string = "../../../../public/images/openminded.png";
 
 let make = (_children) => {
   ...component,
@@ -31,16 +34,19 @@ let make = (_children) => {
     <div className="-bg-grey mt-5">
       <div className="container pt-5 text-center">
         <h3 className="-text-uppercase">{string("Who are we looking for ?")}</h3>
-        <div className="row py-5">
+        <div className="row py-5 career_lookingfor">
           <div className="col-md-4 col-xs-12 pb-3"> 
+            <ImageBackground className=" " src=flexible />
             <h4>{string("Flexible")}</h4>
             <p>{ReasonReact.string({j| Our core work hours make it easy for your schdule to fit your lifestyle. We’re flexible so you can be too. |j})}</p>
           </div>
           <div className="col-md-4 col-xs-12  pb-3"> 
+            <ImageBackground className=" " src=lovelearn />
             <h4>{string("Open Minded")}</h4>
             <p>{ReasonReact.string({j| There’s always more than one way to do something. We’re always open to ideas. |j})}</p>
           </div>
           <div className="col-md-4 col-xs-12  pb-3"> 
+            <ImageBackground className=" " src=openminded />
             <h4>{string("Love Learning")}</h4>
             <p>{ReasonReact.string({j| Do you like learning? We do! Here at Divertise we like to keep up with the latest tech. |j})}</p>
           </div>
