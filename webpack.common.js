@@ -56,7 +56,7 @@ module.exports = {
     }),
     new HtmlWebpackExcludeAssetsPlugin(),
     new CopyWebpackPlugin([
-      { from: 'public/images/favicon.png' }
+      { from: 'public/images/favicon.ico' }
     ]),
   ],
   module: {
