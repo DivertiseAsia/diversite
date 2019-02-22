@@ -46,7 +46,7 @@ let make =
         </div>
         <h2>(string(item.title))</h2>
         <div className="row py-4">
-            <div className="col-md-8 port_icon-container">
+            <div className="col-md-8 col-lg-7 port_icon-container pb-3">
               {
                 (Belt.List.map(
                   item.technologies,
@@ -54,7 +54,7 @@ let make =
                 )|> Belt.List.toArray |> ReasonReact.array)
               }
             </div>
-            <div className="col-md-4 -text-right">
+            <div className="col-md-4 col-lg-5 -text-right">
               {
                 (Belt.List.map(
                   item.links,
