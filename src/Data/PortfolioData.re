@@ -11,15 +11,17 @@ open PortfolioItem;
 [@bs.module] external adsoudesktop : string = "../../../../public/projects/website-adsoup.jpg";
 [@bs.module] external copanelapp : string = "../../../../public/projects/app-copanel.jpg";
 [@bs.module] external copaneldesktop : string = "../../../../public/projects/website-copanel.jpg";
-[@bs.module] external eventcometapp : string = "../../../../public/projects/website-adsoup.jpg";
+[@bs.module] external eventcometeventapp : string = "../../../../public/projects/app-eventcomet-event.jpg";
+[@bs.module] external eventcometscheduleapp : string = "../../../../public/projects/app-eventcomet-schedule.jpg";
+[@bs.module] external eventcometdateapp : string = "../../../../public/projects/app-eventcomet-date.jpg";
 [@bs.module] external mintcrowddesktop : string = "../../../../public/projects/mintcrowd.jpg";
 [@bs.module] external mintcrowdapp : string = "../../../../public/projects/mintcrowd-app.jpg";
 [@bs.module] external boneageai : string = "../../../../public/projects/website-adsoup.jpg";
 [@bs.module] external gameaione : string = "../../../../public/projects/website-adsoup.jpg";
 [@bs.module] external gameaitwo : string = "../../../../public/projects/website-adsoup.jpg";
 [@bs.module] external cvrl : string = "../../../../public/projects/website-adsoup.jpg";
-[@bs.module] external kikiigamephone: string = "../../../../public/projects/kikii-3.jpg";
-[@bs.module] external kikiigametablet: string = "../../../../public/projects/kikii-1.png";
+[@bs.module] external kikiigamephone: string = "../../../../public/projects/game-kikii2.jpg";
+[@bs.module] external kikiigametablet: string = "../../../../public/projects/game-kikii1.png";
 [@bs.module] external microgames1 : string = "../../../../public/projects/game-microgames1.jpg";
 [@bs.module] external microgames2 : string = "../../../../public/projects/game-microgames2.jpg";
 [@bs.module] external microgames3 : string = "../../../../public/projects/game-microgames3.png";
@@ -28,7 +30,7 @@ open PortfolioItem;
 
 /* --------------------- Apps --------------------------*/
 let adsoupPortfolio:portfolioItem = {
-  title: "AdSoup",
+  title: "Adsoup",
   className: None,
   images: [
     {
@@ -102,14 +104,19 @@ let eventcometPortfolio:portfolioItem = {
   className: None,
   images: [
     {
-      src: eventcometapp,
+      src: eventcometeventapp,
       border:PhonePortrait,
       className: Some("col-4 port-no-scroll portimg-eventcomet-phone")
     },
     {
-      src: eventcometapp,
-      border:Desktop,
-      className: Some("col-8 port-no-scroll portimg-eventcomet-desktop")
+      src: eventcometscheduleapp,
+      border:PhonePortrait,
+      className: Some("col-4 port-no-scroll portimg-eventcomet-phone")
+    },
+    {
+      src: eventcometdateapp,
+      border:PhonePortrait,
+      className: Some("col-4 port-no-scroll portimg-eventcomet-phone")
     }
   ],
   links: [
@@ -134,7 +141,7 @@ let mintcrowdPortfolio:portfolioItem = {
     {
       src: mintcrowdapp,
       border:PhonePortraitBlack,
-      className: Some("col-4 scroll-25")
+      className: Some("col-4 scroll-25 portimg-mintcrowd-phone")
     },
     {
       src: mintcrowddesktop,
@@ -169,7 +176,7 @@ let boneagePortfolio:portfolioItem = {
       caption: "Paper Coming Soon"
     }
   ],
-  technologies: ["AI", "Research"],
+  technologies: ["tensorflow","numpy","scikitlearn","pandas","AI", "Research"],
   body: ([
     <div>
       <p>(string("This project works to determine the age of a patient given their x-ray"))</p>
@@ -225,7 +232,7 @@ let ketawaPortfolio:portfolioItem = {
     {
       src: ketawadesktop,
       border:Desktop,
-      className: Some("col-8")
+      className: Some("col-8 portimg-ketawa-desktop")
     }
   ],
   links: [
@@ -235,7 +242,7 @@ let ketawaPortfolio:portfolioItem = {
       caption: "View Website >"
     }
   ],
-  technologies: [ "html5", "css", "Graphic Design", "web design" ],
+  technologies: ["html5", "css", "Js", "Graphic Design", "web design" ],
   body: ([
     <div>
       <p>(string("Ketawa Hotel is a pet friendly hotel and cafe. Ketawa is rebranding and it needs its website to change to match with the new Cooperate Identity. So we redesigned the website. It has a warm, cozy, friendly, but simple look and feel to represent the hotel's characteristic."))</p>
@@ -335,17 +342,17 @@ let vrPortfolio:portfolioItem = {
 /* ----------------------- Games ---------------------------*/
 let kikiiPortfolio:portfolioItem = {
   title: "Kikii on the Run",
-  className: None,
+  className: Some("kikii-image"),
   images: [
     {
       src: kikiigamephone,
       border:PhoneLandscapeBlack,
-      className: Some("col-5")
+      className: Some("portimg-kikii-phone col-5 port-no-scroll")
     },
     {
       src: kikiigametablet,
       border:Tablet,
-      className: Some("col-7")
+      className: Some("col-7 port-no-scroll")
     }
   ],
   links: [
