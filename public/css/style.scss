@@ -850,10 +850,24 @@ nav .logo-link {
   background: radial-gradient(#52c4bb , #14918a);
   h6 { font-size: 14px !important; }
 }
+.port_btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 130px;
+}
 .port_btn {
   padding-left: 20px;
   padding-right: 20px;
   margin: 5px;
+  flex-grow: 1;
+  max-height: 40px;
+  position: relative;
+  bottom: -0.3em;
+}
+.port_btn-container .btn-line-color1 {
+  max-width: 280px;
+  margin-right: 0;
+  margin-left: auto;
 }
 .btn-google-play::before, .btn-app-store::before, .btn-mi-store::before {
   content: "";
@@ -861,10 +875,10 @@ nav .logo-link {
   background-repeat: no-repeat;
   background-position: center;
   height: 40px;
-  width: 140px;
+  max-width: 140px;
   display: block;
   position: relative;
-  margin: 5px auto -1.4em auto;
+  margin: 5px auto -2em auto;
 }
 .btn-google-play::before { background-image: url('../images/Banner_GooglePlay.png'); }
 .btn-app-store::before { background-image: url('../images/Banner_AppStore.png'); }
@@ -872,6 +886,7 @@ nav .logo-link {
 .btn-google-play, .btn-app-store, .btn-mi-store {
   border: none;
   padding: 0;
+  bottom: 0;
 }
 
 /* ------------------------------------ RESPONSIVE --------------------------------------*/
@@ -978,6 +993,30 @@ and (max-width: 768px) {
   .desktop .portimg-container::after {
     margin-top: -50px;
   }
+  .port_btn-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .port_btn:last-child { 
+    background-position: right; 
+    &:before { 
+      background-position: right; 
+      margin-right: 0;
+    }
+  }
+  .port_btn:first-child { 
+    text-align: left; 
+    &:before { 
+      background-position: left; 
+      margin-left: 0;
+    }
+  }
+  .port_btn-container .btn-line-color1 { text-align: center; }
+  .port_btn-container .btn-line-color1 {
+    max-width: unset;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 /* -------- Phones ---------*/
@@ -1017,20 +1056,21 @@ and (max-width: 576px) {
     }
   }
   .port_btn-container {
-    margin-top: 50px;
+    text-align: left;
+    align-items: center;
   }
   .btn-google-play, .btn-app-store, .btn-mi-store {
     border: none;
     padding: 0;
   }
-  .btn-google-play::before, .btn-app-store::before, .btn-mi-store::before {
-    height: 80px;
-    width: 100%;
-    margin-bottom: -20px;
-  }
-  .port_btn {
-    width: 100%;
-  }
+  // .btn-google-play::before, .btn-app-store::before, .btn-mi-store::before {
+  //   height: 80px;
+  //   width: 100%;
+  //   margin-bottom: -20px;
+  // }
+  // .port_btn {
+  //   width: 100%;
+  // }
   .phone-portrait {
     max-width: 150px;
   }
@@ -1057,4 +1097,16 @@ and (max-width: 400px) {
   }
   /* Small Phone Port */
   .phone-portrait { padding: 0; }
+}
+
+/* --------- Iphone4 ------------*/
+@media only screen
+and (max-width: 350px) {
+  .port_btn, .port_btn:last-child { 
+    background-position: left; 
+    &:before { 
+      background-position: left; 
+      margin-left: 0;
+    }
+  }
 }
