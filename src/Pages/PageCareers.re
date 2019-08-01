@@ -13,7 +13,7 @@ let make = (_children) => {
   ...component,
   render: _self => {
     <MainPage>
-      <PageHeader title="Careers" className="bg-gradient-color1" />
+      <PageHeader title="Careers" className="bg-gradient-color1 pt-5" />
     <div className="container"> 
       <div className="row py-5 d-block text-center -text-uppercase">
         <h3>{string("Positions at Divertise Asia")}</h3>
