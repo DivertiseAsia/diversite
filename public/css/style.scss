@@ -912,12 +912,14 @@ and (max-width: 1200px) {
   .phone-portrait {
     max-width: 200px;
   }
+  .page-home .nav {background: transparent;}
 }
 
 /* -------- Tablets Portrait ---------*/
 @media only screen
 and (max-width: 768px) {
   /* Tablet Nav*/
+  .page-home .nav {background: #23a399d9;}
   .nav-icon {
     display: inline-block;
   }

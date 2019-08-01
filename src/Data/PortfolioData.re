@@ -16,7 +16,8 @@ open PortfolioItem;
 [@bs.module] external eventcometdateapp : string = "../../../../public/projects/app-eventcomet-date.jpg";
 [@bs.module] external mintcrowddesktop : string = "../../../../public/projects/mintcrowd.jpg";
 [@bs.module] external mintcrowdapp : string = "../../../../public/projects/mintcrowd-app.jpg";
-[@bs.module] external boneageai : string = "../../../../public/projects/website-adsoup.jpg";
+[@bs.module] external boneageaidesktop : string = "../../../../public/projects/website-boneage.png";
+[@bs.module] external boneageaiapp : string = "../../../../public/projects/app-boneage.png";
 [@bs.module] external gameaione : string = "../../../../public/projects/website-adsoup.jpg";
 [@bs.module] external gameaitwo : string = "../../../../public/projects/website-adsoup.jpg";
 [@bs.module] external cvrl : string = "../../../../public/projects/website-adsoup.jpg";
@@ -168,12 +169,23 @@ let mintcrowdPortfolio:portfolioItem = {
 let boneagePortfolio:portfolioItem = {
   title: "Bone Age",
   className: None,
-  images: [],
+  images: [
+    {
+      src: boneageaiapp,
+      border:PhonePortraitBlack,
+      className: Some("col-4 scroll-25 portimg-mintcrowd-phone")
+    },
+    {
+      src: boneageaidesktop,
+      border:Desktop,
+      className: Some("col-8")
+    }
+  ],
   links: [
     {
       _type: Default,
-      href: "#",
-      caption: "Paper Coming Soon"
+      href: "http://submit.bangkokmedjournal.com/index.php/bangkok-medical-journal/article/view/588",
+      caption: "View Website >"
     }
   ],
   technologies: ["tensorflow","numpy","scikitlearn","pandas","AI", "Research"],
