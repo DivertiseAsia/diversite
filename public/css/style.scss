@@ -28,18 +28,16 @@ $text-shadow: 2px 2px 2px grey;
 
 $transition: all 0.3s ease-out;
 
-$header-height: 65px;
+$header-height: 50px;
 $frontpage-section-img-height: 350px;
 $frontpage-section-height: 300px; 
 $scrollbar-width: 0.5vw;
 $section-header-height: 130px;
 
-html, body, #container {
-  min-width: 100vw;
+html, body {
   min-height: 100vh;
-  width: 100%;
+  width: 100vw;
   height: 100%;
-  overflow: hidden;
 }
 html {
   font-size: 14px;
@@ -153,11 +151,11 @@ a:hover { text-decoration: none; }
   background-size: cover;
 }
 /* scrollbar width */
-.page-content-container {
-  overflow-x: hidden !important;
-  width: 100vw;
-}
-.main-content { width: 100vw; }
+// .page-content-container {
+//   overflow-x: hidden !important;
+//   width: 100vw;
+// }
+// .main-content { width: 100vw; }
 ::-webkit-scrollbar {
   width: $scrollbar-width;
   background-color: white;
@@ -171,7 +169,7 @@ a:hover { text-decoration: none; }
     background-color: grey;
 }
 .section-header {
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
   z-index: -10;
   position: relative;
   margin-top: -1px;
@@ -185,7 +183,7 @@ a:hover { text-decoration: none; }
 
 .nav {
   width: 100vw - $scrollbar-width;
-  padding: 15px;
+  padding: 8px 15px;
   box-sizing: border-box;
   z-index: 99;
   height: $header-height;
@@ -209,12 +207,12 @@ nav.nav {
   display: inline-block;
 }
 nav .logo-link {
-  height: $header-height - 20px;
+  height: $header-height - 5px;
   margin-top: -0.2em;
   float: left;
   padding: 0;
   .logo {
-    height: $header-height - 20px;
+    height: $header-height - 5px;
   }
 }
 .-logo-white {
@@ -260,8 +258,8 @@ nav .logo-link {
 .nav-icon {
   /* display: inline-block; */
   display: none;
-  width: 2.7em;
-  height: 2.7em;
+  width: 2.4em;
+  height: 2.4em;
 }
 .nav-icon div {
   width: 100%;
@@ -277,6 +275,7 @@ nav .logo-link {
   position: absolute;
   z-index: 1;
   opacity: 0;
+  right: 20px;
   cursor: pointer;
 }
 .nav input:checked ~ div div:nth-child(1) {
@@ -316,6 +315,7 @@ nav .logo-link {
 /* spectial Home Page Nav */
 .page-end-top {
   z-index: 99;
+  position: fixed;
 }
 .page-home {
   .page-end-top {
@@ -538,7 +538,7 @@ nav .logo-link {
   position: fixed;
   width: 100%;
   z-index: 1;
-  height: $section-header-height;
+  height: $section-header-height + 20px;
   margin-top: -2px;
 }
 .ourwork_section-header-content {
@@ -547,14 +547,15 @@ nav .logo-link {
   z-index: 99;
   width: 100%;
   height: $section-header-height - 90px;
+  padding-top: $header-height;
 }
 /* Portfolio Nav */
 .page-ourwork_nav {
   background: transparent;
   margin-top: 10px;
-  margin-bottom: 3rem;
   width: 100%;
   padding: 0 60px;
+  height: auto;
   input {
     width: 250px;
   }
@@ -911,12 +912,14 @@ and (max-width: 1200px) {
   .phone-portrait {
     max-width: 200px;
   }
+  .page-home .nav {background: transparent;}
 }
 
 /* -------- Tablets Portrait ---------*/
 @media only screen
 and (max-width: 768px) {
   /* Tablet Nav*/
+  .page-home .nav {background: #23a399d9;}
   .nav-icon {
     display: inline-block;
   }
