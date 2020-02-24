@@ -29,10 +29,10 @@ let make = (_children) => {
     </div>
     <div className="buffer" />
     <div>
-      <PortfolioItem id="appsandplatforms" key="adsoup" item=(adsoupPortfolio) />
+      <PortfolioItem id="appsandplatforms" key="mintcrowd" item=(mintcrowdPortfolio) />
+      <PortfolioItem key="adsoup" item=(adsoupPortfolio) />
       <PortfolioItem key="copanel" item=(copanelPortfolio) />
       <PortfolioItem key="eventcomet" item=(eventcometPortfolio) />
-      <PortfolioItem key="mintcrowd" item=(mintcrowdPortfolio) />
       <PortfolioItem id="ai" key="boneage" item=(boneagePortfolio) />
       <PortfolioItem id="vr" key="vr" item=(vrPortfolio) />
       <PortfolioItem id="websites" key="ketawa" item=(ketawaPortfolio) />

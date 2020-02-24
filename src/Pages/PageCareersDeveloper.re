@@ -13,12 +13,11 @@ let make = (_children) => {
             <h3><Icon className="mr-4" iconType=Pen />{string("What are the requirements?")}</h3>
               <ul className="ul-li-padding-none ul-li-dash p-4 pl-5 -lineheight-large">
                 <li> {string("Intermediate English (verbal)")}</li>
-                <li> {string("Basic programming knowledge (Python/C++ is preferred)")}</li>
+                <li> {string("Basic programming knowledge (Python/ReasonML is preferred)")}</li>
                 <li> {string("Proficiency in one of modern programming languages")}</li>
                 <li> {string("IDE familiarity")}</li>
                 <li> {string("Basic problem solving skills")}</li>
                 <li> {string("Git/SVN knowledge is a plus but not required")}</li>
-                <li> {string("Experiences with game engine is a plus, but not required")}</li>
                 <li> {string("Can take criticism and responsive to feedback")}</li>
                 <li> {string("Interest in latest trends")}</li>
               </ul>

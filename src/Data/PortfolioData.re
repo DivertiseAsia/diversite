@@ -46,7 +46,7 @@ let adsoupPortfolio:portfolioItem = {
     }
   ],
   links: [
-    {
+    /* {
       _type: GooglePlay,
       href: "https://play.google.com/store/apps/details?id=io.adsoup.sales.mobile",
       caption: "Google Play"
@@ -60,7 +60,7 @@ let adsoupPortfolio:portfolioItem = {
       _type: Default,
       href: "https://adsoup.com/?ref=divertise.asia",
       caption: "View Website >"
-    }
+    } */
   ],
   technologies: ["React", "Python", "Reason", "Firebase", "Postgresql", "Android", "iOS", "Docker", "aws", "Web design", "Graphic Design", "Ux", "Ui" ],
   body: ([
@@ -121,11 +121,11 @@ let eventcometPortfolio:portfolioItem = {
     }
   ],
   links: [
-    {
+    /* {
       _type: Default,
       href: "https://eventcomet.com/?ref=divertise.asia",
       caption: "View Website >"
-    }
+    } */
   ],
   technologies: ["iOS", "Android", "Reason", "Ruby", "Docker", "Aws", "Web design", "Ux", "Ui" ],
   body: ([
@@ -152,9 +152,9 @@ let mintcrowdPortfolio:portfolioItem = {
   ],
   links: [
     {
-      _type: Default,
-      href: "https://mintcrowd.com/?ref=divertise.asia",
-      caption: "View Website >"
+      _type: Text,
+      href: "",
+      caption: "(Website Coming Soon)"
     }
   ],
   technologies: ["Reason", "Python", "Docker", "Aws", "Web design", "Ux", "Ui" ],
@@ -184,7 +184,12 @@ let boneagePortfolio:portfolioItem = {
   links: [
     {
       _type: Default,
-      href: "http://submit.bangkokmedjournal.com/index.php/bangkok-medical-journal/article/view/588",
+      href: "https://www.bangkokmedjournal.com/article/performance-of-convolutional-neural-networks-and-transfer-learning-for-skeletal-bone-age-ass/410/abstract",
+      caption: "Read Academic Paper"
+    },
+    {
+      _type: Default,
+      href: "https://www.nextcare.ai/",
       caption: "View Website >"
     }
   ],
@@ -322,7 +327,7 @@ let eastwestPortfolio:portfolioItem = {
 }
 /* ----------------------- Virtual Reality ---------------------- */
 let vrPortfolio:portfolioItem = {
-  title: "CVRL",
+  title: "CXRL",
   className: None,
   images: [
     {
@@ -346,8 +351,8 @@ let vrPortfolio:portfolioItem = {
   technologies: [ "VR", "Unity", "Android", "NodeJS" ],
   body: ([
     <div>
-      <p>(string("We have been working together as a partner with CVRL to help develop their VR catalog. We have worked with them to help create their property viewing platform. "))</p>
-      <p>(string("The products are mostly written in C# using the Unity engine. To see their platform in action please contact CVRL or Divertise Asia"))</p>
+      <p>(string("We have been working together as a partner with CXRL to help develop their VR catalog. We have worked with them to help create their property viewing platform. "))</p>
+      <p>(string("The products are mostly written in C# using the Unity engine. To see their platform in action please contact CXRL or Divertise Asia"))</p>
     </div>
   ] |> Belt.List.toArray),
 }
@@ -368,11 +373,11 @@ let kikiiPortfolio:portfolioItem = {
     }
   ],
   links: [
-    {
+    /* {
       _type: GooglePlay,
       href: "https://play.google.com/store/apps/details?id=asia.divertise.soidog",
       caption: "Google Play"
-    },
+    }, */
     {
       _type: AppStore,
       href: "https://itunes.apple.com/th/app/kikii-on-the-run/id1282269153?mt=8",

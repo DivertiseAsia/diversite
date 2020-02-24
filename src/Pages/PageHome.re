@@ -80,14 +80,14 @@ let make = (_children) => {
             <div className="col-sm-12 col-md-4 letushelp_col"> 
               <div>
                 <h5>(string("Launch your idea"))</h5>
-                <ImageBackground src=launch />
+                <ImageBackground src=optimize />
                 <p>(string("If you have a product idea but don't know where to begin, our team of developers will help make your idea come to live."))</p>
               </div>
             </div>
             <div className="col-sm-12 col-md-4 letushelp_col"> 
               <div>
                 <h5>(string("Business Optimization"))</h5>
-                <ImageBackground src=optimize />
+                <ImageBackground src=launch />
                 <p>(string("We work with you to bring technology to the parts of your business that will have the most impact "))</p>
               </div>
             </div>
