@@ -936,7 +936,10 @@ and (max-width: 1200px) {
 @media only screen
 and (max-width: 768px) {
   /* Tablet Nav*/
-  .page-home .nav {background: #23a399d9;}
+  .page-home {
+    .nav {background: #23a399d9;}
+    .nav-container {background: $bg-color2;}
+  }
   .nav-icon {
     display: inline-block;
   }
@@ -987,7 +990,7 @@ and (max-width: 768px) {
     background: $bg-color1;
     z-index: 99;
     position: absolute;
-    top: $section-header-height * 0.7;
+    top: $section-header-height;
     width: unset;
     padding: 30px 0;
   }
