@@ -13,7 +13,7 @@ let make = (_children) => {
       <div className="container page-ourwork_nav nav">
         <input type_="checkbox" />
         <div className="nav-icon nav-icon-arrow"> 
-          <h6>(string("Applications & Platforms")) </h6>
+          <h6>(string("Category")) </h6>
           <Icon iconType=ArrowDown />
         </div>
         <div className="nav-container">

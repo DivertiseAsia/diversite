@@ -287,7 +287,7 @@ nav .logo-link {
   cursor: pointer;
 }
 .nav input:checked ~ div div:nth-child(1) {
-  transform: rotate(45deg)translate(7px,7px);
+  transform: rotate(45deg) translate(7px,7px);
 }
 .nav input:checked ~ div div:nth-child(2) {
   transform: rotate(-45deg);
@@ -600,7 +600,7 @@ nav .logo-link {
   }
 }
 .nav input:checked ~ .nav-icon-arrow .icon {
-  transform: rotate(180deg)translate(-10px,-10px);
+  transform: rotate(180deg) translate(0, -5px);
 }
 .page-ourwork .buffer {
   height: $section-header-height;
@@ -863,8 +863,6 @@ nav .logo-link {
   max-height: 130px;
 }
 .port_btn {
-  padding-left: 20px;
-  padding-right: 20px;
   margin: 5px;
   flex-grow: 1;
   max-height: 40px;
@@ -956,16 +954,24 @@ and (max-width: 768px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 0;
+    top: $header-height;
     pointer-events: none;
-    z-index: -1;
+    z-index: 99;
     opacity: 0;
     a {
       width: 100vw;
     }
   }
+  .nav input:checked {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    position: absolute;
+  }
   .nav input:checked ~ .nav-container {
-    height: 300px;
+    height: 250px;
     pointer-events: initial;
     box-shadow: 2px 2px 12px 0px #cecece;
     box-shadow: 2px 10px 12px 0px rgba(0,0,0,0.2);

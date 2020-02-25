@@ -185,7 +185,7 @@ let boneagePortfolio:portfolioItem = {
     {
       _type: Default,
       href: "https://www.bangkokmedjournal.com/article/performance-of-convolutional-neural-networks-and-transfer-learning-for-skeletal-bone-age-ass/410/abstract",
-      caption: "Read Academic Paper"
+      caption: "Academic Paper"
     },
     {
       _type: Default,
