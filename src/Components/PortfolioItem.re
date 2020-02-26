@@ -5,6 +5,8 @@ let component = ReasonReact.statelessComponent("PortfolioItemRe");
 
 type portfolioLinkType = 
   | Default
+  | DefaultInactive
+  | Text
   | AppStore
   | GooglePlay
   | MiStore
@@ -61,6 +63,8 @@ let make =
                   link => {
                     let classNames = switch (link._type) {
                       | Default => "btn-line-color1"
+                      | DefaultInactive => "btn-line-color1 inactive"
+                      | Text => "port_link_text"
                       | AppStore => "btn-app-store"
                       | GooglePlay => "btn-google-play"
                       | MiStore => "btn-mi-store"
