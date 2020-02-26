@@ -7,7 +7,7 @@ let make = (_children) => {
   ...component,
   render: _self => {
     <MainPage>
-      <PageHeader title="Careers" subtitle="Designer" className="bg-gradient-color1" />
+      <PageHeader title="Careers" subtitle="Designer" className="bg-gradient-color1 pt-5" />
       <div className="container"> 
           <div className="row pt-5 d-block">
             <h3><Icon className="mr-4" iconType=Pen />{string("What are the requirements?")}</h3>
