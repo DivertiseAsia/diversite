@@ -1,4 +1,6 @@
 open ReasonReact;
+open WebGL;
+open Pentagon;
 
 type state = {route: ReasonReact.Router.url};
 
@@ -14,6 +16,20 @@ let routeMatches = (x:list(string), link:string) => {
   };
 };
 
+let rec animate = (camera, scene, renderer) => {
+  Document.setTimeout(() => {
+    Three.requestAnimationFrame(() => {
+      if (validElementById("webgl-canvas")) {
+        animate(camera, scene, renderer)
+      };
+    });
+  }, 1000 / 24) |> ignore;
+  PentagonScene.animate();
+  PentagonScene.updateParticle();
+  Three.render(renderer, scene, camera);
+};
+
+
 let make = _children => {
   ...component,
   initialState: () => {route: Router.dangerouslyGetInitialUrl()},
@@ -26,6 +42,19 @@ let make = _children => {
     onUnmount(() => Router.unwatchUrl(watcherID));
   },
   render: ({state: {route}}) => {
+
+    if (!validElementById("webgl-canvas") && !isNotSupportedWebGl()) { 
+      Document.setTimeout(() => {
+        let _ = three;
+        let element = Document.getElementById(Document.doc, "webgl-background");
+        setIdToElement(Three.renderer##domElement, "webgl-canvas");
+        Three.onResize(element);
+        PentagonScene.initScene(Three.getCamera(element), Three.renderer, element);
+        animate(Three.getCamera(element), PentagonScene.scene[0], Three.renderer);
+        ()
+      }, 100) |> ignore;
+    };
+    
     switch (route.path) {
     | (x) when routeMatches(x, Links.home) => <PageHome />
     | (x) when routeMatches(x, Links.careers) => <PageCareers />

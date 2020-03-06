@@ -17,7 +17,7 @@ let make = (_children) => {
   ...component,
   render: _self => {
     <MainPage className="page-home">
-      <div className="hero">
+      <div id="webgl-background" className="hero">
         <div className="container">
           <h1>(string("Technical partner for startups in Asia"))</h1>
           <p>(string("specialize in Artificial Intelligence, VR, and other cutting-edge technologies.")) </p>
