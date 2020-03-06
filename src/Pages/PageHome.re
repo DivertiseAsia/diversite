@@ -1,4 +1,6 @@
 open ReasonReact;
+open WebGL;
+open Pentagon;
 
 let component = ReasonReact.statelessComponent("PageHome");
 [@bs.module] external ourgoal1 : string = "../../../../public/images/icon-platforms.png";
@@ -13,9 +15,33 @@ let component = ReasonReact.statelessComponent("PageHome");
 [@bs.module] external optimize : string = "../../../../public/images/letushelp-optimize.png";
 [@bs.module] external launch : string = "../../../../public/images/letushelp-launch.png";
 
+let rec animate = (camera, scene, renderer) => {
+  Document.setTimeout(() => {
+    Three.requestAnimationFrame(() => {
+      if (validElementById("webgl-canvas")) {
+        animate(camera, scene, renderer)
+      };
+    });
+  }, 1000 / 24) |> ignore;
+  PentagonScene.animate();
+  PentagonScene.updateParticle();
+  Three.render(renderer, scene, camera);
+};
+
 let make = (_children) => {
   ...component,
   render: _self => {
+    if (!validElementById("webgl-canvas") && !isNotSupportedWebGl()) { 
+      Document.setTimeout(() => {
+        let _ = three;
+        let element = Document.getElementById(Document.doc, "webgl-background");
+        setIdToElement(Three.renderer##domElement, "webgl-canvas");
+        Three.onResize(element);
+        PentagonScene.initScene(Three.getCamera(element), Three.renderer, element);
+        animate(Three.getCamera(element), PentagonScene.scene[0], Three.renderer);
+        ()
+      }, 100) |> ignore;
+    };
     <MainPage className="page-home">
       <div id="webgl-background" className="hero">
         <div className="container">

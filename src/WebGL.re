@@ -184,10 +184,6 @@ module Three {
         set_aspect(camera[0][0], Document.offsetWidth(element) /. Document.offsetHeight(element));
         updateProjectionMatrix(camera[0][0]);
         setSize(renderer, Document.offsetWidth(element), Document.offsetHeight(element));
-        /* this._camera.aspect = window.innerWidth / window.innerHeight;
-        this._camera.updateProjectionMatrix();
-        this._renderer.setSize(window.innerWidth, window.innerHeight); */
-        ()
     });
 };
 
