@@ -1,6 +1,7 @@
 open ReasonReact;
 open WebGL;
 open Pentagon;
+open Laser;
 
 let component = ReasonReact.statelessComponent("PageHome");
 [@bs.module] external ourgoal1 : string = "../../../../public/images/icon-platforms.png";
@@ -20,6 +21,7 @@ let rec animate = (camera, scene, renderer) => {
     Three.requestAnimationFrame(() => {
       if (validElementById("webgl-canvas")) {
         animate(camera, scene, renderer)
+        LaserScene.animate();
       };
     });
   }, 1000 / 24) |> ignore;
@@ -38,6 +40,9 @@ let make = (_children) => {
         setIdToElement(Three.renderer##domElement, "webgl-canvas");
         Three.onResize(element);
         PentagonScene.initScene(Three.getCamera(element), Three.renderer, element);
+        let mesh = LaserScene.mesh;
+        Three.set_z(mesh##position, -90.);
+        Three.addMeshToScene(PentagonScene.scene[0], mesh);
         animate(Three.getCamera(element), PentagonScene.scene[0], Three.renderer);
         ()
       }, 100) |> ignore;

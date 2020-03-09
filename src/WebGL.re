@@ -39,6 +39,7 @@ module Three {
         y:float,
         z:float
     });
+    type vector2;
     type vertice;
     type matrix3;
     type matrix4;
@@ -62,6 +63,23 @@ module Three {
         rotation: vector3,
         receiveShadow: bool
     });
+    type values = {
+        value: array(float)
+    };
+    type valueFloat = {
+        value: float
+    };
+    type valueVector2 = {
+        value: vector2
+    };
+    type uniforms = {
+        time: valueFloat,
+        r: values,
+        speed: values, 
+        bandWidth: values,
+        color: valueVector2,
+        resolution: valueVector2
+    };
     type line = Js.t({
         .
         position: vector3,
@@ -84,7 +102,7 @@ module Three {
         [@bs.optional] opacity: float, 
         [@bs.optional] linewidth: float, 
         [@bs.optional] vertexColors: float,
-        [@bs.optional] alpha: bool
+        [@bs.optional] alpha: bool,
     };
     type animate;
 
@@ -105,6 +123,7 @@ module Three {
     [@bs.new] [@bs.scope ("Three")] external meshLambertMaterial: (parameters) => material = "MeshLambertMaterial";
     [@bs.new] [@bs.scope ("Three")] external lineBasicMaterial: (parameters) => material = "LineBasicMaterial";
     [@bs.new] [@bs.scope ("Three")] external meshNormalMaterial: (unit) => material = "MeshNormalMaterial";
+    [@bs.new] [@bs.scope ("Three")] external shaderMaterial: (parameters) => material = "ShaderMaterial";
     [@bs.new] [@bs.scope ("Three")] external mesh: (geometry, material) => mesh = "Mesh";
     [@bs.new] [@bs.scope ("Three")] external line: (geometry, material) => line = "Line";
     [@bs.new] [@bs.scope ("Three")] external pointLight: (string) => pointLight = "PointLight";
@@ -112,6 +131,7 @@ module Three {
     [@bs.new] [@bs.scope ("Three")] external ambientLight: (string, float) => ambientLight = "AmbientLight";
     [@bs.new] [@bs.scope ("Three")] external webGLRenderer: (parameters) => renderer = "WebGLRenderer";
     [@bs.new] [@bs.scope ("Three")] external newVector3: (float, float, float) => position = "Vector3";
+    [@bs.new] [@bs.scope ("Three")] external newVector2: (float, float) => vector2 = "Vector2";
 
     [@bs.new] [@bs.scope ("Three")] external color: (string) => color = "Color";
     

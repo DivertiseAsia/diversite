@@ -22,6 +22,10 @@
   "dependencies": {
     "@divertiseasia/bs-divertise-core-components": "^0.1.12",
     "bs-css": "^7.2.0",
+    "glslify": "^7.0.0",
+    "glslify-import-loader": "^0.1.2",
+    "glslify-loader": "^2.0.0",
+    "raw-loader": "^4.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "reason-react": ">=0.4.0",
