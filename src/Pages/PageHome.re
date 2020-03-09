@@ -42,7 +42,7 @@ let make = (_children) => {
         PentagonScene.initScene(Three.getCamera(element), Three.renderer, element);
         let mesh = LaserScene.mesh;
         Three.set_z(mesh##position, -90.);
-        Three.addMeshToScene(PentagonScene.scene[0], mesh);
+        /* Three.addMeshToScene(PentagonScene.scene[0], mesh); */
         animate(Three.getCamera(element), PentagonScene.scene[0], Three.renderer);
         ()
       }, 100) |> ignore;

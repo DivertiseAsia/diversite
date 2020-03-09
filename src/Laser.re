@@ -67,6 +67,5 @@ module LaserScene {
             (material |> get_uniforms_of_material |> get_time_of_material), 
             (material |> get_uniforms_of_material |> get_time_of_material |> get_time_value_of_material) +. 0.05
         );
-        Js.log((material |> get_uniforms_of_material |> get_time_of_material |> get_time_value_of_material));
     };
 };
