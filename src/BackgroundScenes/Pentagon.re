@@ -228,9 +228,8 @@ module PentagonScene {
         };
     };
 
-    let initScene = (camera, renderer, element) => {
+    let initScene = (element) => {
         resetPentagon();
-        Three.set_z(camera##position, 1000.);
         buildBackground();
         buildAmbientLight("#ffffff");
         buildPointLight("#ffffff");
@@ -262,12 +261,5 @@ module PentagonScene {
           addPentagonToScene(pentagon);
           pentagons[0] = Array.append(pentagons[0], [|pentagon|]);
         };
-
-        Three.setSize(renderer, Document.offsetWidth(element), Document.offsetHeight(element));
-        Three.setPixelRatio(renderer, Document.windowDevicePixelRatio);
-      
-        Document.appendChildToId(element, renderer##domElement);
-        setCanvasStyle(renderer##domElement);
-
     };
 };

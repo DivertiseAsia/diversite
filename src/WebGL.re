@@ -8,6 +8,7 @@ module Document {
     type window;
 
     [@bs.send] external getElementById: (document, string) => Dom.element = "getElementById";
+    [@bs.send] external createElement: (document, string) => Dom.element = "createElement";
     [@bs.val] external doc : document = "document";
     [@bs.get] external bodyElement: (document) => Dom.element = "body";
     [@bs.val] external windowWidth : float = "window.innerWidth";
@@ -21,7 +22,8 @@ module Document {
     [@bs.val] external setTimeout : (unit => unit, int) => float = "setTimeout";
 
     [@bs.set] external set_onresize: (Dom.element, unit => unit) => unit = "onresize";
-
+    [@bs.set] external set_mousemove: (Dom.element, ReactEvent.Mouse.t => unit) => unit = "onmousemove";
+    [@bs.set] external set_mouseout: (Dom.element, unit => unit) => unit = "onmouseout";
 };
 
 module Three {
@@ -39,10 +41,15 @@ module Three {
         y:float,
         z:float
     });
-    type vector2;
+    type vector2 = {
+      x: float, 
+      y: float
+    };
     type vertice;
     type matrix3;
     type matrix4;
+    [@bs.deriving abstract]
+    type texture;
     type camera = Js.t({
         .
         position: vector3,
@@ -85,6 +92,7 @@ module Three {
         position: vector3,
         rotation: vector3,
     });
+    type light;
     type ambientLight;
     type pointLight;
     
@@ -103,6 +111,8 @@ module Three {
         [@bs.optional] linewidth: float, 
         [@bs.optional] vertexColors: float,
         [@bs.optional] alpha: bool,
+        [@bs.optional] map: texture, 
+        [@bs.optional] transparent: bool,
     };
     type animate;
 
@@ -116,6 +126,7 @@ module Three {
     [@bs.new] [@bs.scope ("Three")] external scene: unit => scene = "Scene";
     [@bs.new] [@bs.scope ("Three")] external newGeometry: (unit) => geometry = "Geometry";
     [@bs.new] [@bs.scope ("Three")] external cylinderGeometry: (float, float, float, float) => geometry = "CylinderGeometry";
+    [@bs.new] [@bs.scope ("Three")] external sphereGeometry: (float, float, float) => geometry = "SphereGeometry";
     [@bs.new] [@bs.scope ("Three")] external boxGeometry: (float, float, float) => geometry = "BoxGeometry";
     [@bs.new] [@bs.scope ("Three")] external sphereBufferGeometry: (float, float, float) => geometry = "SphereBufferGeometry";
     [@bs.new] [@bs.scope ("Three")] external planeBufferGeometry: (float, float) => geometry = "PlaneBufferGeometry";
@@ -125,10 +136,12 @@ module Three {
     [@bs.new] [@bs.scope ("Three")] external meshNormalMaterial: (unit) => material = "MeshNormalMaterial";
     [@bs.new] [@bs.scope ("Three")] external shaderMaterial: (parameters) => material = "ShaderMaterial";
     [@bs.new] [@bs.scope ("Three")] external mesh: (geometry, material) => mesh = "Mesh";
+    [@bs.new] [@bs.scope ("Three")] external newTexture: (Dom.element) => texture = "Texture";
     [@bs.new] [@bs.scope ("Three")] external line: (geometry, material) => line = "Line";
     [@bs.new] [@bs.scope ("Three")] external pointLight: (string) => pointLight = "PointLight";
     [@bs.new] [@bs.scope ("Three")] external pointLightHelper: (pointLight, float) => mesh = "PointLightHelper";
     [@bs.new] [@bs.scope ("Three")] external ambientLight: (string, float) => ambientLight = "AmbientLight";
+    [@bs.new] [@bs.scope ("Three")] external directionalLight: (string, float) => light = "DirectionalLight";
     [@bs.new] [@bs.scope ("Three")] external webGLRenderer: (parameters) => renderer = "WebGLRenderer";
     [@bs.new] [@bs.scope ("Three")] external newVector3: (float, float, float) => position = "Vector3";
     [@bs.new] [@bs.scope ("Three")] external newVector2: (float, float) => vector2 = "Vector2";
@@ -139,6 +152,7 @@ module Three {
     
     [@bs.send] external addAmbientLightToScene : (scene, ambientLight) => unit = "add";
     [@bs.send] external addPointLightToScene : (scene, pointLight) => unit = "add";
+    [@bs.send] external addLightToScene : (scene, light) => unit = "add";
     [@bs.send] external addMeshToScene : (scene, mesh) => unit = "add";
     [@bs.send] external addLineToScene : (scene, line) => unit = "add";
     [@bs.send] external addVector3ToVector3 : (position, position) => position = "add";
@@ -156,6 +170,9 @@ module Three {
                 float , float, float, float) => unit = "set";
 
     [@bs.set] external set_aspect: (camera, float) => unit = "aspect";
+
+    [@bs.get] external get_x_vector2: (vector2) => float = "x";
+    [@bs.get] external get_y_vector2: (vector2) => float = "y";
 
     [@bs.get] external get_x: (position) => float = "x";
     [@bs.get] external get_y: (position) => float = "y";
@@ -179,6 +196,7 @@ module Three {
     [@bs.get] external geometry_vertices: (geometry) => list(vertice) = "vertices";
     [@bs.set] external geometry_set_colors: (geometry, array(color)) => array(color) = "colors";
     [@bs.send] external geometry_vertices_push: (list(vertice), position) => unit = "push";
+    [@bs.send] external geometry_vertices_pushs: (array(vertice), position, position) => unit = "push";
  
     let camera = [|[||]|];
     let getCamera = (element) => {
