@@ -71,7 +71,7 @@ module NetworkScene {
         let p1 = points[0][v1];
         let p2 = points[0][v2];
         let d = set_distanceTo(p1.position, p2.position);
-        let lineData = { p1: p1, p2: p2, dist: d };
+        let lineData = { p1, p2, dist: d };
         lines[0] = Array.append(lines[0], [|lineData|]);
 
         let params = Three.parseIntoParameters("{\"color\": \"#ffffff\"}");
@@ -85,7 +85,6 @@ module NetworkScene {
     };
 
     let buildObject = (width, height) => {
-        let accel = Three.newVector3(0., -.0.2, 0.);
         let radiusList = [|22., 30., 37.|];
         let rangeX = 300.;
         let rangeY = 250.;
@@ -104,11 +103,13 @@ module NetworkScene {
                             ? Js.Math.random() *. rangeX : 0.);
                 let y = ystart -. (row_index |> float_of_int) *. colHeight +. ((row_index |> float_of_int) !== 0. && (row_index |> float_of_int) !== row -. 1. 
                             ? Js.Math.random() *. rangeY : 0.);
-                let pinned = column_index mod ((col |> int_of_float) - 1) === 0 || (row_index |> float_of_int) === 0. || (row_index |> float_of_int) === row -. 1.;
+                let pinned = column_index mod ((col |> int_of_float) - 1) === 0 || 
+                                        row_index === 0 || 
+                                        row_index === (row |> int_of_float) - 1;
+                
                 createdPoint(x, y, 0., radius, pinned);
             };
         };
-
         for (index in 1 to Array.length(points[0]) - 1) {
             if (index mod (col |> int_of_float) !== 0) {
                 makeEdge(index, index - 1)
@@ -119,55 +120,52 @@ module NetworkScene {
         };
     };
     let initScene = (width, height) => {
+        scene[0] = Three.scene();
+
+        pointTarget[0] = None;
+        points[0] = [||];
+        lines[0] = [||];
+        vertexts[0] = [||];
+        edges[0] = [||];
+
+        force[0] = Three.newVector3(0., 0., 0.);
+
         buildBackSpace(width, height);
         buildObject(width, height);
     };
-    let mouseX: (ReactEvent.Mouse.t) => (float) = [%bs.raw
-    {|
-      function(event) {
-        return (event.clientX);
-      }
-    |}
-    ];
-    let mouseY: (ReactEvent.Mouse.t) => (float) = [%bs.raw
-    {|
-      function(event) {
-        return (event.clientY);
-      }
-    |}
-    ];
+    
     let onMouseOver = (event, width, height) => {   
         let clientX = mouseX(event);
         let clientY = mouseY(event);
-        let mouse = Three.newVector2(clientX -. width /. 2., clientY -. height /. 2.);
-        
+        let mouse = Three.newVector2(clientX -. width /. 2., -.(clientY -. height /. 2.));
         Array.mapi((index, vertext:Three.mesh) => {
             let p = vertext##position;
             let dx = Three.get_x_vector2(mouse) -. p##x;
             let dy = Three.get_y_vector2(mouse) -. p##y;
             let d = Js.Math.sqrt(dx *. dx +. dy *. dy);
             let point = points[0][index];
-
             if (d <= point.radius && !point.pinned) {
-                pointTarget[0] = Some(points[0][index]);
-                switch pointTarget[0] {
-                | Some(target) => 
-                        force[0] = Three.newVector3(
-                            Three.get_x(target.position), 
-                            Three.get_y(target.position), 
-                            Three.get_z(force[0]))
-                | None => ()
-                };
+                pointTarget[0] = Some(point);
+                force[0] = Three.newVector3(
+                            Three.get_x(point.position), 
+                            Three.get_y(point.position), 
+                            Three.get_z(force[0]));
             };
             switch pointTarget[0] {
             | Some(target) => {
-                    let dx = mouse.x -. Three.get_x(target.position);
-                    let dy = mouse.y -. Three.get_y(target.position);
+                    let dx = Three.get_x_vector2(mouse) -. Three.get_x(target.position);
+                    let dy = Three.get_y_vector2(mouse) -. Three.get_y(target.position);
                     if (Js.Math.abs_float(dx) < width *. k) {
-                        force[0] = Three.newVector3(mouse.x, Three.get_y(force[0]), Three.get_z(force[0]))
+                        force[0] = Three.newVector3(
+                            Three.get_x_vector2(mouse),
+                            Three.get_y(force[0]),
+                            Three.get_z(force[0]))
                     };
                     if (Js.Math.abs_float(dy) < height *. k) {
-                        force[0] = Three.newVector3(Three.get_x(force[0]), mouse.y, Three.get_z(force[0]))
+                        force[0] = Three.newVector3(
+                            Three.get_x(force[0]),
+                            Three.get_y_vector2(mouse),
+                            Three.get_z(force[0]))
                     };
                 }
             | None => ()
@@ -182,7 +180,7 @@ module NetworkScene {
     };
 
     let setEventsMouse = (element, width, height) => {
-        Document.set_mousemove(element, (e) => onMouseOver(e, width, height) |> ignore);
+        Document.set_mousemove(element, (e) => onMouseOver(e, width, height));
         Document.set_mouseout(element, () => onMouseOut());
     };
 
@@ -202,60 +200,99 @@ module NetworkScene {
 
     let updatePoint = () => {
         points[0] = 
-            Array.mapi((index, point) => {
-                if (!point.pinned) {
-                    {
+            Array.map((networkPoint) => {
+                if (!networkPoint.pinned) {
+                    let newNetworkPoint = {
                         position: Three.newVector3(
-                            Three.get_x(point.position) +. (Three.get_x(point.position) -. Three.get_x(point.oldPosition) *. resilient), 
-                            Three.get_y(point.position) +. (Three.get_y(point.position) -. Three.get_y(point.oldPosition) *. resilient), 
-                            Three.get_z(point.position) +. (Three.get_z(point.position) -. Three.get_z(point.oldPosition) *. resilient)
+                            Three.get_x(networkPoint.position) +. (Three.get_x(networkPoint.position) -. Three.get_x(networkPoint.oldPosition) *. resilient),
+                            Three.get_y(networkPoint.position) +. (Three.get_y(networkPoint.position) -. Three.get_y(networkPoint.oldPosition) *. resilient),
+                            Three.get_z(networkPoint.position) +. (Three.get_z(networkPoint.position) -. Three.get_z(networkPoint.oldPosition) *. resilient)
                         ),
                         oldPosition: Three.newVector3(
-                            Three.get_x(point.position), 
-
-                            Three.get_y(point.position), 
-                            Three.get_z(point.position)
+                            Three.get_x(networkPoint.position),
+                            Three.get_y(networkPoint.position),
+                            Three.get_z(networkPoint.position)
                         ),
-                        radius: point.radius,
-                        pinned: point.pinned,
-                    }
+                        radius: networkPoint.radius,
+                        pinned: networkPoint.pinned,
+                    };
+                    newNetworkPoint;
                 } else {
-                    point
+                    networkPoint
                 };
             }, points[0]);
     };
 
-    /* let updateJoint = () => {
-        lines[0] = 
-            Array.mapi((index, line) => {
-                if (!point.pinned) {
-                    { 
-                        p1: networkPoint, 
-                        p2: networkPoint, 
-                        dist: float
-                    }
-                } else {
-                    point
+    let updateJoint = () => {
+        lines[0] =
+            Array.map((line) => {
+                let dx = Three.get_x(line.p2.position) -. Three.get_x(line.p1.position);
+                let dy = Three.get_y(line.p2.position) -. Three.get_y(line.p1.position);
+                let d = Js.Math.sqrt(dx *. dx +. dy *. dy);
+                let difference = line.dist -. d;
+                let percen = difference /. d *. 0.5;
+                let offsetX = dx *. percen;
+                let offsetY = dy *. percen;
+                let p1:networkPoint = {
+                    position: Three.newVector3(
+                        Three.get_x(line.p1.position) -. offsetX, 
+                        Three.get_y(line.p1.position) -. offsetY,
+                        Three.get_z(line.p1.position)
+                    ),
+                    oldPosition: line.p1.oldPosition,
+                    radius: line.p1.radius,
+                    pinned: line.p1.pinned,
                 };
+                let p2:networkPoint = {
+                    position: Three.newVector3(
+                        Three.get_x(line.p2.position) +. offsetX, 
+                        Three.get_y(line.p2.position) +. offsetY,
+                        Three.get_z(line.p2.position)
+                    ),
+                    oldPosition: line.p2.oldPosition,
+                    radius: line.p2.radius,
+                    pinned: line.p2.pinned,
+                };
+
+                let (newNetworkPoint1, newNetworkPoint2) = switch (line.p1.pinned, line.p2.pinned) {
+                | (true, true) => (line.p1, line.p2)
+                | (true, false) => (line.p1, p2)
+                | (false, true) => (p1, line.p2)
+                | (false, false) => (p1, p2)
+                };
+
+                let newLine = {
+                    p1: newNetworkPoint1,
+                    p2: newNetworkPoint2,
+                    dist: line.dist
+                };
+                newLine;
             }, lines[0]);
-        this.lines.forEach(line => {
-            const p1 = line.p1.position;
-            const p2 = line.p2.position;
-            const dx = p2.x - p1.x;
-            const dy = p2.y - p1.y;
-            const d = Math.sqrt(dx * dx + dy * dy);
-            const difference = line.dist - d;
-            const percen = difference / d * 0.5;
-            const offsetX = dx * percen;
-            const offsetY = dy * percen;
-            if (!line.p1.pinned) {
-                p1.x -= offsetX;
-                p1.y -= offsetY;
-            }
-            if (!line.p2.pinned) {
-                p2.x += offsetX;
-                p2.y += offsetY;
-            }
-        });
-    }; */
+    };
+
+    [@bs.set][@bs.scope ("geometry")] external set_verticesNeedUpdate: (Three.line, bool) => unit = "verticesNeedUpdate";
+    [@bs.set] external set_lineDistancesNeedUpdate: (Three.line, bool) => unit = "lineDistancesNeedUpdate";
+    [@bs.get] external get_lineDistancesNeedUpdate: (Three.line) => bool = "lineDistancesNeedUpdate";
+    
+    let refreshMesh = () => {
+        Array.mapi((index, networkPoint) => {
+            Three.set_x(vertexts[0][index]##position, Three.get_x(networkPoint.position));
+            Three.set_y(vertexts[0][index]##position, Three.get_y(networkPoint.position));
+            Three.set_z(vertexts[0][index]##position, Three.get_z(networkPoint.position));
+        }, points[0]); 
+
+        Array.mapi((index, edge:Three.line) => {
+            set_verticesNeedUpdate(edges[0][index], true); 
+            set_lineDistancesNeedUpdate(edges[0][index], true);
+        }, edges[0]);
+        
+    }; 
+
+    let animate = () => {
+        updateFource();
+        /* updatePoint();
+        updateJoint(); */
+        refreshMesh();
+        ()
+    };
 };

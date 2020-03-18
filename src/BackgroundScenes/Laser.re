@@ -1,7 +1,7 @@
 open WebGL;
 
-[@bs.module] external customVert : string = "../../../public/Shaders/custom.vert";
-[@bs.module] external customFrag : string = "../../../public/Shaders/custom.frag";
+[@bs.module] external customVert : string = "../../../../public/Shaders/custom.vert";
+[@bs.module] external customFrag : string = "../../../../public/Shaders/custom.frag";
 
 let materialJs: (three, string, string) => Three.material = [%bs.raw
   {|
@@ -51,6 +51,8 @@ let materialJs: (three, string, string) => Three.material = [%bs.raw
 module LaserScene {
     let t = three;
 
+    let scene = [|Three.scene()|];
+
     [@bs.set] external set_time_of_material: (Three.valueFloat, float) => unit = "value";
 
     [@bs.get] external get_uniforms_of_material: (Three.material) => Three.uniforms = "uniforms";
@@ -60,7 +62,11 @@ module LaserScene {
     let geometry = (width, height) => Three.planeBufferGeometry(width, height);
     let material = materialJs(t, customVert, customFrag);
     
-    let mesh = Three.mesh(geometry(Document.windowWidth, Document.windowHeight), material);
+    let initScene = (width, height) => {
+        scene[0] = Three.scene();
+        let mesh = Three.mesh(geometry(width, height), material);
+        Three.addMeshToScene(scene[0], mesh);
+    };
 
     let animate = () => {
         set_time_of_material(

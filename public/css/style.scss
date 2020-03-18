@@ -368,6 +368,26 @@ nav .logo-link {
     color: $text-white;
     text-shadow: $text-shadow;
   }
+
+  .dots {
+    position: absolute;
+    height: 20px;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+    .dot {
+      display: inline-block;
+      cursor: pointer;
+      margin-left: 10px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #686163;
+    }
+    .active {
+      background-color: #ffffff !important;
+    }
+  }
 }
 #webgl-canvas {
   animation: fadeIn ease 1s;

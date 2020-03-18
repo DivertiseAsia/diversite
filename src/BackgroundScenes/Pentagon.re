@@ -226,9 +226,11 @@ module PentagonScene {
         for (x in 0 to amount - 1) {
             Three.rotateX(pentagons[0][x], Js.Math._PI /. rot_ret[x]);
         };
+        updateParticle();
     };
 
     let initScene = (element) => {
+        scene[0] = Three.scene();
         resetPentagon();
         buildBackground();
         buildAmbientLight("#ffffff");

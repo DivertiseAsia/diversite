@@ -24,6 +24,11 @@ module Document {
     [@bs.set] external set_onresize: (Dom.element, unit => unit) => unit = "onresize";
     [@bs.set] external set_mousemove: (Dom.element, ReactEvent.Mouse.t => unit) => unit = "onmousemove";
     [@bs.set] external set_mouseout: (Dom.element, unit => unit) => unit = "onmouseout";
+
+    let clearMouseEvents = (element) => {
+      set_mousemove(element, (e) => ());
+      set_mouseout(element, () => ());
+    };
 };
 
 module Three {
@@ -187,7 +192,9 @@ module Three {
 
     [@bs.set] external set_castShadow: (pointLight, bool) => unit = "castShadow";
 
-    [@bs.val] external requestAnimationFrame: (unit => unit) => unit = "requestAnimationFrame";
+    [@bs.val] external requestAnimationFrame: (unit => unit) => int = "requestAnimationFrame";
+    [@bs.val] external cancelAnimationFrame: (int) => unit = "cancelAnimationFrame";
+    
     [@bs.send] external render : (renderer, scene, camera) => unit = "render";
     [@bs.send] external vector3_copy : (position, vertice) => unit = "copy";
     [@bs.val] external set_position_copy: (position) => unit = "pointLight.position.copy";
@@ -233,7 +240,6 @@ let isNotSupportedWebGl: (unit) => bool = [%bs.raw
         
         var ua = navigator.userAgent.toLowerCase(); 
         var isIE = (ua.indexOf('msie') > -1);
-        console.log(isIE);
         if ((isSafari && iOS) || isIE) {
             return true;
         } else if(isSafari || isIE) {
@@ -277,4 +283,19 @@ let setIdToElement: (Dom.element, string) => unit = [%bs.raw
       }
     }
   |}
+];
+
+let mouseX: (ReactEvent.Mouse.t) => (float) = [%bs.raw
+  {|
+    function(event) {
+      return (event.clientX);
+    }
+  |}
+];
+let mouseY: (ReactEvent.Mouse.t) => (float) = [%bs.raw
+{|
+  function(event) {
+    return (event.clientY);
+  }
+|}
 ];

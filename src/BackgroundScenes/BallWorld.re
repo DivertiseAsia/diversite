@@ -29,7 +29,7 @@ module BallWorldScene {
     let balls = [|[||]|];
     let directions:array(array(Three.vector2)) = [|[||]|];
     let camera = (camera) => camera;
-    let mouse:Three.vector2 = {x: 0., y: 0.};
+    let mouse:array(Three.vector2) = [|{x: 0., y: 0.}|];
 
     let spheres = (width, height) => [
         { x: -.width /. 2. +. 100., y: height /. 2. -. 100., z: 150., r: 160., c: "#C1ACD7", o: 1.0 },
@@ -121,6 +121,13 @@ module BallWorldScene {
     };
 
     let initScene = (width, height) => {
+        scene[0] = Three.scene();
+        widthScene[0] = 0.; 
+        heightScene[0] = 0.;
+        balls[0] = [||];
+        directions[0] = [||];
+        mouse[0] = {x: 0., y: 0.};
+
         buildBackscene(width, height);
         buildSphere(width, height);
         buildDirectionalLight(width, height, "#ffffff");
@@ -131,7 +138,7 @@ module BallWorldScene {
     [@bs.send] external set_translateX: (Three.mesh, float) => unit = "translateX";
     [@bs.send] external set_translateY: (Three.mesh, float) => unit = "translateY";
 
-    let animate = () => {
+    let animate = (width) => {
         for (index in 0 to Array.length(balls[0]) - 1) {
             set_translateX(balls[0][index], Js.Math.random() *. directions[0][index].x /. 2.);
             set_translateY(balls[0][index], Js.Math.random() *. directions[0][index].y /. 2.);
@@ -145,5 +152,16 @@ module BallWorldScene {
                 directions[0][index] = newDirection;
             };
         };
+
+        let targetAngleX = (mouse[0].x *. Js.Math._PI /. 32.) /. (widthScene[0] /. 2.);
+        let targetAngleY = (mouse[0].y *. Js.Math._PI /. 16.) /. (widthScene[0] /. 2.);
+
+        let element = Document.getElementById(Document.doc, "webgl-background");
+        Three.set_x(Three.getCamera(element)##rotation, targetAngleY);
+        Three.set_y(Three.getCamera(element)##rotation, -.targetAngleX);
+    };
+
+    let onMouseMove = (event, width, height) => {
+        mouse[0] = {x: mouseX(event) -. width /. 2., y: (mouseY(event) -. height /. 2.)}
     };
 };

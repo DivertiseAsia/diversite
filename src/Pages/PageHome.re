@@ -1,9 +1,9 @@
 open ReasonReact;
-open WebGL;
+/* open WebGL;
 open Pentagon;
 open Laser;
 open BallWorld;
-open Network;
+open Network; */
 
 let component = ReasonReact.statelessComponent("PageHome");
 [@bs.module] external ourgoal1 : string = "../../../../public/images/icon-platforms.png";
@@ -18,57 +18,11 @@ let component = ReasonReact.statelessComponent("PageHome");
 [@bs.module] external optimize : string = "../../../../public/images/letushelp-optimize.png";
 [@bs.module] external launch : string = "../../../../public/images/letushelp-launch.png";
 
-let rec animate = (camera, scene, renderer) => {
-  Document.setTimeout(() => {
-    Three.requestAnimationFrame(() => {
-      if (validElementById("webgl-canvas")) {
-        animate(camera, scene, renderer)
-        /* LaserScene.animate(); */
-      };
-    });
-  }, 1000 / 24) |> ignore;
-  /* BallWorldScene.animate(); */
-  /* PentagonScene.animate();
-  PentagonScene.updateParticle(); */
-  Three.render(renderer, scene, camera);
-};
-
 let make = (_children) => {
   ...component,
   render: _self => {
-    if (!validElementById("webgl-canvas") && !isNotSupportedWebGl()) { 
-      Document.setTimeout(() => {
-        let _ = three;
-        let element = Document.getElementById(Document.doc, "webgl-background");
-        setIdToElement(Three.renderer##domElement, "webgl-canvas");
-        Three.onResize(element);
-        NetworkScene.setEventsMouse(element, Document.offsetWidth(element), Document.offsetHeight(element));
-        let camera = Three.getCamera(element);
-        Three.set_z(camera##position, 1000.);
-
-        /* PentagonScene.initScene(element); */
-        NetworkScene.initScene(Document.offsetWidth(element), Document.offsetHeight(element));
-
-        Three.setSize(Three.renderer, Document.offsetWidth(element), Document.offsetHeight(element));
-        Three.setPixelRatio(Three.renderer, Document.windowDevicePixelRatio);
-        Document.appendChildToId(element, Three.renderer##domElement);
-        setCanvasStyle(Three.renderer##domElement);
-        
-        /* let mesh = LaserScene.mesh;
-        Three.set_z(mesh##position, -90.);
-        Three.addMeshToScene(PentagonScene.scene[0], mesh); */
-
-        animate(Three.getCamera(element), NetworkScene.scene[0], Three.renderer);
-        ()
-      }, 100) |> ignore;
-    };
     <MainPage className="page-home">
-      <div id="webgl-background" className="hero">
-        <div className="container">
-          <h1>(string("Technical partner for startups in Asia"))</h1>
-          <p>(string("specialize in Artificial Intelligence, VR, and other cutting-edge technologies.")) </p>
-        </div>
-      </div>
+      <Carousel />
       <div className="homepage_menu-bg" />
       <div className="section-ourgoal -text-center">
         <div className="container">
