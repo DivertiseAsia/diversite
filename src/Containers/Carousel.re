@@ -80,14 +80,14 @@ let renderScene = (scene) => {
       let _ = three;
       let element = Document.getElementById(Document.doc, "webgl-background");
       let camera = Three.getCamera(element);
+      Three.set_z(camera##position, 1000.);
+      Three.set_x(camera##rotation,0.);
+      Three.set_y(camera##rotation, 0.);
 
       if (!validElementById("webgl-canvas")) {
         setIdToElement(Three.renderer##domElement, "webgl-canvas");
         Three.onResize(element);
       };
-      Three.set_z(camera##position, 1000.);
-      Three.set_x(camera##rotation,0.);
-      Three.set_y(camera##rotation, 0.);
 
       Document.clearMouseEvents(element);
       let currentSceneObject = switch (scene) {
@@ -116,6 +116,12 @@ let renderScene = (scene) => {
         Three.setPixelRatio(Three.renderer, Document.windowDevicePixelRatio);
         Document.appendChildToId(element, Three.renderer##domElement);
         setCanvasStyle(Three.renderer##domElement);
+      } else {
+        let canvasElement = Document.getElementById(Document.doc, "webgl-canvas");
+        Document.setTimeout(() => {
+          
+        changeClassName(canvasElement, "webgl-fade-in");
+        }, 500) |> ignore;
       };
       
       animate(scene, Three.getCamera(element), currentSceneObject, Three.renderer);
@@ -132,7 +138,7 @@ let make = (_children: array(ReasonReact.reactElement)) => {
     scene: Laser,
   },
   didMount: self =>{
-    saveToLocalStorage("current-scene", sceneToString(Laser))
+    saveToLocalStorage("current-scene", sceneToString(Laser));
   },
   reducer: (action, state) =>
     switch (action) {
@@ -155,6 +161,8 @@ let make = (_children: array(ReasonReact.reactElement)) => {
               className 
               onClick=(_ => {
                 if (self.state.scene !== sceneType) {
+                  let canvasElement = Document.getElementById(Document.doc, "webgl-canvas");
+                  changeClassName(canvasElement, "webgl-fade-out");
                   self.send(ChangeScene(sceneType));
                 };
               }) 

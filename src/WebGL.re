@@ -299,3 +299,14 @@ let mouseY: (ReactEvent.Mouse.t) => (float) = [%bs.raw
   }
 |}
 ];
+
+let changeClassName: (Dom.element, string) => (unit) = [%bs.raw
+{|
+  function(element, className) {
+    console.log(className);
+    if (element) {
+      element.className = className;
+    }
+  }
+|}
+];
