@@ -129,6 +129,19 @@ let renderScene = (scene) => {
   };
 };
 
+let autoChangeScene = ({send}) => {
+  Document.setInterval(() => {
+    switch (loadFromLocalStorage("current-scene")) {
+    | Some(currentScene) => {
+        let canvasElement = Document.getElementById(Document.doc, "webgl-canvas");
+        changeClassName(canvasElement, "webgl-fade-out");
+        send(ChangeScene(selectScene(currentScene |> stringToScene)));
+      }
+    | None => ()
+    };
+  }, 10000);
+};
+
 let component = ReasonReact.reducerComponent("Carousel");
 
 let make = (_children: array(ReasonReact.reactElement)) => {
@@ -139,6 +152,7 @@ let make = (_children: array(ReasonReact.reactElement)) => {
   },
   didMount: self =>{
     saveToLocalStorage("current-scene", sceneToString(Laser));
+    autoChangeScene(self) |> ignore;
   },
   reducer: (action, state) =>
     switch (action) {

@@ -20,14 +20,16 @@ module Document {
     
     [@bs.send][@bs.scope ("body")] external appendChildToBody: (document, Dom.element) => unit = "appendChild";
     [@bs.val] external setTimeout : (unit => unit, int) => float = "setTimeout";
+    [@bs.val] external setInterval : (unit => unit, int) => int = "setInterval";
+    [@bs.send] external clearInterval : (int) => unit = "clearInterval";
 
     [@bs.set] external set_onresize: (Dom.element, unit => unit) => unit = "onresize";
     [@bs.set] external set_mousemove: (Dom.element, ReactEvent.Mouse.t => unit) => unit = "onmousemove";
-    [@bs.set] external set_mouseout: (Dom.element, unit => unit) => unit = "onmouseout";
+    [@bs.set] external set_mouseout: (Dom.element, ReactEvent.Mouse.t => unit) => unit = "onmouseout";
 
     let clearMouseEvents = (element) => {
       set_mousemove(element, (e) => ());
-      set_mouseout(element, () => ());
+      set_mouseout(element, (e) => ());
     };
 };
 
@@ -182,7 +184,13 @@ module Three {
     [@bs.get] external get_x: (position) => float = "x";
     [@bs.get] external get_y: (position) => float = "y";
     [@bs.get] external get_z: (position) => float = "z";
+    [@bs.set] external set_position_x: (position, float) => unit = "x";
+    [@bs.set] external set_position_y: (position, float) => unit = "y";
+    [@bs.set] external set_position_z: (position, float) => unit = "z";
     
+    [@bs.get] external get_vector_x: (vector3) => float = "x";
+    [@bs.get] external get_vector_y: (vector3) => float = "y";
+    [@bs.get] external get_vector_z: (vector3) => float = "z";
     [@bs.set] external set_x: (vector3, float) => unit = "x";
     [@bs.set] external set_y: (vector3, float) => unit = "y";
     [@bs.set] external set_z: (vector3, float) => unit = "z";
