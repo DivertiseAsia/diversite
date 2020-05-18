@@ -53,7 +53,7 @@ let make =
           <Link isExternal=(true) target="_blank" href="https://www.linkedin.com/company/divertiseasia" className="icon-social"><img src=social_in /></Link>
           <Link isExternal=(true) href="mailto:contact@divertise.asia" className="icon-social"><img src=social_mail /></Link>
         </div>
-        <p>{ReasonReact.string({j| © 2017 Divertise Asia.Co.,Ltd |j})}</p>
+        <p>{ReasonReact.string({j| © 2017-2020 Divertise Asia Co.,Ltd. |j})}</p>
       </div>
     </Page>;
   },
