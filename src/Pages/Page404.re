@@ -1,6 +1,6 @@
 open ReasonReact;
 
-let component = ReasonReact.statelessComponent("PageLogin");
+let component = ReasonReact.statelessComponent("Page404");
 
 let make = (_children) => {
   ...component,

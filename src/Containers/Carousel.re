@@ -166,7 +166,7 @@ let make = (_children: array(ReasonReact.reactElement)) => {
     <div id="webgl-background" className="hero">
       <div className="container">
         <h1>(string("Technical partner for startups in Asia"))</h1>
-        <p>(string("specialize in Artificial Intelligence, VR, and other cutting-edge technologies.")) </p>
+        <p>(string("specializing in Artificial Intelligence, VR, and other cutting-edge technologies.")) </p>
       </div>
       <div className="dots"> 
         {
