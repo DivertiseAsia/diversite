@@ -129,7 +129,7 @@ let renderScene = (scene) => {
   };
 };
 
-let autoChangeScene = ({send}) => {
+let autoChangeScene = (send) => {
   Document.setInterval(() => {
     switch (loadFromLocalStorage("current-scene")) {
     | Some(currentScene) => {
@@ -150,9 +150,10 @@ let make = (_children: array(ReasonReact.reactElement)) => {
     loading: false,
     scene: Laser,
   },
-  didMount: self =>{
+  didMount: ({send, onUnmount}) =>{
     saveToLocalStorage("current-scene", sceneToString(Laser));
-    autoChangeScene(self) |> ignore;
+    let intervalId = autoChangeScene(send);
+    onUnmount(() => Document.clearInterval(intervalId));
   },
   reducer: (action, state) =>
     switch (action) {

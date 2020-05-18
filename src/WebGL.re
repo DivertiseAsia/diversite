@@ -21,7 +21,7 @@ module Document {
     [@bs.send][@bs.scope ("body")] external appendChildToBody: (document, Dom.element) => unit = "appendChild";
     [@bs.val] external setTimeout : (unit => unit, int) => float = "setTimeout";
     [@bs.val] external setInterval : (unit => unit, int) => int = "setInterval";
-    [@bs.send] external clearInterval : (int) => unit = "clearInterval";
+    [@bs.get] external clearInterval : (int) => unit = "clearInterval";
 
     [@bs.set] external set_onresize: (Dom.element, unit => unit) => unit = "onresize";
     [@bs.set] external set_mousemove: (Dom.element, ReactEvent.Mouse.t => unit) => unit = "onmousemove";
