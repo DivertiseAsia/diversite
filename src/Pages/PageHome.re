@@ -1,4 +1,9 @@
 open ReasonReact;
+/* open WebGL;
+open Pentagon;
+open Laser;
+open BallWorld;
+open Network; */
 
 let component = ReasonReact.statelessComponent("PageHome");
 [@bs.module] external ourgoal1 : string = "../../../../public/images/icon-platforms.png";
@@ -17,12 +22,7 @@ let make = (_children) => {
   ...component,
   render: _self => {
     <MainPage className="page-home">
-      <div className="hero">
-        <div className="container">
-          <h1>(string("Technical partner for startups in Asia"))</h1>
-          <p>(string("specialize in Artificial Intelligence, VR, and other cutting-edge technologies.")) </p>
-        </div>
-      </div>
+      <Carousel />
       <div className="homepage_menu-bg" />
       <div className="section-ourgoal -text-center">
         <div className="container">

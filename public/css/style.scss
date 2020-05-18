@@ -347,7 +347,8 @@ nav .logo-link {
 }
 .hero {
   /* Remove background styling when replace with the real codes */
-  background-image: url('../images/hero-placeholder.png');
+  //background-image: url('../images/hero-placeholder.png');
+  background-color: #469FA3;
   background-size: cover;
 
   height: 100vh;
@@ -357,9 +358,22 @@ nav .logo-link {
   /* For Nav Menu Background */
   z-index: 2;
   position: relative;
+
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
+
+
   .container {
     max-width: 600px;
     margin-left: 50px;
+    animation: slidFromLeft ease 1.5s;
+    -webkit-animation: slidFromLeft ease 1.5s;
+    -moz-animation: slidFromLeft ease 1.5s;
+    -o-animation: slidFromLeft ease 1.5s;
+    -ms-animation: slidFromLeft ease 1.5s;
   }
   h1 {
     text-transform: uppercase;
@@ -369,6 +383,65 @@ nav .logo-link {
   p {
     color: $text-white;
     text-shadow: $text-shadow;
+  }
+
+  .dots {
+    position: absolute;
+    height: 20px;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+    .dot {
+      display: inline-block;
+      cursor: pointer;
+      margin-left: 10px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #686163;
+    }
+    .active {
+      background-color: #ffffff !important;
+    }
+  }
+}
+.webgl-fade-in {
+  animation: fadeIn ease 0.2s;
+  -webkit-animation: fadeIn ease 0.2s;
+  -moz-animation: fadeIn ease 0.2s;
+  -o-animation: fadeIn ease 0.2s;
+  -ms-animation: fadeIn ease 0.2s;
+}
+.webgl-fade-out {
+  animation: fadeOut ease 0.5s;
+  -webkit-animation: fadeOut ease 0.5s;
+  -moz-animation: fadeOut ease 0.5s;
+  -o-animation: fadeOut ease 0.5s;
+  -ms-animation: fadeOut ease 0.5s;
+  opacity: 0 !important;
+}
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+@keyframes slidFromLeft {
+  0% {
+    margin-left: -500px;
+  }
+  100% {
+    margin-left: 50px;
   }
 }
 

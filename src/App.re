@@ -14,6 +14,7 @@ let routeMatches = (x:list(string), link:string) => {
   };
 };
 
+
 let make = _children => {
   ...component,
   initialState: () => {route: Router.dangerouslyGetInitialUrl()},
@@ -26,6 +27,7 @@ let make = _children => {
     onUnmount(() => Router.unwatchUrl(watcherID));
   },
   render: ({state: {route}}) => {
+    
     switch (route.path) {
     | (x) when routeMatches(x, Links.home) => <PageHome />
     | (x) when routeMatches(x, Links.careers) => <PageCareers />
