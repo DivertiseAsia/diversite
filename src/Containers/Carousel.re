@@ -171,8 +171,15 @@ let make = (_children: array(ReasonReact.reactElement)) => {
         {
           [Laser, Pentagon, Ball, Network] |> List.map(sceneType => {
             let className = self.state.scene === sceneType ? "dot active" : "dot";
+            let key = switch(sceneType) {
+              | Laser => "laser"
+              | Pentagon => "pentagon"
+              | Ball => "ball"
+              | Network => "network"
+            };
             <div 
-              className 
+              className
+              key
               onClick=(_ => {
                 if (self.state.scene !== sceneType) {
                   let canvasElement = Document.getElementById(Document.doc, "webgl-canvas");
