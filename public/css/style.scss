@@ -379,10 +379,12 @@ nav .logo-link {
     text-transform: uppercase;
     color: $text-white;
     text-shadow: $text-shadow;
+    transition: $transition;
   }
   p {
     color: $text-white;
     text-shadow: $text-shadow;
+    transition: $transition;
   }
 
   .dots {
@@ -404,6 +406,9 @@ nav .logo-link {
       background-color: #ffffff !important;
     }
   }
+}
+.hero.ball, .hero.network {
+  h1, p {color: $bg-color1;}
 }
 .webgl-fade-in {
   animation: fadeIn ease 0.2s;

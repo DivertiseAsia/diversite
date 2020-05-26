@@ -212,8 +212,8 @@ let make = (_children: array(ReasonReact.reactElement)) => {
       | Network => "network"
       };
     renderScene(self.state.scene);
-    <div id="webgl-background" className="hero">
-      <div className={"container " ++ sceneClassname}>
+    <div id="webgl-background" className={"hero " ++ sceneClassname}>
+      <div className="container">
         <h1> {string("Technical partner for startups in Asia")} </h1>
         <p>
           {string(
