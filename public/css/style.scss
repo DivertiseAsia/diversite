@@ -201,7 +201,7 @@ nav.nav {
   display: block;
 }
 .nav a {
-  padding: 0.5em 2em;
+  padding: 7px 28px;
   display: inline-flex;
   transition: $transition;
   cursor: pointer;
@@ -1014,47 +1014,54 @@ and (max-width: 768px) {
   /* Tablet Nav*/
   .page-home {
     .nav {background: #23a399d9;}
-    .nav-container {background: $bg-color2;}
+    // .nav-container {background: $bg-color2;}
   }
-  .nav-icon {
+  .nav a:not(.logo-link) {
+    padding: 7px 20px; 
+  }
+  .nav-container .link:first-child {display: none;}
+  .page-ourwork_nav {
+    .nav-icon {
     display: inline-block;
-  }
-  .nav-container {
-    position: absolute;
-    width: 100vw;
-    left: 0;
-    box-sizing: border-box;
-    text-align: center;
-    height: 0;
-    margin-top: 0;
-    background: $bg-color1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    top: $header-height;
-    pointer-events: none;
-    z-index: 99;
-    opacity: 0;
-    a {
+    }
+    .nav-container {
+      position: absolute;
       width: 100vw;
+      left: 0;
+      box-sizing: border-box;
+      text-align: center;
+      height: 0;
+      margin-top: 0;
+      background: $bg-color1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      top: $header-height;
+      pointer-events: none;
+      z-index: 99;
+      opacity: 0;
+      a {
+        width: 100vw;
+      }
+    }
+    input:checked {
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      z-index: 90;
+      position: absolute;
+    }
+    input:checked ~ .nav-container {
+      height: 250px;
+      pointer-events: initial;
+      box-shadow: 2px 2px 12px 0px #cecece;
+      box-shadow: 2px 10px 12px 0px rgba(0,0,0,0.2);
+      opacity: 1;
     }
   }
-  .nav input:checked {
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    z-index: 90;
-    position: absolute;
-  }
-  .nav input:checked ~ .nav-container {
-    height: 250px;
-    pointer-events: initial;
-    box-shadow: 2px 2px 12px 0px #cecece;
-    box-shadow: 2px 10px 12px 0px rgba(0,0,0,0.2);
-    opacity: 1;
-  }
+  
   /*Tablet - Home Page*/
   .hero {
     height: 60vh;
