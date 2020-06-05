@@ -358,6 +358,7 @@ nav .logo-link {
   /* For Nav Menu Background */
   z-index: 2;
   position: relative;
+  transition: ease 1s;
 
   animation: fadeIn ease 1s;
   -webkit-animation: fadeIn ease 1s;
@@ -416,6 +417,7 @@ nav .logo-link {
   }
 }
 .hero.ball, .hero.network {
+  background-color: white;
   h1, p {color: $bg-color1;}
   .btn {@include btn(transparent, $bg-color1,  $bg-color1);}
   .btn:hover {@include btn($bg-color1, $bg-color1, $text-white);}
