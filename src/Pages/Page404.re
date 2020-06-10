@@ -2,7 +2,7 @@ open ReasonReact;
 
 let component = ReasonReact.statelessComponent("Page404");
 
-let make = (_children) => {
+let make = _children => {
   ...component,
   render: _self => {
     <MainPage>

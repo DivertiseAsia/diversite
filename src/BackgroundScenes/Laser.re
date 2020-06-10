@@ -1,7 +1,9 @@
 open WebGL;
 
-[@bs.module] external customVert : string = "../../../../public/Shaders/custom.vert";
-[@bs.module] external customFrag : string = "../../../../public/Shaders/custom.frag";
+[@bs.module]
+external customVert: string = "../../../../public/Shaders/custom.vert";
+[@bs.module]
+external customFrag: string = "../../../../public/Shaders/custom.frag";
 
 let materialJs: (three, string, string) => Three.material = [%bs.raw
   {|
@@ -48,30 +50,41 @@ let materialJs: (three, string, string) => Three.material = [%bs.raw
   |}
 ];
 
-module LaserScene {
-    let t = three;
+module LaserScene = {
+  let t = three;
 
-    let scene = [|Three.scene()|];
+  let scene = [|Three.scene()|];
 
-    [@bs.set] external set_time_of_material: (Three.valueFloat, float) => unit = "value";
+  [@bs.set]
+  external set_time_of_material: (Three.valueFloat, float) => unit = "value";
 
-    [@bs.get] external get_uniforms_of_material: (Three.material) => Three.uniforms = "uniforms";
-    [@bs.get] external get_time_of_material: (Three.uniforms) => Three.valueFloat = "time";
-    [@bs.get] external get_time_value_of_material: (Three.valueFloat) => float = "value";
+  [@bs.get]
+  external get_uniforms_of_material: Three.material => Three.uniforms =
+    "uniforms";
+  [@bs.get]
+  external get_time_of_material: Three.uniforms => Three.valueFloat = "time";
+  [@bs.get]
+  external get_time_value_of_material: Three.valueFloat => float = "value";
 
-    let geometry = (width, height) => Three.planeBufferGeometry(width, height);
-    let material = materialJs(t, customVert, customFrag);
-    
-    let initScene = (width, height) => {
-        scene[0] = Three.scene();
-        let mesh = Three.mesh(geometry(width, height), material);
-        Three.addMeshToScene(scene[0], mesh);
-    };
+  let geometry = (width, height) => Three.planeBufferGeometry(width, height);
+  let material = materialJs(t, customVert, customFrag);
 
-    let animate = () => {
-        set_time_of_material(
-            (material |> get_uniforms_of_material |> get_time_of_material), 
-            (material |> get_uniforms_of_material |> get_time_of_material |> get_time_value_of_material) +. 0.05
-        );
-    };
+  let initScene = (width, height) => {
+    scene[0] = Three.scene();
+    let mesh = Three.mesh(geometry(width, height), material);
+    Three.addMeshToScene(scene[0], mesh);
+  };
+
+  let animate = () => {
+    set_time_of_material(
+      material |> get_uniforms_of_material |> get_time_of_material,
+      (
+        material
+        |> get_uniforms_of_material
+        |> get_time_of_material
+        |> get_time_value_of_material
+      )
+      +. 0.05,
+    );
+  };
 };
