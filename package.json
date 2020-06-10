@@ -20,7 +20,7 @@
   "author": "Divertise Asia Co., Ltd.",
   "license": "MIT",
   "dependencies": {
-    "@divertiseasia/bs-divertise-core-components": "^0.1.15",
+    "@divertiseasia/bs-divertise-core-components": "^1.0.0",
     "bs-css": "^7.2.0",
     "glslify": "^7.0.0",
     "glslify-import-loader": "^0.1.2",
