@@ -360,20 +360,16 @@ let mapIcon = icon =>
     }
   };
 
-let component = ReasonReact.statelessComponent("IconRe");
-
+[@react.component]
 let make = (~iconType, ~className=?, _children) => {
-  ...component,
-  render: _self => {
-    let icon = mapIcon(iconType);
-    <span
-      className={
-        "icon icon-"
-        ++ icon.className
-        ++ " "
-        ++ Js.Option.getWithDefault("", className)
-      }>
-      {icon.content}
-    </span>;
-  },
+  let icon = mapIcon(iconType);
+  <span
+    className={
+      "icon icon-"
+      ++ icon.className
+      ++ " "
+      ++ Js.Option.getWithDefault("", className)
+    }>
+    {icon.content}
+  </span>;
 };

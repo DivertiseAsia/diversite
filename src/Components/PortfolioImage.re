@@ -1,7 +1,5 @@
 open ReasonReact;
 
-let component = ReasonReact.statelessComponent("PortfolioImage");
-
 type portfolioImageBorder =
   | PhonePortrait
   | PhonePortraitBlack
@@ -27,30 +25,28 @@ let getImageBorderClass = (borderType: portfolioImageBorder) => {
   };
 };
 
-let make = (~className: option(string)=?, ~item: portfolioImage, _children) => {
-  ...component,
-  render: _self => {
-    <div
-      className={
-        " "
-        ++ Js.Option.getWithDefault("", className)
-        ++ " "
-        ++ Js.Option.getWithDefault("", item.className)
-        ++ " "
-        ++ getImageBorderClass(item.border)
-      }>
-      <div className="portimg-container">
-        <div className="portimg">
-          <div className="portimg_frame">
-            <div className="portimg_scroll-before" />
-            <ImageBackground
-              className="portimg_scroll scroll-long"
-              src={item.src}
-            />
-          </div>
-          <div className="portimg_frame-after" />
+[@react.component]
+let make = (~className: option(string)=?, ~item: portfolioImage, ~children) => {
+  <div
+    className={
+      " "
+      ++ Js.Option.getWithDefault("", className)
+      ++ " "
+      ++ Js.Option.getWithDefault("", item.className)
+      ++ " "
+      ++ getImageBorderClass(item.border)
+    }>
+    <div className="portimg-container">
+      <div className="portimg">
+        <div className="portimg_frame">
+          <div className="portimg_scroll-before" />
+          <ImageBackground
+            className="portimg_scroll scroll-long"
+            src={item.src}
+          />
         </div>
+        <div className="portimg_frame-after" />
       </div>
-    </div>;
-  },
+    </div>
+  </div>;
 };

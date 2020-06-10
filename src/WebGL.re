@@ -37,8 +37,8 @@ module Document = {
     "onmouseout";
 
   let clearMouseEvents = element => {
-    set_mousemove(element, e => ());
-    set_mouseout(element, e => ());
+    set_mousemove(element, _ => ());
+    set_mouseout(element, _ => ());
   };
 };
 

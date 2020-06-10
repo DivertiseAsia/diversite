@@ -257,22 +257,18 @@ let mapIcon = icon =>
     }
   };
 
-let component = ReasonReact.statelessComponent("IconRe");
-
+[@react.component]
 let make = (~tech: string, ~className=?, _children) => {
-  ...component,
-  render: _self => {
-    let techIconType = mapStringToTechIconType(tech);
-    let icon = mapIcon(techIconType);
+  let techIconType = mapStringToTechIconType(tech);
+  let icon = mapIcon(techIconType);
 
-    <div
-      className={
-        "tech-icon tech-icon-"
-        ++ icon.className
-        ++ " "
-        ++ Js.Option.getWithDefault("", className)
-      }>
-      {icon.content}
-    </div>;
-  },
+  <div
+    className={
+      "tech-icon tech-icon-"
+      ++ icon.className
+      ++ " "
+      ++ Js.Option.getWithDefault("", className)
+    }>
+    {icon.content}
+  </div>;
 };
