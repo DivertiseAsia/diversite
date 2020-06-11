@@ -142,112 +142,113 @@ let mapIcon = icon =>
   | HTML5 => {
       techIconType: icon,
       className: "html5",
-      content: <ImageBackground src=iconhtml5 />,
+      content: <ImageBackground src=iconhtml5> <div /> </ImageBackground>,
     }
   | Python => {
       techIconType: icon,
       className: "python",
-      content: <ImageBackground src=iconpython />,
+      content: <ImageBackground src=iconpython> <div /> </ImageBackground>,
     }
   | Android => {
       techIconType: icon,
       className: "android",
-      content: <ImageBackground src=iconandroid />,
+      content: <ImageBackground src=iconandroid> <div /> </ImageBackground>,
     }
   | Circleci => {
       techIconType: icon,
       className: "circleci",
-      content: <ImageBackground src=iconcircleci />,
+      content: <ImageBackground src=iconcircleci> <div /> </ImageBackground>,
     }
   | Cocos => {
       techIconType: icon,
       className: "cocos",
-      content: <ImageBackground src=iconcocos />,
+      content: <ImageBackground src=iconcocos> <div /> </ImageBackground>,
     }
   | CSS => {
       techIconType: icon,
       className: "css",
-      content: <ImageBackground src=iconcss />,
+      content: <ImageBackground src=iconcss> <div /> </ImageBackground>,
     }
   | Django => {
       techIconType: icon,
       className: "django",
-      content: <ImageBackground src=icondjango />,
+      content: <ImageBackground src=icondjango> <div /> </ImageBackground>,
     }
   | Docker => {
       techIconType: icon,
       className: "docker",
-      content: <ImageBackground src=icondocker />,
+      content: <ImageBackground src=icondocker> <div /> </ImageBackground>,
     }
   | Firebase => {
       techIconType: icon,
       className: "firebase",
-      content: <ImageBackground src=iconfirebase />,
+      content: <ImageBackground src=iconfirebase> <div /> </ImageBackground>,
     }
   | Git => {
       techIconType: icon,
       className: "git",
-      content: <ImageBackground src=icongit />,
+      content: <ImageBackground src=icongit> <div /> </ImageBackground>,
     }
   | Ios => {
       techIconType: icon,
       className: "ios",
-      content: <ImageBackground src=iconios />,
+      content: <ImageBackground src=iconios> <div /> </ImageBackground>,
     }
   | Nodejs => {
       techIconType: icon,
       className: "nodejs",
-      content: <ImageBackground src=iconnodejs />,
+      content: <ImageBackground src=iconnodejs> <div /> </ImageBackground>,
     }
   | Js => {
       techIconType: icon,
       className: "js",
-      content: <ImageBackground src=iconjs />,
+      content: <ImageBackground src=iconjs> <div /> </ImageBackground>,
     }
   | Postgresql => {
       techIconType: icon,
       className: "postgresql",
-      content: <ImageBackground src=iconpostgresql />,
+      content: <ImageBackground src=iconpostgresql> <div /> </ImageBackground>,
     }
   | Pandas => {
       techIconType: icon,
       className: "pandas",
-      content: <ImageBackground src=iconpandas />,
+      content: <ImageBackground src=iconpandas> <div /> </ImageBackground>,
     }
   | Reason => {
       techIconType: icon,
       className: "reason",
-      content: <ImageBackground src=iconreason />,
+      content: <ImageBackground src=iconreason> <div /> </ImageBackground>,
     }
   | React => {
       techIconType: icon,
       className: "react",
-      content: <ImageBackground src=iconreact />,
+      content: <ImageBackground src=iconreact> <div /> </ImageBackground>,
     }
   | Ruby => {
       techIconType: icon,
       className: "ruby",
-      content: <ImageBackground src=iconruby />,
+      content: <ImageBackground src=iconruby> <div /> </ImageBackground>,
     }
   | Scikitlearn => {
       techIconType: icon,
       className: "scikitlearn",
-      content: <ImageBackground src=iconscikitlearn />,
+      content:
+        <ImageBackground src=iconscikitlearn> <div /> </ImageBackground>,
     }
   | Tensorflow => {
       techIconType: icon,
       className: "tensorflow",
-      content: <ImageBackground src=icontensorflow />,
+      content: <ImageBackground src=icontensorflow> <div /> </ImageBackground>,
     }
   | Unity => {
       techIconType: icon,
       className: "unity",
-      content: <ImageBackground src=iconunity />,
+      content: <ImageBackground src=iconunity> <div /> </ImageBackground>,
     }
   | Wordpress => {
       techIconType: icon,
       className: "wordpress",
-      content: <ImageBackground src=iconwordpress />,
+      content: <ImageBackground src=iconwordpress> <div /> </ImageBackground>,
     }
 
   | Other(x, className) => {

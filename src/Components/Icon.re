@@ -361,7 +361,7 @@ let mapIcon = icon =>
   };
 
 [@react.component]
-let make = (~iconType, ~className=?, _children) => {
+let make = (~iconType, ~className=?) => {
   let icon = mapIcon(iconType);
   <span
     className={

@@ -24,7 +24,7 @@ let make =
           </div>
           <p className="read-details"> {string("Read details >")} </p>
         </div>
-        <ImageBackground src=imageURL />
+        <ImageBackground src=imageURL> <div /> </ImageBackground>
       </div>
     </Link>
   </div>;
