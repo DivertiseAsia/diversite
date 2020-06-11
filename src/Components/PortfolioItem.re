@@ -1,8 +1,6 @@
 open ReasonReact;
 open PortfolioImage;
 
-let component = ReasonReact.statelessComponent("PortfolioItemRe");
-
 type portfolioLinkType =
   | Default
   | DefaultInactive
@@ -32,7 +30,7 @@ external desktop: string =
   "../../../../public/images/borders/port_desktop.png";
 
 [@react.component]
-let make = (~id: option(string)=?, ~item: portfolioItem, _children) => {
+let make = (~id: option(string)=?, ~item: portfolioItem) => {
   <div
     ?id
     className={

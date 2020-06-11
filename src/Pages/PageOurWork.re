@@ -1,9 +1,8 @@
 open ReasonReact;
 open PortfolioData;
-let component = ReasonReact.statelessComponent("PageOurWork");
 
-let make = _children => {
-  ...component,
+[@react.component]
+let make = () => {
   render: _self => {
     <MainPage className="page-ourwork">
       <div className="ourwork_section-header-content bg-gradient-color1">
@@ -17,7 +16,7 @@ let make = _children => {
           <input type_="checkbox" />
           <div className="nav-icon nav-icon-arrow">
             <h6> {string("Category")} </h6>
-            <Icon iconType=ArrowDown />
+            <Icon iconType=Icon.ArrowDown />
           </div>
           <div className="nav-container">
             <a href=Links.ourwork_appsandplatforms>
