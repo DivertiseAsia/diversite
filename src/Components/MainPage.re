@@ -9,12 +9,7 @@ external social_in: string = "../../../../public/images/linkedin.svg";
 external social_mail: string = "../../../../public/images/email.svg";
 
 [@react.component]
-let make =
-    (
-      ~className: option(string)=?,
-      ~extraPageEnds=?,
-      children: array(ReasonReact.reactElement),
-    ) => {
+let make = (~className: option(string)=?, ~extraPageEnds=?, ~children) => {
   let extraPageEndsElement =
     switch (extraPageEnds) {
     | None => null
@@ -24,25 +19,27 @@ let make =
     pageEnds={
       top: [
         Children(
-          List.toArray([
-            <nav className="nav -text-right">
-              <Logo />
-              <input type_="checkbox" />
-              <div className="nav-icon"> <div /> <div /> <div /> </div>
-              <div className="nav-container">
-                <Link href=Links.home> {string("Home")} </Link>
-                <Link href=Links.ourwork> {string("Our Work")} </Link>
-                <Link href=Links.careers> {string("Careers")} </Link>
-              </div>
-            </nav>,
-            extraPageEndsElement,
-          ]),
+          React.array(
+            List.toArray([
+              <nav className="nav -text-right">
+                <Logo />
+                <input type_="checkbox" />
+                <div className="nav-icon"> <div /> <div /> <div /> </div>
+                <div className="nav-container">
+                  <Link href=Links.home> {string("Home")} </Link>
+                  <Link href=Links.ourwork> {string("Our Work")} </Link>
+                  <Link href=Links.careers> {string("Careers")} </Link>
+                </div>
+              </nav>,
+              extraPageEndsElement,
+            ]),
+          ),
         ),
       ],
-      bottom: [Children(List.toArray([extraPageEndsElement]))],
+      bottom: [Children(extraPageEndsElement)],
     }
     className={Js.Option.getWithDefault("mainpage-default", className)}>
-    <div className="main-content"> ...children </div>
+    <div className="main-content"> children </div>
     <div className="footer">
       <div className="social-media">
         <Link
@@ -67,7 +64,7 @@ let make =
         </Link>
       </div>
       <p>
-        {ReasonReact.string({j| © 2017-2020 Divertise Asia Co.,Ltd. |j})}
+        {ReasonReact.string({j| ⓒ 2017-2020 Divertise Asia Co.,Ltd. |j})}
       </p>
     </div>
   </Page>;
