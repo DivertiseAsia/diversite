@@ -259,7 +259,7 @@ let mapIcon = icon =>
   };
 
 [@react.component]
-let make = (~tech: string, ~className=?, _children) => {
+let make = (~tech: string, ~className=?) => {
   let techIconType = mapStringToTechIconType(tech);
   let icon = mapIcon(techIconType);
 

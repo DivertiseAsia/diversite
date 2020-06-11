@@ -1,5 +1,3 @@
-open ReasonReact;
-
 type portfolioImageBorder =
   | PhonePortrait
   | PhonePortraitBlack
@@ -26,7 +24,7 @@ let getImageBorderClass = (borderType: portfolioImageBorder) => {
 };
 
 [@react.component]
-let make = (~className: option(string)=?, ~item: portfolioImage, ~children) => {
+let make = (~className: option(string)=?, ~item: portfolioImage) => {
   <div
     className={
       " "

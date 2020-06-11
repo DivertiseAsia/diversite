@@ -8,7 +8,6 @@ let make =
       ~imageURL: string,
       ~href: string,
       ~iconType: Icon.iconType,
-      _children,
     ) => {
   <div
     className={

@@ -3,7 +3,7 @@
 external logoSmall: string = "../../../../public/images/logo-small.png";
 
 [@react.component]
-let make = (~className: option(string)=?, ~onClick=?, _children) => {
+let make = (~className: option(string)=?, ~onClick=?) => {
   <Link href=Links.home className="logo-link">
     <img
       className={

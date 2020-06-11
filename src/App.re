@@ -5,15 +5,13 @@ type state = {route: ReasonReact.Router.url};
 type action =
   | RouteTo(Router.url);
 
-let component = reducerComponent("App");
-
 let routeMatches = (x: list(string), link: string) => {
   let currentPath = List.fold_left((acc, s) => acc ++ "/" ++ s, "", x);
   currentPath == link;
 };
 
-let make = _children => {
-  ...component,
+[@react.component]
+let make = () => {
   initialState: () => {route: Router.dangerouslyGetInitialUrl()},
   reducer: (action, _) =>
     switch (action) {
