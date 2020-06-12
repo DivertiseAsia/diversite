@@ -14,6 +14,7 @@ type portfolioLink = {
   caption: string,
   _type: portfolioLinkType,
 };
+
 type portfolioItem = {
   title: string,
   className: option(string),
@@ -22,6 +23,7 @@ type portfolioItem = {
   technologies: list(string),
   body: array(ReasonReact.reactElement),
 };
+
 [@bs.module]
 external phoneportrait: string =
   "../../../../public/images/borders/port_phone-portrait.png";
@@ -79,7 +81,7 @@ let make = (~id: option(string)=?, ~item: portfolioItem) => {
            |> ReasonReact.array}
         </div>
       </div>
-      <div className="port_texts"> ...{item.body} </div>
+      <div className="port_texts"> {ReasonReact.array(item.body)} </div>
     </div>
   </div>;
 };
