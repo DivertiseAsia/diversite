@@ -127,6 +127,8 @@ a {
 
 .text-white { color: $text-white; }
 .text-color1 { color: $text-color1 !important; }
+.text-color-2 { color: $text-color2; }
+.link.text-color-2:hover {color: $bg-color2-dark}
 .letter-spacing { letter-spacing: 0.1em; }
 
 .icon svg {
@@ -546,6 +548,10 @@ nav .logo-link {
       margin: 20px auto;
     }
   }
+}
+/* ---------- Contacts Page ----------- */
+.contact-link {
+  font-weight: 700;
 }
 /* ------------ Careers Page ------------*/
 .career_lookingfor .image-background {
