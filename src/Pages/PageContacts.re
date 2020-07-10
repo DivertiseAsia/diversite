@@ -33,36 +33,43 @@ let make = _children => {
           </h3>
           <p>
             {string("Please contact us via ")}
-            <Link className="contact-link text-color-2" href=Links.careers>
+            <Link
+              className="contact-link text-color-2"
+              href="mailto:contact@divertise.asia"
+              isExternal=true>
               {string("this email")}
             </Link>
           </p>
-          <h3 className="pt-5"> {string("Looking to work with us?")} </h3>
+          <h3 className="pt-5"> {string("Looking to join our team?")} </h3>
           <p>
             {string("Please read our job descriptions ")}
             <Link className="contact-link" href=Links.careers>
               {string("here")}
             </Link>
             {string(", and send your resume to ")}
-            <Link className="contact-link text-color-2" href=Links.careers>
+            <Link
+              className="contact-link text-color-2"
+              href="mailto:careers@divertise.asia"
+              isExternal=true>
               {string("this email")}
             </Link>
           </p>
         </div>
       </div>
-      <div className="footer-title bg-gradient-color2">
-        <p>
-          {string(
-             "If you are interested in joining our team, just send your portfolio to",
-           )}
-          <Link
-            isExternal=true
-            href="mailto:contact@divertise.asia"
-            className="text-contact">
-            {string("careers@divertise.asia")}
-          </Link>
-        </p>
-      </div>
+      <div
+        className="footer-title bg-gradient-color2"
+        /* <p>
+             {string(
+                "If you are interested in joining our team, just send your portfolio to",
+              )}
+             <Link
+               isExternal=true
+               href="mailto:careers@divertise.asia"
+               className="text-contact">
+               {string("careers@divertise.asia")}
+             </Link>
+           </p> */
+      />
     </MainPage>;
   },
 };
