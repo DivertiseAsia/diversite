@@ -220,7 +220,7 @@ let make = (_children: array(ReasonReact.reactElement)) => {
              "specializing in Artificial Intelligence, VR, and other cutting-edge technologies.",
            )}
         </p>
-        <Link className="btn" href="mailto:contact@divertise.asia">
+        <Link className="btn" href=Links.contacts>
           {string("Contact Us")}
         </Link>
       </div>

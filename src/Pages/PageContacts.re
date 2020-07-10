@@ -20,7 +20,10 @@ let make = _children => {
   ...component,
   render: _self => {
     <MainPage>
-      <PageHeader title="Contact Us" className="bg-gradient-color1 pt-5" />
+      <PageHeader
+        title="Contact Us"
+        className="bg-gradient-color1 pt-5 page-contacts"
+      />
       <div className="container">
         <div className="row py-5 d-block">
           <h3>
@@ -31,20 +34,18 @@ let make = _children => {
           <p>
             {string("Please contact us via ")}
             <Link className="contact-link text-color-2" href=Links.careers>
-              {string("contacts@divertise.asia")}
+              {string("this email")}
             </Link>
           </p>
-          <h3> {string("Looking to work with us?")} </h3>
+          <h3 className="pt-5"> {string("Looking to work with us?")} </h3>
           <p>
             {string("Please read our job descriptions ")}
             <Link className="contact-link" href=Links.careers>
               {string("here")}
             </Link>
-          </p>
-          <p>
-            {string("And send your resume to ")}
+            {string(", and send your resume to ")}
             <Link className="contact-link text-color-2" href=Links.careers>
-              {string("careers@divertise.asia")}
+              {string("this email")}
             </Link>
           </p>
         </div>
