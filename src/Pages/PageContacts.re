@@ -31,6 +31,7 @@ let make = _children => {
                "Looking for technological experts to help you with your product?",
              )}
           </h3>
+          <input id="emailInput" className="contact-page_invisible-input" />
           <p>
             {string("Please contact us via ")}
             <Link
