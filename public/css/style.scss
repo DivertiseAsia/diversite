@@ -354,6 +354,7 @@ nav .logo-link {
   background-size: cover;
 
   height: 100vh;
+  min-height: 480px;
   padding-top: 50px;
   display: flex;
   align-items: center;
@@ -1157,6 +1158,12 @@ and (max-width: 768px) {
 /* -------- Phones ---------*/
 @media only screen
 and (max-width: 576px) {
+  /*Tablet - Home Page*/
+  .hero {
+    .dots {
+      bottom: 25px;
+    }
+  }
   .team-benefits {
     padding: 15px 10px;
   }
