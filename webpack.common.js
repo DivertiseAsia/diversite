@@ -62,8 +62,12 @@ module.exports = {
   module: {
     rules: [
     {
-      test: /\.js$/,
-      use: ["remove-hashbag-loader"]
+      test: /\.(js|mjs|jsx)$/,
+      loader: 'string-replace-loader',
+      options: {
+        search: '#!/usr/bin/env node',
+        replace: '',
+      }
     },
     {
       test: /\.(jpe?g|png|gif|svg|pdf|ico)$/,
@@ -94,10 +98,5 @@ module.exports = {
       ]
     }
   ]
-  },
-  resolveLoader: {
-    alias: {
-      "remove-hashbag-loader": path.join(__dirname, "./loaders/remove-hashbag-loader")
-    }
   }
 };
