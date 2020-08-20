@@ -38,8 +38,8 @@ jobs:
         npm run ci-test
     - name: npm publish
       run: |
-        npm config set //registry.npmjs.org/:_authToken=$npm_token
+        npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
         npm publish || true
       env:
         CI: true
-        NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+        NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
