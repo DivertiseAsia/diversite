@@ -64,7 +64,7 @@ jobs:
         npm install webpack-cli
     - name: webpack build
       run: |
-        webpack --config webpack.site.config.js
+        webpack --config webpack.dev.js
     - name: Upload index.js artifact
       uses: actions/upload-artifact@v1
       with:
