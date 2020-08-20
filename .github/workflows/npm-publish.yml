@@ -65,27 +65,27 @@ jobs:
     - name: webpack build
       run: |
         webpack --config webpack.dev.js
-    - name: Upload index.js artifact
+    - name: Upload docs/index.js artifact
       uses: actions/upload-artifact@v1
       with:
         name: bundle
-        path: index.js
-    - name: stash index.js for branch change
+        path: docs/index.js
+    - name: stash docs/index.js for branch change
       run: |
         git stash -u
     - name: Checkout gh-pages branch
       uses: actions/checkout@v2
       with:
           ref: gh-pages
-    - name: Download index.js artifact
+    - name: Download docs/index.js artifact
       uses: actions/download-artifact@v1
       with:
         name: bundle
-    - name: replace old index.js
+    - name: replace old docs/index.js
       run: |
-        mv bundle/index.js index.js
+        mv bundle/index.js docs/index.js
         rm -rf bundle
-    - name: Commit new index.js to gh-pages branch
+    - name: Commit new docs/index.js to gh-pages branch
       uses: Automattic/action-commit-to-branch@master
       with:
         branch: 'gh-pages'
