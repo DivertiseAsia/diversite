@@ -9,7 +9,7 @@
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
     "clean": "bsb -clean-world",
-    "test": "mocha",
+    "test": "jest --config=./jest.config.json --coverage",
     "webpack": "webpack -w",
     "webpack:production": "cross-env NODE_ENV=production webpack --config webpack.prod.js"
   },
