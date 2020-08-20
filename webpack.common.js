@@ -60,7 +60,12 @@ module.exports = {
     ]),
   ],
   module: {
-    rules: [{
+    rules: [
+    {
+      test: /node_modules[/\\]jsonstream/i,
+      loader: 'shebang-loader'
+    },
+    {
       test: /\.(jpe?g|png|gif|svg|pdf|ico)$/,
       use: [{
         loader: 'file-loader',
