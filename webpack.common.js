@@ -62,8 +62,8 @@ module.exports = {
   module: {
     rules: [
     {
-      test: /node_modules[/\\]jsonstream/i,
-      loader: 'shebang-loader'
+      test: /\.js$/,
+      use: ["remove-hashbag-loader"]
     },
     {
       test: /\.(jpe?g|png|gif|svg|pdf|ico)$/,
@@ -95,4 +95,9 @@ module.exports = {
     }
   ]
   },
+  resolveLoader: {
+    alias: {
+      "remove-hashbag-loader": path.join(__dirname, "./loaders/remove-hashbag-loader")
+    }
+  }
 };
