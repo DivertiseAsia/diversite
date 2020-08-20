@@ -62,14 +62,6 @@ module.exports = {
   module: {
     rules: [
     {
-      test: /\.(js|mjs|jsx)$/,
-      loader: 'string-replace-loader',
-      options: {
-        search: '#!/usr/bin/env node',
-        replace: '',
-      }
-    },
-    {
       test: /\.(jpe?g|png|gif|svg|pdf|ico)$/,
       use: [{
         loader: 'file-loader',
