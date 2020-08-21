@@ -7,6 +7,7 @@ on:
   push:
     branches:
       - master
+      - public-1 
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,17 +29,66 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 10.0.0
-    - name: npm install and npm test
+    - name: npm install
       run: |
         npm install
-        npm run setup-test
         npm run clean
         npm run build
-        npm run ci-test
     - name: npm publish
       run: |
         npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
         npm publish || true
       env:
         CI: true
-        NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+        NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+        
+  pages-update:
+    name: pages-update
+    needs: npm-publish
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.0.0
+    - name: npm install and build
+      run: |
+        npm install
+        npm run clean
+        npm run build
+    - name: webpack install
+      run: |
+        npm install webpack
+        npm install webpack-cli
+    - name: webpack build
+      run: |
+        webpack --config webpack.dev.js
+    - name: Upload docs/index.js artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: bundle
+        path: docs/index.js
+    - name: stash docs/index.js for branch change
+      run: |
+        git stash -u
+    - name: Checkout public branch
+      uses: actions/checkout@v2
+      with:
+          ref: public
+    - name: Download docs/index.js artifact
+      uses: actions/download-artifact@v1
+      with:
+        name: bundle
+    - name: replace old docs/index.js
+      run: |
+        mv bundle/index.js docs/index.js
+        rm -rf bundle
+    - name: Commit new docs/index.js to public branch
+      uses: Automattic/action-commit-to-branch@master
+      with:
+        branch: 'public'
+        commit_message:  'Updated documentation via ${{ github.sha }}'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

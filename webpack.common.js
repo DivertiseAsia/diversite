@@ -60,7 +60,8 @@ module.exports = {
     ]),
   ],
   module: {
-    rules: [{
+    rules: [
+    {
       test: /\.(jpe?g|png|gif|svg|pdf|ico)$/,
       use: [{
         loader: 'file-loader',
@@ -89,5 +90,5 @@ module.exports = {
       ]
     }
   ]
-  },
+  }
 };
