@@ -31,7 +31,7 @@ let make = (_children) => {
     <div>
       <PortfolioItem id="appsandplatforms" key="mintcrowd" item=(mintcrowdPortfolio) />
       <PortfolioItem key="adsoup" item=(adsoupPortfolio) />
-      <PortfolioItem key="copanel" item=(copanelPortfolio) />
+      /* <PortfolioItem key="copanel" item=(copanelPortfolio) /> */
       <PortfolioItem key="eventcomet" item=(eventcometPortfolio) />
       <PortfolioItem id="ai" key="boneage" item=(boneagePortfolio) />
       <PortfolioItem id="vr" key="vr" item=(vrPortfolio) />
