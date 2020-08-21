@@ -19,7 +19,7 @@ jobs:
       - run: npm ci
       - run: npm test
 
-  npm-publish:
+  deploy-website:
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -44,7 +44,7 @@ jobs:
         
   pages-update:
     name: pages-update
-    needs: npm-publish
+    needs: deploy-website
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
