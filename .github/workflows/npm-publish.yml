@@ -73,6 +73,10 @@ jobs:
     - name: stash docs/index.js for branch change
       run: |
         git stash -u
+    - name: Checkout public branch
+      uses: actions/checkout@v2
+      with:
+          ref: public
     - name: Download docs/index.js artifact
       uses: actions/download-artifact@v1
       with:
