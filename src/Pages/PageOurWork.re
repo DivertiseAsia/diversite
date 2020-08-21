@@ -7,9 +7,9 @@ let make = (_children) => {
   render: _self => {
     <MainPage className="page-ourwork">
     <div className="ourwork_section-header-content bg-gradient-color1"> 
-      /* <div className="container align-items-baseline">
+      <div className="container align-items-baseline">
         <h1 className="text-white letter-spacing -text-uppercase -text-header-shadow"> {string("Our Work")}</h1>
-      </div> */
+      </div>
       <div className="container page-ourwork_nav nav">
         <input type_="checkbox" />
         <div className="nav-icon nav-icon-arrow"> 
@@ -31,7 +31,7 @@ let make = (_children) => {
     <div>
       <PortfolioItem id="appsandplatforms" key="mintcrowd" item=(mintcrowdPortfolio) />
       <PortfolioItem key="adsoup" item=(adsoupPortfolio) />
-      <PortfolioItem key="copanel" item=(copanelPortfolio) />
+      /* <PortfolioItem key="copanel" item=(copanelPortfolio) /> */
       <PortfolioItem key="eventcomet" item=(eventcometPortfolio) />
       <PortfolioItem id="ai" key="boneage" item=(boneagePortfolio) />
       <PortfolioItem id="vr" key="vr" item=(vrPortfolio) />
