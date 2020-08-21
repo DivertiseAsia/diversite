@@ -73,10 +73,6 @@ jobs:
     - name: stash docs/index.js for branch change
       run: |
         git stash -u
-    - name: Checkout gh-pages branch
-      uses: actions/checkout@v2
-      with:
-          ref: gh-pages
     - name: Download docs/index.js artifact
       uses: actions/download-artifact@v1
       with:
@@ -85,10 +81,10 @@ jobs:
       run: |
         mv bundle/index.js docs/index.js
         rm -rf bundle
-    - name: Commit new docs/index.js to gh-pages branch
+    - name: Commit new docs/index.js to public branch
       uses: Automattic/action-commit-to-branch@master
       with:
-        branch: 'gh-pages'
+        branch: 'public'
         commit_message:  'Updated documentation via ${{ github.sha }}'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
