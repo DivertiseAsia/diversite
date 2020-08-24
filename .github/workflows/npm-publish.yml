@@ -9,18 +9,7 @@ on:
       - master
       - public-1 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - run: npm ci
-      - run: npm test
-
   deploy-website:
-    needs: build
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
@@ -64,7 +53,7 @@ jobs:
         npm install webpack-cli
     - name: webpack build
       run: |
-        webpack --config webpack.dev.js
+        webpack --config webpack.prod.js
     - name: Upload docs/index.js artifact
       uses: actions/upload-artifact@v1
       with:
