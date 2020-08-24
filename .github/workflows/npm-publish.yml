@@ -21,10 +21,8 @@ jobs:
     - name: npm install and npm test
       run: |
         npm install
-        npm run setup-test
         npm run clean
         npm run build
-        npm run ci-test
     - name: npm publish
       run: |
         npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
@@ -46,7 +44,6 @@ jobs:
         node-version: 10.0.0
     - name: npm install and build
       run: |
-        npm run setup-test
         npm run build
     - name: webpack install
       run: |
