@@ -81,9 +81,3 @@ jobs:
         commit_message:  'Updated documentation via ${{ github.sha }}'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@3.5.9
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: public
-        FOLDER: docs
