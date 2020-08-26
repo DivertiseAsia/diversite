@@ -30,7 +30,7 @@
     "raw-loader": "^4.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "reason-react": ">=0.4.0",
+    "reason-react": "^0.7.0",
     "three": "^0.113.2"
   },
   "devDependencies": {
@@ -49,13 +49,13 @@
     "html-webpack-exclude-assets-plugin": "0.0.7",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "normalize.css": "^8.0.0",
     "sass-loader": "^7.1.0",
     "shelljs": "^0.8.3",
     "style-loader": "^0.23.1",
     "webpack": "^4.44.1",
-    "webpack-cli": "^3.1.2",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.10.3",
     "webpack-merge": "^4.1.4"
   }
