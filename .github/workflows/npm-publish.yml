@@ -7,7 +7,6 @@ on:
   push:
     branches:
       - master
-      - public-1
 jobs:
   deploy-website:
     runs-on: ubuntu-latest
