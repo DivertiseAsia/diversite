@@ -24,13 +24,6 @@ type portfolioItem = {
   body: array(ReasonReact.reactElement),
 };
 
-[@bs.module]
-external phoneportrait: string =
-  "../../../../public/images/borders/port_phone-portrait.png";
-[@bs.module]
-external desktop: string =
-  "../../../../public/images/borders/port_desktop.png";
-
 [@react.component]
 let make = (~id: option(string)=?, ~item: portfolioItem) => {
   <div

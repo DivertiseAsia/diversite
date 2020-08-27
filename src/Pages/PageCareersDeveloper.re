@@ -1,7 +1,5 @@
 open ReasonReact;
 
-[@bs.module] external pen: string = "../../../../public/images/pen.png";
-
 [@react.component]
 let make = () => {
   <MainPage>
