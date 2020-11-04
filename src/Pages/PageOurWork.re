@@ -14,26 +14,30 @@ let make = _children => {
           </h1>
         </div>
         <div className="container page-ourwork_nav nav">
-          <input type_="checkbox" />
-          <div className="nav-icon nav-icon-arrow">
-            <h6> {string("Category")} </h6>
-            <Icon iconType=ArrowDown />
-          </div>
-          <div className="nav-container">
-            <a href=Links.ourwork_appsandplatforms>
-              {string("Applications & Platforms")}
-            </a>
-            <a href=Links.ourwork_ai> {string("Artificial Intelligence")} </a>
-            <a href=Links.ourwork_websites> {string("Websites")} </a>
-            <a href=Links.ourwork_vr> {string("Virtual Reality")} </a>
-            <a href=Links.ourwork_games> {string("Games")} </a>
-          </div>
-        </div>
+
+            <input type_="checkbox" />
+            <div className="nav-icon nav-icon-arrow">
+              <h6> {string("Category")} </h6>
+              <Icon iconType=ArrowDown />
+            </div>
+            <div className="nav-container">
+              <a href=Links.ourwork_appsandplatforms>
+                {string("All Project")}
+              </a> /* TODO: onclick should change the class name of the div below to "port-all" */
+              <a href=Links.ourwork_ai> {string("AI Projects")} </a> /* TODO: onclick should change the class name of the div below to "port-ai" */
+              <a href=Links.ourwork_websites>
+                {string("Apps & Platforms")}
+              </a> /* TODO: onclick should change the class name of the div below to "port-app" */
+              <a href=Links.ourwork_vr> {string("Design Projects")} </a> /* TODO: onclick should change the class name of the div below to "port-design" */
+              <a href=Links.ourwork_games> {string("Others")} </a>
+            </div>
+          </div> /* TODO: onclick should change the class name of the div below to "port-others" */
       </div>
       <div
         className="ourwork_section-header section-header bg-gradient-color1"
       />
       <div className="buffer" />
+      <div className="downloadport-btn"> {string("download portfolio")} </div> /* TODO: This should trigger a popup with an email field and a submit button. No need to add any other things or style it. I'll take care of those */
       <div>
         <PortfolioItem
           id="appsandplatforms"
