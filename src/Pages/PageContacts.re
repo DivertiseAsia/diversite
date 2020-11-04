@@ -16,14 +16,15 @@ external lovelearn: string = "../../../../public/images/lovelearning.png";
 [@bs.module]
 external openminded: string = "../../../../public/images/openminded.png";
 
-let make = _children => {
-  ...component,
-  render: _self => {
+[@react.component]
+let make = () => {
     <MainPage>
       <PageHeader
         title="Contact Us"
         className="bg-gradient-color1 pt-5 page-contacts"
-      />
+      >
+      <div />
+      </PageHeader>
       <div className="container">
         <div className="row py-5 d-block">
           <h3>
@@ -71,6 +72,5 @@ let make = _children => {
              </Link>
            </p> */
       />
-    </MainPage>;
-  },
+    </MainPage>
 };

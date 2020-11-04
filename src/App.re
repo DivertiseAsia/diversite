@@ -28,7 +28,6 @@ let make = () => {
   switch (state.route.path) {
   | x when routeMatches(x, Links.home) => <PageHome />
   | x when routeMatches(x, Links.careers) => <PageCareers />
-  | x when routeMatches(x, Links.contacts) => <PageContacts />
   | x when routeMatches(x, Links.internshipdesign) => <PageInternshipDesign />
   | x when routeMatches(x, Links.internshipdeveloper) => <PageInternshipDev />
   | x
