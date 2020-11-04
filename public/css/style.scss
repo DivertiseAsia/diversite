@@ -741,6 +741,18 @@ nav .logo-link {
 .scroll-25 .scroll-long { transition: all 25s; }
 .scroll-30 .scroll-long { transition: all 30s; }
 
+/* Download Port btn */
+.downloadport-btn {
+  position: fixed;
+  right: 35px;
+  bottom: 35px;
+  z-index: 99;
+  box-shadow: 0 0 10px 3px rgba(0,0,0,0.4);
+  font-size: 18px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: white;
+}
 /* Default portimg-container style */
 .portimg-container {
   width: 90%;
