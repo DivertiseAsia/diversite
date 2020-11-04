@@ -207,7 +207,7 @@ let make = () => {
          )}
       </p>
       <Link className="btn" href="mailto:contact@divertise.asia">
-        {string("Contact Us")}
+        {string("Build Your Idea")}
       </Link>
     </div>
     <div className="dots">
