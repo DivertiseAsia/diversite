@@ -18,7 +18,7 @@ let make = () => {
           {string("Portfolio")}
         </h3> 
           <a href=Links.ourwork_appsandplatforms>
-            <span className="hidden-lg-up">{string("All Projects")}</span> <span className="hidden-md-down">{string("AI")}</span>
+            <span className="hidden-lg-up">{string("All Projects")}</span> <span className="hidden-md-down">{string("All")}</span>
           </a> /* TODO: onclick should change the class name of the div below to "port-all" */
           <a href=Links.ourwork_ai> <span className="hidden-lg-up">{string("AI Project")}</span> <span className="hidden-md-down">{string("AI")}</span> </a> /* TODO: onclick should change the class name of the div below to "port-ai" */
           <a href=Links.ourwork_websites> <span className="hidden-lg-up">{string("Apps & Platforms")}</span> <span className="hidden-md-down">{string("Apps")}</span> </a> /* TODO: onclick should change the class name of the div below to "port-app" */
