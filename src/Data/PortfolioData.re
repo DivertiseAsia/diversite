@@ -72,8 +72,9 @@ external microgames3: string =
 external cvrld: string =
   "../../../../public/projects/project-cvrl-desktop.jpg";
 [@bs.module]
-external cvrlp: string = "../../../../public/projects/project-cvrl-phone.jpg" /* --------------------- Apps --------------------------*/;
+external cvrlp: string = "../../../../public/projects/project-cvrl-phone.jpg";
 
+/* --------------------- Apps --------------------------*/
 let adsoupPortfolio: portfolioItem = {
   title: "Adsoup",
   className: None,
@@ -81,8 +82,7 @@ let adsoupPortfolio: portfolioItem = {
     {
       src: adsoupapp,
       border: PhonePortrait,
-      className:
-        Some("col-4 port-no-scroll portimg-adsoup-phone porttype-app"),
+      className: Some("col-4 port-no-scroll portimg-adsoup-phone"),
     },
     {
       src: adsoudesktop,
@@ -90,22 +90,22 @@ let adsoupPortfolio: portfolioItem = {
       className: Some("col-8 port-no-scroll portimg-adsoup-desktop"),
     },
   ],
-  links:
-    [] /* {
-            _type: GooglePlay,
-            href: "https://play.google.com/store/apps/details?id=io.adsoup.sales.mobile",
-            caption: "Google Play"
-          },
-          {
-            _type: AppStore,
-            href: "https://itunes.apple.com/us/app/adsoup/id1415279019",
-            caption: "iTunes"
-          },
-          {
-            _type: Default,
-            href: "https://adsoup.com/?ref=divertise.asia",
-            caption: "View Website >"
-          } */,
+  links: [],
+  /* {
+       _type: GooglePlay,
+       href: "https://play.google.com/store/apps/details?id=io.adsoup.sales.mobile",
+       caption: "Google Play"
+     },
+     {
+       _type: AppStore,
+       href: "https://itunes.apple.com/us/app/adsoup/id1415279019",
+       caption: "iTunes"
+     },
+     {
+       _type: Default,
+       href: "https://adsoup.com/?ref=divertise.asia",
+       caption: "View Website >"
+     } */
   technologies: [
     "React",
     "Python",
@@ -209,12 +209,12 @@ let eventcometPortfolio: portfolioItem = {
       className: Some("col-4 port-no-scroll portimg-eventcomet-phone"),
     },
   ],
-  links:
-    [] /* {
-            _type: Default,
-            href: "https://eventcomet.com/?ref=divertise.asia",
-            caption: "View Website >"
-          } */,
+  links: [],
+  /* {
+       _type: Default,
+       href: "https://eventcomet.com/?ref=divertise.asia",
+       caption: "View Website >"
+     } */
   technologies: [
     "iOS",
     "Android",
@@ -280,7 +280,8 @@ let mintcrowdPortfolio: portfolioItem = {
       </div>,
     ]
     |> Belt.List.toArray,
-} /* --------------------- AI -----------------------------*/;
+};
+/* --------------------- AI -----------------------------*/
 let boneagePortfolio: portfolioItem = {
   title: "Bone Age",
   className: None,
@@ -343,7 +344,8 @@ let gameaitwoPortfolio: portfolioItem = {
   technologies: ["html5", "css", "Graphic Design", "web design"],
   body:
     [<div> <p> {string("Some body text")} </p> </div>] |> Belt.List.toArray,
-} /* ----------------------- Websites ---------------------*/;
+};
+/* ----------------------- Websites ---------------------*/
 let ketawaPortfolio: portfolioItem = {
   title: "Ketawa Pet Friendly Hotel Website",
   className: None,
@@ -447,7 +449,8 @@ let eastwestPortfolio: portfolioItem = {
       </div>,
     ]
     |> Belt.List.toArray,
-} /* ----------------------- Virtual Reality ---------------------- */;
+};
+/* ----------------------- Virtual Reality ---------------------- */
 let vrPortfolio: portfolioItem = {
   title: "CXRL",
   className: None,
@@ -483,7 +486,8 @@ let vrPortfolio: portfolioItem = {
       </div>,
     ]
     |> Belt.List.toArray,
-} /* ----------------------- Games ---------------------------*/;
+};
+/* ----------------------- Games ---------------------------*/
 let kikiiPortfolio: portfolioItem = {
   title: "Kikii on the Run",
   className: Some("kikii-image"),

@@ -15,6 +15,6 @@
     "bs-css",
     "@divertiseasia/bs-divertise-core-components"
   ],
-  "reason": { "react-jsx": 2 },
+  "reason": { "react-jsx": 3 },
   "refmt": 3
 }

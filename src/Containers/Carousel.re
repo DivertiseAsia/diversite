@@ -43,14 +43,6 @@ let stringToScene = scene => {
   };
 };
 
-type state = {
-  loading: bool,
-  scene,
-};
-
-type action =
-  | ChangeScene(scene);
-
 let rec animate = (currentScene, camera, scene, renderer) => {
   Document.setTimeout(
     () => {
@@ -170,88 +162,80 @@ let renderScene = scene =>
     |> ignore;
   };
 
-let autoChangeScene = send => {
-  Document.setInterval(
-    () =>
-      switch (loadFromLocalStorage("current-scene")) {
-      | Some(currentScene) =>
-        let canvasElement =
-          Document.getElementById(Document.doc, "webgl-canvas");
-        changeClassName(canvasElement, "webgl-fade-out");
-        send(ChangeScene(selectScene(currentScene |> stringToScene)));
-      | None => ()
-      },
-    10000,
-  );
-};
+[@react.component]
+let make = () => {
+  let (scene, setScene) = React.useState(() => Laser);
+  let changeScene = scene => {
+    setScene(_ => scene);
+    saveToLocalStorage("current-scene", sceneToString(scene));
+  };
+  let autoChangeScene = () => {
+    Document.setInterval(
+      () =>
+        switch (loadFromLocalStorage("current-scene")) {
+        | Some(currentScene) =>
+          let canvasElement =
+            Document.getElementById(Document.doc, "webgl-canvas");
+          changeClassName(canvasElement, "webgl-fade-out");
+          changeScene(selectScene(currentScene |> stringToScene));
+        | None => ()
+        },
+      10000,
+    );
+  };
 
-let component = ReasonReact.reducerComponent("Carousel");
-
-let make = (_children: array(ReasonReact.reactElement)) => {
-  ...component,
-  initialState: () => {loading: false, scene: Laser},
-  didMount: ({send, onUnmount}) => {
+  React.useEffect0(() => {
     saveToLocalStorage("current-scene", sceneToString(Laser));
-    let intervalId = autoChangeScene(send);
-    onUnmount(() => Document.clearInterval(intervalId));
-  },
-  reducer: (action, state) =>
-    switch (action) {
-    | ChangeScene(scene) =>
-      UpdateWithSideEffects(
-        {...state, scene},
-        _ => saveToLocalStorage("current-scene", sceneToString(scene)),
-      )
-    },
-  render: self => {
-    let sceneClassname =
-      switch (self.state.scene) {
-      | Laser => "laser"
-      | Pentagon => "pentagon"
-      | Ball => "ball"
-      | Network => "network"
-      };
-    renderScene(self.state.scene);
-    <div id="webgl-background" className={"hero " ++ sceneClassname}>
-      <div className="container">
-        <h1> {string("Technical partner for startups in Asia")} </h1>
-        <p>
-          {string(
-             "specializing in Artificial Intelligence, VR, and other cutting-edge technologies.",
-           )}
-        </p>
-        <Link className="btn" href=Links.contacts>
-          {string("Contact Us")}
-        </Link>
-      </div>
-      <div className="dots">
-        {[Laser, Pentagon, Ball, Network]
-         |> List.map(sceneType => {
-              let className =
-                self.state.scene === sceneType ? "dot active" : "dot";
-              let key =
-                switch (sceneType) {
-                | Laser => "laser"
-                | Pentagon => "pentagon"
-                | Ball => "ball"
-                | Network => "network"
-                };
-              <div
-                className
-                key
-                onClick={_ =>
-                  if (self.state.scene !== sceneType) {
-                    let canvasElement =
-                      Document.getElementById(Document.doc, "webgl-canvas");
-                    changeClassName(canvasElement, "webgl-fade-out");
-                    self.send(ChangeScene(sceneType));
-                  }
+    let intervalId = autoChangeScene();
+    Some(() => Document.clearInterval(intervalId));
+  });
+  let sceneClassname =
+    switch (scene) {
+    | Laser => "laser"
+    | Pentagon => "pentagon"
+    | Ball => "ball"
+    | Network => "network"
+    };
+
+  renderScene(scene);
+  <div id="webgl-background" className={"hero " ++ sceneClassname}>
+    <div className="container">
+      <h1> {string("Technical partner for startups in Asia")} </h1>
+      <p>
+        {string(
+           "specializing in Artificial Intelligence, VR, and other cutting-edge technologies.",
+         )}
+      </p>
+      <Link className="btn" href="mailto:contact@divertise.asia">
+        {string("Contact Us")}
+      </Link>
+    </div>
+    <div className="dots">
+      {[Laser, Pentagon, Ball, Network]
+       |> List.map(sceneType => {
+            let className = scene === sceneType ? "dot active" : "dot";
+            let key =
+              switch (sceneType) {
+              | Laser => "laser"
+              | Pentagon => "pentagon"
+              | Ball => "ball"
+              | Network => "network"
+              };
+            <div
+              className
+              key
+              onClick={_ =>
+                if (scene !== sceneType) {
+                  let canvasElement =
+                    Document.getElementById(Document.doc, "webgl-canvas");
+                  changeClassName(canvasElement, "webgl-fade-out");
+                  changeScene(sceneType);
                 }
-              />;
-            })
-         |> Array.of_list
-         |> array}
-      </div>
-    </div>;
-  },
+              }
+            />;
+          })
+       |> Array.of_list
+       |> array}
+    </div>
+  </div>;
 };
