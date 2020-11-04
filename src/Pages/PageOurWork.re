@@ -5,27 +5,26 @@ open PortfolioData;
 let make = () => {
   <MainPage className="page-ourwork">
     <div className="ourwork_section-header-content bg-gradient-color1">
-      <div className="container align-items-baseline">
-        <h1
-          className="text-white letter-spacing -text-uppercase -text-header-shadow">
-          {string("Our Work")}
-        </h1>
-      </div>
       <div className="container page-ourwork_nav nav">
-        <input type_="checkbox" />
+        /* <input type_="checkbox" />
         <div className="nav-icon nav-icon-arrow">
           <h6> {string("Category")} </h6>
           <Icon iconType=Icon.ArrowDown />
-        </div>
+        </div> 
         <div className="nav-container">
+          <h6> {string("Category")} </h6> */
+          <h3
+          className="text-white letter-spacing -text-uppercase -text-header-shadow">
+          {string("Portfolio")}
+        </h3> 
           <a href=Links.ourwork_appsandplatforms>
-            {string("All Projects")}
+            <span className="hidden-lg-up">{string("All Projects")}</span> <span className="hidden-md-down">{string("AI")}</span>
           </a> /* TODO: onclick should change the class name of the div below to "port-all" */
-          <a href=Links.ourwork_ai> {string("AI Project")} </a> /* TODO: onclick should change the class name of the div below to "port-ai" */
-          <a href=Links.ourwork_websites> {string("Design Projects")} </a> /* TODO: onclick should change the class name of the div below to "port-app" */
-          <a href=Links.ourwork_vr> {string("Design Projects")} </a> /* TODO: onclick should change the class name of the div below to "port-design" */
+          <a href=Links.ourwork_ai> <span className="hidden-lg-up">{string("AI Project")}</span> <span className="hidden-md-down">{string("AI")}</span> </a> /* TODO: onclick should change the class name of the div below to "port-ai" */
+          <a href=Links.ourwork_websites> <span className="hidden-lg-up">{string("Apps & Platforms")}</span> <span className="hidden-md-down">{string("Apps")}</span> </a> /* TODO: onclick should change the class name of the div below to "port-app" */
+          <a href=Links.ourwork_vr> <span className="hidden-lg-up">{string("Design Projects")}</span> <span className="hidden-md-down">{string("Design")}</span> </a> /* TODO: onclick should change the class name of the div below to "port-design" */
           <a href=Links.ourwork_games> {string("Others")} </a> /* TODO: onclick should change the class name of the div below to "port-others" */
-        </div>
+        /* </div> */
       </div>
     </div>
     <div

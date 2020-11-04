@@ -146,6 +146,9 @@ ul li {
 ul.ul-li-dash li:before {
   content: "- ";
 }
+
+.hidden-lg-up {display: none;}
+
 a:hover { text-decoration: none; }
 /* ------------- Bootstrap Elements --------------*/
 
@@ -212,6 +215,11 @@ nav.nav {
   font-family: $font-header;
   flex-direction: column;
   align-items: center;
+}
+.nav a span {
+  font-weight: $font-weight-medium;
+  color: $text-white;
+  font-family: $font-header;
 }
 .nav .nav-container > div {
   display: inline-block;
@@ -647,7 +655,11 @@ nav .logo-link {
   width: 100%;
   z-index: 1;
   height: $section-header-height + 20px;
+  height: 110px;
   margin-top: -2px;
+}
+.ourwork_section-header {
+  clip-path: none;
 }
 .ourwork_section-header-content {
   background: transparent;
@@ -662,7 +674,8 @@ nav .logo-link {
   background: transparent;
   margin-top: 10px;
   width: 100%;
-  padding: 0 60px;
+  padding: 0;
+  justify-content: center;
   height: auto;
   input {
     width: 250px;
@@ -1030,6 +1043,12 @@ and (max-width: 1200px) {
   .page-home .nav {background: transparent;}
 }
 
+@media only screen
+and (min-width: 992px) {
+  .hidden-md-down {display: none;}
+  .hidden-lg-up {display: inline;}
+}
+
 /* -------- Tablets Portrait ---------*/
 @media only screen
 and (max-width: 768px) {
@@ -1242,6 +1261,10 @@ and (max-width: 400px) {
   }
   /* Small Phone Port */
   .phone-portrait { padding: 0; }
+  .page-ourwork_nav > h3 {
+    width: 90%;
+  }
+  .page-ourwork .ourwork_section-header {height: 150px;}
 }
 
 /* --------- Iphone4 ------------*/
