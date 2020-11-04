@@ -31,11 +31,15 @@ let make =
                 <input type_="checkbox" />
                 <div className="nav-icon"> <div /> <div /> <div /> </div>
                 <div className="nav-container">
-                  <Link href=Links.home> {string("Home")} </Link>
-                  <Link href=Links.ourwork> {string("Our Work")} </Link>
-                  <Link href=Links.careers> {string("Careers")} </Link>
-                  <Link href=Links.contacts> {string("Contact Us")} </Link>
-                </div>
+
+                    <Link href=Links.home> {string("Home")} </Link>
+                    <Link href=Links.ourwork> {string("Our Work")} </Link>
+                    <Link href=Links.careers> {string("Careers")} </Link>
+                    <Link href=Links.contacts> {string("Contact Us")} </Link>
+                    <Link href=Links.contacts>
+                      {string("Build Your Ideas")}
+                    </Link>
+                  </div> /* TODO: This should trigger a popup with an form and a submit button. No need to add any other things or style it. I'll take care of those */
               </nav>,
               extraPageEndsElement,
             ]),
