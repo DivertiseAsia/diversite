@@ -97,6 +97,8 @@ a {
   @include btn(transparent, $bg-color1, $bg-color1); 
   cursor: default; 
 }
+.btn-line-white { @include btn(transparent, $text-white, $text-white) }
+.btn-line-white:hover { @include btn($text-white, $text-white, $bg-color1) }
 
 /* ------------- Default Classes ------------- */
 
@@ -223,6 +225,10 @@ nav.nav {
 }
 .nav .nav-container > div {
   display: inline-block;
+}
+.nav .btn {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 nav .logo-link {
   height: $header-height - 5px;
@@ -1044,9 +1050,12 @@ and (max-width: 1200px) {
 }
 
 @media only screen
-and (min-width: 992px) {
+and (max-width: 992px) {
   .hidden-md-down {display: none;}
   .hidden-lg-up {display: inline;}
+  .page-ourwork_nav.nav a:not(.btn):hover::after {
+    width: 14px;
+  }
 }
 
 /* -------- Tablets Portrait ---------*/

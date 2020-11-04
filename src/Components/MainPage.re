@@ -31,7 +31,7 @@ let make = (~className: option(string)=?, ~extraPageEnds=?, ~children) => {
                     <Link href=Links.ourwork> {string("Our Work")} </Link>
                     <Link href=Links.careers> {string("Careers")} </Link>
                     /* <Link href=Links.contacts> {string("Contact Us")} </Link> */
-                    <Link href=Links.contacts>
+                    <Link className="btn btn-line-white" href=Links.contacts>
                       {string("Build Your Ideas")}
                     </Link> /* TODO: This should trigger a popup with an form and a submit button. No need to add any other things or style it. I'll take care of those */
                   </div>
