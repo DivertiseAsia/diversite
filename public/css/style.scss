@@ -100,6 +100,14 @@ a {
 .btn-line-white { @include btn(transparent, $text-white, $text-white) }
 .btn-line-white:hover { @include btn($text-white, $text-white, $bg-color1) }
 
+.input-default {
+  border-radius: $border-radius;
+  padding: 8px;
+  min-width: 100px;
+  border: $border-default;
+  transition: $transition;
+  margin: 20px auto;
+}
 /* ------------- Default Classes ------------- */
 
 .-text-small { font-size: .7em; }
@@ -542,6 +550,7 @@ nav .logo-link {
   border-radius: 5px;
   padding: 0;
 }
+.popup-content{max-width: 100%;}
 .popup-backing {
   background: rgba(0,0,0,0.3);
   overflow: hidden;
@@ -800,8 +809,31 @@ nav .logo-link {
   background-color: white;
 }
 .downloadport-popup {
+  .btn, .input-default {
+    margin: 5px;
+    height: 44px;
+  }
   .popup-backing {background: transparent;}
+  .popup {
+    position: absolute;
+    right: 24px;
+    bottom: 30px;
+    >* {
+      display: inline-block;
+      vertical-align: bottom;
+    }
+  }
+  .downloadport-form {
+    display: flex;
+    justify-content: space-between;
+    >* {
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
+    >input {flex-shrink: 1;}
+  }
 }
+.downloadport-popup.popup-open .popup {box-shadow: 0 0 10px 2px rgba(0,0,0,0.5);}
 /* Default portimg-container style */
 .portimg-container {
   width: 90%;

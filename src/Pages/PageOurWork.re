@@ -58,8 +58,12 @@ let make = (~selectedCategory:PortfolioDataType.t) => {
       <div className="downloadport-btn btn btn-line-color1" onClick=(_ => setPopupOpen(_ => !isPopupOpen))>
         {string("Download Port")}
       </div> /* TODO: This should trigger a popup with an email field and a submit button. No need to add any other things or style it. I'll take care of those */
-      <Popup isOpen=isPopupOpen className="downloadport-popup" hasCloseBtn=true closeBtnText="Not Now" closeOnBgClick=true closeFunc=(() => setPopupOpen(_ => false))>
-        <div>{ReasonReact.string("hello this is your popup; todo: put stuff ehre")}</div>
+      <Popup isOpen=isPopupOpen className="downloadport-popup" hasCloseBtn=true closeBtnText="Not Now" closeOnBgClick=true showX=false closeFunc=(() => setPopupOpen(_ => false))>
+        <p>{ReasonReact.string("Please add your email. We will send you our portfolio.")}</p>
+        <div className="downloadport-form">
+          <input className="input-default" type_="email" placeholder="Your Email" />
+          <div className="btn">{ReasonReact.string("Submit")}</div>
+        </div>
       </Popup>
       <div>
         <PortfolioItem

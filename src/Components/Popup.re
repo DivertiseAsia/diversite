@@ -5,7 +5,9 @@ let make = (~isOpen:bool = true, ~className: option(string)=?, ~hasCloseBtn=fals
     <div className="popup-backing" onClick=(closeOnBgClick ? (_) => closeFunc() : (_) => ()) />
     <div className="popup">
       {showX ? <div className="popup-x" onClick=(_ => closeFunc())>{ReasonReact.string("X")}</div> : ReasonReact.null}
+      <div className="popup-content">
       {children}
+      </div>
       {hasCloseBtn ? <div className="btn popup-close-btn" onClick=(_ => closeFunc())>{ReasonReact.string(Js.Option.getWithDefault("Close Popup", closeBtnText))}</div>: ReasonReact.null}
     </div>
   </div>
