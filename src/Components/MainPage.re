@@ -37,7 +37,7 @@ let make = (~className: option(string)=?, ~extraPageEnds=?, ~children) => {
                     </div>
                   </div>
                 </nav>, 
-                <Popup isOpen=isPopupOpen closeOnBgClick=true closeFunc=(() => setPopupOpen(_ => false))>
+                <Popup isOpen=isPopupOpen closeOnBgClick=false closeFunc=(() => setPopupOpen(_ => false))>
                   <div>{ReasonReact.string("hello this is your popup; todo: put stuff ehre")}</div>
                 </Popup>,
               extraPageEndsElement,
