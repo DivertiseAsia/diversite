@@ -10,6 +10,7 @@ external social_mail: string = "../../../../public/images/email.svg";
 
 [@react.component]
 let make = (~className: option(string)=?, ~extraPageEnds=?, ~children) => {
+  let (isPopupOpen, setPopupOpen) = React.useState(() => false);
   let extraPageEndsElement =
     switch (extraPageEnds) {
     | None => null
@@ -31,11 +32,14 @@ let make = (~className: option(string)=?, ~extraPageEnds=?, ~children) => {
                     <Link href=Links.ourwork> {string("Our Work")} </Link>
                     <Link href=Links.careers> {string("Careers")} </Link>
                     /* <Link href=Links.contacts> {string("Contact Us")} </Link> */
-                    <Link className="btn btn-line-white" href=Links.contacts>
+                    <div className="btn btn-line-white" onClick=(_ => setPopupOpen(_ => !isPopupOpen))>
                       {string("Build Your Ideas")}
-                    </Link> /* TODO: This should trigger a popup with an form and a submit button. No need to add any other things or style it. I'll take care of those */
+                    </div>
                   </div>
                 </nav>, 
+                <Popup isOpen=isPopupOpen closeOnBgClick=true closeFunc=(() => setPopupOpen(_ => false))>
+                  <div>{ReasonReact.string("hello this is your popup; todo: put stuff ehre")}</div>
+                </Popup>,
               extraPageEndsElement,
             ]),
           ),

@@ -3,6 +3,7 @@ open PortfolioData;
 
 [@react.component]
 let make = (~selectedCategory:PortfolioDataType.t) => {
+  let (isPopupOpen, setPopupOpen) = React.useState(() => false);
 
   let portfolioCategoryLink = (category:PortfolioDataType.t, text:string, tooltip:string) => {
     <a 
@@ -54,9 +55,12 @@ let make = (~selectedCategory:PortfolioDataType.t) => {
         className="ourwork_section-header section-header bg-gradient-color1"
       />
       <div className="buffer" />
-      <div className="downloadport-btn btn btn-line-color1">
+      <div className="downloadport-btn btn btn-line-color1" onClick=(_ => setPopupOpen(_ => !isPopupOpen))>
         {string("Download Port")}
       </div> /* TODO: This should trigger a popup with an email field and a submit button. No need to add any other things or style it. I'll take care of those */
+      <Popup isOpen=isPopupOpen closeOnBgClick=true closeFunc=(() => setPopupOpen(_ => false))>
+        <div>{ReasonReact.string("hello this is your popup; todo: put stuff ehre")}</div>
+      </Popup>
       <div>
         <PortfolioItem
           id="appsandplatforms"

@@ -518,7 +518,49 @@ nav .logo-link {
   }
   .btn:hover { @include btn( $text-color2-light , $text-color2-light, $text-color1); }
 }
-
+.popup-closed {
+  pointer-events: none;
+}
+.popup-closed .popup-backing {
+  background: #00000000;
+  max-height: 0;
+}
+.popup-closed .popup {
+  max-height: 0;
+}
+.popup-open .popup {
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+}
+.popup {
+  overflow: hidden;
+  background: white;
+  transition: all 0.5s;
+  z-index: 1;
+}
+.popup-backing {
+  background: rgba(0,0,0,0.3);
+  overflow: hidden;
+  max-height: 100%;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  transition: all 0.5s;
+  position: absolute;
+  top: 0;
+  left: 0; 
+}
+.popup-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 /*
 .frontpage-section {
   background: $bg-gradient1;
