@@ -76,31 +76,31 @@ let make = () => {
       <FrontPageSection
         title="Application and Platforms"
         imageURL=homeapp
-        href=Links.ourwork_appsandplatforms>
+        href=Links.ourwork_link(PortfolioDataType.AppPlatforms)>
         {string(
            "We create entire platforms and services from the ground up. These platforms typically live in a combination of places from app stores to the cloud.",
          )}
       </FrontPageSection>
       <FrontPageSection
-        title="Artificial Intelligence" imageURL=homeai href=Links.ourwork_ai>
+        title="Artificial Intelligence" imageURL=homeai href=Links.ourwork_link(PortfolioDataType.AI)>
         {string(
            "Newer applications and services should always be considering AI into their product. Everyone at Divertise Asia learns how to use AI and we make sure we offer it to everyone we work with.",
          )}
       </FrontPageSection>
       <FrontPageSection
-        title="Websites" imageURL=homeweb href=Links.ourwork_websites>
+        title="Websites" imageURL=homeweb href=Links.ourwork_link(PortfolioDataType.Other)>
         {string(
            "The world runs on the web and we can produce any website needed for it. We aim to create a balance between user content management and speed of development.",
          )}
       </FrontPageSection>
       <FrontPageSection
-        title="Virtual Reality" imageURL=homevr href=Links.ourwork_vr>
+        title="Virtual Reality" imageURL=homevr href=Links.ourwork_link(PortfolioDataType.Other)>
         {string(
            "Creating applications in VR/AR will be one of the next big things. We are looking for ways to be at the forefront of the technology and have partnered with other companies in Asia to bring VR applications to life.",
          )}
       </FrontPageSection>
       <FrontPageSection
-        title="Games" imageURL=homegame href=Links.ourwork_games>
+        title="Games" imageURL=homegame href=Links.ourwork_link(PortfolioDataType.Other)>
         {string(
            "We love bringing more fun into the world! We have made two of our own games and occasionally have internal game jams",
          )}

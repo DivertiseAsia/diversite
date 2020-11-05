@@ -2,8 +2,30 @@ open ReasonReact;
 open PortfolioData;
 
 [@react.component]
-let make = () => {
-  <MainPage className="page-ourwork">
+let make = (~selectedCategory:PortfolioDataType.t) => {
+
+  let portfolioCategoryLink = (category:PortfolioDataType.t, text:string, tooltip:string) => {
+    <a 
+      href=Links.ourwork_link(category)
+      className=(category === selectedCategory ? "selected" : "")
+    >
+      <span className="hidden-md-down">
+        {string(text)}
+      </span>
+      <span className="hidden-lg-up"> {string(tooltip)} </span>
+    </a>
+  };
+
+  let additional_classname =
+    "port-" ++ switch(selectedCategory) {
+    | All => "all"
+    | AI => "ai"
+    | AppPlatforms => "appsandplatforms"
+    | Design => "design"
+    | Other => "other"
+    };
+
+  <MainPage className=("page-ourwork " ++ additional_classname)>
 
       <div className="ourwork_section-header-content bg-gradient-color1">
 
@@ -20,33 +42,13 @@ let make = () => {
                 className="text-white letter-spacing -text-uppercase -text-header-shadow">
                 {string("Portfolio")}
               </h3>
-              <a href=Links.ourwork_appsandplatforms>
-                <span className="hidden-md-down">
-                  {string("All Projects")}
-                </span>
-                <span className="hidden-lg-up"> {string("All")} </span>
-              </a> /* TODO: onclick should change the class name of the div below to "port-all" */
-              <a href=Links.ourwork_ai>
-                <span className="hidden-md-down">
-                  {string("AI Project")}
-                </span>
-                <span className="hidden-lg-up"> {string("AI")} </span>
-              </a> /* TODO: onclick should change the class name of the div below to "port-ai" */
-              <a href=Links.ourwork_websites>
-                <span className="hidden-md-down">
-                  {string("Apps & Platforms")}
-                </span>
-                <span className="hidden-lg-up"> {string("Apps")} </span>
-              </a> /* TODO: onclick should change the class name of the div below to "port-app" */
-              <a href=Links.ourwork_vr>
-                <span className="hidden-md-down">
-                  {string("Design Projects")}
-                </span>
-                <span className="hidden-lg-up"> {string("Design")} </span>
-              </a> /* TODO: onclick should change the class name of the div below to "port-design" */
-              <a href=Links.ourwork_games> {string("Others")} </a>
+              {portfolioCategoryLink(PortfolioDataType.All, "All Projects", "All")}
+              {portfolioCategoryLink(PortfolioDataType.AI, "AI Project", "AI")}
+              {portfolioCategoryLink(PortfolioDataType.AppPlatforms, "Apps & Platforms", "Apps")}
+              {portfolioCategoryLink(PortfolioDataType.Design, "Design Projects", "Design")}
+              {portfolioCategoryLink(PortfolioDataType.Other, "Other Projects", "Others")}
             </div>
-        </div> /* TODO: onclick should change the class name of the div below to "port-others" */
+        </div>
         /* </div> */
       <div
         className="ourwork_section-header section-header bg-gradient-color1"

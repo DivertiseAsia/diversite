@@ -40,7 +40,7 @@ let make = () => {
         routeMatches(x, "/career-developer")
         || routeMatches(x, Links.careersdeveloper) =>
     <PageCareersDeveloper />
-  | x when routeMatches(x, Links.ourwork) => <PageOurWork />
+  | x when routeMatches(x, Links.ourwork) => <PageOurWork selectedCategory=Links.ourwork_link_category(state.route.hash) />
   | _ => <PageHome />
   };
 };
