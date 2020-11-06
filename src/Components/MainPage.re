@@ -23,23 +23,27 @@ let make = (~className: option(string)=?, ~extraPageEnds=?, ~children) => {
           React.array(
             List.toArray([
               <nav className="nav -text-right">
-
-                  <Logo />
-                  <input type_="checkbox" />
-                  <div className="nav-icon"> <div /> <div /> <div /> </div>
-                  <div className="nav-container">
-                    <Link href=Links.home> {string("Home")} </Link>
-                    <Link href=Links.ourwork> {string("Our Work")} </Link>
-                    <Link href=Links.careers> {string("Careers")} </Link>
-                    /* <Link href=Links.contacts> {string("Contact Us")} </Link> */
-                    <div className="btn btn-line-white" onClick=(_ => setPopupOpen(_ => !isPopupOpen))>
-                      {string("Build Your Ideas")}
-                    </div>
+                <Logo />
+                <input type_="checkbox" />
+                <div className="nav-icon"> <div /> <div /> <div /> </div>
+                <div className="nav-container">
+                  <Link href=Links.home> {string("Home")} </Link>
+                  <Link href=Links.ourwork> {string("Our Work")} </Link>
+                  <Link href=Links.careers> {string("Careers")} </Link>
+                  /* <Link href=Links.contacts> {string("Contact Us")} </Link> */
+                  <div
+                    className="btn btn-line-white"
+                    onClick={_ => setPopupOpen(_ => !isPopupOpen)}>
+                    {string("Build Your Ideas")}
                   </div>
-                </nav>, 
-                <Popup isOpen=isPopupOpen closeOnBgClick=false closeFunc=(() => setPopupOpen(_ => false))>
-                  <div>{ReasonReact.string("hello this is your popup; todo: put stuff ehre")}</div>
-                </Popup>,
+                </div>
+              </nav>,
+              <Popup
+                isOpen=isPopupOpen
+                closeOnBgClick=false
+                closeFunc={() => setPopupOpen(_ => false)}>
+                <ContactForm />
+              </Popup>,
               extraPageEndsElement,
             ]),
           ),

@@ -99,6 +99,10 @@ a {
 }
 .btn-line-white { @include btn(transparent, $text-white, $text-white) }
 .btn-line-white:hover { @include btn($text-white, $text-white, $bg-color1) }
+.btn-solid-color2 { @include btn($bg-color2, $bg-color2, $text-white) }
+.btn-solid-color2:hover { @include btn(#1a7d76, #1a7d76, $text-white) }
+.btn-solid-color1 { @include btn($bg-color1, $bg-color1, $text-white) }
+.btn-solid-color1:hover { @include btn(#1d364b, #1d364b, $text-white) }
 
 .input-default {
   border-radius: $border-radius;
@@ -549,6 +553,7 @@ nav .logo-link {
   z-index: 1;
   border-radius: 5px;
   padding: 0;
+  transition: 0.1s;
 }
 .popup-content{max-width: 100%;}
 .popup-backing {
@@ -813,6 +818,8 @@ nav .logo-link {
     margin: 5px;
     height: 44px;
   }
+  .popup-close-btn {@include btn(rgb(170, 170, 170),rgb(170, 170, 170),$text-white)}
+  .popup-close-btn:hover {@include btn(grey,grey,$text-white)}
   .popup-backing {background: transparent;}
   .popup {
     position: absolute;
