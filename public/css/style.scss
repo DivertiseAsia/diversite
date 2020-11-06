@@ -115,10 +115,13 @@ a {
 .inputtext {
   p {
     margin-bottom: 0;
+    font-weight: 600;
+    font-size: 0.9rem;
     width: 100%;
   }
   .input-default {width: 100%;}
   margin-bottom: 10px;
+
 }
 /* ------------- Default Classes ------------- */
 
@@ -598,6 +601,10 @@ nav .logo-link {
 }
 // Build your idea popup
 .buildyouridea-popup {
+  p {
+    color: $text-color1;
+    text-shadow: none;
+  }
   .popup {
     width: 90%;
     height: 90%;
@@ -625,6 +632,8 @@ nav .logo-link {
     textarea {flex-grow: 1;}
   }
   .inputtext {width: 100%;}
+  .btn.btn-solid-color1 { @include btn($bg-color1, $bg-color1, $text-white) }
+  .btn.btn-solid-color1:hover { @include btn(#1d364b, #1d364b, $text-white) }
 }
 /*
 .frontpage-section {
