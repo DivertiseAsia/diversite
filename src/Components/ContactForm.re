@@ -18,7 +18,10 @@ let make = (~className: option(string)=?) => {
     <InputText
       isTextarea=true
       inputLabel="Tell us a bit more"
-      placeholder="Hi! I have a project I'd you to help with. (tell us a bit more)"
+      placeholder="Hi! I have a project I'd like you to help with."
     />
+    <div className="btn btn-solid-color1">
+      {ReasonReact.string("Submit")}
+    </div>
   </div>;
 };

@@ -41,7 +41,16 @@ let make = (~className: option(string)=?, ~extraPageEnds=?, ~children) => {
               <Popup
                 isOpen=isPopupOpen
                 closeOnBgClick=false
-                closeFunc={() => setPopupOpen(_ => false)}>
+                closeFunc={() => setPopupOpen(_ => false)}
+                className="buildyouridea-popup">
+                <div>
+                  <h3> {string("Build Your Ideas")} </h3>
+                  <p>
+                    {string(
+                       "Tell us about what you need. We will get back to you within 1 working day",
+                     )}
+                  </p>
+                </div>
                 <ContactForm />
               </Popup>,
               extraPageEndsElement,

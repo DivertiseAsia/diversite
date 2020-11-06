@@ -7,7 +7,16 @@ let make =
       ~inputLabel: option(string)=?,
       ~isTextarea=false,
     ) => {
-  <div className={Js.Option.getWithDefault("", className)}>
+  <div
+    className={
+      "inputtext "
+      ++ {
+        Js.Option.getWithDefault("", className);
+      }
+      ++ {
+        isTextarea ? " inputtext-textarea" : "";
+      }
+    }>
     <p className="inputtext_label">
       {ReasonReact.string(Js.Option.getWithDefault("", inputLabel))}
     </p>
