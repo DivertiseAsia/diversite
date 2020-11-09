@@ -597,7 +597,9 @@ nav .logo-link {
   line-height: 30px;
   text-align: center;
   width: 30px;
-  float: right;
+}
+.popup-open .popup-x {
+  position: absolute;
 }
 // Build your idea popup
 .buildyouridea-popup {
@@ -615,8 +617,11 @@ nav .logo-link {
     flex-wrap: wrap;
     padding: 30px;
     height: 100%;
-    >* {width: 45%;}
+    >* {
+      width: 45%;
+    }
   }
+  .popup-x { right: calc(5% + 20px);}
 }
 .contactform {
   display: flex;
@@ -1453,6 +1458,12 @@ and (max-width: 576px) {
   }
   .desktop .portimg-container::after {
     margin-top: -20px;
+  }
+  .buildyouridea-popup {
+    .popup-content {
+      flex-direction: row;
+      >*{width: 100%;}
+    }
   }
 }
 
