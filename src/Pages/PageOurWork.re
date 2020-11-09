@@ -104,12 +104,12 @@ let make = (~selectedCategory: PortfolioDataType.t) => {
       <PortfolioItem key="adsoup" item=adsoupPortfolio />
       <PortfolioItem key="copanel" item=copanelPortfolio />
       <PortfolioItem key="eventcomet" item=eventcometPortfolio />
-      <PortfolioItem id="ai" key="boneage" item=boneagePortfolio />
-      <PortfolioItem id="vr" key="vr" item=vrPortfolio />
-      <PortfolioItem id="websites" key="ketawa" item=ketawaPortfolio />
+      <PortfolioItem key="boneage" item=boneagePortfolio />
+      <PortfolioItem key="vr" item=vrPortfolio />
+      <PortfolioItem key="ketawa" item=ketawaPortfolio />
       <PortfolioItem key="willamailn" item=wilaamalinPortfolio />
       <PortfolioItem key="eastwest" item=eastwestPortfolio />
-      <PortfolioItem id="games" key="kikii" item=kikiiPortfolio />
+      <PortfolioItem key="kikii" item=kikiiPortfolio />
       <PortfolioItem key="micro" item=microgamesPortfolio />
     </div>
   </MainPage>; /* TODO: This div's classname should change according to the links above */
