@@ -9,7 +9,9 @@ let make = (~selectedCategory: PortfolioDataType.t) => {
       (category: PortfolioDataType.t, text: string, tooltip: string) => {
     <a
       href={Links.ourwork_link(category)}
-      className={category === selectedCategory ? "selected" : ""}>
+      className={
+        "port-filter " ++ (category === selectedCategory ? "selected" : "")
+      }>
       <span className="hidden-md-down"> {string(text)} </span>
       <span className="hidden-lg-up"> {string(tooltip)} </span>
     </a>;

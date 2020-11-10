@@ -976,6 +976,7 @@ nav .logo-link {
   padding-bottom: 60px;
   opacity: 1;
 }
+.nav a:not(.logo-link):not(.btn).port-filter.selected::after {width: 35px;}
 .port-all {
   .item-all,
   .item-ai,
@@ -1322,6 +1323,7 @@ and (max-width: 992px) {
   .page-ourwork_nav.nav a:not(.btn):hover::after {
     width: 14px;
   }
+  .nav a:not(.logo-link):not(.btn).port-filter.selected::after {width: 14px;}
 }
 
 /* -------- Tablets Portrait ---------*/
