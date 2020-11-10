@@ -8,12 +8,14 @@ $font-header: 'OrkneyRegular', sans-serif;
 $lineheigh: 1.8em;
 
 $bg-grey: #eaeaea;
+$bg-grey-hover: #d1d1d1;
 $bg-color1: #2d506d;
 $bg-color2: #23a399;
 $bg-color2-dark: #14918a;
 $text-white: white;
 $text-color1: #2d506d;
 $text-color2:#23a399;
+$text-color2-hover:#18837a;
 $text-color2-light: #a4dad4;
 $border-grey: #eaeaea;
 
@@ -640,6 +642,57 @@ nav .logo-link {
   .btn.btn-solid-color1 { @include btn($bg-color1, $bg-color1, $text-white) }
   .btn.btn-solid-color1:hover { @include btn(#1d364b, #1d364b, $text-white) }
 }
+.contactform_email >* {display: inline;}
+.email {
+  svg {
+    width: 170px;
+    fill: $text-color2;
+    transition: $transition;
+  }
+  cursor: pointer;
+  display: inline;
+  margin: 0 5px;
+  text-align: center;
+}
+.email:hover {
+  svg {fill: $text-color2-hover}
+}
+.email_popover {
+  >* {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: $bg-grey;  
+    padding: 0 7px;
+    border-radius: 7px;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.5);
+    height: 100%;
+    transition: $transition;
+  }
+  >*:first-child {margin-right: 7px;}
+  >*:hover {background: $bg-grey-hover;}
+  textarea {display: none;}
+}
+.popover-default {
+  height: 40px;
+  position: relative;
+  transition: $transition;
+}
+.popover-open {
+  opacity: 1;
+  top: 2px;
+}
+.popover-close {
+  opacity: 1;
+  top: -40px;
+  pointer-events: none;
+  touch-action: none;
+  >* {
+    pointer-events: none;
+    touch-action: none;
+  }
+}
+
 /*
 .frontpage-section {
   background: $bg-gradient1;

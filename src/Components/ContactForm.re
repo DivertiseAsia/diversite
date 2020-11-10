@@ -23,5 +23,9 @@ let make = (~className: option(string)=?) => {
     <div className="btn btn-solid-color1">
       {ReasonReact.string("Submit")}
     </div>
+    <div className="contactform_email">
+      <p> {ReasonReact.string("or email us at")} </p>
+      <EmailPopover />
+    </div>
   </div>;
 };
