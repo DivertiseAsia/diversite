@@ -2,7 +2,7 @@
 let make = (~className: option(string)=?) => {
   <div className="contactform-container">
   <form
-    action="https://formspree.io/f/contact@divertise.asia"
+    action="https://formspree.io/f/xdopdkdk"
     method="POST"
     className={
       "contactform "
@@ -24,7 +24,7 @@ let make = (~className: option(string)=?) => {
       isTextarea=true
       inputLabel="Tell us a bit more"
       placeholder="Hi! I have a project I'd like you to help with."
-      name="email"
+      name="content"
     />
     <button type_="submit" className="btn btn-solid-color1">
       {ReasonReact.string("Submit")}
