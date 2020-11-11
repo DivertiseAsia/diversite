@@ -3,9 +3,7 @@ let make = (~className: option(string)=?) => {
   let (isPopoverOpen, setPopoverOpen) = React.useState(() => false);
   let openFunc = () => setPopoverOpen(_ => true);
   let closeFunc = () => setPopoverOpen(_ => false);
-  let copyToClipboard = () => {
-    ();
-  };
+
   <div
     className={
       "email email-contact " ++ Js.Option.getWithDefault("", className)
@@ -21,7 +19,10 @@ let make = (~className: option(string)=?) => {
       <Link isExternal=true href="mailto:contact@divertise.asia">
         {ReasonReact.string("Open mail app")}
       </Link>
-      <div onClick={_ => copyToClipboard()}>
+      <div
+        onClick={_ =>
+          Utils.copyToClipboard("contact@divertise.asia") |> ignore
+        }>
         <div> {ReasonReact.string("Copy")} </div>
         <textarea id="tobecopied">
           {ReasonReact.string("contact@divertise.asia")}
