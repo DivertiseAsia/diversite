@@ -3,6 +3,8 @@ let make = (~className: option(string)=?) => {
   let (isPopoverOpen, setPopoverOpen) = React.useState(() => false);
   let openFunc = () => setPopoverOpen(_ => true);
   let closeFunc = () => setPopoverOpen(_ => false);
+  let showCopySuccessMessage = () => ();
+  let showCopyFailMessage = () => ();
 
   <div
     className={
@@ -22,14 +24,11 @@ let make = (~className: option(string)=?) => {
       <div
         onClick={_ =>
           Utils.copyToClipboard("contact@divertise.asia")
-          |> Js.Promise.(then_(() => Js.log("finish copying") |> resolve))
-          |> Js.Promise.(catch(_ => Js.log("error copying") |> resolve))
+          |> Js.Promise.(then_(_ => showCopySuccessMessage() |> resolve))
+          |> Js.Promise.(catch(_ => showCopyFailMessage() |> resolve))
           |> ignore
         }>
         <div> {ReasonReact.string("Copy")} </div>
-        <textarea id="tobecopied">
-          {ReasonReact.string("contact@divertise.asia")}
-        </textarea>
       </div>
     </div>
   </div>;
