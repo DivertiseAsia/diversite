@@ -625,6 +625,11 @@ nav .logo-link {
   }
   .popup-x { right: calc(5% + 20px);}
 }
+.contactform-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
 .contactform {
   display: flex;
   flex-direction: column;
