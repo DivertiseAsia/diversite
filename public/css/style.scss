@@ -642,15 +642,21 @@ nav .logo-link {
   .btn.btn-solid-color1 { @include btn($bg-color1, $bg-color1, $text-white) }
   .btn.btn-solid-color1:hover { @include btn(#1d364b, #1d364b, $text-white) }
 }
+$email-height: 30px;
 .contactform_email >* {display: inline;}
+.contactform_email {height: 2* $email-height;}
 .email {
+  >*{display: block;}
   svg {
     width: 170px;
     fill: $text-color2;
     transition: $transition;
   }
   cursor: pointer;
-  display: inline;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  top: -5px;
   margin: 0 5px;
   text-align: center;
 }
@@ -674,21 +680,21 @@ nav .logo-link {
   textarea {display: none;}
 }
 .popover-default {
-  height: 40px;
+  height: $email-height;
   position: relative;
   transition: $transition;
 }
 .popover-open {
   opacity: 1;
-  top: 2px;
-  height: 40px;
-  margin-bottom: 0;
+  top: -2px;
+  height: $email-height;
+  margin-bottom: -$email-height;
 }
 .popover-close {
   opacity: 0;
-  top: -40px;
+  top: -$email-height;
   height: 0;
-  margin-bottom: 40px;
+  margin-bottom: 0;
   pointer-events: none;
   touch-action: none;
   >* {
