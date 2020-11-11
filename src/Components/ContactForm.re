@@ -2,7 +2,7 @@
 let make = (~className: option(string)=?) => {
   <div className="contactform-container">
   <form
-    action="https://formspree.io/contact@divertise.asia"
+    action="https://formspree.io/f/contact@divertise.asia"
     method="POST"
     className={
       "contactform "
