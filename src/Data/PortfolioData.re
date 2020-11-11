@@ -80,12 +80,12 @@ let adsoupPortfolio: portfolioItem = {
   className: None,
   images: [
     {
-      src: adsoupapp,
+      src: "adsoupapp",
       border: PhonePortrait,
       className: Some("col-4 port-no-scroll portimg-adsoup-phone"),
     },
     {
-      src: adsoudesktop,
+      src: "adsoudesktop",
       border: Desktop,
       className: Some("col-8 port-no-scroll portimg-adsoup-desktop"),
     },
@@ -144,12 +144,12 @@ let copanelPortfolio: portfolioItem = {
   className: None,
   images: [
     {
-      src: copanelapp,
+      src: "copanelapp",
       border: PhonePortrait,
       className: Some("col-4 port-no-scroll portimg-copanel-phone"),
     },
     {
-      src: copaneldesktop,
+      src: "copaneldesktop",
       border: Desktop,
       className: Some("col-8 port-no-scroll portimg-copanel-desktop"),
     },
@@ -196,17 +196,17 @@ let eventcometPortfolio: portfolioItem = {
   className: None,
   images: [
     {
-      src: eventcometeventapp,
+      src: "eventcometeventapp",
       border: PhonePortrait,
       className: Some("col-4 port-no-scroll portimg-eventcomet-phone"),
     },
     {
-      src: eventcometscheduleapp,
+      src: "eventcometscheduleapp",
       border: PhonePortrait,
       className: Some("col-4 port-no-scroll portimg-eventcomet-phone"),
     },
     {
-      src: eventcometdateapp,
+      src: "eventcometdateapp",
       border: PhonePortrait,
       className: Some("col-4 port-no-scroll portimg-eventcomet-phone"),
     },
@@ -251,11 +251,11 @@ let mintcrowdPortfolio: portfolioItem = {
   className: None,
   images: [
     {
-      src: mintcrowdapp,
+      src: "mintcrowdapp",
       border: PhonePortraitBlack,
       className: Some("col-4 scroll-25 portimg-mintcrowd-phone"),
     },
-    {src: mintcrowddesktop, border: Desktop, className: Some("col-8")},
+    {src: "mintcrowddesktop", border: Desktop, className: Some("col-8")},
   ],
   links: [{_type: Text, href: "", caption: "(Website Coming Soon)"}],
   category: PortfolioDataType.AppPlatforms,
@@ -291,11 +291,11 @@ let boneagePortfolio: portfolioItem = {
   className: None,
   images: [
     {
-      src: boneageaiapp,
+      src: "boneageaiapp",
       border: PhonePortraitBlack,
       className: Some("col-4 scroll-25 portimg-mintcrowd-phone"),
     },
-    {src: boneageaidesktop, border: Desktop, className: Some("col-8")},
+    {src: "boneageaidesktop", border: Desktop, className: Some("col-8")},
   ],
   category: PortfolioDataType.AI,
   links: [
@@ -334,7 +334,7 @@ let gameaionePortfolio: portfolioItem = {
   title: "Game Playing Ai",
   className: None,
   images: [
-    {src: gameaione, border: PhonePortrait, className: Some("col-12")},
+    {src: "gameaione", border: PhonePortrait, className: Some("col-12")},
   ],
   category: PortfolioDataType.AI,
   links: [],
@@ -346,7 +346,7 @@ let gameaitwoPortfolio: portfolioItem = {
   title: "AI Game 2",
   className: None,
   category: PortfolioDataType.AI,
-  images: [{src: gameaitwo, border: Desktop, className: Some("col-8")}],
+  images: [{src: "gameaitwo", border: Desktop, className: Some("col-8")}],
   links: [],
   technologies: ["html5", "css", "Graphic Design", "web design"],
   body:
@@ -359,12 +359,12 @@ let ketawaPortfolio: portfolioItem = {
   category: PortfolioDataType.Design,
   images: [
     {
-      src: ketawaapp,
+      src: "ketawaapp",
       border: PhonePortrait,
       className: Some("col-4 scroll-25"),
     },
     {
-      src: ketawadesktop,
+      src: "ketawadesktop",
       border: Desktop,
       className: Some("col-8 portimg-ketawa-desktop"),
     },
@@ -400,11 +400,11 @@ let wilaamalinPortfolio: portfolioItem = {
   category: PortfolioDataType.Other,
   images: [
     {
-      src: wilaamalinapp,
+      src: "wilaamalinapp",
       border: PhonePortraitBlack,
       className: Some("col-4 scroll-30"),
     },
-    {src: wilaamalindesktop, border: Desktop, className: Some("col-8")},
+    {src: "wilaamalindesktop", border: Desktop, className: Some("col-8")},
   ],
   links: [
     {
@@ -433,11 +433,11 @@ let eastwestPortfolio: portfolioItem = {
   category: PortfolioDataType.Other,
   images: [
     {
-      src: eastwestapp,
+      src: "eastwestapp",
       border: PhonePortrait,
       className: Some("col-4 scroll-30"),
     },
-    {src: eastwestdesktop, border: Desktop, className: Some("col-8")},
+    {src: "eastwestdesktop", border: Desktop, className: Some("col-8")},
   ],
   links: [
     {
@@ -467,11 +467,11 @@ let vrPortfolio: portfolioItem = {
   category: PortfolioDataType.Other,
   images: [
     {
-      src: cvrlp,
+      src: "cvrlp",
       border: PhoneLandscape,
       className: Some("col-6 port-no-scroll portimg-cvrl-phone"),
     },
-    {src: cvrld, border: Desktop, className: Some("col-6 port-no-scroll")},
+    {src: "cvrld", border: Desktop, className: Some("col-6 port-no-scroll")},
   ],
   links: [
     {
@@ -505,12 +505,12 @@ let kikiiPortfolio: portfolioItem = {
   category: PortfolioDataType.Other,
   images: [
     {
-      src: kikiigamephone,
+      src: "kikiigamephone",
       border: PhoneLandscapeBlack,
       className: Some("portimg-kikii-phone col-5 port-no-scroll"),
     },
     {
-      src: kikiigametablet,
+      src: "kikiigametablet",
       border: Tablet,
       className: Some("col-7 port-no-scroll"),
     },
@@ -557,9 +557,9 @@ let microgamesPortfolio: portfolioItem = {
   className: None,
   category: PortfolioDataType.Other,
   images: [
-    {src: microgames1, border: PhonePortrait, className: Some("col-4")},
-    {src: microgames2, border: PhonePortrait, className: Some("col-4")},
-    {src: microgames3, border: PhonePortrait, className: Some("col-4")},
+    {src: "microgames1", border: PhonePortrait, className: Some("col-4")},
+    {src: "microgames2", border: PhonePortrait, className: Some("col-4")},
+    {src: "microgames3", border: PhonePortrait, className: Some("col-4")},
   ],
   links: [
     {
