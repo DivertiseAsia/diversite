@@ -21,7 +21,10 @@ let make = (~className: option(string)=?) => {
       </Link>
       <div
         onClick={_ =>
-          Utils.copyToClipboard("contact@divertise.asia") |> ignore
+          Utils.copyToClipboard("contact@divertise.asia")
+          |> Js.Promise.(then_(() => Js.log("finish copying") |> resolve))
+          |> Js.Promise.(catch(_ => Js.log("error copying") |> resolve))
+          |> ignore
         }>
         <div> {ReasonReact.string("Copy")} </div>
         <textarea id="tobecopied">
