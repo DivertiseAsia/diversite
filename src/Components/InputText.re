@@ -6,6 +6,7 @@ let make =
       ~placeholder: option(string)=?,
       ~inputLabel: option(string)=?,
       ~isTextarea=false,
+      ~name="",
     ) => {
   <div
     className={
@@ -21,11 +22,12 @@ let make =
       {ReasonReact.string(Js.Option.getWithDefault("", inputLabel))}
     </p>
     {isTextarea
-       ? <textarea className="input-default">
+       ? <textarea className="input-default" name=name>
            {ReasonReact.string(Js.Option.getWithDefault("", placeholder))}
          </textarea>
        : <input
            className="input-default"
+           name=name
            type_={Js.Option.getWithDefault("text", type_)}
            placeholder={Js.Option.getWithDefault("", placeholder)}
          />}

@@ -86,16 +86,17 @@ let make = (~selectedCategory: PortfolioDataType.t) => {
            "Please add your email. We will send you our portfolio.",
          )}
       </p>
-      <div className="downloadport-form">
+      <form action="https://formspree.io/f/mbjpklyn" method="POST" className="downloadport-form">
         <input
           className="input-default"
           type_="email"
           placeholder="Your Email"
+          name="email"
         />
-        <div className="btn btn-solid-color1">
+        <button type_="submit" className="btn btn-solid-color1">
           {ReasonReact.string("Submit")}
-        </div>
-      </div>
+        </button>
+      </form>
     </Popup>
     <div>
       <PortfolioItem
