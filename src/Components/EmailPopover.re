@@ -1,14 +1,15 @@
 [@react.component]
 let make = (~className: option(string)=?) => {
   let (isPopoverOpen, setPopoverOpen) = React.useState(() => false);
-  let (isCopied, setCopied) = React.useState(() => false);
-  let (isCopySuccess, setCopySuccess) = React.useState(() => true);
+  let (isCopySuccess, setCopySuccess) = React.useState(() => false);
   let openFunc = () => setPopoverOpen(_ => true);
-  let closeFunc = () => setPopoverOpen(_ => false);
-  let showCopySuccessMessage = () => ();
+  let closeFunc = () => {
+    setCopySuccess(_ => false);
+    setPopoverOpen(_ => false);
+  };
+  let showCopySuccessMessage = () => setCopySuccess(_ => true);
   let showCopyFailMessage = () => ();
   let copyClick = () => {
-    setCopied(_ => true);
     Utils.copyToClipboard("contact@divertise.asia")
     |> Js.Promise.(then_(_ => showCopySuccessMessage() |> resolve))
     |> Js.Promise.(catch(_ => showCopyFailMessage() |> resolve))
@@ -31,7 +32,20 @@ let make = (~className: option(string)=?) => {
         {ReasonReact.string("Open mail app")}
       </Link>
       <div onClick={_ => copyClick()}>
-        <div> {ReasonReact.string("Copy")} </div>
+        <div
+          className={
+            "copybtn_content copybtn_content-"
+            ++ (isCopySuccess ? "hide" : "show")
+          }>
+          {ReasonReact.string("Copy")}
+        </div>
+        <div
+          className={
+            "copybtn_content copybtn_content-"
+            ++ (isCopySuccess ? "show" : "hide")
+          }>
+          <Icon iconType=Icon.Check />
+        </div>
       </div>
     </div>
   </div>;

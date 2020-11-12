@@ -652,7 +652,7 @@ $email-height: 30px;
 .contactform_email {height: 2* $email-height;}
 .email {
   >*{display: block;}
-  svg {
+  .icon-emailcontact svg {
     width: 170px;
     fill: $text-color2;
     transition: $transition;
@@ -666,7 +666,7 @@ $email-height: 30px;
   text-align: center;
 }
 .email:hover {
-  svg {fill: $text-color2-hover}
+  .icon-emailcontact svg {fill: $text-color2-hover}
 }
 .email_popover {
   >* {
@@ -707,7 +707,21 @@ $email-height: 30px;
     touch-action: none;
   }
 }
-
+.copybtn_content {
+  transition: $transition;
+  position: relative;
+  width: 30px;
+  .icon-check svg {
+    height: 18px;
+    fill: $bg-color2;
+  }
+}
+.copybtn_content:last-child {
+  left: -30px;
+  margin-right: -30px;
+}
+.copybtn_content-show {opacity: 1;}
+.copybtn_content-hide {opacity: 0;}
 /*
 .frontpage-section {
   background: $bg-gradient1;
