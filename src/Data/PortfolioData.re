@@ -614,7 +614,7 @@ let halalblockvideoPortfolio: portfolioItem = {
     },
   ],
   links: [],
-  technologies: ["Video Editing", "2D Animation", "Storyboard"],
+  technologies: ["Video Editing", "2D Animation", "Story Board"],
   body:
     [
       <div>
@@ -639,7 +639,7 @@ let traitsignalvideoPortfolio: portfolioItem = {
     },
   ],
   links: [],
-  technologies: ["Video Editing", "2D Animation", "Storyboard"],
+  technologies: ["Video Editing", "2D Animation", "Story Board"],
   body:
     [
       <div>
@@ -667,7 +667,7 @@ let adsoupvideoPortfolio: portfolioItem = {
     },
   ],
   links: [],
-  technologies: ["Video Editing", "2D Animation", "Storyboard"],
+  technologies: ["Video Editing", "2D Animation", "Story Board"],
   body:
     [
       <div>
