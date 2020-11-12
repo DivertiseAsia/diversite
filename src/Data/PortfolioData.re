@@ -72,9 +72,8 @@ external microgames3: string =
 external cvrld: string =
   "../../../../public/projects/project-cvrl-desktop.jpg";
 [@bs.module]
-external cvrlp: string = "../../../../public/projects/project-cvrl-phone.jpg";
+external cvrlp: string = "../../../../public/projects/project-cvrl-phone.jpg" /* --------------------- Apps --------------------------*/;
 
-/* --------------------- Apps --------------------------*/
 let adsoupPortfolio: portfolioItem = {
   title: "Adsoup",
   className: None,
@@ -91,22 +90,22 @@ let adsoupPortfolio: portfolioItem = {
     },
   ],
   category: PortfolioDataType.AppPlatforms,
-  links: [],
-  /* {
-       _type: GooglePlay,
-       href: "https://play.google.com/store/apps/details?id=io.adsoup.sales.mobile",
-       caption: "Google Play"
-     },
-     {
-       _type: AppStore,
-       href: "https://itunes.apple.com/us/app/adsoup/id1415279019",
-       caption: "iTunes"
-     },
-     {
-       _type: Default,
-       href: "https://adsoup.com/?ref=divertise.asia",
-       caption: "View Website >"
-     } */
+  links: [] /* {
+     _type: GooglePlay,
+     href: "https://play.google.com/store/apps/details?id=io.adsoup.sales.mobile",
+     caption: "Google Play"
+   },
+   {
+     _type: AppStore,
+     href: "https://itunes.apple.com/us/app/adsoup/id1415279019",
+     caption: "iTunes"
+   },
+   {
+     _type: Default,
+     href: "https://adsoup.com/?ref=divertise.asia",
+     caption: "View Website >"
+   } */,
+
   technologies: [
     "React",
     "Python",
@@ -212,12 +211,12 @@ let eventcometPortfolio: portfolioItem = {
     },
   ],
   category: PortfolioDataType.AppPlatforms,
-  links: [],
-  /* {
-       _type: Default,
-       href: "https://eventcomet.com/?ref=divertise.asia",
-       caption: "View Website >"
-     } */
+  links: [] /* {
+     _type: Default,
+     href: "https://eventcomet.com/?ref=divertise.asia",
+     caption: "View Website >"
+   } */,
+
   technologies: [
     "iOS",
     "Android",
@@ -285,7 +284,113 @@ let mintcrowdPortfolio: portfolioItem = {
     ]
     |> Belt.List.toArray,
 };
-/* --------------------- AI -----------------------------*/
+let safemodePortfolio: portfolioItem = {
+  title: "Safemode",
+  className: None,
+  images: [
+    {src: "safemode1", border: PhonePortrait, className: Some("col-4")},
+    {src: "safemode2", border: PhonePortrait, className: Some("col-4")},
+    {src: "safemode3", border: PhonePortrait, className: Some("col-4")},
+  ],
+  links: [],
+  category: PortfolioDataType.AppPlatforms,
+  technologies: ["Reason", "Ux", "Ui"],
+  body:
+    [
+      <div>
+        <p>
+          {string(
+             "Safe Mode is an application aimed to make the society a little safer for everyone. The application allows users to share their location with their close contacts. It also allows users to call their close contact or an emergency number. The app aims to give the users a peace of mind that there is someone watching their back. ",
+           )}
+        </p>
+      </div>,
+    ]
+    |> Belt.List.toArray,
+};
+let plateupPortfolio: portfolioItem = {
+  title: "Plateup",
+  className: None,
+  images: [
+    {src: "plateup1", border: PhonePortrait, className: Some("col-4")},
+    {src: "plateup2", border: PhonePortrait, className: Some("col-4")},
+    {src: "plateup3", border: PhonePortrait, className: Some("col-4")},
+  ],
+  links: [
+    {
+      _type: Default,
+      href: "https://www.plateup.app/",
+      caption: "View Website >",
+    },
+  ],
+  category: PortfolioDataType.AppPlatforms,
+  technologies: [],
+  body:
+    [
+      <div>
+        <p>
+          {string(
+             "Plate Up is an application aimed at making healthy diets an easy, affordable option. The app allows users to select recipes, order ingredients, and count calories seamlessly.",
+           )}
+        </p>
+      </div>,
+    ]
+    |> Belt.List.toArray,
+};
+let ihapmPortfolio: portfolioItem = {
+  title: "IHAPM",
+  className: None,
+  images: [
+    {src: "ihapm1", border: PhonePortrait, className: Some("col-4")},
+    {src: "ihapm2", border: PhonePortrait, className: Some("col-4")},
+    {src: "ihapm3", border: PhonePortrait, className: Some("col-4")},
+  ],
+  links: [{_type: Text, href: "", caption: "Website Coming Soon"}],
+  category: PortfolioDataType.AppPlatforms,
+  technologies: [],
+  body:
+    [
+      <div>
+        <p>
+          {string(
+             "IHAPM is a smart-home kit that lets users control all electronic devices in their home through just a tab on their smart phone",
+           )}
+        </p>
+      </div>,
+    ]
+    |> Belt.List.toArray,
+} /* --------------------- AI -----------------------------*/;
+let traitsignalPortfolio: portfolioItem = {
+  title: "Trait Signal",
+  className: None,
+  images: [
+    {
+      src: "traitsignalmobile",
+      border: PhonePortraitBlack,
+      className: Some("col-4 scroll-25 portimg-mintcrowd-phone"),
+    },
+    {src: "traitsignaldesktop", border: Desktop, className: Some("col-8")},
+  ],
+  links: [
+    {
+      _type: Default,
+      href: "https://traitsignal.com/",
+      caption: "View Website >",
+    },
+  ],
+  category: PortfolioDataType.AI,
+  technologies: [],
+  body:
+    [
+      <div>
+        <p>
+          {string(
+             "Trait Signal is a webapp that is built to help car dealers grasp their customer's opinions about cars they are trying to sell.",
+           )}
+        </p>
+      </div>,
+    ]
+    |> Belt.List.toArray,
+};
 let boneagePortfolio: portfolioItem = {
   title: "Bone Age",
   className: None,
@@ -351,8 +456,7 @@ let gameaitwoPortfolio: portfolioItem = {
   technologies: ["html5", "css", "Graphic Design", "web design"],
   body:
     [<div> <p> {string("Some body text")} </p> </div>] |> Belt.List.toArray,
-};
-/* ----------------------- Websites ---------------------*/
+} /* ----------------------- Websites ---------------------*/;
 let ketawaPortfolio: portfolioItem = {
   title: "Ketawa Pet Friendly Hotel Website",
   className: None,
@@ -383,6 +487,44 @@ let ketawaPortfolio: portfolioItem = {
         <p>
           {string(
              "Ketawa Hotel is a pet friendly hotel and cafe. Ketawa is rebranding and it needs its website to change to match with the new Cooperate Identity. So we redesigned the website. It has a warm, cozy, friendly, but simple look and feel to represent the hotel's characteristic.",
+           )}
+        </p>
+        <p>
+          {string(
+             "The site was built with HTML, Javascript, and styled with CSS in the framework of Bootstrap.",
+           )}
+        </p>
+      </div>,
+    ]
+    |> Belt.List.toArray,
+};
+let alldaytattooPortfolio: portfolioItem = {
+  title: "All Day Tattoo Website",
+  className: None,
+  category: PortfolioDataType.Design,
+  images: [
+    {
+      src: "alldaytattoo",
+      border: Desktop,
+      className: Some("col-8 portimg-ketawa-desktop"),
+    },
+  ],
+  links: [],
+  technologies: [
+    "html5",
+    "css",
+    "wordpress",
+    "Js",
+    "Graphic Design",
+    "web design",
+  ],
+  body:
+    [
+      <div>
+        <p>
+          {string(
+             "Alldaytattoo is a website redesign project. It is Built with Wordpress Visual Builder, Divi, and styled with additional CSS.
+             ",
            )}
         </p>
         <p>
@@ -460,7 +602,87 @@ let eastwestPortfolio: portfolioItem = {
     ]
     |> Belt.List.toArray,
 };
-/* ----------------------- Virtual Reality ---------------------- */
+let halalblockvideoPortfolio: portfolioItem = {
+  title: "Halal Blockchain Promotional Video",
+  className: None,
+  category: PortfolioDataType.Other,
+  images: [
+    {
+      src: "halalblockvideo",
+      border: Desktop,
+      className: Some("col-8 portimg-ketawa-desktop"),
+    },
+  ],
+  links: [],
+  technologies: ["Video Editing", "2D Animation", "Storyboard"],
+  body:
+    [
+      <div>
+        <p>
+          {string(
+             "Halal Blockchain has a grand vision of integrating the traditional Halal products with Blockchain Technology. We are honoured to be trusted to visualize and vocalize that vision in a 2-minute long video, on which we worked on all process, from storyboard to concept art to animating.",
+           )}
+        </p>
+      </div>,
+    ]
+    |> Belt.List.toArray,
+};
+let traitsignalvideoPortfolio: portfolioItem = {
+  title: "Trait Signal Promotional Video",
+  className: None,
+  category: PortfolioDataType.Other,
+  images: [
+    {
+      src: "traitsignalvideo",
+      border: Desktop,
+      className: Some("col-8 portimg-ketawa-desktop"),
+    },
+  ],
+  links: [],
+  technologies: ["Video Editing", "2D Animation", "Storyboard"],
+  body:
+    [
+      <div>
+        <p>
+          {string(
+             "Traitsignal is a startup aimed to use technology for better communications between customers and car manufacturers.
+
+             Working with them, we created a 90-second long animation to explain how their products work, and how it would change the car industry.
+             ",
+           )}
+        </p>
+      </div>,
+    ]
+    |> Belt.List.toArray,
+};
+let adsoupvideoPortfolio: portfolioItem = {
+  title: "Adsoup Promotional Video",
+  className: None,
+  category: PortfolioDataType.Other,
+  images: [
+    {
+      src: "adsoupvideo",
+      border: Desktop,
+      className: Some("col-8 portimg-ketawa-desktop"),
+    },
+  ],
+  links: [],
+  technologies: ["Video Editing", "2D Animation", "Storyboard"],
+  body:
+    [
+      <div>
+        <p>
+          {string(
+             "Adsoup is a startup who uses technology to make smoother communications between creative agencies and their clients.
+
+             In this video, we worked closely with Adsoup from storyboard to finish to tell the story of their product better.
+             ",
+           )}
+        </p>
+      </div>,
+    ]
+    |> Belt.List.toArray,
+} /* ----------------------- Virtual Reality ---------------------- */;
 let vrPortfolio: portfolioItem = {
   title: "CXRL",
   className: None,
@@ -497,8 +719,7 @@ let vrPortfolio: portfolioItem = {
       </div>,
     ]
     |> Belt.List.toArray,
-};
-/* ----------------------- Games ---------------------------*/
+} /* ----------------------- Games ---------------------------*/;
 let kikiiPortfolio: portfolioItem = {
   title: "Kikii on the Run",
   className: Some("kikii-image"),

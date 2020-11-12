@@ -86,7 +86,10 @@ let make = (~selectedCategory: PortfolioDataType.t) => {
            "Please add your email. We will send you our portfolio.",
          )}
       </p>
-      <form action="https://formspree.io/f/mbjpklyn" method="POST" className="downloadport-form">
+      <form
+        action="https://formspree.io/f/mbjpklyn"
+        method="POST"
+        className="downloadport-form">
         <input
           className="input-default"
           type_="email"
@@ -104,12 +107,20 @@ let make = (~selectedCategory: PortfolioDataType.t) => {
         key="mintcrowd"
         item=mintcrowdPortfolio
       />
+      <PortfolioItem key="safemode" item=safemodePortfolio />
+      <PortfolioItem key="safemode" item=plateupPortfolio />
+      <PortfolioItem key="safemode" item=ihapmPortfolio />
       <PortfolioItem key="adsoup" item=adsoupPortfolio />
       <PortfolioItem key="copanel" item=copanelPortfolio />
       <PortfolioItem key="eventcomet" item=eventcometPortfolio />
       <PortfolioItem key="boneage" item=boneagePortfolio />
+      <PortfolioItem key="traitsignal" item=traitsignalPortfolio />
       <PortfolioItem key="vr" item=vrPortfolio />
       <PortfolioItem key="ketawa" item=ketawaPortfolio />
+      <PortfolioItem key="alldaytattoo" item=alldaytattooPortfolio />
+      <PortfolioItem key="halalblockvideo" item=halalblockvideoPortfolio />
+      <PortfolioItem key="traitsignalvideo" item=traitsignalvideoPortfolio />
+      <PortfolioItem key="adsoupvideo" item=adsoupvideoPortfolio />
       <PortfolioItem key="willamailn" item=wilaamalinPortfolio />
       <PortfolioItem key="eastwest" item=eastwestPortfolio />
       <PortfolioItem key="kikii" item=kikiiPortfolio />
