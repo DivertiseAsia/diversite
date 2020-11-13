@@ -91,20 +91,21 @@ let adsoupPortfolio: portfolioItem = {
   ],
   category: [PortfolioDataType.AppPlatforms],
   links: [] /* {
-       _type: GooglePlay,
-       href: "https://play.google.com/store/apps/details?id=io.adsoup.sales.mobile",
-       caption: "Google Play"
-     },
-     {
-       _type: AppStore,
-       href: "https://itunes.apple.com/us/app/adsoup/id1415279019",
-       caption: "iTunes"
-     },
-     {
-       _type: Default,
-       href: "https://adsoup.com/?ref=divertise.asia",
-       caption: "View Website >"
-     } */,
+     _type: GooglePlay,
+     href: "https://play.google.com/store/apps/details?id=io.adsoup.sales.mobile",
+     caption: "Google Play"
+   },
+   {
+     _type: AppStore,
+     href: "https://itunes.apple.com/us/app/adsoup/id1415279019",
+     caption: "iTunes"
+   },
+   {
+     _type: Default,
+     href: "https://adsoup.com/?ref=divertise.asia",
+     caption: "View Website >"
+   } */,
+
   technologies: [
     "React",
     "Python",
@@ -211,10 +212,11 @@ let eventcometPortfolio: portfolioItem = {
   ],
   category: [PortfolioDataType.AppPlatforms],
   links: [] /* {
-       _type: Default,
-       href: "https://eventcomet.com/?ref=divertise.asia",
-       caption: "View Website >"
-     } */,
+     _type: Default,
+     href: "https://eventcomet.com/?ref=divertise.asia",
+     caption: "View Website >"
+   } */,
+
   technologies: [
     "iOS",
     "Android",
@@ -375,7 +377,7 @@ let traitsignalPortfolio: portfolioItem = {
       caption: "View Website >",
     },
   ],
-  category: [PortfolioDataType.AI],
+  category: [PortfolioDataType.AI, PortfolioDataType.AppPlatforms],
   technologies: [],
   body:
     [
@@ -400,7 +402,7 @@ let boneagePortfolio: portfolioItem = {
     },
     {src: "boneageaidesktop", border: Desktop, className: Some("col-8")},
   ],
-  category: [PortfolioDataType.AI],
+  category: [PortfolioDataType.AI, PortfolioDataType.AppPlatforms],
   links: [
     {
       _type: Default,
