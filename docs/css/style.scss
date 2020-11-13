@@ -8,12 +8,14 @@ $font-header: 'OrkneyRegular', sans-serif;
 $lineheigh: 1.8em;
 
 $bg-grey: #eaeaea;
+$bg-grey-hover: #d1d1d1;
 $bg-color1: #2d506d;
 $bg-color2: #23a399;
 $bg-color2-dark: #14918a;
 $text-white: white;
 $text-color1: #2d506d;
 $text-color2:#23a399;
+$text-color2-hover:#18837a;
 $text-color2-light: #a4dad4;
 $border-grey: #eaeaea;
 
@@ -97,7 +99,32 @@ a {
   @include btn(transparent, $bg-color1, $bg-color1); 
   cursor: default; 
 }
+.btn-line-white { @include btn(transparent, $text-white, $text-white) }
+.btn-line-white:hover { @include btn($text-white, $text-white, $bg-color1) }
+.btn-solid-color2 { @include btn($bg-color2, $bg-color2, $text-white) }
+.btn-solid-color2:hover { @include btn(#1a7d76, #1a7d76, $text-white) }
+.btn-solid-color1 { @include btn($bg-color1, $bg-color1, $text-white) }
+.btn-solid-color1:hover { @include btn(#1d364b, #1d364b, $text-white) }
 
+.input-default {
+  border-radius: $border-radius;
+  padding: 8px;
+  min-width: 100px;
+  border: $border-default;
+  border-color: $border-grey;
+  transition: $transition;
+}
+.inputtext {
+  p {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+  .input-default {width: 100%;}
+  margin-bottom: 10px;
+
+}
 /* ------------- Default Classes ------------- */
 
 .-text-small { font-size: .7em; }
@@ -127,6 +154,8 @@ a {
 
 .text-white { color: $text-white; }
 .text-color1 { color: $text-color1 !important; }
+.text-color-2 { color: $text-color2; }
+.link.text-color-2:hover {color: $bg-color2-dark}
 .letter-spacing { letter-spacing: 0.1em; }
 
 .icon svg {
@@ -144,7 +173,55 @@ ul li {
 ul.ul-li-dash li:before {
   content: "- ";
 }
+
+.hidden-lg-up {display: none;}
+
 a:hover { text-decoration: none; }
+
+/* ---------- Portfolio Page Image url list ----------- */
+.ketawadesktop {background-image: url('../projects/website-ketawa-d.jpg')}
+.ketawaapp {background-image: url('../projects/app-ketawa.png')}
+.alldaytattoo {background-image: url('../projects/alldaytattoo.png')}
+.wilaamalindesktop {background-image: url('../projects/website-wilaamalin.png')}
+.wilaamalinapp {background-image: url('../projects/app-wilaamalin.png')}
+.eastwestdesktop {background-image: url('../projects/website-eastwest.png')}
+.eastwestapp {background-image: url('../projects/app-eastwest.png')}
+.adsoupapp {background-image: url('../projects/app-adsoup.jpg')}
+.adsoudesktop {background-image: url('../projects/website-adsoup.jpg')}
+.copanelapp {background-image: url('../projects/app-copanel.jpg')}
+.copaneldesktop {background-image: url('../projects/website-copanel.jpg')}
+.eventcometeventapp {background-image: url('../projects/app-eventcomet-event.jpg')}
+.eventcometscheduleapp {background-image: url('../projects/app-eventcomet-schedule.jpg')}
+.eventcometdateapp {background-image: url('../projects/app-eventcomet-date.jpg')}
+.mintcrowddesktop {background-image: url('../projects/mintcrowd.jpg')}
+.mintcrowdapp {background-image: url('../projects/mintcrowd-app.jpg')}
+.safemode1 {background-image: url('../projects/safemode1.png')}
+.safemode2 {background-image: url('../projects/safemode2.png')}
+.safemode3 {background-image: url('../projects/safemode3.png')}
+.plateup1 {background-image: url('../projects/plateup1.png')}
+.plateup2 {background-image: url('../projects/plateup2.png')}
+.plateup3 {background-image: url('../projects/plateup3.png')}
+.traitsignalmobile {background-image: url('../projects/traitsignalmobile.png')}
+.traitsignaldesktop {background-image: url('../projects/traitsignaldesktop.png')}
+.ihapm1 {background-image: url('../projects/ihapm1.png')}
+.ihapm2 {background-image: url('../projects/ihapm2.png')}
+.ihapm3 {background-image: url('../projects/ihapm3.png')}
+.boneageaidesktop {background-image: url('../projects/nextcare3.png')}
+.boneageaiapp {background-image: url('../projects/app-boneage.png')}
+.gameaione {background-image: url('../projects/website-adsoup.jpg')}
+.gameaitwo {background-image: url('../projects/website-adsoup.jpg')}
+.cvrl {background-image: url('../projects/website-adsoup.jpg')}
+.kikiigamephone {background-image: url('../projects/game-kikii2.jpg')}
+.kikiigametablet {background-image: url('../projects/game-kikii1.png')}
+.microgames1 {background-image: url('../projects/game-microgames1.jpg')}
+.microgames2 {background-image: url('../projects/game-microgames2.jpg')}
+.microgames3 {background-image: url('../projects/game-microgames3.png')}
+.cvrld {background-image: url('../projects/project-cvrl-desktop.jpg')}
+.cvrlp {background-image: url('../projects/project-cvrl-phone.jpg')}
+.halalblockvideo {background-image: url('../projects/halablockchain-video.png')}
+.traitsignalvideo {background-image: url('../projects/traitsignal-video.png')}
+.adsoupvideo {background-image: url('../projects/adsoup-video.png')}
+
 /* ------------- Bootstrap Elements --------------*/
 
 .container {
@@ -201,7 +278,7 @@ nav.nav {
   display: block;
 }
 .nav a {
-  padding: 0.5em 2em;
+  padding: 7px 28px;
   display: inline-flex;
   transition: $transition;
   cursor: pointer;
@@ -211,8 +288,17 @@ nav.nav {
   flex-direction: column;
   align-items: center;
 }
+.nav a span {
+  font-weight: $font-weight-medium;
+  color: $text-white;
+  font-family: $font-header;
+}
 .nav .nav-container > div {
   display: inline-block;
+}
+.nav .btn {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 nav .logo-link {
   height: $header-height - 5px;
@@ -352,12 +438,14 @@ nav .logo-link {
   background-size: cover;
 
   height: 100vh;
+  min-height: 480px;
   padding-top: 50px;
   display: flex;
   align-items: center;
   /* For Nav Menu Background */
   z-index: 2;
   position: relative;
+  transition: ease 1s;
 
   animation: fadeIn ease 1s;
   -webkit-animation: fadeIn ease 1s;
@@ -379,11 +467,21 @@ nav .logo-link {
     text-transform: uppercase;
     color: $text-white;
     text-shadow: $text-shadow;
+    transition: $transition;
   }
   p {
     color: $text-white;
     text-shadow: $text-shadow;
+    transition: $transition;
   }
+  .btn { 
+    @include btn(transparent, $text-white, $text-white);
+    padding-right: 40px;
+    padding-left: 40px;
+    margin-top: 5px;
+    transition: $transition;
+  }
+  .btn:hover {@include btn($text-white,$text-white,$bg-color1);}
 
   .dots {
     position: absolute;
@@ -404,6 +502,12 @@ nav .logo-link {
       background-color: #ffffff !important;
     }
   }
+}
+.hero.ball, .hero.network {
+  background-color: white;
+  h1, p {color: $bg-color1;}
+  .btn {@include btn(transparent, $bg-color1,  $bg-color1);}
+  .btn:hover {@include btn($bg-color1, $bg-color1, $text-white);}
 }
 .webgl-fade-in {
   animation: fadeIn ease 0.2s;
@@ -484,7 +588,185 @@ nav .logo-link {
   }
   .btn:hover { @include btn( $text-color2-light , $text-color2-light, $text-color1); }
 }
-
+.popup-closed {
+  pointer-events: none;
+}
+.popup-closed .popup-backing {
+  background: #00000000;
+  max-height: 0;
+}
+.popup-closed .popup {
+  max-height: 0;
+}
+.popup-open .popup {
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  padding: 20px;
+}
+.popup {
+  overflow: hidden;
+  background: white;
+  transition: all 0.5s;
+  z-index: 1;
+  border-radius: 5px;
+  padding: 0;
+  transition: 0.1s;
+}
+.popup-content{max-width: 100%;}
+.popup-backing {
+  background: rgba(0,0,0,0.3);
+  overflow: hidden;
+  max-height: 100%;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  transition: all 0.5s;
+  position: absolute;
+  top: 0;
+  left: 0; 
+}
+.popup-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+.popup-x {
+  font-family: $font-header;
+  cursor: pointer;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  width: 30px;
+}
+.popup-open .popup-x {
+  position: absolute;
+}
+// Build your idea popup
+.buildyouridea-popup {
+  p {
+    color: $text-color1;
+    text-shadow: none;
+  }
+  .popup {
+    width: 90%;
+    height: 90%;
+  }
+  .popup-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px;
+    height: 100%;
+    >* {
+      width: 45%;
+    }
+  }
+  .popup-x { right: calc(5% + 20px);}
+}
+.contactform-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.contactform {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  height: 100%;
+  >* {flex-grow: 0}
+  >.inputtext-textarea {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    p {flex-grow: 0;}
+    textarea {flex-grow: 1;}
+  }
+  .inputtext {width: 100%;}
+  .btn.btn-solid-color1 { @include btn($bg-color1, $bg-color1, $text-white) }
+  .btn.btn-solid-color1:hover { @include btn(#1d364b, #1d364b, $text-white) }
+}
+$email-height: 30px;
+.contactform_email >* {display: inline;}
+.contactform_email {height: 2* $email-height;}
+.email {
+  >*{display: block;}
+  .icon-emailcontact svg {
+    width: 170px;
+    fill: $text-color2;
+    transition: $transition;
+  }
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  top: -5px;
+  margin: 0 5px;
+  text-align: center;
+}
+.email:hover {
+  .icon-emailcontact svg {fill: $text-color2-hover}
+}
+.email_popover {
+  >* {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: $bg-grey;  
+    padding: 0 7px;
+    border-radius: 7px;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.5);
+    height: 100%;
+    transition: $transition;
+  }
+  >*:first-child {margin-right: 7px;}
+  >*:hover {background: $bg-grey-hover;}
+  textarea {display: none;}
+}
+.popover-default {
+  height: $email-height;
+  position: relative;
+  transition: $transition;
+}
+.popover-open {
+  opacity: 1;
+  top: -2px;
+  height: $email-height;
+  margin-bottom: -$email-height;
+}
+.popover-close {
+  opacity: 0;
+  top: -$email-height;
+  height: 0;
+  margin-bottom: 0;
+  pointer-events: none;
+  touch-action: none;
+  >* {
+    pointer-events: none;
+    touch-action: none;
+  }
+}
+.copybtn_content {
+  transition: $transition;
+  position: relative;
+  width: 30px;
+  .icon-check svg {
+    height: 18px;
+    fill: $bg-color2;
+  }
+}
+.copybtn_content:last-child {
+  left: -30px;
+  margin-right: -30px;
+}
+.copybtn_content-show {opacity: 1;}
+.copybtn_content-hide {opacity: 0;}
 /*
 .frontpage-section {
   background: $bg-gradient1;
@@ -529,6 +811,13 @@ nav .logo-link {
       margin: 20px auto;
     }
   }
+}
+/* ---------- Contacts Page ----------- */
+.contact-link {
+  font-weight: 700;
+}
+.contact-page_invisible-input {
+  display: none;
 }
 /* ------------ Careers Page ------------*/
 .career_lookingfor .image-background {
@@ -620,7 +909,11 @@ nav .logo-link {
   width: 100%;
   z-index: 1;
   height: $section-header-height + 20px;
+  height: 110px;
   margin-top: -2px;
+}
+.ourwork_section-header {
+  clip-path: none;
 }
 .ourwork_section-header-content {
   background: transparent;
@@ -635,7 +928,8 @@ nav .logo-link {
   background: transparent;
   margin-top: 10px;
   width: 100%;
-  padding: 0 60px;
+  padding: 0;
+  justify-content: center;
   height: auto;
   input {
     width: 250px;
@@ -682,6 +976,7 @@ nav .logo-link {
 .section-portfolio {
   padding-top: 60px;
   padding-bottom: 60px;
+  transition: $transition;
   h3 { margin-bottom: 30px; }
 }
 .section-portfolio:nth-child(even) { background-color: $bg-grey; } 
@@ -695,6 +990,94 @@ nav .logo-link {
 .scroll-25 .scroll-long { transition: all 25s; }
 .scroll-30 .scroll-long { transition: all 30s; }
 
+/* Download Port btn */
+.downloadport-btn {
+  position: fixed;
+  right: 35px;
+  bottom: 35px;
+  z-index: 99;
+  box-shadow: 0 0 10px 3px rgba(0,0,0,0.4);
+  font-size: 18px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: white;
+}
+.downloadport-popup {
+  .btn, .input-default {
+    margin: 5px;
+    height: 44px;
+  }
+  .popup-close-btn {@include btn(rgb(170, 170, 170),rgb(170, 170, 170),$text-white)}
+  .popup-close-btn:hover {@include btn(grey,grey,$text-white)}
+  .popup-backing {background: transparent;}
+  .popup {
+    position: absolute;
+    right: 24px;
+    bottom: 30px;
+    >* {
+      display: inline-block;
+      vertical-align: bottom;
+    }
+  }
+  .downloadport-form {
+    display: flex;
+    justify-content: space-between;
+    >* {
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
+    >input {flex-shrink: 1;}
+  }
+}
+.downloadport-popup.popup-open .popup {box-shadow: 0 0 10px 2px rgba(0,0,0,0.5);}
+@mixin portitem-hide() {
+  transform: scale(0);
+  // overflow: hidden;
+  height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  opacity: 0;
+}
+@mixin portitem-show() {
+  transform: scale(1);
+  // overflow: auto;
+  height: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  opacity: 1;
+}
+.nav a:not(.logo-link):not(.btn).port-filter.selected::after {width: 35px;}
+.port-all {
+  .item-all,
+  .item-ai,
+  .item-appsandplatforms,
+  .item-design,
+  .item-other {@include portitem-show()}
+}
+.port-ai {
+  .item-appsandplatforms,
+  .item-design,
+  .item-other {@include portitem-hide()}
+  .item-ai {@include portitem-show()}
+}
+.port-appsandplatforms {
+  .item-ai,
+  .item-design,
+  .item-other {@include portitem-hide()}
+  .item-appsandplatforms {@include portitem-show()}
+}
+.port-design {
+  .item-ai,
+  .item-appsandplatforms,
+  .item-other {@include portitem-hide()}
+  .item-design {@include portitem-show()}
+}
+.port-other {
+  .item-ai,
+  .item-appsandplatforms,
+  .item-design {@include portitem-hide()}
+  .item-other {@include portitem-show()}
+}
 /* Default portimg-container style */
 .portimg-container {
   width: 90%;
@@ -1003,53 +1386,70 @@ and (max-width: 1200px) {
   .page-home .nav {background: transparent;}
 }
 
+@media only screen
+and (max-width: 992px) {
+  .hidden-md-down {display: none;}
+  .hidden-lg-up {display: inline;}
+  .page-ourwork_nav.nav a:not(.btn):hover::after {
+    width: 14px;
+  }
+  .nav a:not(.logo-link):not(.btn).port-filter.selected::after {width: 14px;}
+}
+
 /* -------- Tablets Portrait ---------*/
 @media only screen
 and (max-width: 768px) {
   /* Tablet Nav*/
   .page-home {
     .nav {background: #23a399d9;}
-    .nav-container {background: $bg-color2;}
+    // .nav-container {background: $bg-color2;}
   }
-  .nav-icon {
+  .nav a:not(.logo-link) {
+    padding: 7px 10px; 
+  }
+  .nav-container .link:first-child {display: none;}
+  .page-ourwork_nav {
+    .nav-icon {
     display: inline-block;
-  }
-  .nav-container {
-    position: absolute;
-    width: 100vw;
-    left: 0;
-    box-sizing: border-box;
-    text-align: center;
-    height: 0;
-    margin-top: 0;
-    background: $bg-color1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    top: $header-height;
-    pointer-events: none;
-    z-index: 99;
-    opacity: 0;
-    a {
+    }
+    .nav-container {
+      position: absolute;
       width: 100vw;
+      left: 0;
+      box-sizing: border-box;
+      text-align: center;
+      height: 0;
+      margin-top: 0;
+      background: $bg-color1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      top: $header-height;
+      pointer-events: none;
+      z-index: 99;
+      opacity: 0;
+      a {
+        width: 100vw;
+      }
+    }
+    input:checked {
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      z-index: 90;
+      position: absolute;
+    }
+    input:checked ~ .nav-container {
+      height: 250px;
+      pointer-events: initial;
+      box-shadow: 2px 2px 12px 0px #cecece;
+      box-shadow: 2px 10px 12px 0px rgba(0,0,0,0.2);
+      opacity: 1;
     }
   }
-  .nav input:checked {
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    z-index: 90;
-    position: absolute;
-  }
-  .nav input:checked ~ .nav-container {
-    height: 250px;
-    pointer-events: initial;
-    box-shadow: 2px 2px 12px 0px #cecece;
-    box-shadow: 2px 10px 12px 0px rgba(0,0,0,0.2);
-    opacity: 1;
-  }
+  
   /*Tablet - Home Page*/
   .hero {
     height: 60vh;
@@ -1127,6 +1527,12 @@ and (max-width: 768px) {
 /* -------- Phones ---------*/
 @media only screen
 and (max-width: 576px) {
+  /*Tablet - Home Page*/
+  .hero {
+    .dots {
+      bottom: 25px;
+    }
+  }
   .team-benefits {
     padding: 15px 10px;
   }
@@ -1182,6 +1588,12 @@ and (max-width: 576px) {
   .desktop .portimg-container::after {
     margin-top: -20px;
   }
+  .buildyouridea-popup {
+    .popup-content {
+      flex-direction: row;
+      >*{width: 100%;}
+    }
+  }
 }
 
 /* -------- Small Phones ---------*/
@@ -1202,6 +1614,11 @@ and (max-width: 400px) {
   }
   /* Small Phone Port */
   .phone-portrait { padding: 0; }
+  .page-ourwork_nav > h3 {
+    width: 100%;
+    text-align: center;
+  }
+  .page-ourwork .ourwork_section-header {height: 150px;}
 }
 
 /* --------- Iphone4 ------------*/
