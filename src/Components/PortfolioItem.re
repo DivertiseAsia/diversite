@@ -36,11 +36,12 @@ let additional_classname = (category:PortfolioDataType.t) => {
 };
 
 [@react.component]
-let make = (~id: option(string)=?, ~item: portfolioItem) => {
+let make = (~id: option(string)=?, ~className="", ~item: portfolioItem) => {
   <div
     ?id
     className={
       "section-portfolio "
+      ++ className ++ " "
       ++ Js.Option.getWithDefault("section-portfolio-default", item.className)
       ++ " " ++ (item.category |> List.map(additional_classname) |> List.fold_left((acc, s) => acc ++ " " ++ s, ""))
     }>
