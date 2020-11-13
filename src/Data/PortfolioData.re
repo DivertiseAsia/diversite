@@ -89,23 +89,22 @@ let adsoupPortfolio: portfolioItem = {
       className: Some("col-8 port-no-scroll portimg-adsoup-desktop"),
     },
   ],
-  category: PortfolioDataType.AppPlatforms,
+  category: [PortfolioDataType.AppPlatforms],
   links: [] /* {
-     _type: GooglePlay,
-     href: "https://play.google.com/store/apps/details?id=io.adsoup.sales.mobile",
-     caption: "Google Play"
-   },
-   {
-     _type: AppStore,
-     href: "https://itunes.apple.com/us/app/adsoup/id1415279019",
-     caption: "iTunes"
-   },
-   {
-     _type: Default,
-     href: "https://adsoup.com/?ref=divertise.asia",
-     caption: "View Website >"
-   } */,
-
+       _type: GooglePlay,
+       href: "https://play.google.com/store/apps/details?id=io.adsoup.sales.mobile",
+       caption: "Google Play"
+     },
+     {
+       _type: AppStore,
+       href: "https://itunes.apple.com/us/app/adsoup/id1415279019",
+       caption: "iTunes"
+     },
+     {
+       _type: Default,
+       href: "https://adsoup.com/?ref=divertise.asia",
+       caption: "View Website >"
+     } */,
   technologies: [
     "React",
     "Python",
@@ -153,7 +152,7 @@ let copanelPortfolio: portfolioItem = {
       className: Some("col-8 port-no-scroll portimg-copanel-desktop"),
     },
   ],
-  category: PortfolioDataType.AppPlatforms,
+  category: [PortfolioDataType.AppPlatforms],
   links: [
     {
       _type: Default,
@@ -210,13 +209,12 @@ let eventcometPortfolio: portfolioItem = {
       className: Some("col-4 port-no-scroll portimg-eventcomet-phone"),
     },
   ],
-  category: PortfolioDataType.AppPlatforms,
+  category: [PortfolioDataType.AppPlatforms],
   links: [] /* {
-     _type: Default,
-     href: "https://eventcomet.com/?ref=divertise.asia",
-     caption: "View Website >"
-   } */,
-
+       _type: Default,
+       href: "https://eventcomet.com/?ref=divertise.asia",
+       caption: "View Website >"
+     } */,
   technologies: [
     "iOS",
     "Android",
@@ -257,7 +255,7 @@ let mintcrowdPortfolio: portfolioItem = {
     {src: "mintcrowddesktop", border: Desktop, className: Some("col-8")},
   ],
   links: [{_type: Text, href: "", caption: "(Website Coming Soon)"}],
-  category: PortfolioDataType.AppPlatforms,
+  category: [PortfolioDataType.AppPlatforms],
   technologies: [
     "Reason",
     "Python",
@@ -293,7 +291,7 @@ let safemodePortfolio: portfolioItem = {
     {src: "safemode3", border: PhonePortrait, className: Some("col-4")},
   ],
   links: [],
-  category: PortfolioDataType.AppPlatforms,
+  category: [PortfolioDataType.AppPlatforms],
   technologies: ["Reason", "Ux", "Ui"],
   body:
     [
@@ -322,7 +320,7 @@ let plateupPortfolio: portfolioItem = {
       caption: "View Website >",
     },
   ],
-  category: PortfolioDataType.AppPlatforms,
+  category: [PortfolioDataType.AppPlatforms],
   technologies: [],
   body:
     [
@@ -345,7 +343,7 @@ let ihapmPortfolio: portfolioItem = {
     {src: "ihapm3", border: PhonePortrait, className: Some("col-4")},
   ],
   links: [{_type: Text, href: "", caption: "Website Coming Soon"}],
-  category: PortfolioDataType.AppPlatforms,
+  category: [PortfolioDataType.AppPlatforms],
   technologies: [],
   body:
     [
@@ -377,7 +375,7 @@ let traitsignalPortfolio: portfolioItem = {
       caption: "View Website >",
     },
   ],
-  category: PortfolioDataType.AI,
+  category: [PortfolioDataType.AI],
   technologies: [],
   body:
     [
@@ -402,7 +400,7 @@ let boneagePortfolio: portfolioItem = {
     },
     {src: "boneageaidesktop", border: Desktop, className: Some("col-8")},
   ],
-  category: PortfolioDataType.AI,
+  category: [PortfolioDataType.AI],
   links: [
     {
       _type: Default,
@@ -441,7 +439,7 @@ let gameaionePortfolio: portfolioItem = {
   images: [
     {src: "gameaione", border: PhonePortrait, className: Some("col-12")},
   ],
-  category: PortfolioDataType.AI,
+  category: [PortfolioDataType.AI],
   links: [],
   technologies: ["Game Design", "Graphic Design", "Ux", "Ui"],
   body:
@@ -450,8 +448,8 @@ let gameaionePortfolio: portfolioItem = {
 let gameaitwoPortfolio: portfolioItem = {
   title: "AI Game 2",
   className: None,
-  category: PortfolioDataType.AI,
-  images: [{src: "gameaitwo", border: Desktop, className: Some("col-8")}],
+  category: [PortfolioDataType.AI],
+  images: [{src: gameaitwo, border: Desktop, className: Some("col-8")}],
   links: [],
   technologies: ["html5", "css", "Graphic Design", "web design"],
   body:
@@ -460,7 +458,7 @@ let gameaitwoPortfolio: portfolioItem = {
 let ketawaPortfolio: portfolioItem = {
   title: "Ketawa Pet Friendly Hotel Website",
   className: None,
-  category: PortfolioDataType.Design,
+  category: [PortfolioDataType.Design],
   images: [
     {
       src: "ketawaapp",
@@ -501,7 +499,7 @@ let ketawaPortfolio: portfolioItem = {
 let alldaytattooPortfolio: portfolioItem = {
   title: "All Day Tattoo Website",
   className: None,
-  category: PortfolioDataType.Design,
+  category: [PortfolioDataType.Design],
   images: [
     {
       src: "alldaytattoo",
@@ -539,7 +537,7 @@ let alldaytattooPortfolio: portfolioItem = {
 let wilaamalinPortfolio: portfolioItem = {
   title: "WilaaMalin",
   className: None,
-  category: PortfolioDataType.Other,
+  category: [PortfolioDataType.Other],
   images: [
     {
       src: "wilaamalinapp",
@@ -572,7 +570,7 @@ let wilaamalinPortfolio: portfolioItem = {
 let eastwestPortfolio: portfolioItem = {
   title: "East West Fitness",
   className: None,
-  category: PortfolioDataType.Other,
+  category: [PortfolioDataType.Other],
   images: [
     {
       src: "eastwestapp",
@@ -605,7 +603,7 @@ let eastwestPortfolio: portfolioItem = {
 let halalblockvideoPortfolio: portfolioItem = {
   title: "Halal Blockchain Promotional Video",
   className: None,
-  category: PortfolioDataType.Other,
+  category: [PortfolioDataType.Other],
   images: [
     {
       src: "halalblockvideo",
@@ -630,7 +628,7 @@ let halalblockvideoPortfolio: portfolioItem = {
 let traitsignalvideoPortfolio: portfolioItem = {
   title: "Trait Signal Promotional Video",
   className: None,
-  category: PortfolioDataType.Other,
+  category: [PortfolioDataType.Other],
   images: [
     {
       src: "traitsignalvideo",
@@ -658,7 +656,7 @@ let traitsignalvideoPortfolio: portfolioItem = {
 let adsoupvideoPortfolio: portfolioItem = {
   title: "Adsoup Promotional Video",
   className: None,
-  category: PortfolioDataType.Other,
+  category: [PortfolioDataType.Other],
   images: [
     {
       src: "adsoupvideo",
@@ -686,7 +684,7 @@ let adsoupvideoPortfolio: portfolioItem = {
 let vrPortfolio: portfolioItem = {
   title: "CXRL",
   className: None,
-  category: PortfolioDataType.Other,
+  category: [PortfolioDataType.Other],
   images: [
     {
       src: "cvrlp",
@@ -723,7 +721,7 @@ let vrPortfolio: portfolioItem = {
 let kikiiPortfolio: portfolioItem = {
   title: "Kikii on the Run",
   className: Some("kikii-image"),
-  category: PortfolioDataType.Other,
+  category: [PortfolioDataType.Other],
   images: [
     {
       src: "kikiigamephone",
@@ -776,7 +774,7 @@ let kikiiPortfolio: portfolioItem = {
 let microgamesPortfolio: portfolioItem = {
   title: "Microgames",
   className: None,
-  category: PortfolioDataType.Other,
+  category: [PortfolioDataType.Other],
   images: [
     {src: "microgames1", border: PhonePortrait, className: Some("col-4")},
     {src: "microgames2", border: PhonePortrait, className: Some("col-4")},
