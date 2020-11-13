@@ -17,7 +17,7 @@ type portfolioLink = {
 
 type portfolioItem = {
   title: string,
-  category: PortfolioDataType.t,
+  category: list(PortfolioDataType.t),
   className: option(string),
   images: list(portfolioImage),
   links: list(portfolioLink),
@@ -42,7 +42,7 @@ let make = (~id: option(string)=?, ~item: portfolioItem) => {
     className={
       "section-portfolio "
       ++ Js.Option.getWithDefault("section-portfolio-default", item.className)
-      ++ " " ++ additional_classname(item.category)
+      ++ " " ++ (item.category |> List.map(additional_classname) |> List.fold_left((acc, s) => acc ++ " " ++ s, ""))
     }>
     <div className="container">
       <div className="port_img-container row">
