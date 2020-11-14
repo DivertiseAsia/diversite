@@ -127,6 +127,8 @@ let mapStringToTechIconType = (icon: string) =>
   | "web design"
   | "game design"
   | "2d art" => Other(icon, "color2")
+  | "story board" => Other(icon, "color2")
+  | "video editing" => Other(icon, "color2")
   | "c++"
   | "aws"
   | "html"

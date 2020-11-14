@@ -10,6 +10,7 @@ external social_mail: string = "../../../../public/images/email.svg";
 
 [@react.component]
 let make = (~className: option(string)=?, ~extraPageEnds=?, ~children) => {
+  let (isPopupOpen, setPopupOpen) = React.useState(() => false);
   let extraPageEndsElement =
     switch (extraPageEnds) {
     | None => null
@@ -29,8 +30,29 @@ let make = (~className: option(string)=?, ~extraPageEnds=?, ~children) => {
                   <Link href=Links.home> {string("Home")} </Link>
                   <Link href=Links.ourwork> {string("Our Work")} </Link>
                   <Link href=Links.careers> {string("Careers")} </Link>
+                  /* <Link href=Links.contacts> {string("Contact Us")} </Link> */
+                  <div
+                    className="btn btn-line-white"
+                    onClick={_ => setPopupOpen(_ => !isPopupOpen)}>
+                    {string("Build Your Ideas")}
+                  </div>
                 </div>
               </nav>,
+              <Popup
+                isOpen=isPopupOpen
+                closeOnBgClick=false
+                closeFunc={() => setPopupOpen(_ => false)}
+                className="buildyouridea-popup">
+                <div>
+                  <h3> {string("Build Your Ideas")} </h3>
+                  <p>
+                    {string(
+                       "Tell us about what you need. We will get back to you within 1 working day",
+                     )}
+                  </p>
+                </div>
+                <ContactForm />
+              </Popup>,
               extraPageEndsElement,
             ]),
           ),

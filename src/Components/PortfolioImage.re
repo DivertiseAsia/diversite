@@ -38,10 +38,10 @@ let make = (~className: option(string)=?, ~item: portfolioImage) => {
       <div className="portimg">
         <div className="portimg_frame">
           <div className="portimg_scroll-before" />
-          <ImageBackground
-            className="portimg_scroll scroll-long" src={item.src}>
+          <div
+            className={"image-background portimg_scroll scroll-long " ++ item.src} >
             <div />
-          </ImageBackground>
+          </div>
         </div>
         <div className="portimg_frame-after" />
       </div>

@@ -17,6 +17,7 @@ type portfolioLink = {
 
 type portfolioItem = {
   title: string,
+  category: list(PortfolioDataType.t),
   className: option(string),
   images: list(portfolioImage),
   links: list(portfolioLink),
@@ -24,13 +25,25 @@ type portfolioItem = {
   body: array(ReasonReact.reactElement),
 };
 
+let additional_classname = (category:PortfolioDataType.t) => {
+    "item-" ++ switch(category) {
+    | All => "all"
+    | AI => "ai"
+    | AppPlatforms => "appsandplatforms"
+    | Design => "design"
+    | Other => "other"
+    }
+};
+
 [@react.component]
-let make = (~id: option(string)=?, ~item: portfolioItem) => {
+let make = (~id: option(string)=?, ~className="", ~item: portfolioItem) => {
   <div
     ?id
     className={
       "section-portfolio "
+      ++ className ++ " "
       ++ Js.Option.getWithDefault("section-portfolio-default", item.className)
+      ++ " " ++ (item.category |> List.map(additional_classname) |> List.fold_left((acc, s) => acc ++ " " ++ s, ""))
     }>
     <div className="container">
       <div className="port_img-container row">
