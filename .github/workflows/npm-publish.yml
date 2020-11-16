@@ -44,6 +44,7 @@ jobs:
         name: bundle
     - name: replace old docs
       run: |
+        rm -rf docs/
         mv bundle/* docs/
         rm -rf bundle
     - name: Commit new docs/ to public branch
