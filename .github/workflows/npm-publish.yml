@@ -45,6 +45,7 @@ jobs:
     - name: replace old docs
       run: |
         rm -rf docs/
+        mkdir docs
         mv bundle/* docs/
         rm -rf bundle
     - name: Commit new docs/ to public branch
