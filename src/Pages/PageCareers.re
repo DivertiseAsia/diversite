@@ -144,12 +144,10 @@ let make = () => {
         {string(
            "If you are interested in joining our team, just send your portfolio to",
          )}
-        <Link
-          isExternal=true
-          href="mailto:contact@divertise.asia"
-          className="text-contact">
-          {string("careers@divertise.asia")}
-        </Link>
+        <EmailPopover
+          className="link-white"
+          emailType=EmailPopover.EmailCareers
+        />
       </p>
     </div>
   </MainPage>;

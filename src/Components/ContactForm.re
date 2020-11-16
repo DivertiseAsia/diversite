@@ -35,7 +35,10 @@ let make = (~className: option(string)=?) => {
     </form>
     <div className="contactform_email">
       <p> {ReasonReact.string("or email us at")} </p>
-      <EmailPopover emailType=EmailPopover.EmailContact />
+      <EmailPopover
+        className="link-color2"
+        emailType=EmailPopover.EmailContact
+      />
     </div>
   </div>;
 };
