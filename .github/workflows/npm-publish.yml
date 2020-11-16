@@ -8,27 +8,6 @@ on:
     branches:
       - master
 jobs:
-  deploy-website:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-    - name: Set up Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: 10.0.0
-    - name: npm install and npm test
-      run: |
-        npm install
-        npm run clean
-        npm run build
-    - name: npm publish
-      run: |
-        npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
-        npm publish || true
-      env:
-        CI: true
-        NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
         
   pages-update:
     name: pages-update
@@ -52,28 +31,28 @@ jobs:
         npm install webpack-cli
     - name: webpack build
       run: |
-        webpack --config webpack.prod.js
-    - name: Upload docs/index.js artifact
+        npm run webpack:production
+    - name: Upload docs artifact
       uses: actions/upload-artifact@v1
       with:
         name: bundle
-        path: docs/index.js
-    - name: stash docs/index.js for branch change
+        path: docs/
+    - name: stash docs/* for branch change
       run: |
         git stash -u
     - name: Checkout public branch
       uses: actions/checkout@v2
       with:
           ref: public
-    - name: Download docs/index.js artifact
+    - name: Download docs artifact
       uses: actions/download-artifact@v1
       with:
         name: bundle
-    - name: replace old docs/index.js
+    - name: replace old docs
       run: |
-        mv bundle/index.js docs/index.js
+        mv bundle/* docs/
         rm -rf bundle
-    - name: Commit new docs/index.js to public branch
+    - name: Commit new docs/ to public branch
       uses: Automattic/action-commit-to-branch@master
       with:
         branch: 'public'
