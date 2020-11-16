@@ -697,7 +697,7 @@ $email-height: 30px;
 .contactform_email {height: 2* $email-height;}
 .email {
   >*{display: block;}
-  .icon-emailcontact svg {
+  .icon-emailpopover svg {
     width: 170px;
     fill: $text-color2;
     transition: $transition;
@@ -711,7 +711,7 @@ $email-height: 30px;
   text-align: center;
 }
 .email:hover {
-  .icon-emailcontact svg {fill: $text-color2-hover}
+  .icon-emailpopover svg {fill: $text-color2-hover}
 }
 .email_popover {
   >* {

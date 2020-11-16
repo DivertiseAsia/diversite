@@ -7,6 +7,7 @@ let make =
       ~inputLabel: option(string)=?,
       ~isTextarea=false,
       ~name="",
+      ~required=false,
     ) => {
   <div
     className={
@@ -21,15 +22,22 @@ let make =
     <p className="inputtext_label">
       {ReasonReact.string(Js.Option.getWithDefault("", inputLabel))}
     </p>
-    {isTextarea
-       ? <textarea className="input-default" name=name>
-           {ReasonReact.string(Js.Option.getWithDefault("", placeholder))}
-         </textarea>
-       : <input
-           className="input-default"
-           name=name
-           type_={Js.Option.getWithDefault("text", type_)}
-           placeholder={Js.Option.getWithDefault("", placeholder)}
-         />}
+    {switch (isTextarea) {
+     | true =>
+       <textarea
+         className="input-default"
+         placeholder={Js.Option.getWithDefault("", placeholder)}
+         name
+         required
+       />
+     | _ =>
+       <input
+         className="input-default"
+         name
+         required
+         type_={Js.Option.getWithDefault("text", type_)}
+         placeholder={Js.Option.getWithDefault("", placeholder)}
+       />
+     }}
   </div>;
 };
