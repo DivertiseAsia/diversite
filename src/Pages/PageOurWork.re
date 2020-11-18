@@ -107,7 +107,6 @@ let make = (~selectedCategory: PortfolioDataType.t) => {
               </label>
               <input
                 type_="email"
-                value=""
                 name="EMAIL"
                 className="required email"
                 id="mce-EMAIL"
@@ -128,7 +127,6 @@ let make = (~selectedCategory: PortfolioDataType.t) => {
               <input
                 type_="text"
                 name="b_d87120d8b19a52a88623f1d7e_bbc24adf32"
-                value=""
               />
             </div>
             <div className="clear">
@@ -153,7 +151,7 @@ let make = (~selectedCategory: PortfolioDataType.t) => {
            className="input-default"
            type_="email"
            placeholder="Your Email"
-           name="email"
+           name="EMAIL"
          />
          <button type_="submit" className="btn btn-solid-color1">
            {ReasonReact.string("Submit")}
