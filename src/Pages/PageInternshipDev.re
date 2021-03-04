@@ -2,7 +2,11 @@ open ReasonReact;
 
 [@react.component]
 let make = () => {
-  <MainPage>
+  <MainPage
+    title="Developer Internship at Divertise Asia"
+    keywords="Artificial Intelligence, Design, Fullstack, API, Server"
+    description="Have your internship with Divertise Asia"
+  >
     <PageHeader
       title="Internship"
       subtitle="Developer"

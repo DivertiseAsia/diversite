@@ -30,7 +30,11 @@ external launch: string = "../../../../public/images/letushelp-launch.png";
 
 [@react.component]
 let make = () => {
-  <MainPage className="page-home">
+  <MainPage className="page-home"
+    title="Get Launched with Divertise Asia"
+    keywords="Artificial Intelligence, Design, Fullstack, API, Server"
+    description="Realize your technical project with Divertise Asia as your partner"
+  >
     <Carousel />
     <div className="homepage_menu-bg" />
     <div className="section-ourgoal -text-center">

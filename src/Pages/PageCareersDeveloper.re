@@ -2,7 +2,11 @@ open ReasonReact;
 
 [@react.component]
 let make = () => {
-  <MainPage>
+  <MainPage
+    title="Developer at Divertise Asia"
+    keywords="Artificial Intelligence, Design, Fullstack, API, Server"
+    description="Be a full-stack developer at Divertise Asia"
+  >
     <PageHeader
       title="Careers" subtitle="Developer" className="bg-gradient-color1 pt-5">
       <div />
