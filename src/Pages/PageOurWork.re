@@ -29,7 +29,12 @@ let make = (~selectedCategory: PortfolioDataType.t) => {
       }
     );
 
-  <MainPage className={"page-ourwork " ++ additional_classname}>
+  <MainPage 
+    className={"page-ourwork " ++ additional_classname}
+    title="Work of Divertise Asia"
+    keywords="portfolio, Artificial Intelligence, Design, Fullstack, API, Server"
+    description="AI, Apps & Platforms, and Design items created by us"
+  >
     <div className="ourwork_section-header-content bg-gradient-color1">
       <div className="container page-ourwork_nav nav">
         /* <input type_="checkbox" />

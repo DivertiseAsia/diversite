@@ -18,7 +18,11 @@ external openminded: string = "../../../../public/images/openminded.png";
 
 [@react.component]
 let make = () => {
-  <MainPage>
+  <MainPage
+    title="Careers at Divertise Asia"
+    keywords="Artificial Intelligence, Design, Fullstack, API, Server"
+    description="Join our team"
+  >
     <PageHeader title="Careers" className="bg-gradient-color1 pt-5">
       <div />
     </PageHeader>

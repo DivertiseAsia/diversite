@@ -21,6 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "@divertiseasia/bs-divertise-core-components": "^1.0.0",
+    "@moox/bs-react-helmet": "^3.0.0",
     "bs-css": "^7.2.0",
     "glslify": "^7.0.0",
     "glslify-import-loader": "^0.1.2",
@@ -29,6 +30,7 @@
     "mocha": "^8.1.1",
     "raw-loader": "^4.0.0",
     "react": "^16.13.1",
+    "react-helmet": "^6.1.0",
     "reason-react": ">=0.8.0",
     "three": "^0.113.2"
   },

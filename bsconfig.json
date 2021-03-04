@@ -14,6 +14,7 @@
   "namespace": true,
   "bs-dependencies": [
     "reason-react",
+    "@moox/bs-react-helmet",
     "bs-css",
     "@divertiseasia/bs-divertise-core-components"
   ],
