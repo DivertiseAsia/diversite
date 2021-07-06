@@ -37,9 +37,9 @@ let sceneToString = scene => {
 let stringToScene = scene => {
   switch (scene) {
   | "Laser" => Laser
-  | "Pentagon" => Pentagon
   | "Ball" => Ball
-  | _ => Network
+  | "Network" => Network
+  | "Pentagon" | _ => Pentagon
   };
 };
 
@@ -165,31 +165,7 @@ let renderScene = scene =>
 [@react.component]
 let make = () => {
   let (isPopupOpen, setPopupOpen) = React.useState(() => false);
-  let (scene, setScene) = React.useState(() => Laser);
-  let changeScene = scene => {
-    setScene(_ => scene);
-    saveToLocalStorage("current-scene", sceneToString(scene));
-  };
-  let autoChangeScene = () => {
-    Document.setInterval(
-      () =>
-        switch (loadFromLocalStorage("current-scene")) {
-        | Some(currentScene) =>
-          let canvasElement =
-            Document.getElementById(Document.doc, "webgl-canvas");
-          changeClassName(canvasElement, "webgl-fade-out");
-          changeScene(selectScene(currentScene |> stringToScene));
-        | None => ()
-        },
-      10000,
-    );
-  };
-
-  React.useEffect0(() => {
-    saveToLocalStorage("current-scene", sceneToString(Laser));
-    let intervalId = autoChangeScene();
-    Some(() => Document.clearInterval(intervalId));
-  });
+  let (scene, setScene) = React.useState(() => Pentagon);
   let sceneClassname =
     switch (scene) {
     | Laser => "laser"
@@ -225,33 +201,6 @@ let make = () => {
         </div>
         <ContactForm />
       </Popup>
-    </div>
-    <div className="dots">
-      {[Laser, Pentagon, Ball, Network]
-       |> List.map(sceneType => {
-            let className = scene === sceneType ? "dot active" : "dot";
-            let key =
-              switch (sceneType) {
-              | Laser => "laser"
-              | Pentagon => "pentagon"
-              | Ball => "ball"
-              | Network => "network"
-              };
-            <div
-              className
-              key
-              onClick={_ =>
-                if (scene !== sceneType) {
-                  let canvasElement =
-                    Document.getElementById(Document.doc, "webgl-canvas");
-                  changeClassName(canvasElement, "webgl-fade-out");
-                  changeScene(sceneType);
-                }
-              }
-            />;
-          })
-       |> Array.of_list
-       |> array}
     </div>
   </div>;
 };
