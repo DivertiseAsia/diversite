@@ -8,8 +8,15 @@ You can view divertise-asia-site at https://divertise.asia/
 
 # Run
 
-`npm start`
-`npm run server`
+```bash
+npm start
+```
+
+On another terminal
+
+```bash
+npm run server
+```
 
 # Deployment
 
