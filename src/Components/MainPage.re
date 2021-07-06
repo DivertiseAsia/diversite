@@ -92,7 +92,7 @@ let make = (~className: option(string)=?, ~title:string, ~keywords:string, ~desc
           </Link>
         </div>
         <p>
-          {ReasonReact.string({j| ⓒ 2017-2020 Divertise Asia Co.,Ltd. |j})}
+          {ReasonReact.string({j| ⓒ 2017-2021 Divertise Asia Co.,Ltd. |j})}
         </p>
       </div>
     </Page>

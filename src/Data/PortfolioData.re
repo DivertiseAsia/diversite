@@ -336,29 +336,7 @@ let plateupPortfolio: portfolioItem = {
     ]
     |> Belt.List.toArray,
 };
-let ihapmPortfolio: portfolioItem = {
-  title: "IHAPM",
-  className: None,
-  images: [
-    {src: "ihapm1", border: PhonePortrait, className: Some("col-4")},
-    {src: "ihapm2", border: PhonePortrait, className: Some("col-4")},
-    {src: "ihapm3", border: PhonePortrait, className: Some("col-4")},
-  ],
-  links: [{_type: Text, href: "", caption: "Website Coming Soon"}],
-  category: [PortfolioDataType.AppPlatforms],
-  technologies: [],
-  body:
-    [
-      <div>
-        <p>
-          {string(
-             "IHAPM is a smart-home kit that lets users control all electronic devices in their home through just a tab on their smart phone",
-           )}
-        </p>
-      </div>,
-    ]
-    |> Belt.List.toArray,
-} /* --------------------- AI -----------------------------*/;
+/* --------------------- AI -----------------------------*/
 let traitsignalPortfolio: portfolioItem = {
   title: "Trait Signal",
   className: None,

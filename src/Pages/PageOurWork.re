@@ -107,13 +107,13 @@ let make = (~selectedCategory: PortfolioDataType.t) => {
       </form>
     </Popup>
     <div>
+      <PortfolioItem key="plateup" item=plateupPortfolio />
       <PortfolioItem
         id="appsandplatforms"
         key="mintcrowd"
         item=mintcrowdPortfolio
       />
       <PortfolioItem key="safemode" item=safemodePortfolio />
-      <PortfolioItem key="safemode" item=plateupPortfolio />
       <PortfolioItem key="adsoup" item=adsoupPortfolio />
       <PortfolioItem key="copanel" item=copanelPortfolio />
       <PortfolioItem key="eventcomet" item=eventcometPortfolio />
