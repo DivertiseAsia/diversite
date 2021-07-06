@@ -336,7 +336,7 @@ let plateupPortfolio: portfolioItem = {
     ]
     |> Belt.List.toArray,
 };
-/* --------------------- AI -----------------------------*/;
+/* --------------------- AI -----------------------------*/
 let traitsignalPortfolio: portfolioItem = {
   title: "Trait Signal",
   className: None,
