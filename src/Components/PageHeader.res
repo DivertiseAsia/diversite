@@ -1,11 +1,9 @@
-open ReasonReact;
-
-[@react.component]
+@react.component
 let make =
     (
-      ~className: option(string)=?,
+      ~className: option<string>=?,
       ~title: string,
-      ~subtitle: option(string)=?,
+      ~subtitle: option<string>=?,
       ~children,
     ) => {
   <div
@@ -13,14 +11,14 @@ let make =
     <div className="container">
       <div className="row d-flex align-items-baseline -text-uppercase">
         <h1 className="text-white letter-spacing -text-header-shadow">
-          {string(title)}
+          {React.string(title)}
         </h1>
         {switch (subtitle) {
          | None
-         | Some("") => ReasonReact.null
+         | Some("") => React.null
          | Some(x) =>
            <h2 className="text-white letter-spacing -text-header-shadow">
-             {string("-  " ++ x)}
+             {React.string("-  " ++ x)}
            </h2>
          }}
       </div>

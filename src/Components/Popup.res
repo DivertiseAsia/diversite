@@ -1,10 +1,10 @@
-[@react.component]
+@react.component
 let make =
     (
       ~isOpen: bool=true,
-      ~className: option(string)=?,
+      ~className: option<string>=?,
       ~hasCloseBtn=false,
-      ~closeBtnText: option(string)=?,
+      ~closeBtnText: option<string>=?,
       ~closeOnBgClick=false,
       ~showX=true,
       ~closeFunc=() => (),
@@ -25,17 +25,17 @@ let make =
     <div className="popup">
       {showX
          ? <div className="popup-x" onClick={_ => closeFunc()}>
-             {ReasonReact.string({j|×|j})}
+             {React.string("×")}
            </div>
-         : ReasonReact.null}
+         : React.null}
       <div className="popup-content"> children </div>
       {hasCloseBtn
          ? <div className="btn popup-close-btn" onClick={_ => closeFunc()}>
-             {ReasonReact.string(
+             {React.string(
                 Js.Option.getWithDefault("Close Popup", closeBtnText),
               )}
            </div>
-         : ReasonReact.null}
+         : React.null}
     </div>
   </div>;
 };

@@ -8,7 +8,7 @@ let internshipdeveloper = "/internships/developer";
 let ourwork = "/ourwork";
 
 
-let ourwork_link = (category:PortfolioDataType.t) => {
+let ourwork_link = (category:DataTypes.PortfolioItem.category) => {
   ourwork ++ "#" ++ switch(category) {
   | All => "all"
   | AI => "ai"
@@ -18,7 +18,7 @@ let ourwork_link = (category:PortfolioDataType.t) => {
   }
 }
 
-let ourwork_link_category = (link:string):PortfolioDataType.t => {
+let ourwork_link_category = (link:string):DataTypes.PortfolioItem.category => {
   switch (link) {
     | "ai" => AI
     | "appsandplatforms" => AppPlatforms

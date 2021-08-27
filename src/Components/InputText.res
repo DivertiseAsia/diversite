@@ -1,10 +1,10 @@
-[@react.component]
+@react.component
 let make =
     (
-      ~className: option(string)=?,
-      ~type_: option(string)=?,
-      ~placeholder: option(string)=?,
-      ~inputLabel: option(string)=?,
+      ~className: option<string>=?,
+      ~type_: option<string>=?,
+      ~placeholder: option<string>=?,
+      ~inputLabel: option<string>=?,
       ~isTextarea=false,
       ~name="",
     ) => {
@@ -19,11 +19,11 @@ let make =
       }
     }>
     <p className="inputtext_label">
-      {ReasonReact.string(Js.Option.getWithDefault("", inputLabel))}
+      {React.string(Js.Option.getWithDefault("", inputLabel))}
     </p>
     {isTextarea
        ? <textarea className="input-default" name=name>
-           {ReasonReact.string(Js.Option.getWithDefault("", placeholder))}
+           {React.string(Js.Option.getWithDefault("", placeholder))}
          </textarea>
        : <input
            className="input-default"
