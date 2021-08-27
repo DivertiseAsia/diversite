@@ -1,25 +1,24 @@
 {
   "name": "divertise-asia-site",
-  "sources": {
-    "dir": "src",
-    "subdirs": true
-  },
-  "package-specs": [
-    {
-      "module": "commonjs",
-      "in-source": false
-    }
+  "namespace": false,
+  "reason": { "react-jsx": 3 },
+  "refmt": 3,
+  "bs-dependencies": ["@rescript/react"],
+  "ppx-flags": [],
+  "sources": [
+    { "dir": "src", "subdirs": true }
   ],
-  "suffix": ".bs.js",
-  "namespace": true,
-  "bs-dependencies": [
-    "reason-react",
-    "@moox/bs-react-helmet",
-    "bs-css",
-    "@divertiseasia/bs-divertise-core-components"
-  ],
-  "reason": {
-    "react-jsx": 3
+  "package-specs": {
+    "module": "es6",
+    "in-source": true
   },
-  "refmt": 3
+  "suffix": ".mjs",
+  "warnings": {
+    "number": "-3",
+    "error": "+101+8"
+  },
+  "gentypeconfig": {
+    "language": "untyped",
+    "shims": []
+  }
 }
