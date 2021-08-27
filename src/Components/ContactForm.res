@@ -1,5 +1,5 @@
-[@react.component]
-let make = (~className: option(string)=?) => {
+@react.component
+let make = (~className: option<string>=?) => {
   <div className="contactform-container">
   <form
     action="https://formspree.io/f/xdopdkdk"
@@ -27,11 +27,11 @@ let make = (~className: option(string)=?) => {
       name="content"
     />
     <button type_="submit" className="btn btn-solid-color1">
-      {ReasonReact.string("Submit")}
+      {React.string("Submit")}
     </button>
   </form>
   <div className="contactform_email">
-  <p> {ReasonReact.string("or email us at")} </p>
+  <p> {React.string("or email us at")} </p>
   <EmailPopover />
 </div>
 </div>;

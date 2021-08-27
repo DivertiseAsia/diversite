@@ -28,16 +28,16 @@ let make = (~className: option(string)=?) => {
         "email_popover popover-default "
         ++ (isPopoverOpen ? "popover-open" : "popover-close")
       }>
-      <Link isExternal=true href="mailto:contact@divertise.asia">
-        {ReasonReact.string("Open mail app")}
-      </Link>
+      <a target="_blank" href="mailto:contact@divertise.asia">
+        {React.string("Open mail app")}
+      </a>
       <div onClick={_ => copyClick()}>
         <div
           className={
             "copybtn_content copybtn_content-"
             ++ (isCopySuccess ? "hide" : "show")
           }>
-          {ReasonReact.string("Copy")}
+          {React.string("Copy")}
         </div>
         <div
           className={

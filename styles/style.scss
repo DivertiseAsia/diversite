@@ -36,7 +36,7 @@ $frontpage-section-height: 300px;
 $scrollbar-width: 0.5vw;
 $section-header-height: 130px;
 
-html, body {
+html, body, body>div, body>div>div {
   min-height: 100vh;
   width: 100vw;
   height: 100%;
@@ -218,6 +218,16 @@ a:hover { text-decoration: none; }
 .halalblockvideo {background-image: url('../public/static/projects/halablockchain-video.png')}
 .traitsignalvideo {background-image: url('../public/static/projects/traitsignal-video.png')}
 .adsoupvideo {background-image: url('../public/static/projects/adsoup-video.png')}
+
+.page {
+  display: flex;
+  direction: column;
+  height: 100%;
+}
+.page-content-container {
+  overflow: auto;
+  flex: 1;
+}
 
 /* ------------- Bootstrap Elements --------------*/
 
@@ -827,7 +837,7 @@ $email-height: 30px;
 .internship-program {
   padding: 20px;
 }
-.internship-list {
+.internship-program a {
   .image-background {
     padding: 68px 0 40px 0;
     background-color: #2d506d;
@@ -1596,7 +1606,7 @@ and (max-width: 576px) {
 /* -------- Small Phones ---------*/
 @media only screen
 and (max-width: 400px) {
-  .internship-list .content-program h4 {
+  .internship-program a .content-program h4 {
     padding-left: 10px;
     font-size: 16px;
   }

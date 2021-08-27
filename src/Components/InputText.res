@@ -22,9 +22,7 @@ let make =
       {React.string(Js.Option.getWithDefault("", inputLabel))}
     </p>
     {isTextarea
-       ? <textarea className="input-default" name=name>
-           {React.string(Js.Option.getWithDefault("", placeholder))}
-         </textarea>
+       ? <textarea className="input-default" name=name defaultValue=Js.Option.getWithDefault("", placeholder) />
        : <input
            className="input-default"
            name=name
