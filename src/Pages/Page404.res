@@ -1,6 +1,6 @@
-open ReasonReact;
+open React;
 
-[@react.component]
+@react.component
 let make = () => {
   <MainPage
     title="404"
