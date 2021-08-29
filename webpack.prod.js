@@ -5,7 +5,6 @@ const webpack = require('webpack');
 const outputDir = path.join(__dirname, "docs/");
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HtmlWebpackExcludeAssetsPlugin = require('html-webpack-exclude-assets-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -18,7 +17,6 @@ module.exports = merge(common, {
       filename: 'index.html',
       template: 'src/index.html',
     }),
-    new HtmlWebpackExcludeAssetsPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css',
       chunkFilename: '[id].[hash].css',
