@@ -1,31 +1,7 @@
-open ReasonReact;
-open PortfolioImage;
+open React;
+open DataTypes.PortfolioItem;
 
-type portfolioLinkType =
-  | Default
-  | DefaultInactive
-  | Text
-  | AppStore
-  | GooglePlay
-  | MiStore;
-
-type portfolioLink = {
-  href: string,
-  caption: string,
-  _type: portfolioLinkType,
-};
-
-type portfolioItem = {
-  title: string,
-  category: list(PortfolioDataType.t),
-  className: option(string),
-  images: list(portfolioImage),
-  links: list(portfolioLink),
-  technologies: list(string),
-  body: array(ReasonReact.reactElement),
-};
-
-let additional_classname = (category:PortfolioDataType.t) => {
+let additional_classname = (category:category) => {
     "item-" ++ switch(category) {
     | All => "all"
     | AI => "ai"
@@ -35,8 +11,8 @@ let additional_classname = (category:PortfolioDataType.t) => {
     }
 };
 
-[@react.component]
-let make = (~id: option(string)=?, ~className="", ~item: portfolioItem) => {
+@react.component
+let make = (~id: option<string>=?, ~className="", ~item: t) => {
   <div
     ?id
     className={
@@ -51,21 +27,21 @@ let make = (~id: option(string)=?, ~className="", ~item: portfolioItem) => {
            <PortfolioImage key={img.src} item=img />
          )
          |> Belt.List.toArray
-         |> ReasonReact.array}
+         |> React.array}
       </div>
       <h2> {string(item.title)} </h2>
       <div className="row py-4">
         <div className="col-md-6 port_icon-container">
           {Belt.List.map(item.technologies, tech => <TechIcon key=tech tech />)
            |> Belt.List.toArray
-           |> ReasonReact.array}
+           |> React.array}
         </div>
         <div className="col-md-6 -text-right port_btn-container">
           {Belt.List.map(
              item.links,
              link => {
                let classNames =
-                 switch (link._type) {
+                 switch (link.category) {
                  | Default => "btn-line-color1"
                  | DefaultInactive => "btn-line-color1 inactive"
                  | Text => "port_link_text"
@@ -73,21 +49,20 @@ let make = (~id: option(string)=?, ~className="", ~item: portfolioItem) => {
                  | GooglePlay => "btn-google-play"
                  | MiStore => "btn-mi-store"
                  };
-               <Link
-                 isExternal=true
+               <a
                  target="_blank"
                  className={"port_btn btn " ++ classNames}
                  key={link.href}
                  href={link.href}>
                  {string(link.caption)}
-               </Link>;
+               </a>;
              },
            )
            |> Belt.List.toArray
-           |> ReasonReact.array}
+           |> React.array}
         </div>
       </div>
-      <div className="port_texts"> {ReasonReact.array(item.body)} </div>
+      <div className="port_texts"> {React.array(item.body)} </div>
     </div>
   </div>;
 };

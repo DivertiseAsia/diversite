@@ -1,5 +1,4 @@
-open ReasonReact;
-
+open React;
 [@react.component]
 let make =
     (
@@ -17,12 +16,16 @@ let make =
     <div>
       <div className="row pb-5">
         <div className="col-sm-6">
-          <ImageBackground src=imageURL> <div /> </ImageBackground>
+          <ImageBackground src=imageURL />
         </div>
         <div className="col-sm-6 frontpage-section-texts pt-5">
           <h4> {string(title)} </h4>
           <div className="content"> children </div>
-          <Link className="btn" href> {string("See All Projects")} </Link>
+          <Next.Link href>
+            <a className="btn">
+              {string("See All Projects")}
+            </a>
+          </Next.Link>
         </div>
       </div>
     </div>

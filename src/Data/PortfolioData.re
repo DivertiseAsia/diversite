@@ -1,80 +1,55 @@
-open ReasonReact;
-open PortfolioItem;
+open React;
+open DataTypes.PortfolioItem;
 
-[@bs.module]
-external ketawadesktop: string =
-  "../../../../public/projects/website-ketawa-d.jpg";
-[@bs.module]
-external ketawaapp: string = "../../../../public/projects/app-ketawa.png";
-[@bs.module]
-external wilaamalindesktop: string =
-  "../../../../public/projects/website-wilaamalin.png";
-[@bs.module]
-external wilaamalinapp: string =
-  "../../../../public/projects/app-wilaamalin.png";
-[@bs.module]
-external eastwestdesktop: string =
-  "../../../../public/projects/website-eastwest.png";
-[@bs.module]
-external eastwestapp: string = "../../../../public/projects/app-eastwest.png";
-[@bs.module]
-external adsoupapp: string = "../../../../public/projects/app-adsoup.jpg";
-[@bs.module]
-external adsoudesktop: string =
-  "../../../../public/projects/website-adsoup.jpg";
-[@bs.module]
-external copanelapp: string = "../../../../public/projects/app-copanel.jpg";
-[@bs.module]
-external copaneldesktop: string =
-  "../../../../public/projects/website-copanel.jpg";
-[@bs.module]
-external eventcometeventapp: string =
-  "../../../../public/projects/app-eventcomet-event.jpg";
-[@bs.module]
-external eventcometscheduleapp: string =
-  "../../../../public/projects/app-eventcomet-schedule.jpg";
-[@bs.module]
-external eventcometdateapp: string =
-  "../../../../public/projects/app-eventcomet-date.jpg";
-[@bs.module]
-external mintcrowddesktop: string =
-  "../../../../public/projects/mintcrowd.jpg";
-[@bs.module]
-external mintcrowdapp: string =
-  "../../../../public/projects/mintcrowd-app.jpg";
-[@bs.module]
-external boneageaidesktop: string =
-  "../../../../public/projects/website-boneage.png";
-[@bs.module]
-external boneageaiapp: string = "../../../../public/projects/app-boneage.png";
-[@bs.module]
-external gameaione: string = "../../../../public/projects/website-adsoup.jpg";
-[@bs.module]
-external gameaitwo: string = "../../../../public/projects/website-adsoup.jpg";
-[@bs.module]
-external cvrl: string = "../../../../public/projects/website-adsoup.jpg";
-[@bs.module]
-external kikiigamephone: string =
-  "../../../../public/projects/game-kikii2.jpg";
-[@bs.module]
-external kikiigametablet: string =
-  "../../../../public/projects/game-kikii1.png";
-[@bs.module]
-external microgames1: string =
-  "../../../../public/projects/game-microgames1.jpg";
-[@bs.module]
-external microgames2: string =
-  "../../../../public/projects/game-microgames2.jpg";
-[@bs.module]
-external microgames3: string =
-  "../../../../public/projects/game-microgames3.png";
-[@bs.module]
-external cvrld: string =
-  "../../../../public/projects/project-cvrl-desktop.jpg";
-[@bs.module]
-external cvrlp: string = "../../../../public/projects/project-cvrl-phone.jpg" /* --------------------- Apps --------------------------*/;
+let ketawadesktop: string =
+  "/static/projects/website-ketawa-d.jpg";
+let ketawaapp: string = "/static/projects/app-ketawa.png";
+let wilaamalindesktop: string =
+  "/static/projects/website-wilaamalin.png";
+let wilaamalinapp: string =
+  "/static/projects/app-wilaamalin.png";
+let eastwestdesktop: string =
+  "/static/projects/website-eastwest.png";
+let eastwestapp: string = "/static/projects/app-eastwest.png";
+let adsoupapp: string = "/static/projects/app-adsoup.jpg";
+let adsoudesktop: string =
+  "/static/projects/website-adsoup.jpg";
+let copanelapp: string = "/static/projects/app-copanel.jpg";
+let copaneldesktop: string =
+  "/static/projects/website-copanel.jpg";
+let eventcometeventapp: string =
+  "/static/projects/app-eventcomet-event.jpg";
+let eventcometscheduleapp: string =
+  "/static/projects/app-eventcomet-schedule.jpg";
+let eventcometdateapp: string =
+  "/static/projects/app-eventcomet-date.jpg";
+let mintcrowddesktop: string =
+  "/static/projects/mintcrowd.jpg";
+let mintcrowdapp: string =
+  "/static/projects/mintcrowd-app.jpg";
+let boneageaidesktop: string =
+  "/static/projects/website-boneage.png";
+let boneageaiapp: string = "/static/projects/app-boneage.png";
+let gameaione: string = "/static/projects/website-adsoup.jpg";
+let gameaitwo: string = "/static/projects/website-adsoup.jpg";
+let cvrl: string = "/static/projects/website-adsoup.jpg";
+let kikiigamephone: string =
+  "/static/projects/game-kikii2.jpg";
+let kikiigametablet: string =
+  "/static/projects/game-kikii1.png";
+let microgames1: string =
+  "/static/projects/game-microgames1.jpg";
+let microgames2: string =
+  "/static/projects/game-microgames2.jpg";
+let microgames3: string =
+  "/static/projects/game-microgames3.png";
+let cvrld: string =
+  "/static/projects/project-cvrl-desktop.jpg";
+let cvrlp: string = "/static/projects/project-cvrl-phone.jpg"
 
-let adsoupPortfolio: portfolioItem = {
+/* --------------------- Apps --------------------------*/;
+
+let adsoupPortfolio: t = {
   title: "Adsoup",
   className: None,
   images: [
@@ -89,19 +64,19 @@ let adsoupPortfolio: portfolioItem = {
       className: Some("col-8 port-no-scroll portimg-adsoup-desktop"),
     },
   ],
-  category: [PortfolioDataType.AppPlatforms],
+  category: [AppPlatforms],
   links: [] /* {
-     _type: GooglePlay,
+     category: GooglePlay,
      href: "https://play.google.com/store/apps/details?id=io.adsoup.sales.mobile",
      caption: "Google Play"
    },
    {
-     _type: AppStore,
+     category: AppStore,
      href: "https://itunes.apple.com/us/app/adsoup/id1415279019",
      caption: "iTunes"
    },
    {
-     _type: Default,
+     category: Default,
      href: "https://adsoup.com/?ref=divertise.asia",
      caption: "View Website >"
    } */,
@@ -138,7 +113,7 @@ let adsoupPortfolio: portfolioItem = {
     ]
     |> Belt.List.toArray,
 };
-let copanelPortfolio: portfolioItem = {
+let copanelPortfolio: t = {
   title: "Copanel",
   className: None,
   images: [
@@ -153,10 +128,10 @@ let copanelPortfolio: portfolioItem = {
       className: Some("col-8 port-no-scroll portimg-copanel-desktop"),
     },
   ],
-  category: [PortfolioDataType.AppPlatforms],
+  category: [AppPlatforms],
   links: [
     {
-      _type: Default,
+      category: Default,
       href: "http://copanel.io/?ref=divertise.asia",
       caption: "View Website >",
     },
@@ -190,7 +165,7 @@ let copanelPortfolio: portfolioItem = {
     ]
     |> Belt.List.toArray,
 };
-let eventcometPortfolio: portfolioItem = {
+let eventcometPortfolio: t = {
   title: "Event Comet",
   className: None,
   images: [
@@ -210,9 +185,9 @@ let eventcometPortfolio: portfolioItem = {
       className: Some("col-4 port-no-scroll portimg-eventcomet-phone"),
     },
   ],
-  category: [PortfolioDataType.AppPlatforms],
+  category: [AppPlatforms],
   links: [] /* {
-     _type: Default,
+     category: Default,
      href: "https://eventcomet.com/?ref=divertise.asia",
      caption: "View Website >"
    } */,
@@ -245,7 +220,7 @@ let eventcometPortfolio: portfolioItem = {
     ]
     |> Belt.List.toArray,
 };
-let mintcrowdPortfolio: portfolioItem = {
+let mintcrowdPortfolio: t = {
   title: "Mint Crowd",
   className: None,
   images: [
@@ -256,8 +231,8 @@ let mintcrowdPortfolio: portfolioItem = {
     },
     {src: "mintcrowddesktop", border: Desktop, className: Some("col-8")},
   ],
-  links: [{_type: Text, href: "", caption: "(Website Coming Soon)"}],
-  category: [PortfolioDataType.AppPlatforms],
+  links: [{category: Text, href: "", caption: "(Website Coming Soon)"}],
+  category: [AppPlatforms],
   technologies: [
     "Reason",
     "Python",
@@ -284,7 +259,7 @@ let mintcrowdPortfolio: portfolioItem = {
     ]
     |> Belt.List.toArray,
 };
-let safemodePortfolio: portfolioItem = {
+let safemodePortfolio: t = {
   title: "Safemode",
   className: None,
   images: [
@@ -293,7 +268,7 @@ let safemodePortfolio: portfolioItem = {
     {src: "safemode3", border: PhonePortrait, className: Some("col-4")},
   ],
   links: [],
-  category: [PortfolioDataType.AppPlatforms],
+  category: [AppPlatforms],
   technologies: ["Reason", "Ux", "Ui"],
   body:
     [
@@ -307,7 +282,7 @@ let safemodePortfolio: portfolioItem = {
     ]
     |> Belt.List.toArray,
 };
-let plateupPortfolio: portfolioItem = {
+let plateupPortfolio: t = {
   title: "Plateup",
   className: None,
   images: [
@@ -317,12 +292,12 @@ let plateupPortfolio: portfolioItem = {
   ],
   links: [
     {
-      _type: Default,
+      category: Default,
       href: "https://www.plateup.app/",
       caption: "View Website >",
     },
   ],
-  category: [PortfolioDataType.AppPlatforms],
+  category: [AppPlatforms],
   technologies: [],
   body:
     [
@@ -337,7 +312,7 @@ let plateupPortfolio: portfolioItem = {
     |> Belt.List.toArray,
 };
 /* --------------------- AI -----------------------------*/
-let traitsignalPortfolio: portfolioItem = {
+let traitsignalPortfolio: t = {
   title: "Trait Signal",
   className: None,
   images: [
@@ -350,12 +325,12 @@ let traitsignalPortfolio: portfolioItem = {
   ],
   links: [
     {
-      _type: Default,
+      category: Default,
       href: "https://traitsignal.com/",
       caption: "View Website >",
     },
   ],
-  category: [PortfolioDataType.AI, PortfolioDataType.AppPlatforms],
+  category: [AI, AppPlatforms],
   technologies: [],
   body:
     [
@@ -369,7 +344,7 @@ let traitsignalPortfolio: portfolioItem = {
     ]
     |> Belt.List.toArray,
 };
-let boneagePortfolio: portfolioItem = {
+let boneagePortfolio: t = {
   title: "Bone Age",
   className: None,
   images: [
@@ -380,15 +355,15 @@ let boneagePortfolio: portfolioItem = {
     },
     {src: "boneageaidesktop", border: Desktop, className: Some("col-8")},
   ],
-  category: [PortfolioDataType.AI, PortfolioDataType.AppPlatforms],
+  category: [AI, AppPlatforms],
   links: [
     {
-      _type: Default,
+      category: Default,
       href: "https://www.bangkokmedjournal.com/article/performance-of-convolutional-neural-networks-and-transfer-learning-for-skeletal-bone-age-ass/410/abstract",
       caption: "Academic Paper",
     },
     {
-      _type: Default,
+      category: Default,
       href: "https://www.nextcare.ai/",
       caption: "View Website >",
     },
@@ -413,32 +388,32 @@ let boneagePortfolio: portfolioItem = {
     ]
     |> Belt.List.toArray,
 };
-let gameaionePortfolio: portfolioItem = {
+let gameaionePortfolio: t = {
   title: "Game Playing Ai",
   className: None,
   images: [
     {src: "gameaione", border: PhonePortrait, className: Some("col-12")},
   ],
-  category: [PortfolioDataType.AI],
+  category: [AI],
   links: [],
   technologies: ["Game Design", "Graphic Design", "Ux", "Ui"],
   body:
     [<div> <p> {string("Some body text")} </p> </div>] |> Belt.List.toArray,
 };
-let gameaitwoPortfolio: portfolioItem = {
+let gameaitwoPortfolio: t = {
   title: "AI Game 2",
   className: None,
-  category: [PortfolioDataType.AI],
+  category: [AI],
   images: [{src: gameaitwo, border: Desktop, className: Some("col-8")}],
   links: [],
   technologies: ["html5", "css", "Graphic Design", "web design"],
   body:
     [<div> <p> {string("Some body text")} </p> </div>] |> Belt.List.toArray,
 } /* ----------------------- Websites ---------------------*/;
-let ketawaPortfolio: portfolioItem = {
+let ketawaPortfolio: t = {
   title: "Ketawa Pet Friendly Hotel Website",
   className: None,
-  category: [PortfolioDataType.Design],
+  category: [Design],
   images: [
     {
       src: "ketawaapp",
@@ -453,7 +428,7 @@ let ketawaPortfolio: portfolioItem = {
   ],
   links: [
     {
-      _type: Default,
+      category: Default,
       href: "http://www.ketawahotel.com/",
       caption: "View Website >",
     },
@@ -476,10 +451,10 @@ let ketawaPortfolio: portfolioItem = {
     ]
     |> Belt.List.toArray,
 };
-let alldaytattooPortfolio: portfolioItem = {
+let alldaytattooPortfolio: t = {
   title: "All Day Tattoo Website",
   className: None,
-  category: [PortfolioDataType.Design],
+  category: [Design],
   images: [
     {
       src: "alldaytattoo",
@@ -514,10 +489,10 @@ let alldaytattooPortfolio: portfolioItem = {
     ]
     |> Belt.List.toArray,
 };
-let wilaamalinPortfolio: portfolioItem = {
+let wilaamalinPortfolio: t = {
   title: "WilaaMalin",
   className: None,
-  category: [PortfolioDataType.Other],
+  category: [Other],
   images: [
     {
       src: "wilaamalinapp",
@@ -528,7 +503,7 @@ let wilaamalinPortfolio: portfolioItem = {
   ],
   links: [
     {
-      _type: Default,
+      category: Default,
       href: "https://wilaamalin.com?ref=divertise.asia",
       caption: "View Website >",
     },
@@ -547,10 +522,10 @@ let wilaamalinPortfolio: portfolioItem = {
     ]
     |> Belt.List.toArray,
 };
-let eastwestPortfolio: portfolioItem = {
+let eastwestPortfolio: t = {
   title: "East West Fitness",
   className: None,
-  category: [PortfolioDataType.Other],
+  category: [Other],
   images: [
     {
       src: "eastwestapp",
@@ -561,7 +536,7 @@ let eastwestPortfolio: portfolioItem = {
   ],
   links: [
     {
-      _type: Default,
+      category: Default,
       href: "https://eastwestfitness.com/?ref=divertise.asia",
       caption: "View Website >",
     },
@@ -580,10 +555,10 @@ let eastwestPortfolio: portfolioItem = {
     ]
     |> Belt.List.toArray,
 };
-let halalblockvideoPortfolio: portfolioItem = {
+let halalblockvideoPortfolio: t = {
   title: "Halal Blockchain Promotional Video",
   className: None,
-  category: [PortfolioDataType.Other],
+  category: [Other],
   images: [
     {
       src: "halalblockvideo",
@@ -605,10 +580,10 @@ let halalblockvideoPortfolio: portfolioItem = {
     ]
     |> Belt.List.toArray,
 };
-let traitsignalvideoPortfolio: portfolioItem = {
+let traitsignalvideoPortfolio: t = {
   title: "Trait Signal Promotional Video",
   className: None,
-  category: [PortfolioDataType.Other],
+  category: [Other],
   images: [
     {
       src: "traitsignalvideo",
@@ -633,10 +608,10 @@ let traitsignalvideoPortfolio: portfolioItem = {
     ]
     |> Belt.List.toArray,
 };
-let adsoupvideoPortfolio: portfolioItem = {
+let adsoupvideoPortfolio: t = {
   title: "Adsoup Promotional Video",
   className: None,
-  category: [PortfolioDataType.Other],
+  category: [Other],
   images: [
     {
       src: "adsoupvideo",
@@ -661,10 +636,10 @@ let adsoupvideoPortfolio: portfolioItem = {
     ]
     |> Belt.List.toArray,
 } /* ----------------------- Virtual Reality ---------------------- */;
-let vrPortfolio: portfolioItem = {
+let vrPortfolio: t = {
   title: "CXRL",
   className: None,
-  category: [PortfolioDataType.Other],
+  category: [Other],
   images: [
     {
       src: "cvrlp",
@@ -675,7 +650,7 @@ let vrPortfolio: portfolioItem = {
   ],
   links: [
     {
-      _type: Default,
+      category: Default,
       href: "https://cvrl.asia/?ref=divertise.asia",
       caption: "View Website >",
     },
@@ -698,10 +673,10 @@ let vrPortfolio: portfolioItem = {
     ]
     |> Belt.List.toArray,
 } /* ----------------------- Games ---------------------------*/;
-let kikiiPortfolio: portfolioItem = {
+let kikiiPortfolio: t = {
   title: "Kikii on the Run",
   className: Some("kikii-image"),
-  category: [PortfolioDataType.Other],
+  category: [Other],
   images: [
     {
       src: "kikiigamephone",
@@ -716,12 +691,12 @@ let kikiiPortfolio: portfolioItem = {
   ],
   links: [
     /* {
-         _type: GooglePlay,
+         category: GooglePlay,
          href: "https://play.google.com/store/apps/details?id=asia.divertise.soidog",
          caption: "Google Play"
        }, */
     {
-      _type: AppStore,
+      category: AppStore,
       href: "https://itunes.apple.com/th/app/kikii-on-the-run/id1282269153?mt=8",
       caption: "iTunes",
     },
@@ -751,10 +726,10 @@ let kikiiPortfolio: portfolioItem = {
     ]
     |> Belt.List.toArray,
 };
-let microgamesPortfolio: portfolioItem = {
+let microgamesPortfolio: t = {
   title: "Microgames",
   className: None,
-  category: [PortfolioDataType.Other],
+  category: [Other],
   images: [
     {src: "microgames1", border: PhonePortrait, className: Some("col-4")},
     {src: "microgames2", border: PhonePortrait, className: Some("col-4")},
@@ -762,7 +737,7 @@ let microgamesPortfolio: portfolioItem = {
   ],
   links: [
     {
-      _type: GooglePlay,
+      category: GooglePlay,
       href: "https://play.google.com/store/apps/details?id=th.co.microgames",
       caption: "Google Play",
     },

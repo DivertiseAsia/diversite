@@ -1,70 +1,4 @@
-open ReasonReact;
-
-[@bs.module]
-external iconhtml5: string = "../../../../public/images/html5-logo.png";
-[@bs.module]
-external iconpython: string =
-  "../../../../public/images/tech-icon/tech-icon_python.png";
-[@bs.module]
-external iconandroid: string =
-  "../../../../public/images/tech-icon/tech-icon_android.png";
-[@bs.module]
-external iconcircleci: string =
-  "../../../../public/images/tech-icon/tech-icon_circleci.png";
-[@bs.module]
-external iconcocos: string =
-  "../../../../public/images/tech-icon/tech-icon_cocos.png";
-[@bs.module]
-external iconcss: string =
-  "../../../../public/images/tech-icon/tech-icon_css.png";
-[@bs.module]
-external icondjango: string =
-  "../../../../public/images/tech-icon/tech-icon_django.png";
-[@bs.module]
-external icondocker: string =
-  "../../../../public/images/tech-icon/tech-icon_docker.png";
-[@bs.module]
-external iconfirebase: string =
-  "../../../../public/images/tech-icon/tech-icon_firebase.png";
-[@bs.module]
-external icongit: string =
-  "../../../../public/images/tech-icon/tech-icon_git.png";
-[@bs.module]
-external iconios: string =
-  "../../../../public/images/tech-icon/tech-icon_ios.png";
-[@bs.module]
-external iconjs: string =
-  "../../../../public/images/tech-icon/tech-icon_js.png";
-[@bs.module]
-external iconpostgresql: string =
-  "../../../../public/images/tech-icon/tech-icon_postgresql.png";
-[@bs.module]
-external iconpandas: string =
-  "../../../../public/images/tech-icon/tech-icon_pandas.png";
-[@bs.module]
-external iconreason: string =
-  "../../../../public/images/tech-icon/tech-icon_reason.png";
-[@bs.module]
-external iconreact: string =
-  "../../../../public/images/tech-icon/tech-icon_react.png";
-[@bs.module]
-external iconscikitlearn: string =
-  "../../../../public/images/tech-icon/tech-icon_scikitlearn.png";
-[@bs.module]
-external iconnodejs: string =
-  "../../../../public/images/tech-icon/tech-icon_nodejs.png";
-[@bs.module]
-external iconunity: string =
-  "../../../../public/images/tech-icon/tech-icon_unity.png";
-[@bs.module]
-external iconruby: string =
-  "../../../../public/images/tech-icon/tech-icon_ruby.png";
-[@bs.module]
-external icontensorflow: string =
-  "../../../../public/images/tech-icon/tech-icon_tensorflow.png";
-[@bs.module]
-external iconwordpress: string =
-  "../../../../public/images/tech-icon/tech-icon_wordpress.png";
+open React;
 
 type techIconType =
   | HTML5
@@ -94,7 +28,7 @@ type techIconType =
 type techIcon = {
   techIconType,
   className: string,
-  content: ReasonReact.reactElement,
+  content: React.element,
 };
 
 let mapStringToTechIconType = (icon: string) =>
@@ -144,113 +78,113 @@ let mapIcon = icon =>
   | HTML5 => {
       techIconType: icon,
       className: "html5",
-      content: <ImageBackground src=iconhtml5> <div /> </ImageBackground>,
+      content: <ImageBackground src="/static/images/tech-icon/html5_logo.png" />,
     }
   | Python => {
       techIconType: icon,
       className: "python",
-      content: <ImageBackground src=iconpython> <div /> </ImageBackground>,
+      content: <ImageBackground src="/static/images/tech-icon/tech-icon_python.png" />,
     }
   | Android => {
       techIconType: icon,
       className: "android",
-      content: <ImageBackground src=iconandroid> <div /> </ImageBackground>,
+      content: <ImageBackground src="/static/images/tech-icon/tech-icon_android.png" />,
     }
   | Circleci => {
       techIconType: icon,
       className: "circleci",
-      content: <ImageBackground src=iconcircleci> <div /> </ImageBackground>,
+      content: <ImageBackground src="/static/images/tech-icon/tech-icon_circleci.png" />,
     }
   | Cocos => {
       techIconType: icon,
       className: "cocos",
-      content: <ImageBackground src=iconcocos> <div /> </ImageBackground>,
+      content: <ImageBackground src="/static/images/tech-icon/tech-icon_cocos.png" />,
     }
   | CSS => {
       techIconType: icon,
       className: "css",
-      content: <ImageBackground src=iconcss> <div /> </ImageBackground>,
+      content: <ImageBackground src="/static/images/tech-icon/tech-icon_css.png" />,
     }
   | Django => {
       techIconType: icon,
       className: "django",
-      content: <ImageBackground src=icondjango> <div /> </ImageBackground>,
+      content: <ImageBackground src="/static/images/tech-icon/tech-icon_django.png" />,
     }
   | Docker => {
       techIconType: icon,
       className: "docker",
-      content: <ImageBackground src=icondocker> <div /> </ImageBackground>,
+      content: <ImageBackground src="/static/images/tech-icon/tech-icon_docker.png" />,
     }
   | Firebase => {
       techIconType: icon,
       className: "firebase",
-      content: <ImageBackground src=iconfirebase> <div /> </ImageBackground>,
+      content: <ImageBackground src="/static/images/tech-icon/tech-icon_firebase.png" />,
     }
   | Git => {
       techIconType: icon,
       className: "git",
-      content: <ImageBackground src=icongit> <div /> </ImageBackground>,
+      content: <ImageBackground src="/static/images/tech-icon/tech-icon_git.png" />,
     }
   | Ios => {
       techIconType: icon,
       className: "ios",
-      content: <ImageBackground src=iconios> <div /> </ImageBackground>,
+      content: <ImageBackground src="/static/images/tech-icon/tech-icon_ios.png" />,
     }
   | Nodejs => {
       techIconType: icon,
       className: "nodejs",
-      content: <ImageBackground src=iconnodejs> <div /> </ImageBackground>,
+      content: <ImageBackground src="/static/images/tech-icon/tech-icon_nodejs.png" />,
     }
   | Js => {
       techIconType: icon,
       className: "js",
-      content: <ImageBackground src=iconjs> <div /> </ImageBackground>,
+      content: <ImageBackground src="/static/images/tech-icon/tech-icon_js.png" />,
     }
   | Postgresql => {
       techIconType: icon,
       className: "postgresql",
-      content: <ImageBackground src=iconpostgresql> <div /> </ImageBackground>,
+      content: <ImageBackground src="/static/images/tech-icon/tech-icon_postgresql.png" />,
     }
   | Pandas => {
       techIconType: icon,
       className: "pandas",
-      content: <ImageBackground src=iconpandas> <div /> </ImageBackground>,
+      content: <ImageBackground src="/static/images/tech-icon/tech-icon_pandas.png" />,
     }
   | Reason => {
       techIconType: icon,
       className: "reason",
-      content: <ImageBackground src=iconreason> <div /> </ImageBackground>,
+      content: <ImageBackground src="/static/images/tech-icon/tech-icon_reason.png" />,
     }
   | React => {
       techIconType: icon,
       className: "react",
-      content: <ImageBackground src=iconreact> <div /> </ImageBackground>,
+      content: <ImageBackground src="/static/images/tech-icon/tech-icon_react.png" />,
     }
   | Ruby => {
       techIconType: icon,
       className: "ruby",
-      content: <ImageBackground src=iconruby> <div /> </ImageBackground>,
+      content: <ImageBackground src="/static/images/tech-icon/tech-icon_ruby.png" />,
     }
   | Scikitlearn => {
       techIconType: icon,
       className: "scikitlearn",
       content:
-        <ImageBackground src=iconscikitlearn> <div /> </ImageBackground>,
+        <ImageBackground src="/static/images/tech-icon/tech-icon_scikitlearn.png" />,
     }
   | Tensorflow => {
       techIconType: icon,
       className: "tensorflow",
-      content: <ImageBackground src=icontensorflow> <div /> </ImageBackground>,
+      content: <ImageBackground src="/static/images/tech-icon/tech-icon_tensorflow.png" />,
     }
   | Unity => {
       techIconType: icon,
       className: "unity",
-      content: <ImageBackground src=iconunity> <div /> </ImageBackground>,
+      content: <ImageBackground src="/static/images/tech-icon/tech-icon_unity.png" />,
     }
   | Wordpress => {
       techIconType: icon,
       className: "wordpress",
-      content: <ImageBackground src=iconwordpress> <div /> </ImageBackground>,
+      content: <ImageBackground src="/static/images/tech-icon/tech-icon_wordpress.png" />,
     }
 
   | Other(x, className) => {

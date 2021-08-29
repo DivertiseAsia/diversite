@@ -1,12 +1,13 @@
-open ReasonReact;
+open React;
+open DataTypes.PortfolioItem;
 open PortfolioData;
 
 [@react.component]
-let make = (~selectedCategory: PortfolioDataType.t) => {
+let make = (~selectedCategory: category) => {
   let (isPopupOpen, setPopupOpen) = React.useState(() => false);
 
   let portfolioCategoryLink =
-      (category: PortfolioDataType.t, text: string, tooltip: string) => {
+      (category: category, text: string, tooltip: string) => {
     <a
       href={Links.ourwork_link(category)}
       className={
@@ -49,20 +50,20 @@ let make = (~selectedCategory: PortfolioDataType.t) => {
             className="text-white letter-spacing -text-uppercase -text-header-shadow">
             {string("Portfolio")}
           </h3>
-          {portfolioCategoryLink(PortfolioDataType.All, "All Projects", "All")}
-          {portfolioCategoryLink(PortfolioDataType.AI, "AI Project", "AI")}
+          {portfolioCategoryLink(All, "All Projects", "All")}
+          {portfolioCategoryLink(AI, "AI Project", "AI")}
           {portfolioCategoryLink(
-             PortfolioDataType.AppPlatforms,
+             AppPlatforms,
              "Apps & Platforms",
              "Apps",
            )}
           {portfolioCategoryLink(
-             PortfolioDataType.Design,
+             Design,
              "Design Projects",
              "Design",
            )}
           {portfolioCategoryLink(
-             PortfolioDataType.Other,
+             Other,
              "Other Projects",
              "Others",
            )}
@@ -87,7 +88,7 @@ let make = (~selectedCategory: PortfolioDataType.t) => {
       showX=false
       closeFunc={() => setPopupOpen(_ => false)}>
       <p>
-        {ReasonReact.string(
+        {React.string(
            "Please add your email. We will send you our portfolio.",
          )}
       </p>
@@ -102,7 +103,7 @@ let make = (~selectedCategory: PortfolioDataType.t) => {
           name="email"
         />
         <button type_="submit" className="btn btn-solid-color1">
-          {ReasonReact.string("Submit")}
+          {React.string("Submit")}
         </button>
       </form>
     </Popup>
