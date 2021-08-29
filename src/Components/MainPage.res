@@ -57,18 +57,18 @@ let make = (~className: option<string>=?, ~title:string, ~keywords:string, ~desc
               target="_blank"
               href="https://www.facebook.com/DivertiseAsia/"
               className="icon-social social-fb">
-              <img src="static/images/facebook.svg" />
+              <img src="/static/images/facebook.svg" />
             </a>
             <a
               target="_blank"
               href="https://www.linkedin.com/company/divertiseasia"
               className="icon-social">
-              <img src="static/images/linkedin.svg" />
+              <img src="/static/images/linkedin.svg" />
             </a>
             <a
               href="mailto:contact@divertise.asia"
               className="icon-social">
-              <img src="static/images/email.svg" />
+              <img src="/static/images/email.svg" />
             </a>
           </div>
           <p>
