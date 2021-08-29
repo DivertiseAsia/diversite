@@ -1,31 +1,13 @@
-open ReasonReact;
+open React;
 
-let component = ReasonReact.statelessComponent("PageCareers");
-[@bs.module]
-external type1: string = "../../../../public/images/position-dev.jpg";
-[@bs.module]
-external type2: string = "../../../../public/images/position-design.jpg";
-[@bs.module]
-external type3: string = "../../../../public/images/position-game.jpg";
-[@bs.module]
-external type4: string = "../../../../public/images/position-art.jpg";
-[@bs.module]
-external flexible: string = "../../../../public/images/flexible.png";
-[@bs.module]
-external lovelearn: string = "../../../../public/images/lovelearning.png";
-[@bs.module]
-external openminded: string = "../../../../public/images/openminded.png";
-
-[@react.component]
+@react.component
 let make = () => {
   <MainPage
     title="Careers at Divertise Asia"
     keywords="Artificial Intelligence, Design, Fullstack, API, Server"
     description="Join our team"
   >
-    <PageHeader title="Careers" className="bg-gradient-color1 pt-5">
-      <div />
-    </PageHeader>
+    <PageHeader title="Careers" className="bg-gradient-color1 pt-5"/>
     <div className="container">
       <div className="row py-5 d-block text-center -text-uppercase">
         <h3> {string("Positions at Divertise Asia")} </h3>
@@ -33,13 +15,13 @@ let make = () => {
           <InternshipProgram
             iconType=Icon.Code
             title="Developer"
-            imageURL=type1
+            imageURL="/static/images/position-dev.jpg"
             href=Links.careersdeveloper
           />
           <InternshipProgram
             iconType=Icon.Pen
             title="Design Engineer"
-            imageURL=type2
+            imageURL="/static/images/position-design.jpg"
             href=Links.careersdesigner
           />
         </div>
@@ -55,14 +37,14 @@ let make = () => {
           <InternshipProgram
             iconType=Icon.Code
             title="App & Ai Dev"
-            imageURL=type3
+            imageURL="/static/images/position-game.jpg"
             href=Links.internshipdeveloper
             className="image-background"
           />
           <InternshipProgram
             iconType=Icon.Pen
             title="Art & Design"
-            imageURL=type4
+            imageURL="/static/images/position-art.jpg"
             href=Links.internshipdesign
           />
         </div>
@@ -75,35 +57,29 @@ let make = () => {
         </h3>
         <div className="row py-5 career_lookingfor">
           <div className="col-md-4 col-xs-12 pb-3">
-            <ImageBackground className=" " src=flexible>
-              <div />
-            </ImageBackground>
+            <ImageBackground className=" " src="/static/images/flexible.png" />
             <h4> {string("Flexible")} </h4>
             <p>
-              {ReasonReact.string(
-                 {j| Our core work hours make it easy for your schdule to fit your lifestyle. We're flexible so you can be too. |j},
+              {React.string(
+                 `Our core work hours make it easy for your schdule to fit your lifestyle. We're flexible so you can be too.`,
                )}
             </p>
           </div>
           <div className="col-md-4 col-xs-12  pb-3">
-            <ImageBackground className=" " src=lovelearn>
-              <div />
-            </ImageBackground>
+            <ImageBackground className=" " src="/static/images/lovelearning.png" />
             <h4> {string("Open Minded")} </h4>
             <p>
-              {ReasonReact.string(
-                 {j| There's always more than one way to do something. We're always open to ideas. |j},
+              {React.string(
+                 `There's always more than one way to do something. We're always open to ideas.`,
                )}
             </p>
           </div>
           <div className="col-md-4 col-xs-12  pb-3">
-            <ImageBackground className=" " src=openminded>
-              <div />
-            </ImageBackground>
+            <ImageBackground className=" " src="/static/images/openminded.png" />
             <h4> {string("Love Learning")} </h4>
             <p>
-              {ReasonReact.string(
-                 {j| Do you like learning? We do! Here at Divertise we like to keep up with the latest tech. |j},
+              {React.string(
+                 `Do you like learning? We do! Here at Divertise we like to keep up with the latest tech.`,
                )}
             </p>
           </div>
@@ -148,12 +124,12 @@ let make = () => {
         {string(
            "If you are interested in joining our team, just send your portfolio to",
          )}
-        <Link
-          isExternal=true
+        <a
+          target="_blank"
           href="mailto:contact@divertise.asia"
           className="text-contact">
           {string("careers@divertise.asia")}
-        </Link>
+        </a>
       </p>
     </div>
   </MainPage>;

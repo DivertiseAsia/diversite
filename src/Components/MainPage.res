@@ -13,39 +13,39 @@ let make = (~className: option<string>=?, ~title:string, ~keywords:string, ~desc
     <div className={"page page-has-top " ++ {Js.Option.getWithDefault("mainpage-default", className)}}>
       <div className="page-end-container page-end-top">
         <div className="page-end page-end-0">
-          <nav className="nav -text-right">
-            <Logo />
-            <input type_="checkbox" />
-            <div className="nav-icon"> <div /> <div /> <div /> </div>
-            <div className="nav-container">
-              <Link href=Links.home> {string("Home")} </Link>
-              <Link href=Links.ourwork> {string("Our Work")} </Link>
-              <Link href=Links.careers> {string("Careers")} </Link>
-              <Link href=Links.contacts> {string("Contact Us")} </Link>
-              <div
-                className="btn btn-line-white"
-                onClick={_ => setPopupOpen(_ => !isPopupOpen)}>
-                {string("Build Your Ideas")}
+          <div className="page-children">
+            <nav className="nav -text-right">
+              <Logo />
+              <input type_="checkbox" />
+              <div className="nav-icon"> <div /> <div /> <div /> </div>
+              <div className="nav-container">
+                <Link href=Links.home> {string("Home")} </Link>
+                <Link href=Links.ourwork> {string("Our Work")} </Link>
+                <Link href=Links.careers> {string("Careers")} </Link>
+                <Link href=Links.contacts> {string("Contact Us")} </Link>
+                <div
+                  className="btn btn-line-white"
+                  onClick={_ => setPopupOpen(_ => !isPopupOpen)}>
+                  {string("Build Your Ideas")}
+                </div>
               </div>
-            </div>
-          </nav>
-        </div>
-        <div className="page-end page-end-1">
-          <Popup
-            isOpen=isPopupOpen
-            closeOnBgClick=false
-            closeFunc={() => setPopupOpen(_ => false)}
-            className="buildyouridea-popup">
-            <div>
-              <h3> {string("Build Your Ideas")} </h3>
-              <p>
-                {string(
-                  "Tell us about what you need. We will get back to you within 1 working day",
-                )}
-              </p>
-            </div>
-            <ContactForm />
-          </Popup>
+            </nav>
+            <Popup
+              isOpen=isPopupOpen
+              closeOnBgClick=false
+              closeFunc={() => setPopupOpen(_ => false)}
+              className="buildyouridea-popup">
+              <div>
+                <h3> {string("Build Your Ideas")} </h3>
+                <p>
+                  {string(
+                    "Tell us about what you need. We will get back to you within 1 working day",
+                  )}
+                </p>
+              </div>
+              <ContactForm />
+            </Popup>
+          </div>
         </div>
       </div>
       <div className={"page-content-container"} key="children">
@@ -78,5 +78,5 @@ let make = (~className: option<string>=?, ~title:string, ~keywords:string, ~desc
         </div>
       </div>
     </div>
-  </div>;
+  </div>
 };

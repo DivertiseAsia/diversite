@@ -1,4 +1,4 @@
-open ReasonReact;
+open React;
 
 type iconType =
   | Bag
@@ -18,7 +18,7 @@ type iconType =
 type icon = {
   iconType,
   className: string,
-  content: ReasonReact.reactElement,
+  content: React.element,
 };
 
 let mapStringToIconType = (icon: string) =>

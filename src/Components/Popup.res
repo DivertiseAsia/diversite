@@ -25,7 +25,7 @@ let make =
     <div className="popup">
       {showX
          ? <div className="popup-x" onClick={_ => closeFunc()}>
-             {React.string("×")}
+             {React.string(`×`)}
            </div>
          : React.null}
       <div className="popup-content"> children </div>

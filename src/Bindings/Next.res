@@ -66,6 +66,18 @@ module Link = {
   ) => React.element = "default"
 }
 
+module Image = {
+  @module("next/image") @react.component
+  external make: (
+    ~src: string,
+    ~width: int=?,
+    ~height: int=?,
+    ~layout: string=?,
+    ~objectFit: string=?,
+    ~className: string=?,
+  ) => React.element = "default"
+}
+
 module Router = {
   /*
       Make sure to only register events via a useEffect hook!

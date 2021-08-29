@@ -4,7 +4,6 @@ let make =
       ~className: option<string>=?,
       ~title: string,
       ~subtitle: option<string>=?,
-      ~children,
     ) => {
   <div
     className={"section-header " ++ Js.Option.getWithDefault("", className)}>
@@ -23,6 +22,5 @@ let make =
          }}
       </div>
     </div>
-    <div className="container nav"> children </div>
   </div>;
 };

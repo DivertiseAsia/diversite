@@ -1,6 +1,6 @@
-open ReasonReact;
+open React;
 
-[@react.component]
+@react.component
 let make = () => {
   <MainPage
     title="Designer Internship at Divertise Asia"
@@ -10,9 +10,8 @@ let make = () => {
     <PageHeader
       title="Internship"
       subtitle="Art & Design"
-      className="bg-gradient-color1 pt-5">
-      <div />
-    </PageHeader>
+      className="bg-gradient-color1 pt-5"
+    />
     <div className="container">
       <div className="row pt-5 d-block">
         <h3>
@@ -85,11 +84,11 @@ let make = () => {
           <div className="d-flex justify-content-center flex-wrap">
             <p> {string("Send us your resume and porfolio to ")} </p>
             <p>
-              <Link
+              <a
                 className="pr-1 pl-1 -font-weight-bold text-color1 -text-underline-none"
                 href="mailto:contact@divertise.asia">
                 {string("careers@divertise.asia")}
-              </Link>
+              </a>
             </p>
             <p> {string("and we'll get back to you soon!")} </p>
           </div>
