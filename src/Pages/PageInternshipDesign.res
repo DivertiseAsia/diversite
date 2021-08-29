@@ -86,7 +86,7 @@ let make = () => {
             <p>
               <a
                 className="pr-1 pl-1 -font-weight-bold text-color1 -text-underline-none"
-                href="mailto:contact@divertise.asia">
+                href="mailto:careers@divertise.asia">
                 {string("careers@divertise.asia")}
               </a>
             </p>
