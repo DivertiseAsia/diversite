@@ -221,7 +221,7 @@ a:hover { text-decoration: none; }
 
 .page {
   display: flex;
-  direction: column;
+  flex-direction: column;
   height: 100%;
 }
 .page-content-container {
