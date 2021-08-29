@@ -1,9 +1,9 @@
 open WebGL;
 
 [@bs.module]
-external customVert: string = "../../../../public/Shaders/custom.vert";
+external customVert: string = "/static/Shaders/custom.vert";
 [@bs.module]
-external customFrag: string = "../../../../public/Shaders/custom.frag";
+external customFrag: string = "/static/Shaders/custom.frag";
 
 let materialJs: (three, string, string) => Three.material = [%bs.raw
   {|
