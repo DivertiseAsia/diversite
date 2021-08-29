@@ -1,6 +1,6 @@
-open ReasonReact;
+open React;
 open WebGL;
-open Laser;
+/* open Laser; */
 open Pentagon;
 open BallWorld;
 open Network;
@@ -64,7 +64,8 @@ let rec animate = (currentScene, camera, scene, renderer) => {
   )
   |> ignore;
   switch (currentScene) {
-  | Laser => LaserScene.animate()
+  /* | Laser => LaserScene.animate() */
+  | Laser
   | Pentagon => PentagonScene.animate()
   | Ball => BallWorldScene.animate()
   | Network => NetworkScene.animate()
@@ -92,12 +93,12 @@ let renderScene = scene =>
         Document.clearMouseEvents(element);
         let currentSceneObject =
           switch (scene) {
-          | Laser =>
-            LaserScene.initScene(
+          | Laser 
+            /* LaserScene.initScene(
               Document.offsetWidth(element),
               Document.offsetHeight(element),
             );
-            LaserScene.scene[0];
+            LaserScene.scene[0]; */
           | Pentagon =>
             PentagonScene.initScene(element);
             PentagonScene.scene[0];
