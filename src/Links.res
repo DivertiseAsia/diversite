@@ -1,15 +1,16 @@
-let home = "/";
-let careers = "/careers";
-let contacts = "/contacts";
-let careersdesigner = "/careers/designer";
-let careersdeveloper = "/careers/developer";
-let internshipdesign = "/internships/design";
-let internshipdeveloper = "/internships/developer";
-let ourwork = "/ourwork";
+let home = "/"
+let careers = "/careers"
+let contact = "/contact"
+let careersdesigner = "/careers/designer"
+let careersdeveloper = "/careers/developer"
+let internshipdesign = "/internships/design"
+let internshipdeveloper = "/internships/developer"
+let ourwork = "/ourwork"
 
-
-let ourwork_link = (category:DataTypes.PortfolioItem.category) => {
-  ourwork ++ "#" ++ switch(category) {
+let ourwork_link = (category: DataTypes.PortfolioItem.category) => {
+  ourwork ++
+  "#" ++
+  switch category {
   | All => "all"
   | AI => "ai"
   | AppPlatforms => "appsandplatforms"
@@ -18,12 +19,12 @@ let ourwork_link = (category:DataTypes.PortfolioItem.category) => {
   }
 }
 
-let ourwork_link_category = (link:string):DataTypes.PortfolioItem.category => {
-  switch (link) {
-    | "ai" => AI
-    | "appsandplatforms" => AppPlatforms
-    | "design" => Design
-    | "other" => Other
-    | "all" | _ => All
+let ourwork_link_category = (link: string): DataTypes.PortfolioItem.category => {
+  switch link {
+  | "ai" => AI
+  | "appsandplatforms" => AppPlatforms
+  | "design" => Design
+  | "other" => Other
+  | "all" | _ => All
   }
 }
