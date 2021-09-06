@@ -1,3 +1,3 @@
 module Info = {
-  let name = "DivertiseAsiaWebsite";
-};
+  let name = "DivertiseAsiaWebsite"
+}
