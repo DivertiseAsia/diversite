@@ -23,7 +23,7 @@ function ourwork_link(category) {
         break;
     
   }
-  return "/ourwork#" + tmp;
+  return "/ourwork?category=" + tmp;
 }
 
 function ourwork_link_category(link) {

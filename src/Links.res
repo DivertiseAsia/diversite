@@ -9,7 +9,7 @@ let ourwork = "/ourwork"
 
 let ourwork_link = (category: DataTypes.PortfolioItem.category) => {
   ourwork ++
-  "#" ++
+  "?category=" ++
   switch category {
   | All => "all"
   | AI => "ai"

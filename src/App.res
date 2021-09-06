@@ -15,21 +15,22 @@ type props = {
 // use <App/> within our ReScript code.
 // It's only used within `pages/_app.js`
 let default = (props: props): React.element => {
-  //let {component, pageProps} = props
+  let router = Next.Router.useRouter()
 
-  let router = Next.Router.useRouter()      
-
-  //let content = React.createElement(component, pageProps)
-
-  switch (router.route) {
-    | "/" => <PageHome />
-    | "/careers" => <PageCareers />
-    | "/careers/developer" => <PageCareersDeveloper />
-    | "/careers/designer" => <PageCareersDesigner />
-    | "/internships/developer" => <PageInternshipDev />
-    | "/internships/design" => <PageInternshipDesign />
-    | "/contact" => <PageContact />
-    | "/ourwork" => <PageOurWork selectedCategory=Links.ourwork_link_category("") />
-    | _ => <Page404 />
+  switch router.route {
+  | "/" => <PageHome />
+  | "/careers" => <PageCareers />
+  | "/careers/developer" => <PageCareersDeveloper />
+  | "/careers/designer" => <PageCareersDesigner />
+  | "/internships/developer" => <PageInternshipDev />
+  | "/internships/design" => <PageInternshipDesign />
+  | "/contact" => <PageContact />
+  | "/ourwork" =>
+    <PageOurWork
+      selectedCategory={Links.ourwork_link_category(
+        Js.Option.getWithDefault("", Js.Dict.get(router.query, "category")),
+      )}
+    />
+  | _ => <Page404 />
   }
 }

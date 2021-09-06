@@ -2,8 +2,10 @@
 
 import * as Links from "./Links.mjs";
 import * as React from "react";
+import * as Js_dict from "rescript/lib/es6/js_dict.js";
 import * as Page404 from "./Pages/Page404.mjs";
 import * as PageHome from "./Pages/PageHome.mjs";
+import * as Js_option from "rescript/lib/es6/js_option.js";
 import * as PageCareers from "./Pages/PageCareers.mjs";
 import * as PageContact from "./Pages/PageContact.mjs";
 import * as PageOurWork from "./Pages/PageOurWork.mjs";
@@ -33,7 +35,7 @@ function $$default(props) {
         return React.createElement(PageInternshipDev.make, {});
     case "/ourwork" :
         return React.createElement(PageOurWork.make, {
-                    selectedCategory: Links.ourwork_link_category("")
+                    selectedCategory: Links.ourwork_link_category(Js_option.getWithDefault("", Js_dict.get(router.query, "category")))
                   });
     default:
       return React.createElement(Page404.make, {});

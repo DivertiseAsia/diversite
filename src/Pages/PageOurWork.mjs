@@ -5,6 +5,7 @@ import * as Links from "../Links.mjs";
 import * as Popup from "../Components/Popup.mjs";
 import * as React from "react";
 import * as MainPage from "../Components/MainPage.mjs";
+import Link from "next/link";
 import * as PortfolioData from "../Data/PortfolioData.mjs";
 import * as PortfolioItem from "../Components/PortfolioItem.mjs";
 
@@ -16,16 +17,18 @@ function PageOurWork(Props) {
   var setPopupOpen = match[1];
   var isPopupOpen = match[0];
   var portfolioCategoryLink = function (category, text, tooltip) {
-    return React.createElement("a", {
-                className: "port-filter " + (
-                  category === selectedCategory ? "selected" : ""
-                ),
-                href: Links.ourwork_link(category)
-              }, React.createElement("span", {
-                    className: "hidden-md-down"
-                  }, text), React.createElement("span", {
-                    className: "hidden-lg-up"
-                  }, tooltip));
+    var selectedClass = category === selectedCategory ? "selected" : "";
+    return React.createElement(Link, {
+                href: Links.ourwork_link(category),
+                children: React.createElement("a", {
+                      className: "port-filter " + selectedClass
+                    }, React.createElement("span", {
+                          className: "hidden-md-down"
+                        }, text), React.createElement("span", {
+                          className: "hidden-lg-up"
+                        }, tooltip)),
+                key: text
+              });
   };
   var tmp;
   switch (selectedCategory) {
@@ -99,7 +102,6 @@ function PageOurWork(Props) {
                       item: PortfolioData.plateupPortfolio,
                       key: "plateup"
                     }), React.createElement(PortfolioItem.make, {
-                      id: "appsandplatforms",
                       item: PortfolioData.mintcrowdPortfolio,
                       key: "mintcrowd"
                     }), React.createElement(PortfolioItem.make, {
