@@ -100,7 +100,7 @@ function mapIcon(icon) {
                 techIconType: icon,
                 className: "html5",
                 content: React.createElement(ImageBackground.make, {
-                      src: "/static/images/tech-icon/html5_logo.png"
+                      src: "/static/images/tech-icon/html5-logo.png"
                     })
               };
     case /* Python */1 :

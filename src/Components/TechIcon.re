@@ -78,7 +78,7 @@ let mapIcon = icon =>
   | HTML5 => {
       techIconType: icon,
       className: "html5",
-      content: <ImageBackground src="/static/images/tech-icon/html5_logo.png" />,
+      content: <ImageBackground src="/static/images/tech-icon/html5-logo.png" />,
     }
   | Python => {
       techIconType: icon,
