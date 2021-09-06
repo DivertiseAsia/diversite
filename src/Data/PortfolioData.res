@@ -77,20 +77,18 @@ let adsoupPortfolio: t = {
     "Ux",
     "Ui",
   },
-  body: list{
-    <div>
-      <p>
-        {string(
-          "Adsoup Sales is an all-in-one platform where sales can communicate with thier leads from different comunication channels in one place, including Facebook and email. They also provide pipeline management and CRM functionality to manage customers account.",
-        )}
-      </p>
-      <p>
-        {string(
-          "Adsoup's main application is created in React and Firebase. The live chat component is built soley upon Firebase/Reason. The backend API and mailing fetching services are written in Python.",
-        )}
-      </p>
-    </div>,
-  } |> Belt.List.toArray,
+  body: <div>
+    <p>
+      {string(
+        "Adsoup Sales is an all-in-one platform where sales can communicate with thier leads from different comunication channels in one place, including Facebook and email. They also provide pipeline management and CRM functionality to manage customers account.",
+      )}
+    </p>
+    <p>
+      {string(
+        "Adsoup's main application is created in React and Firebase. The live chat component is built soley upon Firebase/Reason. The backend API and mailing fetching services are written in Python.",
+      )}
+    </p>
+  </div>,
 }
 let copanelPortfolio: t = {
   title: "Copanel",
@@ -127,20 +125,18 @@ let copanelPortfolio: t = {
     "Ux",
     "Ui",
   },
-  body: list{
-    <div>
-      <p>
-        {string(
-          "CoPanel is a time tracking application with the the ability to plan tasks ahead of time. This platform is designed for a small to medium size team to track working time and create reports based on category and projects. ",
-        )}
-      </p>
-      <p>
-        {string(
-          "The frontend is written in ReactJS and the backend is in Ruby. It is currently a free platform that supports both Thai and English",
-        )}
-      </p>
-    </div>,
-  } |> Belt.List.toArray,
+  body: <div>
+    <p>
+      {string(
+        "CoPanel is a time tracking application with the the ability to plan tasks ahead of time. This platform is designed for a small to medium size team to track working time and create reports based on category and projects. ",
+      )}
+    </p>
+    <p>
+      {string(
+        "The frontend is written in ReactJS and the backend is in Ruby. It is currently a free platform that supports both Thai and English",
+      )}
+    </p>
+  </div>,
 }
 let eventcometPortfolio: t = {
   title: "Event Comet",
@@ -169,20 +165,18 @@ let eventcometPortfolio: t = {
      caption: "View Website >"
    } */,
   technologies: list{"iOS", "Android", "Reason", "Ruby", "Docker", "Aws", "Web design", "Ux", "Ui"},
-  body: list{
-    <div>
-      <p>
-        {string(
-          "EventComet is an all-in-one event app solution. It was created to allow any event to have their own application. It allows event data to be updated even during the event.",
-        )}
-      </p>
-      <p>
-        {string(
-          "It's written using ReasonML with the server in Ruby. The platform supports running on both Android and iOS.",
-        )}
-      </p>
-    </div>,
-  } |> Belt.List.toArray,
+  body: <div>
+    <p>
+      {string(
+        "EventComet is an all-in-one event app solution. It was created to allow any event to have their own application. It allows event data to be updated even during the event.",
+      )}
+    </p>
+    <p>
+      {string(
+        "It's written using ReasonML with the server in Ruby. The platform supports running on both Android and iOS.",
+      )}
+    </p>
+  </div>,
 }
 let mintcrowdPortfolio: t = {
   title: "Mint Crowd",
@@ -198,16 +192,14 @@ let mintcrowdPortfolio: t = {
   links: list{{category: Text, href: "", caption: "(Website Coming Soon)"}},
   category: list{AppPlatforms},
   technologies: list{"Reason", "Python", "Docker", "Aws", "Web design", "Ux", "Ui"},
-  body: list{
-    <div>
-      <p>
-        {string(
-          "Mint Crowd allows anyone to invest in property located in Asia. The site takes a crowdfunding approach to investing and aims at a Western market.",
-        )}
-      </p>
-      <p> {string("The site was built with Reason and the backend runs in Python.")} </p>
-    </div>,
-  } |> Belt.List.toArray,
+  body: <div>
+    <p>
+      {string(
+        "Mint Crowd allows anyone to invest in property located in Asia. The site takes a crowdfunding approach to investing and aims at a Western market.",
+      )}
+    </p>
+    <p> {string("The site was built with Reason and the backend runs in Python.")} </p>
+  </div>,
 }
 let safemodePortfolio: t = {
   title: "Safemode",
@@ -220,15 +212,13 @@ let safemodePortfolio: t = {
   links: list{},
   category: list{AppPlatforms},
   technologies: list{"Reason", "Ux", "Ui"},
-  body: list{
-    <div>
-      <p>
-        {string(
-          "Safe Mode is an application aimed to make the society a little safer for everyone. The application allows users to share their location with their close contacts. It also allows users to call their close contact or an emergency number. The app aims to give the users a peace of mind that there is someone watching their back. ",
-        )}
-      </p>
-    </div>,
-  } |> Belt.List.toArray,
+  body: <div>
+    <p>
+      {string(
+        "Safe Mode is an application aimed to make the society a little safer for everyone. The application allows users to share their location with their close contacts. It also allows users to call their close contact or an emergency number. The app aims to give the users a peace of mind that there is someone watching their back. ",
+      )}
+    </p>
+  </div>,
 }
 let plateupPortfolio: t = {
   title: "Plateup",
@@ -247,15 +237,13 @@ let plateupPortfolio: t = {
   },
   category: list{AppPlatforms},
   technologies: list{},
-  body: list{
-    <div>
-      <p>
-        {string(
-          "Plate Up is an application aimed at making healthy diets an easy, affordable option. The app allows users to select recipes, order ingredients, and count calories seamlessly.",
-        )}
-      </p>
-    </div>,
-  } |> Belt.List.toArray,
+  body: <div>
+    <p>
+      {string(
+        "Plate Up is an application aimed at making healthy diets an easy, affordable option. The app allows users to select recipes, order ingredients, and count calories seamlessly.",
+      )}
+    </p>
+  </div>,
 }
 /* --------------------- AI ----------------------------- */
 let traitsignalPortfolio: t = {
@@ -278,15 +266,13 @@ let traitsignalPortfolio: t = {
   },
   category: list{AI, AppPlatforms},
   technologies: list{},
-  body: list{
-    <div>
-      <p>
-        {string(
-          "Trait Signal is a webapp that is built to help car dealers grasp their customer's opinions about cars they are trying to sell.",
-        )}
-      </p>
-    </div>,
-  } |> Belt.List.toArray,
+  body: <div>
+    <p>
+      {string(
+        "Trait Signal is a webapp that is built to help car dealers grasp their customer's opinions about cars they are trying to sell.",
+      )}
+    </p>
+  </div>,
 }
 let boneagePortfolio: t = {
   title: "Bone Age",
@@ -313,11 +299,9 @@ let boneagePortfolio: t = {
     },
   },
   technologies: list{"tensorflow", "numpy", "scikitlearn", "pandas", "AI", "Research"},
-  body: list{
-    <div>
-      <p> {string("This project works to determine the age of a patient given their x-ray")} </p>
-    </div>,
-  } |> Belt.List.toArray,
+  body: <div>
+    <p> {string("This project works to determine the age of a patient given their x-ray")} </p>
+  </div>,
 }
 let gameaionePortfolio: t = {
   title: "Game Playing Ai",
@@ -326,7 +310,7 @@ let gameaionePortfolio: t = {
   category: list{AI},
   links: list{},
   technologies: list{"Game Design", "Graphic Design", "Ux", "Ui"},
-  body: list{<div> <p> {string("Some body text")} </p> </div>} |> Belt.List.toArray,
+  body: <div> <p> {string("Some body text")} </p> </div>,
 }
 let gameaitwoPortfolio: t = {
   title: "AI Game 2",
@@ -335,7 +319,7 @@ let gameaitwoPortfolio: t = {
   images: list{{src: gameaitwo, border: Desktop, className: Some("col-8")}},
   links: list{},
   technologies: list{"html5", "css", "Graphic Design", "web design"},
-  body: list{<div> <p> {string("Some body text")} </p> </div>} |> Belt.List.toArray,
+  body: <div> <p> {string("Some body text")} </p> </div>,
 } /* ----------------------- Websites --------------------- */
 let ketawaPortfolio: t = {
   title: "Ketawa Pet Friendly Hotel Website",
@@ -361,20 +345,18 @@ let ketawaPortfolio: t = {
     },
   },
   technologies: list{"html5", "css", "Js", "Graphic Design", "web design"},
-  body: list{
-    <div>
-      <p>
-        {string(
-          "Ketawa Hotel is a pet friendly hotel and cafe. Ketawa is rebranding and it needs its website to change to match with the new Cooperate Identity. So we redesigned the website. It has a warm, cozy, friendly, but simple look and feel to represent the hotel's characteristic.",
-        )}
-      </p>
-      <p>
-        {string(
-          "The site was built with HTML, Javascript, and styled with CSS in the framework of Bootstrap.",
-        )}
-      </p>
-    </div>,
-  } |> Belt.List.toArray,
+  body: <div>
+    <p>
+      {string(
+        "Ketawa Hotel is a pet friendly hotel and cafe. Ketawa is rebranding and it needs its website to change to match with the new Cooperate Identity. So we redesigned the website. It has a warm, cozy, friendly, but simple look and feel to represent the hotel's characteristic.",
+      )}
+    </p>
+    <p>
+      {string(
+        "The site was built with HTML, Javascript, and styled with CSS in the framework of Bootstrap.",
+      )}
+    </p>
+  </div>,
 }
 let alldaytattooPortfolio: t = {
   title: "All Day Tattoo Website",
@@ -389,19 +371,17 @@ let alldaytattooPortfolio: t = {
   },
   links: list{},
   technologies: list{"html5", "css", "wordpress", "Js", "Graphic Design", "web design"},
-  body: list{
-    <div>
-      <p>
-        {string("Alldaytattoo is a website redesign project. It is Built with Wordpress Visual Builder, Divi, and styled with additional CSS.
+  body: <div>
+    <p>
+      {string("Alldaytattoo is a website redesign project. It is Built with Wordpress Visual Builder, Divi, and styled with additional CSS.
              ")}
-      </p>
-      <p>
-        {string(
-          "The site was built with HTML, Javascript, and styled with CSS in the framework of Bootstrap.",
-        )}
-      </p>
-    </div>,
-  } |> Belt.List.toArray,
+    </p>
+    <p>
+      {string(
+        "The site was built with HTML, Javascript, and styled with CSS in the framework of Bootstrap.",
+      )}
+    </p>
+  </div>,
 }
 let wilaamalinPortfolio: t = {
   title: "WilaaMalin",
@@ -423,16 +403,14 @@ let wilaamalinPortfolio: t = {
     },
   },
   technologies: list{"wordpress", "Graphic Design", "web design"},
-  body: list{
-    <div>
-      <p>
-        {string(
-          "WilaaMalin is a handmade pet toy store. They wanted to move their website to a platform they could more easily manage and have more control in.",
-        )}
-      </p>
-      <p> {string("The site was created in WordPress.")} </p>
-    </div>,
-  } |> Belt.List.toArray,
+  body: <div>
+    <p>
+      {string(
+        "WilaaMalin is a handmade pet toy store. They wanted to move their website to a platform they could more easily manage and have more control in.",
+      )}
+    </p>
+    <p> {string("The site was created in WordPress.")} </p>
+  </div>,
 }
 let eastwestPortfolio: t = {
   title: "East West Fitness",
@@ -454,16 +432,14 @@ let eastwestPortfolio: t = {
     },
   },
   technologies: list{"Wordpress", "Graphic Design", "web design"},
-  body: list{
-    <div>
-      <p>
-        {string(
-          "East West Fitness is both a gym and fitness equipment provider located in Bangkok, Thailand. They wanted to a more professional website that they could manage on a daily basis.",
-        )}
-      </p>
-      <p> {string("The website was created in WordPress.")} </p>
-    </div>,
-  } |> Belt.List.toArray,
+  body: <div>
+    <p>
+      {string(
+        "East West Fitness is both a gym and fitness equipment provider located in Bangkok, Thailand. They wanted to a more professional website that they could manage on a daily basis.",
+      )}
+    </p>
+    <p> {string("The website was created in WordPress.")} </p>
+  </div>,
 }
 let halalblockvideoPortfolio: t = {
   title: "Halal Blockchain Promotional Video",
@@ -478,15 +454,13 @@ let halalblockvideoPortfolio: t = {
   },
   links: list{},
   technologies: list{"Video Editing", "2D Animation", "Story Board"},
-  body: list{
-    <div>
-      <p>
-        {string(
-          "Halal Blockchain has a grand vision of integrating the traditional Halal products with Blockchain Technology. We are honoured to be trusted to visualize and vocalize that vision in a 2-minute long video, on which we worked on all process, from storyboard to concept art to animating.",
-        )}
-      </p>
-    </div>,
-  } |> Belt.List.toArray,
+  body: <div>
+    <p>
+      {string(
+        "Halal Blockchain has a grand vision of integrating the traditional Halal products with Blockchain Technology. We are honoured to be trusted to visualize and vocalize that vision in a 2-minute long video, on which we worked on all process, from storyboard to concept art to animating.",
+      )}
+    </p>
+  </div>,
 }
 let traitsignalvideoPortfolio: t = {
   title: "Trait Signal Promotional Video",
@@ -501,16 +475,14 @@ let traitsignalvideoPortfolio: t = {
   },
   links: list{},
   technologies: list{"Video Editing", "2D Animation", "Story Board"},
-  body: list{
-    <div>
-      <p>
-        {string("Traitsignal is a startup aimed to use technology for better communications between customers and car manufacturers.
+  body: <div>
+    <p>
+      {string("Traitsignal is a startup aimed to use technology for better communications between customers and car manufacturers.
 
              Working with them, we created a 90-second long animation to explain how their products work, and how it would change the car industry.
              ")}
-      </p>
-    </div>,
-  } |> Belt.List.toArray,
+    </p>
+  </div>,
 }
 let adsoupvideoPortfolio: t = {
   title: "Adsoup Promotional Video",
@@ -525,16 +497,14 @@ let adsoupvideoPortfolio: t = {
   },
   links: list{},
   technologies: list{"Video Editing", "2D Animation", "Story Board"},
-  body: list{
-    <div>
-      <p>
-        {string("Adsoup is a startup who uses technology to make smoother communications between creative agencies and their clients.
+  body: <div>
+    <p>
+      {string("Adsoup is a startup who uses technology to make smoother communications between creative agencies and their clients.
 
              In this video, we worked closely with Adsoup from storyboard to finish to tell the story of their product better.
              ")}
-      </p>
-    </div>,
-  } |> Belt.List.toArray,
+    </p>
+  </div>,
 } /* ----------------------- Virtual Reality ---------------------- */
 let vrPortfolio: t = {
   title: "CXRL",
@@ -556,20 +526,18 @@ let vrPortfolio: t = {
     },
   },
   technologies: list{"VR", "Unity", "Android", "NodeJS"},
-  body: list{
-    <div>
-      <p>
-        {string(
-          "We have been working together as a partner with CXRL to help develop their VR catalog. We have worked with them to help create their property viewing platform. ",
-        )}
-      </p>
-      <p>
-        {string(
-          "The products are mostly written in C# using the Unity engine. To see their platform in action please contact CXRL or Divertise Asia",
-        )}
-      </p>
-    </div>,
-  } |> Belt.List.toArray,
+  body: <div>
+    <p>
+      {string(
+        "We have been working together as a partner with CXRL to help develop their VR catalog. We have worked with them to help create their property viewing platform. ",
+      )}
+    </p>
+    <p>
+      {string(
+        "The products are mostly written in C# using the Unity engine. To see their platform in action please contact CXRL or Divertise Asia",
+      )}
+    </p>
+  </div>,
 } /* ----------------------- Games --------------------------- */
 let kikiiPortfolio: t = {
   title: "Kikii on the Run",
@@ -600,20 +568,18 @@ let kikiiPortfolio: t = {
     },
   },
   technologies: list{"android", "ios", "Unity", "Game Design", "2D Art", "2D Animation"},
-  body: list{
-    <div>
-      <p>
-        {string(
-          "A game with the ridiculous concept of a dog running, eating, and pooping in the streets of Bangkok. Inspired by the walk to our old office.",
-        )}
-      </p>
-      <p>
-        {string(
-          "It's written in C# using the Unity engine. The game is currently out on Android and IOS. It supports both Thai and English",
-        )}
-      </p>
-    </div>,
-  } |> Belt.List.toArray,
+  body: <div>
+    <p>
+      {string(
+        "A game with the ridiculous concept of a dog running, eating, and pooping in the streets of Bangkok. Inspired by the walk to our old office.",
+      )}
+    </p>
+    <p>
+      {string(
+        "It's written in C# using the Unity engine. The game is currently out on Android and IOS. It supports both Thai and English",
+      )}
+    </p>
+  </div>,
 }
 let microgamesPortfolio: t = {
   title: "Microgames",
@@ -641,18 +607,16 @@ let microgamesPortfolio: t = {
     "ux",
     "ui",
   },
-  body: list{
-    <div>
-      <p>
-        {string(
-          "A 4-player game that takes place all on the same screen. It's made to be frantic for some quick downtime fun.",
-        )}
-      </p>
-      <p>
-        {string(
-          "Microgames was orignally written in Javascript using Phaser but was later ported to C++ with Cocos. It's currently available on Android.",
-        )}
-      </p>
-    </div>,
-  } |> Belt.List.toArray,
+  body: <div>
+    <p>
+      {string(
+        "A 4-player game that takes place all on the same screen. It's made to be frantic for some quick downtime fun.",
+      )}
+    </p>
+    <p>
+      {string(
+        "Microgames was orignally written in Javascript using Phaser but was later ported to C++ with Cocos. It's currently available on Android.",
+      )}
+    </p>
+  </div>,
 }
