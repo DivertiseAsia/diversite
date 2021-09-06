@@ -51,7 +51,6 @@ let make = (~selectedCategory: category) => {
         {portfolioCategoryLink(Other, "Other Projects", "Others")}
       </div>
     </div>
-    /* </div> */
     <div className="ourwork_section-header section-header bg-gradient-color1" />
     <div className="buffer" />
     <div
@@ -93,5 +92,5 @@ let make = (~selectedCategory: category) => {
       <PortfolioItem key="kikii" item=kikiiPortfolio />
       <PortfolioItem key="micro" item=microgamesPortfolio />
     </div>
-  </MainPage> /* TODO: This div's classname should change according to the links above */
+  </MainPage>
 }
