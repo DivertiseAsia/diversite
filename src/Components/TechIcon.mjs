@@ -281,7 +281,7 @@ function TechIcon(Props) {
   var techIconType = mapStringToTechIconType(tech);
   var icon = mapIcon(techIconType);
   return React.createElement("div", {
-              className: "tech-icon tech-icon-" + (icon.className + (" " + Js_option.getWithDefault("", className)))
+              className: "tech-icon tech-icon-" + icon.className + " " + Js_option.getWithDefault("", className)
             }, icon.content);
 }
 

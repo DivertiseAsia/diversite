@@ -1,4 +1,4 @@
-open React;
+open React
 
 type techIconType =
   | HTML5
@@ -23,16 +23,16 @@ type techIconType =
   | Tensorflow
   | Unity
   | Wordpress
-  | Other(string, string);
+  | Other(string, string)
 
 type techIcon = {
-  techIconType,
+  techIconType: techIconType,
   className: string,
   content: React.element,
-};
+}
 
 let mapStringToTechIconType = (icon: string) =>
-  switch (Js.String.toLowerCase(icon)) {
+  switch Js.String.toLowerCase(icon) {
   | "python" => Python
   | "html5" => HTML5
   | "android" => Android
@@ -60,21 +60,24 @@ let mapStringToTechIconType = (icon: string) =>
   | "2d animation"
   | "web design"
   | "game design"
-  | "2d art" => Other(icon, "color2")
+  | "2d art" =>
+    Other(icon, "color2")
   | "story board" => Other(icon, "color2")
   | "video editing" => Other(icon, "color2")
   | "c++"
   | "aws"
   | "html"
   | "vr"
-  | "ai" => Other(icon, "text-big")
+  | "ai" =>
+    Other(icon, "text-big")
   | "ux"
-  | "ui" => Other(icon, "color2-text-big")
+  | "ui" =>
+    Other(icon, "color2-text-big")
   | x => Other(x, x)
-  };
+  }
 
 let mapIcon = icon =>
-  switch (icon) {
+  switch icon {
   | HTML5 => {
       techIconType: icon,
       className: "html5",
@@ -168,8 +171,7 @@ let mapIcon = icon =>
   | Scikitlearn => {
       techIconType: icon,
       className: "scikitlearn",
-      content:
-        <ImageBackground src="/static/images/tech-icon/tech-icon_scikitlearn.png" />,
+      content: <ImageBackground src="/static/images/tech-icon/tech-icon_scikitlearn.png" />,
     }
   | Tensorflow => {
       techIconType: icon,
@@ -189,23 +191,21 @@ let mapIcon = icon =>
 
   | Other(x, className) => {
       techIconType: icon,
-      className,
+      className: className,
       content: <h6> {string(x)} </h6>,
     }
-  };
+  }
 
-[@react.component]
+@react.component
 let make = (~tech: string, ~className=?) => {
-  let techIconType = mapStringToTechIconType(tech);
-  let icon = mapIcon(techIconType);
+  let techIconType = mapStringToTechIconType(tech)
+  let icon = mapIcon(techIconType)
 
   <div
-    className={
-      "tech-icon tech-icon-"
-      ++ icon.className
-      ++ " "
-      ++ Js.Option.getWithDefault("", className)
-    }>
+    className={"tech-icon tech-icon-" ++
+    icon.className ++
+    " " ++
+    Js.Option.getWithDefault("", className)}>
     {icon.content}
-  </div>;
-};
+  </div>
+}

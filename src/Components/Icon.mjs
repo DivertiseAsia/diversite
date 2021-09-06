@@ -392,7 +392,7 @@ function Icon(Props) {
   var className = Props.className;
   var icon = mapIcon(iconType);
   return React.createElement("span", {
-              className: "icon icon-" + (icon.className + (" " + Js_option.getWithDefault("", className)))
+              className: "icon icon-" + icon.className + " " + Js_option.getWithDefault("", className)
             }, icon.content);
 }
 
