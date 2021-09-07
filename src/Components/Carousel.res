@@ -138,7 +138,11 @@ let make = () => {
   | Network => "network"
   }
 
-  renderScene(scene)
+  React.useEffect0(() => {
+    renderScene(scene)
+    None
+  })
+
   <div id="webgl-background" className={"hero " ++ sceneClassname}>
     <div className="container">
       <h1> {string("Technical partner for startups in Asia")} </h1>

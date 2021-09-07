@@ -154,7 +154,10 @@ function Carousel(Props) {
         break;
     
   }
-  renderScene(scene);
+  React.useEffect((function () {
+          renderScene(scene);
+          
+        }), []);
   return React.createElement("div", {
               className: "hero " + sceneClassname,
               id: "webgl-background"
