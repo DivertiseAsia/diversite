@@ -6,7 +6,7 @@ const transpileModules = ["rescript"].concat(bsconfig["bs-dependencies"]);
 const withTM = require("next-transpile-modules")(transpileModules);
 
 const isWebpack5 = true;
-const config = {
+const nextConfig = {
   target: "serverless",
   pageExtensions: ["jsx", "js"],
   env: {
@@ -54,4 +54,4 @@ const config = {
   webpack5: isWebpack5
 };
 
-module.exports = (config);
+module.exports = withTM(nextConfig);
