@@ -6,6 +6,7 @@
     "debug": "NODE_OPTIONS='--inspect' next",
     "build": "rescript && next build",
     "now-build": "rescript && next build",
+    "export": "rescript && next build && next export",
     "start": "rescript build -w",
     "clean": "rescript clean",
     "webpack": "webpack -w",
