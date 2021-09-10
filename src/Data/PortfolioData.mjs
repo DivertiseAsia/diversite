@@ -2,7 +2,81 @@
 
 import * as React from "react";
 
+var ketawadesktop = "/static/projects/website-ketawa-d.jpg";
+
+var ketawaapp = "/static/projects/app-ketawa.png";
+
+var alldaytattoo = "/static/projects/alldaytattoo.png";
+
+var wilaamalindesktop = "/static/projects/website-wilaamalin.png";
+
+var wilaamalinapp = "/static/projects/app-wilaamalin.png";
+
+var eastwestdesktop = "/static/projects/website-eastwest.png";
+
+var eastwestapp = "/static/projects/app-eastwest.png";
+
+var adsoupapp = "/static/projects/app-adsoup.jpg";
+
+var adsoudesktop = "/static/projects/website-adsoup.jpg";
+
+var copanelapp = "/static/projects/app-copanel.jpg";
+
+var copaneldesktop = "/static/projects/website-copanel.jpg";
+
+var eventcometeventapp = "/static/projects/app-eventcomet-event.jpg";
+
+var eventcometscheduleapp = "/static/projects/app-eventcomet-schedule.jpg";
+
+var eventcometdateapp = "/static/projects/app-eventcomet-date.jpg";
+
+var mintcrowddesktop = "/static/projects/mintcrowd.jpg";
+
+var mintcrowdapp = "/static/projects/mintcrowd-app.jpg";
+
+var safemode1 = "/static/projects/safemode1.png";
+
+var safemode2 = "/static/projects/safemode2.png";
+
+var safemode3 = "/static/projects/safemode3.png";
+
+var plateup1 = "/static/projects/plateup1.png";
+
+var plateup2 = "/static/projects/plateup2.png";
+
+var plateup3 = "/static/projects/plateup3.png";
+
+var traitsignalmobile = "/static/projects/traitsignalmobile.png";
+
+var traitsignaldesktop = "/static/projects/traitsignaldesktop.png";
+
+var boneageaidesktop = "/static/projects/nextcare3.png";
+
+var boneageaiapp = "/static/projects/app-boneage.png";
+
+var gameaione = "/static/projects/website-adsoup.jpg";
+
 var gameaitwo = "/static/projects/website-adsoup.jpg";
+
+var kikiigamephone = "/static/projects/game-kikii2.jpg";
+
+var kikiigametablet = "/static/projects/game-kikii1.png";
+
+var microgames1 = "/static/projects/game-microgames1.jpg";
+
+var microgames2 = "/static/projects/game-microgames2.jpg";
+
+var microgames3 = "/static/projects/game-microgames3.png";
+
+var cvrld = "/static/projects/project-cvrl-desktop.jpg";
+
+var cvrlp = "/static/projects/project-cvrl-phone.jpg";
+
+var halalblockvideo = "/static/projects/halablockchain-video.png";
+
+var traitsignalvideo = "/static/projects/traitsignal-video.png";
+
+var adsoupvideo = "/static/projects/adsoup-video.png";
 
 var adsoupPortfolio_category = {
   hd: /* AppPlatforms */4,
@@ -11,13 +85,13 @@ var adsoupPortfolio_category = {
 
 var adsoupPortfolio_images = {
   hd: {
-    src: "adsoupapp",
+    src: adsoupapp,
     border: /* PhonePortrait */0,
     className: "col-4 port-no-scroll portimg-adsoup-phone"
   },
   tl: {
     hd: {
-      src: "adsoudesktop",
+      src: adsoudesktop,
       border: /* Desktop */4,
       className: "col-8 port-no-scroll portimg-adsoup-desktop"
     },
@@ -85,13 +159,13 @@ var copanelPortfolio_category = {
 
 var copanelPortfolio_images = {
   hd: {
-    src: "copanelapp",
+    src: copanelapp,
     border: /* PhonePortrait */0,
     className: "col-4 port-no-scroll portimg-copanel-phone"
   },
   tl: {
     hd: {
-      src: "copaneldesktop",
+      src: copaneldesktop,
       border: /* Desktop */4,
       className: "col-8 port-no-scroll portimg-copanel-desktop"
     },
@@ -159,19 +233,19 @@ var eventcometPortfolio_category = {
 
 var eventcometPortfolio_images = {
   hd: {
-    src: "eventcometeventapp",
+    src: eventcometeventapp,
     border: /* PhonePortrait */0,
     className: "col-4 port-no-scroll portimg-eventcomet-phone"
   },
   tl: {
     hd: {
-      src: "eventcometscheduleapp",
+      src: eventcometscheduleapp,
       border: /* PhonePortrait */0,
       className: "col-4 port-no-scroll portimg-eventcomet-phone"
     },
     tl: {
       hd: {
-        src: "eventcometdateapp",
+        src: eventcometdateapp,
         border: /* PhonePortrait */0,
         className: "col-4 port-no-scroll portimg-eventcomet-phone"
       },
@@ -228,13 +302,13 @@ var mintcrowdPortfolio_category = {
 
 var mintcrowdPortfolio_images = {
   hd: {
-    src: "mintcrowdapp",
+    src: mintcrowdapp,
     border: /* PhonePortraitBlack */1,
     className: "col-4 scroll-25 portimg-mintcrowd-phone"
   },
   tl: {
     hd: {
-      src: "mintcrowddesktop",
+      src: mintcrowddesktop,
       border: /* Desktop */4,
       className: "col-8"
     },
@@ -293,19 +367,19 @@ var safemodePortfolio_category = {
 
 var safemodePortfolio_images = {
   hd: {
-    src: "safemode1",
+    src: safemode1,
     border: /* PhonePortrait */0,
     className: "col-4"
   },
   tl: {
     hd: {
-      src: "safemode2",
+      src: safemode2,
       border: /* PhonePortrait */0,
       className: "col-4"
     },
     tl: {
       hd: {
-        src: "safemode3",
+        src: safemode3,
         border: /* PhonePortrait */0,
         className: "col-4"
       },
@@ -344,19 +418,19 @@ var plateupPortfolio_category = {
 
 var plateupPortfolio_images = {
   hd: {
-    src: "plateup1",
+    src: plateup1,
     border: /* PhonePortrait */0,
     className: "col-4"
   },
   tl: {
     hd: {
-      src: "plateup2",
+      src: plateup2,
       border: /* PhonePortrait */0,
       className: "col-4"
     },
     tl: {
       hd: {
-        src: "plateup3",
+        src: plateup3,
         border: /* PhonePortrait */0,
         className: "col-4"
       },
@@ -396,13 +470,13 @@ var traitsignalPortfolio_category = {
 
 var traitsignalPortfolio_images = {
   hd: {
-    src: "traitsignalmobile",
+    src: traitsignalmobile,
     border: /* PhonePortraitBlack */1,
     className: "col-4 scroll-25 portimg-mintcrowd-phone"
   },
   tl: {
     hd: {
-      src: "traitsignaldesktop",
+      src: traitsignaldesktop,
       border: /* Desktop */4,
       className: "col-8"
     },
@@ -441,13 +515,13 @@ var boneagePortfolio_category = {
 
 var boneagePortfolio_images = {
   hd: {
-    src: "boneageaiapp",
+    src: boneageaiapp,
     border: /* PhonePortraitBlack */1,
     className: "col-4 scroll-25 portimg-mintcrowd-phone"
   },
   tl: {
     hd: {
-      src: "boneageaidesktop",
+      src: boneageaidesktop,
       border: /* Desktop */4,
       className: "col-8"
     },
@@ -510,7 +584,7 @@ var gameaionePortfolio_category = {
 
 var gameaionePortfolio_images = {
   hd: {
-    src: "gameaione",
+    src: gameaione,
     border: /* PhonePortrait */0,
     className: "col-12"
   },
@@ -590,13 +664,13 @@ var ketawaPortfolio_category = {
 
 var ketawaPortfolio_images = {
   hd: {
-    src: "ketawaapp",
+    src: ketawaapp,
     border: /* PhonePortrait */0,
     className: "col-4 scroll-25"
   },
   tl: {
     hd: {
-      src: "ketawadesktop",
+      src: ketawadesktop,
       border: /* Desktop */4,
       className: "col-8 portimg-ketawa-desktop"
     },
@@ -649,7 +723,7 @@ var alldaytattooPortfolio_category = {
 
 var alldaytattooPortfolio_images = {
   hd: {
-    src: "alldaytattoo",
+    src: alldaytattoo,
     border: /* Desktop */4,
     className: "col-8 portimg-ketawa-desktop"
   },
@@ -695,13 +769,13 @@ var wilaamalinPortfolio_category = {
 
 var wilaamalinPortfolio_images = {
   hd: {
-    src: "wilaamalinapp",
+    src: wilaamalinapp,
     border: /* PhonePortraitBlack */1,
     className: "col-4 scroll-30"
   },
   tl: {
     hd: {
-      src: "wilaamalindesktop",
+      src: wilaamalindesktop,
       border: /* Desktop */4,
       className: "col-8"
     },
@@ -748,13 +822,13 @@ var eastwestPortfolio_category = {
 
 var eastwestPortfolio_images = {
   hd: {
-    src: "eastwestapp",
+    src: eastwestapp,
     border: /* PhonePortrait */0,
     className: "col-4 scroll-30"
   },
   tl: {
     hd: {
-      src: "eastwestdesktop",
+      src: eastwestdesktop,
       border: /* Desktop */4,
       className: "col-8"
     },
@@ -801,7 +875,7 @@ var halalblockvideoPortfolio_category = {
 
 var halalblockvideoPortfolio_images = {
   hd: {
-    src: "halalblockvideo",
+    src: halalblockvideo,
     border: /* Desktop */4,
     className: "col-8 portimg-ketawa-desktop"
   },
@@ -838,7 +912,7 @@ var traitsignalvideoPortfolio_category = {
 
 var traitsignalvideoPortfolio_images = {
   hd: {
-    src: "traitsignalvideo",
+    src: traitsignalvideo,
     border: /* Desktop */4,
     className: "col-8 portimg-ketawa-desktop"
   },
@@ -875,7 +949,7 @@ var adsoupvideoPortfolio_category = {
 
 var adsoupvideoPortfolio_images = {
   hd: {
-    src: "adsoupvideo",
+    src: adsoupvideo,
     border: /* Desktop */4,
     className: "col-8 portimg-ketawa-desktop"
   },
@@ -912,13 +986,13 @@ var vrPortfolio_category = {
 
 var vrPortfolio_images = {
   hd: {
-    src: "cvrlp",
+    src: cvrlp,
     border: /* PhoneLandscape */2,
     className: "col-6 port-no-scroll portimg-cvrl-phone"
   },
   tl: {
     hd: {
-      src: "cvrld",
+      src: cvrld,
       border: /* Desktop */4,
       className: "col-6 port-no-scroll"
     },
@@ -970,13 +1044,13 @@ var kikiiPortfolio_className = "kikii-image";
 
 var kikiiPortfolio_images = {
   hd: {
-    src: "kikiigamephone",
+    src: kikiigamephone,
     border: /* PhoneLandscapeBlack */3,
     className: "portimg-kikii-phone col-5 port-no-scroll"
   },
   tl: {
     hd: {
-      src: "kikiigametablet",
+      src: kikiigametablet,
       border: /* Tablet */5,
       className: "col-7 port-no-scroll"
     },
@@ -1032,19 +1106,19 @@ var microgamesPortfolio_category = {
 
 var microgamesPortfolio_images = {
   hd: {
-    src: "microgames1",
+    src: microgames1,
     border: /* PhonePortrait */0,
     className: "col-4"
   },
   tl: {
     hd: {
-      src: "microgames2",
+      src: microgames2,
       border: /* PhonePortrait */0,
       className: "col-4"
     },
     tl: {
       hd: {
-        src: "microgames3",
+        src: microgames3,
         border: /* PhonePortrait */0,
         className: "col-4"
       },
@@ -1100,61 +1174,12 @@ var microgamesPortfolio = {
   body: microgamesPortfolio_body
 };
 
-var ketawadesktop = "/static/projects/website-ketawa-d.jpg";
-
-var ketawaapp = "/static/projects/app-ketawa.png";
-
-var wilaamalindesktop = "/static/projects/website-wilaamalin.png";
-
-var wilaamalinapp = "/static/projects/app-wilaamalin.png";
-
-var eastwestdesktop = "/static/projects/website-eastwest.png";
-
-var eastwestapp = "/static/projects/app-eastwest.png";
-
-var adsoupapp = "/static/projects/app-adsoup.jpg";
-
-var adsoudesktop = "/static/projects/website-adsoup.jpg";
-
-var copanelapp = "/static/projects/app-copanel.jpg";
-
-var copaneldesktop = "/static/projects/website-copanel.jpg";
-
-var eventcometeventapp = "/static/projects/app-eventcomet-event.jpg";
-
-var eventcometscheduleapp = "/static/projects/app-eventcomet-schedule.jpg";
-
-var eventcometdateapp = "/static/projects/app-eventcomet-date.jpg";
-
-var mintcrowddesktop = "/static/projects/mintcrowd.jpg";
-
-var mintcrowdapp = "/static/projects/mintcrowd-app.jpg";
-
-var boneageaidesktop = "/static/projects/website-boneage.png";
-
-var boneageaiapp = "/static/projects/app-boneage.png";
-
-var gameaione = "/static/projects/website-adsoup.jpg";
-
 var cvrl = "/static/projects/website-adsoup.jpg";
-
-var kikiigamephone = "/static/projects/game-kikii2.jpg";
-
-var kikiigametablet = "/static/projects/game-kikii1.png";
-
-var microgames1 = "/static/projects/game-microgames1.jpg";
-
-var microgames2 = "/static/projects/game-microgames2.jpg";
-
-var microgames3 = "/static/projects/game-microgames3.png";
-
-var cvrld = "/static/projects/project-cvrl-desktop.jpg";
-
-var cvrlp = "/static/projects/project-cvrl-phone.jpg";
 
 export {
   ketawadesktop ,
   ketawaapp ,
+  alldaytattoo ,
   wilaamalindesktop ,
   wilaamalinapp ,
   eastwestdesktop ,
@@ -1168,6 +1193,14 @@ export {
   eventcometdateapp ,
   mintcrowddesktop ,
   mintcrowdapp ,
+  safemode1 ,
+  safemode2 ,
+  safemode3 ,
+  plateup1 ,
+  plateup2 ,
+  plateup3 ,
+  traitsignalmobile ,
+  traitsignaldesktop ,
   boneageaidesktop ,
   boneageaiapp ,
   gameaione ,
@@ -1180,6 +1213,9 @@ export {
   microgames3 ,
   cvrld ,
   cvrlp ,
+  halalblockvideo ,
+  traitsignalvideo ,
+  adsoupvideo ,
   adsoupPortfolio ,
   copanelPortfolio ,
   eventcometPortfolio ,
