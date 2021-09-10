@@ -51,7 +51,8 @@ const nextConfig = {
     }
     return config
   },
-  webpack5: isWebpack5
+  webpack5: isWebpack5,
+  experimental:{esmExternals: 'loose'},
 };
 
 module.exports = withTM(nextConfig);

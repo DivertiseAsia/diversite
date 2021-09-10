@@ -1,13 +1,23 @@
 open React
 
+%%raw(`
+import dynamic from "next/dynamic";
+
+const Carousel = dynamic(() => import("../Components/Carousel.mjs").then(mod => mod.make), {
+  ssr: false,
+});
+;
+`)
+
 @react.component
 let make = () => {
+  let carousel = %raw(`Carousel`)
   <MainPage
     className="page-home"
     title="Get Launched with Divertise Asia"
     keywords="Artificial Intelligence, Design, Fullstack, API, Server"
     description="Realize your technical project with Divertise Asia as your partner">
-    // <Carousel />
+    {React.createElement(carousel, Js.Dict.empty())}
     <div className="homepage_menu-bg" />
     <div className="section-ourgoal -text-center">
       <div className="container">

@@ -6,14 +6,23 @@ import * as MainPage from "../Components/MainPage.mjs";
 import * as ImageBackground from "../Components/ImageBackground.mjs";
 import * as FrontPageSection from "../Components/FrontPageSection.mjs";
 
+import dynamic from "next/dynamic";
+
+const Carousel = dynamic(() => import("../Components/Carousel.mjs").then(mod => mod.make), {
+  ssr: false,
+});
+;
+;
+
 function PageHome(Props) {
+  var carousel = Carousel;
   return React.createElement(MainPage.make, {
               className: "page-home",
               title: "Get Launched with Divertise Asia",
               keywords: "Artificial Intelligence, Design, Fullstack, API, Server",
               description: "Realize your technical project with Divertise Asia as your partner",
               children: null
-            }, React.createElement("div", {
+            }, React.createElement(carousel, {}), React.createElement("div", {
                   className: "homepage_menu-bg"
                 }), React.createElement("div", {
                   className: "section-ourgoal -text-center"
@@ -98,4 +107,4 @@ export {
   make ,
   
 }
-/* react Not a pure module */
+/*  Not a pure module */
