@@ -3,6 +3,7 @@
 import * as React from "react";
 import * as DataTypes from "../Data/DataTypes.mjs";
 import * as Js_option from "rescript/lib/es6/js_option.js";
+import * as ImageBackground from "./ImageBackground.mjs";
 
 function PortfolioImage(Props) {
   var className = Props.className;
@@ -17,9 +18,10 @@ function PortfolioImage(Props) {
                           className: "portimg_frame"
                         }, React.createElement("div", {
                               className: "portimg_scroll-before"
-                            }), React.createElement("div", {
-                              className: "image-background portimg_scroll scroll-long " + item.src
-                            }, React.createElement("div", undefined))), React.createElement("div", {
+                            }), React.createElement(ImageBackground.make, {
+                              className: "portimg_scroll scroll-long ",
+                              src: item.src
+                            })), React.createElement("div", {
                           className: "portimg_frame-after"
                         }))));
 }

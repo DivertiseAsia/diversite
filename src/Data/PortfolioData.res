@@ -3,6 +3,7 @@ open DataTypes.PortfolioItem
 
 let ketawadesktop: string = "/static/projects/website-ketawa-d.jpg"
 let ketawaapp: string = "/static/projects/app-ketawa.png"
+let alldaytattoo: string = "/static/projects/alldaytattoo.png"
 let wilaamalindesktop: string = "/static/projects/website-wilaamalin.png"
 let wilaamalinapp: string = "/static/projects/app-wilaamalin.png"
 let eastwestdesktop: string = "/static/projects/website-eastwest.png"
@@ -16,7 +17,15 @@ let eventcometscheduleapp: string = "/static/projects/app-eventcomet-schedule.jp
 let eventcometdateapp: string = "/static/projects/app-eventcomet-date.jpg"
 let mintcrowddesktop: string = "/static/projects/mintcrowd.jpg"
 let mintcrowdapp: string = "/static/projects/mintcrowd-app.jpg"
-let boneageaidesktop: string = "/static/projects/website-boneage.png"
+let safemode1: string = "/static/projects/safemode1.png"
+let safemode2: string = "/static/projects/safemode2.png"
+let safemode3: string = "/static/projects/safemode3.png"
+let plateup1: string = "/static/projects/plateup1.png"
+let plateup2: string = "/static/projects/plateup2.png"
+let plateup3: string = "/static/projects/plateup3.png"
+let traitsignalmobile: string = "/static/projects/traitsignalmobile.png"
+let traitsignaldesktop: string = "/static/projects/traitsignaldesktop.png"
+let boneageaidesktop: string = "/static/projects/nextcare3.png"
 let boneageaiapp: string = "/static/projects/app-boneage.png"
 let gameaione: string = "/static/projects/website-adsoup.jpg"
 let gameaitwo: string = "/static/projects/website-adsoup.jpg"
@@ -28,6 +37,9 @@ let microgames2: string = "/static/projects/game-microgames2.jpg"
 let microgames3: string = "/static/projects/game-microgames3.png"
 let cvrld: string = "/static/projects/project-cvrl-desktop.jpg"
 let cvrlp: string = "/static/projects/project-cvrl-phone.jpg"
+let halalblockvideo: string = "/static/projects/halablockchain-video.png"
+let traitsignalvideo: string = "/static/projects/traitsignal-video.png"
+let adsoupvideo: string = "/static/projects/adsoup-video.png"
 
 /* --------------------- Apps -------------------------- */
 
@@ -36,12 +48,12 @@ let adsoupPortfolio: t = {
   className: None,
   images: list{
     {
-      src: "adsoupapp",
+      src: adsoupapp,
       border: PhonePortrait,
       className: Some("col-4 port-no-scroll portimg-adsoup-phone"),
     },
     {
-      src: "adsoudesktop",
+      src: adsoudesktop,
       border: Desktop,
       className: Some("col-8 port-no-scroll portimg-adsoup-desktop"),
     },
@@ -95,12 +107,12 @@ let copanelPortfolio: t = {
   className: None,
   images: list{
     {
-      src: "copanelapp",
+      src: copanelapp,
       border: PhonePortrait,
       className: Some("col-4 port-no-scroll portimg-copanel-phone"),
     },
     {
-      src: "copaneldesktop",
+      src: copaneldesktop,
       border: Desktop,
       className: Some("col-8 port-no-scroll portimg-copanel-desktop"),
     },
@@ -143,17 +155,17 @@ let eventcometPortfolio: t = {
   className: None,
   images: list{
     {
-      src: "eventcometeventapp",
+      src: eventcometeventapp,
       border: PhonePortrait,
       className: Some("col-4 port-no-scroll portimg-eventcomet-phone"),
     },
     {
-      src: "eventcometscheduleapp",
+      src: eventcometscheduleapp,
       border: PhonePortrait,
       className: Some("col-4 port-no-scroll portimg-eventcomet-phone"),
     },
     {
-      src: "eventcometdateapp",
+      src: eventcometdateapp,
       border: PhonePortrait,
       className: Some("col-4 port-no-scroll portimg-eventcomet-phone"),
     },
@@ -183,11 +195,11 @@ let mintcrowdPortfolio: t = {
   className: None,
   images: list{
     {
-      src: "mintcrowdapp",
+      src: mintcrowdapp,
       border: PhonePortraitBlack,
       className: Some("col-4 scroll-25 portimg-mintcrowd-phone"),
     },
-    {src: "mintcrowddesktop", border: Desktop, className: Some("col-8")},
+    {src: mintcrowddesktop, border: Desktop, className: Some("col-8")},
   },
   links: list{{category: Text, href: "", caption: "(Website Coming Soon)"}},
   category: list{AppPlatforms},
@@ -205,9 +217,9 @@ let safemodePortfolio: t = {
   title: "Safemode",
   className: None,
   images: list{
-    {src: "safemode1", border: PhonePortrait, className: Some("col-4")},
-    {src: "safemode2", border: PhonePortrait, className: Some("col-4")},
-    {src: "safemode3", border: PhonePortrait, className: Some("col-4")},
+    {src: safemode1, border: PhonePortrait, className: Some("col-4")},
+    {src: safemode2, border: PhonePortrait, className: Some("col-4")},
+    {src: safemode3, border: PhonePortrait, className: Some("col-4")},
   },
   links: list{},
   category: list{AppPlatforms},
@@ -224,9 +236,9 @@ let plateupPortfolio: t = {
   title: "Plateup",
   className: None,
   images: list{
-    {src: "plateup1", border: PhonePortrait, className: Some("col-4")},
-    {src: "plateup2", border: PhonePortrait, className: Some("col-4")},
-    {src: "plateup3", border: PhonePortrait, className: Some("col-4")},
+    {src: plateup1, border: PhonePortrait, className: Some("col-4")},
+    {src: plateup2, border: PhonePortrait, className: Some("col-4")},
+    {src: plateup3, border: PhonePortrait, className: Some("col-4")},
   },
   links: list{
     {
@@ -251,11 +263,11 @@ let traitsignalPortfolio: t = {
   className: None,
   images: list{
     {
-      src: "traitsignalmobile",
+      src: traitsignalmobile,
       border: PhonePortraitBlack,
       className: Some("col-4 scroll-25 portimg-mintcrowd-phone"),
     },
-    {src: "traitsignaldesktop", border: Desktop, className: Some("col-8")},
+    {src: traitsignaldesktop, border: Desktop, className: Some("col-8")},
   },
   links: list{
     {
@@ -279,11 +291,11 @@ let boneagePortfolio: t = {
   className: None,
   images: list{
     {
-      src: "boneageaiapp",
+      src: boneageaiapp,
       border: PhonePortraitBlack,
       className: Some("col-4 scroll-25 portimg-mintcrowd-phone"),
     },
-    {src: "boneageaidesktop", border: Desktop, className: Some("col-8")},
+    {src: boneageaidesktop, border: Desktop, className: Some("col-8")},
   },
   category: list{AI, AppPlatforms},
   links: list{
@@ -306,7 +318,7 @@ let boneagePortfolio: t = {
 let gameaionePortfolio: t = {
   title: "Game Playing Ai",
   className: None,
-  images: list{{src: "gameaione", border: PhonePortrait, className: Some("col-12")}},
+  images: list{{src: gameaione, border: PhonePortrait, className: Some("col-12")}},
   category: list{AI},
   links: list{},
   technologies: list{"Game Design", "Graphic Design", "Ux", "Ui"},
@@ -327,12 +339,12 @@ let ketawaPortfolio: t = {
   category: list{Design},
   images: list{
     {
-      src: "ketawaapp",
+      src: ketawaapp,
       border: PhonePortrait,
       className: Some("col-4 scroll-25"),
     },
     {
-      src: "ketawadesktop",
+      src: ketawadesktop,
       border: Desktop,
       className: Some("col-8 portimg-ketawa-desktop"),
     },
@@ -364,7 +376,7 @@ let alldaytattooPortfolio: t = {
   category: list{Design},
   images: list{
     {
-      src: "alldaytattoo",
+      src: alldaytattoo,
       border: Desktop,
       className: Some("col-8 portimg-ketawa-desktop"),
     },
@@ -389,11 +401,11 @@ let wilaamalinPortfolio: t = {
   category: list{Other},
   images: list{
     {
-      src: "wilaamalinapp",
+      src: wilaamalinapp,
       border: PhonePortraitBlack,
       className: Some("col-4 scroll-30"),
     },
-    {src: "wilaamalindesktop", border: Desktop, className: Some("col-8")},
+    {src: wilaamalindesktop, border: Desktop, className: Some("col-8")},
   },
   links: list{
     {
@@ -418,11 +430,11 @@ let eastwestPortfolio: t = {
   category: list{Other},
   images: list{
     {
-      src: "eastwestapp",
+      src: eastwestapp,
       border: PhonePortrait,
       className: Some("col-4 scroll-30"),
     },
-    {src: "eastwestdesktop", border: Desktop, className: Some("col-8")},
+    {src: eastwestdesktop, border: Desktop, className: Some("col-8")},
   },
   links: list{
     {
@@ -447,7 +459,7 @@ let halalblockvideoPortfolio: t = {
   category: list{Other},
   images: list{
     {
-      src: "halalblockvideo",
+      src: halalblockvideo,
       border: Desktop,
       className: Some("col-8 portimg-ketawa-desktop"),
     },
@@ -468,7 +480,7 @@ let traitsignalvideoPortfolio: t = {
   category: list{Other},
   images: list{
     {
-      src: "traitsignalvideo",
+      src: traitsignalvideo,
       border: Desktop,
       className: Some("col-8 portimg-ketawa-desktop"),
     },
@@ -490,7 +502,7 @@ let adsoupvideoPortfolio: t = {
   category: list{Other},
   images: list{
     {
-      src: "adsoupvideo",
+      src: adsoupvideo,
       border: Desktop,
       className: Some("col-8 portimg-ketawa-desktop"),
     },
@@ -512,11 +524,11 @@ let vrPortfolio: t = {
   category: list{Other},
   images: list{
     {
-      src: "cvrlp",
+      src: cvrlp,
       border: PhoneLandscape,
       className: Some("col-6 port-no-scroll portimg-cvrl-phone"),
     },
-    {src: "cvrld", border: Desktop, className: Some("col-6 port-no-scroll")},
+    {src: cvrld, border: Desktop, className: Some("col-6 port-no-scroll")},
   },
   links: list{
     {
@@ -545,12 +557,12 @@ let kikiiPortfolio: t = {
   category: list{Other},
   images: list{
     {
-      src: "kikiigamephone",
+      src: kikiigamephone,
       border: PhoneLandscapeBlack,
       className: Some("portimg-kikii-phone col-5 port-no-scroll"),
     },
     {
-      src: "kikiigametablet",
+      src: kikiigametablet,
       border: Tablet,
       className: Some("col-7 port-no-scroll"),
     },
@@ -586,9 +598,9 @@ let microgamesPortfolio: t = {
   className: None,
   category: list{Other},
   images: list{
-    {src: "microgames1", border: PhonePortrait, className: Some("col-4")},
-    {src: "microgames2", border: PhonePortrait, className: Some("col-4")},
-    {src: "microgames3", border: PhonePortrait, className: Some("col-4")},
+    {src: microgames1, border: PhonePortrait, className: Some("col-4")},
+    {src: microgames2, border: PhonePortrait, className: Some("col-4")},
+    {src: microgames3, border: PhonePortrait, className: Some("col-4")},
   },
   links: list{
     {
