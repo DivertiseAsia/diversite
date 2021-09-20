@@ -1308,8 +1308,7 @@ $email-height: 30px;
   color: $bg-color1;
   cursor: default;
 }
-.btn-google-play::before, .btn-app-store::before, .btn-mi-store::before {
-  content: "";
+.port_btn .image-background {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -1319,9 +1318,7 @@ $email-height: 30px;
   position: relative;
   margin: 5px auto -2em auto;
 }
-.btn-google-play::before { background-image: url('../public/static/images/Banner_GooglePlay.png'); }
-.btn-app-store::before { background-image: url('../public/static/images/Banner_AppStore.png'); }
-.btn-mi-store::before { background-image: url('../public/static/images/Banner_MiStore.png'); }
+
 .btn-google-play, .btn-app-store, .btn-mi-store {
   border: none;
   padding: 0;

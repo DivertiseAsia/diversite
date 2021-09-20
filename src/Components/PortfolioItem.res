@@ -1,6 +1,29 @@
 open React
 open DataTypes.PortfolioItem
 
+module PortfolioLink = {
+  @react.component
+  let make = (~link: DataTypes.PortfolioLink.t) => {
+    let classNames = switch link.category {
+    | Default => "btn-line-color1"
+    | DefaultInactive => "btn-line-color1 inactive"
+    | Text => "port_link_text"
+    | AppStore => "btn-app-store"
+    | GooglePlay => "btn-google-play"
+    | MiStore => "btn-mi-store"
+    }
+    let src = switch link.category {
+    | GooglePlay => "/static/images/Banner_GooglePlay.png"
+    | AppStore => "/static/images/Banner_AppStore.png"
+    | MiStore => "/static/images/Banner_MiStore.png"
+    | _ => ""
+    }
+    <a target="_blank" className={"port_btn btn " ++ classNames} key={link.href} href={link.href}>
+      {src != "" ? <ImageBackground src /> : React.null} {string(link.caption)}
+    </a>
+  }
+}
+
 let additional_classname = (category: category) => {
   "item-" ++
   switch category {
@@ -39,21 +62,7 @@ let make = (~id: option<string>=?, ~className="", ~item: t) => {
         </div>
         <div className="col-md-6 -text-right port_btn-container">
           {Belt.List.map(item.links, link => {
-            let classNames = switch link.category {
-            | Default => "btn-line-color1"
-            | DefaultInactive => "btn-line-color1 inactive"
-            | Text => "port_link_text"
-            | AppStore => "btn-app-store"
-            | GooglePlay => "btn-google-play"
-            | MiStore => "btn-mi-store"
-            }
-            <a
-              target="_blank"
-              className={"port_btn btn " ++ classNames}
-              key={link.href}
-              href={link.href}>
-              {string(link.caption)}
-            </a>
+            <PortfolioLink link key=link.href />
           })
           |> Belt.List.toArray
           |> React.array}

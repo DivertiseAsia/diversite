@@ -7,6 +7,65 @@ import * as Belt_List from "rescript/lib/es6/belt_List.js";
 import * as Js_option from "rescript/lib/es6/js_option.js";
 import * as Caml_option from "rescript/lib/es6/caml_option.js";
 import * as PortfolioImage from "./PortfolioImage.mjs";
+import * as ImageBackground from "./ImageBackground.mjs";
+
+function PortfolioItem$PortfolioLink(Props) {
+  var link = Props.link;
+  var match = link.category;
+  var classNames;
+  switch (match) {
+    case /* Default */0 :
+        classNames = "btn-line-color1";
+        break;
+    case /* DefaultInactive */1 :
+        classNames = "btn-line-color1 inactive";
+        break;
+    case /* Text */2 :
+        classNames = "port_link_text";
+        break;
+    case /* AppStore */3 :
+        classNames = "btn-app-store";
+        break;
+    case /* GooglePlay */4 :
+        classNames = "btn-google-play";
+        break;
+    case /* MiStore */5 :
+        classNames = "btn-mi-store";
+        break;
+    
+  }
+  var match$1 = link.category;
+  var src;
+  switch (match$1) {
+    case /* Default */0 :
+    case /* DefaultInactive */1 :
+    case /* Text */2 :
+        src = "";
+        break;
+    case /* AppStore */3 :
+        src = "/static/images/Banner_AppStore.png";
+        break;
+    case /* GooglePlay */4 :
+        src = "/static/images/Banner_GooglePlay.png";
+        break;
+    case /* MiStore */5 :
+        src = "/static/images/Banner_MiStore.png";
+        break;
+    
+  }
+  return React.createElement("a", {
+              key: link.href,
+              className: "port_btn btn " + classNames,
+              href: link.href,
+              target: "_blank"
+            }, src !== "" ? React.createElement(ImageBackground.make, {
+                    src: src
+                  }) : null, link.caption);
+}
+
+var PortfolioLink = {
+  make: PortfolioItem$PortfolioLink
+};
 
 function additional_classname(category) {
   var tmp;
@@ -65,35 +124,10 @@ function PortfolioItem(Props) {
                                   })))), React.createElement("div", {
                           className: "col-md-6 -text-right port_btn-container"
                         }, Belt_List.toArray(Belt_List.map(item.links, (function (link) {
-                                    var match = link.category;
-                                    var classNames;
-                                    switch (match) {
-                                      case /* Default */0 :
-                                          classNames = "btn-line-color1";
-                                          break;
-                                      case /* DefaultInactive */1 :
-                                          classNames = "btn-line-color1 inactive";
-                                          break;
-                                      case /* Text */2 :
-                                          classNames = "port_link_text";
-                                          break;
-                                      case /* AppStore */3 :
-                                          classNames = "btn-app-store";
-                                          break;
-                                      case /* GooglePlay */4 :
-                                          classNames = "btn-google-play";
-                                          break;
-                                      case /* MiStore */5 :
-                                          classNames = "btn-mi-store";
-                                          break;
-                                      
-                                    }
-                                    return React.createElement("a", {
-                                                key: link.href,
-                                                className: "port_btn btn " + classNames,
-                                                href: link.href,
-                                                target: "_blank"
-                                              }, link.caption);
+                                    return React.createElement(PortfolioItem$PortfolioLink, {
+                                                link: link,
+                                                key: link.href
+                                              });
                                   }))))), React.createElement("div", {
                       className: "port_texts"
                     }, item.body)));
@@ -102,6 +136,7 @@ function PortfolioItem(Props) {
 var make = PortfolioItem;
 
 export {
+  PortfolioLink ,
   additional_classname ,
   make ,
   
