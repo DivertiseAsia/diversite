@@ -42,10 +42,10 @@ jobs:
     - name: replace old docs
       run: |
         cp docs/CNAME bundle/CNAME
-        cp docs/.nojekyll bundle/.nojekyll
         rm -rf docs/
         mkdir docs
         mv bundle/* docs/
+        touch docs/.nojekyll
         rm -rf bundle
     - name: Commit new docs/ to public branch
       uses: Automattic/action-commit-to-branch@master
