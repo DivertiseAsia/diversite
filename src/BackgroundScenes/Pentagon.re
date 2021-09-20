@@ -167,7 +167,7 @@ module PentagonScene = {
            };
          };
 
-         Three.geometry_set_colors(newGeometry, colors[0]);
+         Three.geometry_set_colors(newGeometry, colors[0]) |> ignore;
          let params =
            Three.parseIntoParameters(
              "{\"color\": \"#ffffff\", \"opacity\": 1.0, \"linewidth\": 1.0, \"vertexColors\": 2.0}",
@@ -330,13 +330,13 @@ module PentagonScene = {
   let getPivotVector = (obj, first_vertice, second_vertice) => {
     let vector3_first = Three.newVector3(0., 0., 0.);
     Three.vector3_copy(vector3_first, obj##geometry##vertices[first_vertice]);
-    Three.applyMatrix4(vector3_first, obj##matrix);
+    Three.applyMatrix4(vector3_first, obj##matrix) |> ignore;
     let vector3_second = Three.newVector3(0., 0., 0.);
     Three.vector3_copy(
       vector3_second,
       obj##geometry##vertices[second_vertice],
     );
-    Three.applyMatrix4(vector3_second, obj##matrix);
+    Three.applyMatrix4(vector3_second, obj##matrix) |> ignore;
     Three.multiplyScalar(
       Three.addVector3ToVector3(vector3_first, vector3_second),
       0.5,

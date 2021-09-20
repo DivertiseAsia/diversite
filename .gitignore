@@ -37,3 +37,5 @@ stats.json
 /app/www/
 
 *.log
+.next/
+out/

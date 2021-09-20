@@ -382,7 +382,7 @@ module NetworkScene = {
 
   let animate = () => {
     updateFource();
-    updatePoint();
+    updatePoint() |> ignore;
     updateJoint();
     refreshMesh();
   };

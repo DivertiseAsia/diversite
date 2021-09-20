@@ -18,20 +18,17 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v1
       with:
-        node-version: 10.0.0
-    - name: npm install and build
+        node-version: 15.14.0
+    - name: npm install and export
       run: |
         npm install
-        npm run build
-    - name: webpack build
-      run: |
-        npm run webpack:production
+        npm run export
     - name: Upload docs artifact
       uses: actions/upload-artifact@v1
       with:
         name: bundle
-        path: docs/
-    - name: stash docs/* for branch change
+        path: out/
+    - name: stash out/* for branch change
       run: |
         git stash -u
     - name: Checkout public branch
@@ -44,7 +41,6 @@ jobs:
         name: bundle
     - name: replace old docs
       run: |
-        cp docs/404.html bundle/404.html
         cp docs/CNAME bundle/CNAME
         rm -rf docs/
         mkdir docs
