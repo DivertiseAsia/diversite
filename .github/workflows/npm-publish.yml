@@ -23,6 +23,7 @@ jobs:
       run: |
         npm install
         npm run export
+        touch out/.nojekyll
     - name: Upload docs artifact
       uses: actions/upload-artifact@v1
       with:
