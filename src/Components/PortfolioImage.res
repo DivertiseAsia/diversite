@@ -17,6 +17,9 @@ let make = (~className: option<string>=?, ~item: image) => {
         </div>
         <div className="portimg_frame-after" />
       </div>
+      <ImageBackground
+        className="portimg-stand" src="/static/images/borders/port_desktop-stand.png"
+      />
     </div>
   </div>
 }

@@ -23,7 +23,10 @@ function PortfolioImage(Props) {
                               src: item.src
                             })), React.createElement("div", {
                           className: "portimg_frame-after"
-                        }))));
+                        })), React.createElement(ImageBackground.make, {
+                      className: "portimg-stand",
+                      src: "/static/images/borders/port_desktop-stand.png"
+                    })));
 }
 
 var make = PortfolioImage;

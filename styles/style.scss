@@ -1068,6 +1068,9 @@ $email-height: 30px;
       background-position: top;
     }
   }
+  .portimg-stand {
+    display: none;
+  }
 }
 /* Desktop portimg-container style */
 .desktop .portimg-container {
@@ -1090,9 +1093,7 @@ $email-height: 30px;
       border-bottom-right-radius: 15px;
     }
   }
-  .portimg::after {
-    content: "";
-    background: url('../public/static/images/borders/port_desktop-stand.png');
+  .portimg-stand {
     background-repeat: no-repeat;
     position: relative;
     display: block;
