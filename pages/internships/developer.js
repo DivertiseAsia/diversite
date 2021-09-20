@@ -8,5 +8,5 @@ import PageInternshipDeveloperRes from "src/Pages/PageInternshipDev.mjs";
 // If you don't do this, your Fast-Refresh will
 // not work!
 export default function Developer(props) {
-  return <PageInternshipDeveloperRes {...props}/>;
+  return <PageInternshipDeveloperRes {...props} />;
 }

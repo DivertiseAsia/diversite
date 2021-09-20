@@ -8,5 +8,5 @@ import PageOurWorkRes from "src/Pages/PageOurWork.mjs";
 // If you don't do this, your Fast-Refresh will
 // not work!
 export default function OurWork(props) {
-  return <PageOurWorkRes {...props}/>;
+  return <PageOurWorkRes {...props} />;
 }

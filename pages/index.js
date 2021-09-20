@@ -8,5 +8,5 @@ import PageHomeRes from "src/Pages/PageHome.mjs";
 // If you don't do this, your Fast-Refresh will
 // not work!
 export default function Index(props) {
-  return <PageHomeRes {...props}/>;
+  return <PageHomeRes {...props} />;
 }

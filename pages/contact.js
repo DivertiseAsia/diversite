@@ -8,5 +8,5 @@ import PageContactRes from "src/Pages/PageContact.mjs";
 // If you don't do this, your Fast-Refresh will
 // not work!
 export default function Contact(props) {
-  return <PageContactRes {...props}/>;
+  return <PageContactRes {...props} />;
 }

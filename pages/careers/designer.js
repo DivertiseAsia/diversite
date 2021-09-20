@@ -8,5 +8,5 @@ import PageCareersDesignerRes from "src/Pages/PageCareersDesigner.mjs";
 // If you don't do this, your Fast-Refresh will
 // not work!
 export default function Designer(props) {
-  return <PageCareersDesignerRes {...props}/>;
+  return <PageCareersDesignerRes {...props} />;
 }

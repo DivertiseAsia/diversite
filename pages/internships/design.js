@@ -8,5 +8,5 @@ import PageInternshipDesignRes from "src/Pages/PageInternshipDesign.mjs";
 // If you don't do this, your Fast-Refresh will
 // not work!
 export default function Design(props) {
-  return <PageInternshipDesignRes {...props}/>;
+  return <PageInternshipDesignRes {...props} />;
 }
