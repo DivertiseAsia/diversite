@@ -23,7 +23,6 @@ jobs:
       run: |
         npm install
         npm run export
-        touch out/.nojekyll
     - name: Upload docs artifact
       uses: actions/upload-artifact@v1
       with:
@@ -43,6 +42,7 @@ jobs:
     - name: replace old docs
       run: |
         cp docs/CNAME bundle/CNAME
+        cp docs/.nojekyll bundle/.nojekyll
         rm -rf docs/
         mkdir docs
         mv bundle/* docs/
