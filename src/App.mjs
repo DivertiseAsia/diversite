@@ -15,7 +15,7 @@ import * as PageCareersDesigner from "./Pages/PageCareersDesigner.mjs";
 import * as PageCareersDeveloper from "./Pages/PageCareersDeveloper.mjs";
 import * as PageInternshipDesign from "./Pages/PageInternshipDesign.mjs";
 
-function $$default(_props) {
+function $$default(props) {
   var router = Router.useRouter();
   var match = router.route;
   switch (match) {

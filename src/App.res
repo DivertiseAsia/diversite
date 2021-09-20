@@ -14,7 +14,7 @@ type props = {
 // We are not using `@react.component` since we will never
 // use <App/> within our ReScript code.
 // It's only used within `pages/_app.js`
-let default = (_props: props): React.element => {
+let default = (props: props): React.element => {
   let router = Next.Router.useRouter()
 
   switch router.route {
