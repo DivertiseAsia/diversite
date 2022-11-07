@@ -99,7 +99,7 @@ function PageCareers(Props) {
                                   iconType: /* Laptop */9
                                 }), React.createElement("h6", {
                                   className: "icon-title"
-                                }, "Personal Laptop")), React.createElement("div", {
+                                }, "Hybrid Work")), React.createElement("div", {
                               className: "col-6 col-md pb-3 team-benefits"
                             }, React.createElement(Icon.make, {
                                   iconType: /* Clock */1

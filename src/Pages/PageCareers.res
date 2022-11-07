@@ -95,7 +95,7 @@ let make = () => {
         <div className="row py-5 justify-content-center">
           <div className="col-6 col-md pb-3 team-benefits">
             <Icon iconType=Icon.Laptop />
-            <h6 className="icon-title"> {string("Personal Laptop")} </h6>
+            <h6 className="icon-title"> {string("Hybrid Work")} </h6>
           </div>
           <div className="col-6 col-md pb-3 team-benefits">
             <Icon iconType=Icon.Clock />
