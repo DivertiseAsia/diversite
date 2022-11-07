@@ -43,6 +43,31 @@ let adsoupvideo: string = "/static/projects/adsoup-video.png"
 
 /* --------------------- Apps -------------------------- */
 
+let bettercastPortfolio: t = {
+  title: "Bettercast Website",
+  className: None,
+  category: list{All, AppPlatforms},
+  images: list{
+    {
+      src: alldaytattoo,
+      border: Desktop,
+      className: Some("col-8 portimg-ketawa-desktop"),
+    },
+  },
+  links: list{},
+  technologies: list{"html5", "css", "wordpress", "Js", "Graphic Design", "web design"},
+  body: <div>
+    <p>
+      {string("What would be better suited to the landscape of digital transformation of 2020 than BetterCast: a rising platform where people can meet, talk, discuss new ideas, ask questions, 100% online. From launchable MVP in 3 months to full production-scale implementation, we worked with BetterCast the entire way. We continued helping it grow, continuing to evaluate new features, and streamline the experience until we were able to help them cultivate an in-house team to take over the project.
+             ")}
+    </p>
+    <p>
+      {string(
+        "The site was built with HTML, Javascript, and styled with CSS in the framework of Bootstrap.",
+      )}
+    </p>
+  </div>,
+}
 let adsoupPortfolio: t = {
   title: "Adsoup",
   className: None,

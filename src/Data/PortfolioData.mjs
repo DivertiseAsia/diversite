@@ -78,6 +78,55 @@ var traitsignalvideo = "/static/projects/traitsignal-video.png";
 
 var adsoupvideo = "/static/projects/adsoup-video.png";
 
+var bettercastPortfolio_category = {
+  hd: /* All */0,
+  tl: {
+    hd: /* AppPlatforms */4,
+    tl: /* [] */0
+  }
+};
+
+var bettercastPortfolio_images = {
+  hd: {
+    src: alldaytattoo,
+    border: /* Desktop */4,
+    className: "col-8 portimg-ketawa-desktop"
+  },
+  tl: /* [] */0
+};
+
+var bettercastPortfolio_technologies = {
+  hd: "html5",
+  tl: {
+    hd: "css",
+    tl: {
+      hd: "wordpress",
+      tl: {
+        hd: "Js",
+        tl: {
+          hd: "Graphic Design",
+          tl: {
+            hd: "web design",
+            tl: /* [] */0
+          }
+        }
+      }
+    }
+  }
+};
+
+var bettercastPortfolio_body = React.createElement("div", undefined, React.createElement("p", undefined, "What would be better suited to the landscape of digital transformation of 2020 than BetterCast: a rising platform where people can meet, talk, discuss new ideas, ask questions, 100% online. From launchable MVP in 3 months to full production-scale implementation, we worked with BetterCast the entire way. We continued helping it grow, continuing to evaluate new features, and streamline the experience until we were able to help them cultivate an in-house team to take over the project.\r\n             "), React.createElement("p", undefined, "The site was built with HTML, Javascript, and styled with CSS in the framework of Bootstrap."));
+
+var bettercastPortfolio = {
+  title: "Bettercast Website",
+  category: bettercastPortfolio_category,
+  className: undefined,
+  images: bettercastPortfolio_images,
+  links: /* [] */0,
+  technologies: bettercastPortfolio_technologies,
+  body: bettercastPortfolio_body
+};
+
 var adsoupPortfolio_category = {
   hd: /* AppPlatforms */4,
   tl: /* [] */0
@@ -1216,6 +1265,7 @@ export {
   halalblockvideo ,
   traitsignalvideo ,
   adsoupvideo ,
+  bettercastPortfolio ,
   adsoupPortfolio ,
   copanelPortfolio ,
   eventcometPortfolio ,
@@ -1238,4 +1288,4 @@ export {
   microgamesPortfolio ,
   
 }
-/* adsoupPortfolio Not a pure module */
+/* bettercastPortfolio Not a pure module */

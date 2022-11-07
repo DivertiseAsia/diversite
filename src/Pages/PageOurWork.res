@@ -73,6 +73,7 @@ let make = (~selectedCategory: category) => {
       </form>
     </Popup>
     <div>
+      <PortfolioItem key="bettercast" item=bettercastPortfolio />
       <PortfolioItem key="plateup" item=plateupPortfolio />
       <PortfolioItem key="mintcrowd" item=mintcrowdPortfolio />
       <PortfolioItem key="safemode" item=safemodePortfolio />
