@@ -2,6 +2,8 @@
 
 import * as React from "react";
 
+var bettercastdesktop = "/static/projects/website-bettercast.jpg";
+
 var ketawadesktop = "/static/projects/website-ketawa-d.jpg";
 
 var ketawaapp = "/static/projects/app-ketawa.png";
@@ -88,42 +90,31 @@ var bettercastPortfolio_category = {
 
 var bettercastPortfolio_images = {
   hd: {
-    src: alldaytattoo,
+    src: bettercastdesktop,
     border: /* Desktop */4,
     className: "col-8 portimg-ketawa-desktop"
   },
   tl: /* [] */0
 };
 
-var bettercastPortfolio_technologies = {
-  hd: "html5",
-  tl: {
-    hd: "css",
-    tl: {
-      hd: "wordpress",
-      tl: {
-        hd: "Js",
-        tl: {
-          hd: "Graphic Design",
-          tl: {
-            hd: "web design",
-            tl: /* [] */0
-          }
-        }
-      }
-    }
-  }
+var bettercastPortfolio_links = {
+  hd: {
+    href: "https://bettercast.io/",
+    caption: "View Website >",
+    category: /* Default */0
+  },
+  tl: /* [] */0
 };
 
-var bettercastPortfolio_body = React.createElement("div", undefined, React.createElement("p", undefined, "What would be better suited to the landscape of digital transformation of 2020 than BetterCast: a rising platform where people can meet, talk, discuss new ideas, ask questions, 100% online. From launchable MVP in 3 months to full production-scale implementation, we worked with BetterCast the entire way. We continued helping it grow, continuing to evaluate new features, and streamline the experience until we were able to help them cultivate an in-house team to take over the project.\r\n             "), React.createElement("p", undefined, "The site was built with HTML, Javascript, and styled with CSS in the framework of Bootstrap."));
+var bettercastPortfolio_body = React.createElement("div", undefined, React.createElement("p", undefined, "What would be better suited to the landscape of digital transformation of 2020 than BetterCast: a rising platform where people can meet, talk, discuss new ideas, ask questions, 100% online. From launchable MVP in 3 months to full production-scale implementation, we worked with BetterCast the entire way. We continued helping it grow, continuing to evaluate new features, and streamline the experience until we were able to help them cultivate an in-house team to take over the project.\r\n             "));
 
 var bettercastPortfolio = {
   title: "Bettercast Website",
   category: bettercastPortfolio_category,
   className: undefined,
   images: bettercastPortfolio_images,
-  links: /* [] */0,
-  technologies: bettercastPortfolio_technologies,
+  links: bettercastPortfolio_links,
+  technologies: /* [] */0,
   body: bettercastPortfolio_body
 };
 
@@ -918,7 +909,7 @@ var eastwestPortfolio = {
 };
 
 var halalblockvideoPortfolio_category = {
-  hd: /* Other */2,
+  hd: /* Design */3,
   tl: /* [] */0
 };
 
@@ -955,7 +946,7 @@ var halalblockvideoPortfolio = {
 };
 
 var traitsignalvideoPortfolio_category = {
-  hd: /* Other */2,
+  hd: /* Design */3,
   tl: /* [] */0
 };
 
@@ -992,7 +983,7 @@ var traitsignalvideoPortfolio = {
 };
 
 var adsoupvideoPortfolio_category = {
-  hd: /* Other */2,
+  hd: /* Design */3,
   tl: /* [] */0
 };
 
@@ -1226,6 +1217,7 @@ var microgamesPortfolio = {
 var cvrl = "/static/projects/website-adsoup.jpg";
 
 export {
+  bettercastdesktop ,
   ketawadesktop ,
   ketawaapp ,
   alldaytattoo ,

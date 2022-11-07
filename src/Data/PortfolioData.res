@@ -1,6 +1,7 @@
 open React
 open DataTypes.PortfolioItem
 
+let bettercastdesktop: string = "/static/projects/website-bettercast.jpg"
 let ketawadesktop: string = "/static/projects/website-ketawa-d.jpg"
 let ketawaapp: string = "/static/projects/app-ketawa.png"
 let alldaytattoo: string = "/static/projects/alldaytattoo.png"
@@ -47,24 +48,25 @@ let bettercastPortfolio: t = {
   title: "Bettercast Website",
   className: None,
   category: list{All, AppPlatforms},
+  technologies: list{},
   images: list{
     {
-      src: alldaytattoo,
+      src: bettercastdesktop,
       border: Desktop,
       className: Some("col-8 portimg-ketawa-desktop"),
     },
   },
-  links: list{},
-  technologies: list{"html5", "css", "wordpress", "Js", "Graphic Design", "web design"},
+  links: list{
+    {
+      category: Default,
+      href: "https://bettercast.io/",
+      caption: "View Website >",
+    },
+  },
   body: <div>
     <p>
       {string("What would be better suited to the landscape of digital transformation of 2020 than BetterCast: a rising platform where people can meet, talk, discuss new ideas, ask questions, 100% online. From launchable MVP in 3 months to full production-scale implementation, we worked with BetterCast the entire way. We continued helping it grow, continuing to evaluate new features, and streamline the experience until we were able to help them cultivate an in-house team to take over the project.
              ")}
-    </p>
-    <p>
-      {string(
-        "The site was built with HTML, Javascript, and styled with CSS in the framework of Bootstrap.",
-      )}
     </p>
   </div>,
 }
@@ -481,7 +483,7 @@ let eastwestPortfolio: t = {
 let halalblockvideoPortfolio: t = {
   title: "Halal Blockchain Promotional Video",
   className: None,
-  category: list{Other},
+  category: list{Design},
   images: list{
     {
       src: halalblockvideo,
@@ -502,7 +504,7 @@ let halalblockvideoPortfolio: t = {
 let traitsignalvideoPortfolio: t = {
   title: "Trait Signal Promotional Video",
   className: None,
-  category: list{Other},
+  category: list{Design},
   images: list{
     {
       src: traitsignalvideo,
@@ -524,7 +526,7 @@ let traitsignalvideoPortfolio: t = {
 let adsoupvideoPortfolio: t = {
   title: "Adsoup Promotional Video",
   className: None,
-  category: list{Other},
+  category: list{Design},
   images: list{
     {
       src: adsoupvideo,
