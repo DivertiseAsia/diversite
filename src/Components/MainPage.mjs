@@ -104,7 +104,7 @@ function MainPage(Props) {
                                       href: "mailto:contact@divertise.asia"
                                     }, React.createElement("img", {
                                           src: "/static/images/email.svg"
-                                        }))), React.createElement("p", undefined, "ⓒ 2017-2021 Divertise Asia Co.,Ltd."))))));
+                                        }))), React.createElement("p", undefined, "ⓒ 2017-2022 Divertise Asia Co.,Ltd."))))));
 }
 
 var make = MainPage;

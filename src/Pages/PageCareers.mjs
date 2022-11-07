@@ -33,6 +33,16 @@ function PageCareers(Props) {
                               imageURL: "/static/images/position-design.jpg",
                               href: Links.careersdesigner,
                               iconType: /* Pen */8
+                            }), React.createElement(InternshipProgram.make, {
+                              title: "Software Project Manager",
+                              imageURL: "/static/images/position-dev.jpg",
+                              href: Links.careersprojectmanager,
+                              iconType: /* Code */2
+                            }), React.createElement(InternshipProgram.make, {
+                              title: "Sales Executive (Software)",
+                              imageURL: "/static/images/position-design.jpg",
+                              href: Links.careerssales,
+                              iconType: /* Pen */8
                             }))), React.createElement("div", {
                       className: "row d-block text-center"
                     }, React.createElement("h3", {

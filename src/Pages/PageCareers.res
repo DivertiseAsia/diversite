@@ -23,6 +23,18 @@ let make = () => {
             imageURL="/static/images/position-design.jpg"
             href=Links.careersdesigner
           />
+          <InternshipProgram
+            iconType=Icon.Code
+            title="Software Project Manager"
+            imageURL="/static/images/position-dev.jpg"
+            href=Links.careersprojectmanager
+          />
+          <InternshipProgram
+            iconType=Icon.Pen
+            title="Sales Executive (Software)"
+            imageURL="/static/images/position-design.jpg"
+            href=Links.careerssales
+          />
         </div>
       </div>
       <div className="row d-block text-center">
