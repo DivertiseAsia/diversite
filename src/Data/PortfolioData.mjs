@@ -99,6 +99,15 @@ var adsoupPortfolio_images = {
   }
 };
 
+var adsoupPortfolio_links = {
+  hd: {
+    href: "https://www.youtube.com/watch?v=1yW1P6MCj1I",
+    caption: "View Video >",
+    category: /* Default */0
+  },
+  tl: /* [] */0
+};
+
 var adsoupPortfolio_technologies = {
   hd: "React",
   tl: {
@@ -147,7 +156,7 @@ var adsoupPortfolio = {
   category: adsoupPortfolio_category,
   className: undefined,
   images: adsoupPortfolio_images,
-  links: /* [] */0,
+  links: adsoupPortfolio_links,
   technologies: adsoupPortfolio_technologies,
   body: adsoupPortfolio_body
 };
@@ -486,8 +495,8 @@ var traitsignalPortfolio_images = {
 
 var traitsignalPortfolio_links = {
   hd: {
-    href: "https://traitsignal.com/",
-    caption: "View Website >",
+    href: "https://www.youtube.com/watch?v=DD-Bb_8Avto",
+    caption: "View Video >",
     category: /* Default */0
   },
   tl: /* [] */0

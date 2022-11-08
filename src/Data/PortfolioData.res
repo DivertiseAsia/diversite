@@ -59,7 +59,13 @@ let adsoupPortfolio: t = {
     },
   },
   category: list{AppPlatforms},
-  links: list{} /* {
+  links: list{
+    {
+     category: Default,
+     href: "https://www.youtube.com/watch?v=1yW1P6MCj1I",
+     caption: "View Video >"
+   }
+  } /* {
      category: GooglePlay,
      href: "https://play.google.com/store/apps/details?id=io.adsoup.sales.mobile",
      caption: "Google Play"
@@ -272,8 +278,8 @@ let traitsignalPortfolio: t = {
   links: list{
     {
       category: Default,
-      href: "https://traitsignal.com/",
-      caption: "View Website >",
+      href: "https://www.youtube.com/watch?v=DD-Bb_8Avto",
+      caption: "View Video >",
     },
   },
   category: list{AI, AppPlatforms},
