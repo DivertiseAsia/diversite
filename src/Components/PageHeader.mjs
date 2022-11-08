@@ -14,7 +14,7 @@ function PageHeader(Props) {
   return React.createElement("div", {
               className: "section-header " + Js_option.getWithDefault("", className)
             }, React.createElement("div", {
-                  className: "container"
+                  className: "container pb-4 pb-lg-0"
                 }, React.createElement("div", {
                       className: "row d-flex align-items-baseline -text-uppercase"
                     }, React.createElement("h1", {
