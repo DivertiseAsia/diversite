@@ -32,7 +32,7 @@ $transition: all 0.3s ease-out;
 
 $header-height: 50px;
 $frontpage-section-img-height: 350px;
-$frontpage-section-height: 300px; 
+$frontpage-section-height: 300px;
 $scrollbar-width: 0.5vw;
 $section-header-height: 130px;
 
@@ -68,8 +68,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: $font-weight-bold;
   line-height: 1.4em;
 }
-p { 
-  color: $text-color1; 
+p {
+  color: $text-color1;
 }
 a {
   text-decoration: none;
@@ -95,9 +95,9 @@ a {
   opacity: 0.5;
   cursor: default;
 }
-.btn-line-color1.inactive:hover { 
-  @include btn(transparent, $bg-color1, $bg-color1); 
-  cursor: default; 
+.btn-line-color1.inactive:hover {
+  @include btn(transparent, $bg-color1, $bg-color1);
+  cursor: default;
 }
 .btn-line-white { @include btn(transparent, $text-white, $text-white) }
 .btn-line-white:hover { @include btn($text-white, $text-white, $bg-color1) }
@@ -196,7 +196,7 @@ a:hover { text-decoration: none; }
 }
 /* -------------- Project Elements ----------------*/
 
-.image-background { 
+.image-background {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -440,7 +440,7 @@ nav .logo-link {
     text-shadow: $text-shadow;
     transition: $transition;
   }
-  .btn { 
+  .btn {
     @include btn(transparent, $text-white, $text-white);
     padding-right: 40px;
     padding-left: 40px;
@@ -544,10 +544,10 @@ nav .logo-link {
   }
   h4 {
     text-transform: uppercase;
-    color: $text-white; 
+    color: $text-white;
   }
   .content { color: $text-color2-light; }
-  .btn { 
+  .btn {
     @include btn(transparent, $text-color2-light, $text-color2-light);
     padding-right: 40px;
     padding-left: 40px;
@@ -590,7 +590,7 @@ nav .logo-link {
   transition: all 0.5s;
   position: absolute;
   top: 0;
-  left: 0; 
+  left: 0;
 }
 .popup-holder {
   display: flex;
@@ -684,7 +684,7 @@ $email-height: 30px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    background: $bg-grey;  
+    background: $bg-grey;
     padding: 0 7px;
     border-radius: 7px;
     box-shadow: 0 0 5px 2px rgba(0,0,0,0.5);
@@ -827,15 +827,15 @@ $email-height: 30px;
     position: absolute;
     z-index: 5;
     width: 100%;
-    margin-top: 70px;
-    h4 { 
+    margin-top: 35px;
+    h4, h5 {
       color: $text-white;
-      padding-left: 20px;
+      padding-left: 10px;
       padding-top: 10px;
     }
   }
 }
-.looking-for { 
+.looking-for {
   h3, h6 {
     color: $text-white;
   }
@@ -945,7 +945,7 @@ $email-height: 30px;
   transition: $transition;
   h3 { margin-bottom: 30px; }
 }
-.section-portfolio:nth-child(even) { background-color: $bg-grey; } 
+.section-portfolio:nth-child(even) { background-color: $bg-grey; }
 .port_img-container {
   text-align: center;
   margin-bottom: 30px;
@@ -1166,7 +1166,7 @@ $email-height: 30px;
   .portimg {
     .portimg_scroll { border: $border-default rgb(46, 46, 46); }
     .portimg_scroll-before { background: rgb(46, 46, 46); }
-    .portimg_frame { 
+    .portimg_frame {
       background: rgb(0, 0, 0);
       border: solid 2px rgb(46, 46, 46);;
     }
@@ -1337,9 +1337,9 @@ and (max-width: 1200px) {
   /* Small Desktop Portfolio */
   .phone-landscape, .phone-portrait, .tablet-landscape {
     .portimg-container .portimg {
-      .portimg_frame { 
+      .portimg_frame {
         border-radius: 18px;
-        border-width: 1px; 
+        border-width: 1px;
       }
       .portimg_scroll { border-width: 1px; }
     }
@@ -1369,7 +1369,7 @@ and (max-width: 768px) {
     // .nav-container {background: $bg-color2;}
   }
   .nav a:not(.logo-link) {
-    padding: 7px 10px; 
+    padding: 7px 10px;
   }
   .nav-container .link:first-child {display: none;}
   .page-ourwork_nav {
@@ -1413,7 +1413,7 @@ and (max-width: 768px) {
       opacity: 1;
     }
   }
-  
+
   /*Tablet - Home Page*/
   .hero {
     height: 60vh;
@@ -1449,9 +1449,9 @@ and (max-width: 768px) {
   }
   .phone-landscape, .phone-portrait, .tablet-landscape {
     .portimg-container .portimg {
-      .portimg_frame { 
+      .portimg_frame {
         border-radius: 15px;
-        border-width: 1px; 
+        border-width: 1px;
       }
       .portimg_scroll { border-width: 1px; }
     }
@@ -1463,17 +1463,17 @@ and (max-width: 768px) {
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  .port_btn:last-child { 
-    background-position: right; 
-    &:before { 
-      background-position: right; 
+  .port_btn:last-child {
+    background-position: right;
+    &:before {
+      background-position: right;
       margin-right: 0;
     }
   }
-  .port_btn:first-child { 
-    text-align: left; 
-    &:before { 
-      background-position: left; 
+  .port_btn:first-child {
+    text-align: left;
+    &:before {
+      background-position: left;
       margin-left: 0;
     }
   }
@@ -1523,9 +1523,9 @@ and (max-width: 576px) {
   }
   .phone-landscape, .phone-portrait, .tablet-landscape {
     .portimg-container .portimg {
-      .portimg_frame { 
+      .portimg_frame {
         border-radius: 9px;
-        border-width: 1px; 
+        border-width: 1px;
       }
       .portimg_scroll { border-width: 0.5px; }
     }
@@ -1563,6 +1563,9 @@ and (max-width: 576px) {
 /* -------- Small Phones ---------*/
 @media only screen
 and (max-width: 400px) {
+  .internship-program a .content-program {
+    margin-top: 15px;
+  }
   .internship-program a .content-program h4 {
     padding-left: 10px;
     font-size: 16px;
@@ -1588,10 +1591,10 @@ and (max-width: 400px) {
 /* --------- Iphone4 ------------*/
 @media only screen
 and (max-width: 350px) {
-  .port_btn, .port_btn:last-child { 
-    background-position: left; 
-    &:before { 
-      background-position: left; 
+  .port_btn, .port_btn:last-child {
+    background-position: left;
+    &:before {
+      background-position: left;
       margin-left: 0;
     }
   }

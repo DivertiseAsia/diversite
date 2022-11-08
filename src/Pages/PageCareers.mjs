@@ -25,22 +25,26 @@ function PageCareers(Props) {
                           className: "row pt-5"
                         }, React.createElement(InternshipProgram.make, {
                               title: "Developer",
+                              time: "",
                               imageURL: "/static/images/position-dev.jpg",
                               href: Links.careersdeveloper,
                               iconType: /* Code */2
                             }), React.createElement(InternshipProgram.make, {
                               title: "Design Engineer",
+                              time: "",
                               imageURL: "/static/images/position-design.jpg",
                               href: Links.careersdesigner,
                               iconType: /* Pen */8
                             }), React.createElement(InternshipProgram.make, {
                               title: "Software Project Manager",
-                              imageURL: "/static/images/position-dev.jpg",
+                              time: "",
+                              imageURL: "/static/images/position-pm.png",
                               href: Links.careersprojectmanager,
                               iconType: /* Code */2
                             }), React.createElement(InternshipProgram.make, {
                               title: "Sales Executive (Software)",
-                              imageURL: "/static/images/position-design.jpg",
+                              time: "(3 months contract)",
+                              imageURL: "/static/images/position-sales.png",
                               href: Links.careerssales,
                               iconType: /* Pen */8
                             }))), React.createElement("div", {
@@ -54,11 +58,13 @@ function PageCareers(Props) {
                         }, React.createElement(InternshipProgram.make, {
                               className: "image-background",
                               title: "App & Ai Dev",
+                              time: "",
                               imageURL: "/static/images/position-game.jpg",
                               href: Links.internshipdeveloper,
                               iconType: /* Code */2
                             }), React.createElement(InternshipProgram.make, {
                               title: "Art & Design",
+                              time: "",
                               imageURL: "/static/images/position-art.jpg",
                               href: Links.internshipdesign,
                               iconType: /* Pen */8
