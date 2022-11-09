@@ -30,7 +30,10 @@ let make = (
                 <Link href=Links.ourwork> {string("Our Work")} </Link>
                 <Link href=Links.careers> {string("Careers")} </Link>
                 <Link href=Links.contact> {string("Contact Us")} </Link>
-                <div className="btn btn-line-white" onClick={_ => setPopupOpen(_ => !isPopupOpen)}>
+                <div className="btn btn-line-white d-none d-sm-inline-block" onClick={_ => setPopupOpen(_ => !isPopupOpen)}>
+                  {string("Build Your Ideas")}
+                </div>
+                <div className="btn btn-line-color1 d-inline-block d-sm-none" onClick={_ => setPopupOpen(_ => !isPopupOpen)}>
                   {string("Build Your Ideas")}
                 </div>
               </div>

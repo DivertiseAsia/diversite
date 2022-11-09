@@ -60,7 +60,14 @@ function MainPage(Props) {
                                           href: Links.contact,
                                           children: "Contact Us"
                                         }), React.createElement("div", {
-                                          className: "btn btn-line-white",
+                                          className: "btn btn-line-white d-none d-sm-inline-block",
+                                          onClick: (function (param) {
+                                              return Curry._1(setPopupOpen, (function (param) {
+                                                            return !isPopupOpen;
+                                                          }));
+                                            })
+                                        }, "Build Your Ideas"), React.createElement("div", {
+                                          className: "btn btn-line-color1 d-inline-block d-sm-none",
                                           onClick: (function (param) {
                                               return Curry._1(setPopupOpen, (function (param) {
                                                             return !isPopupOpen;
