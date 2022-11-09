@@ -59,13 +59,7 @@ let adsoupPortfolio: t = {
     },
   },
   category: list{AppPlatforms},
-  links: list{
-    {
-     category: Default,
-     href: "https://www.youtube.com/watch?v=1yW1P6MCj1I",
-     caption: "View Video >"
-   }
-  } /* {
+  links: list{} /* {
      category: GooglePlay,
      href: "https://play.google.com/store/apps/details?id=io.adsoup.sales.mobile",
      caption: "Google Play"
@@ -275,13 +269,7 @@ let traitsignalPortfolio: t = {
     },
     {src: traitsignaldesktop, border: Desktop, className: Some("col-8")},
   },
-  links: list{
-    {
-      category: Default,
-      href: "https://www.youtube.com/watch?v=DD-Bb_8Avto",
-      caption: "View Video >",
-    },
-  },
+  links: list{},
   category: list{AI, AppPlatforms},
   technologies: list{},
   body: <div>
@@ -491,7 +479,13 @@ let traitsignalvideoPortfolio: t = {
       className: Some("col-8 portimg-ketawa-desktop"),
     },
   },
-  links: list{},
+  links: list{
+    {
+      category: Default,
+      href: "https://www.youtube.com/watch?v=DD-Bb_8Avto",
+      caption: "View Video >",
+    },
+  },
   technologies: list{"Video Editing", "2D Animation", "Story Board"},
   body: <div>
     <p>
@@ -513,7 +507,13 @@ let adsoupvideoPortfolio: t = {
       className: Some("col-8 portimg-ketawa-desktop"),
     },
   },
-  links: list{},
+  links: list{
+    {
+     category: Default,
+     href: "https://www.youtube.com/watch?v=1yW1P6MCj1I",
+     caption: "View Video >"
+   },
+  },
   technologies: list{"Video Editing", "2D Animation", "Story Board"},
   body: <div>
     <p>

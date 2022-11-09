@@ -99,15 +99,6 @@ var adsoupPortfolio_images = {
   }
 };
 
-var adsoupPortfolio_links = {
-  hd: {
-    href: "https://www.youtube.com/watch?v=1yW1P6MCj1I",
-    caption: "View Video >",
-    category: /* Default */0
-  },
-  tl: /* [] */0
-};
-
 var adsoupPortfolio_technologies = {
   hd: "React",
   tl: {
@@ -156,7 +147,7 @@ var adsoupPortfolio = {
   category: adsoupPortfolio_category,
   className: undefined,
   images: adsoupPortfolio_images,
-  links: adsoupPortfolio_links,
+  links: /* [] */0,
   technologies: adsoupPortfolio_technologies,
   body: adsoupPortfolio_body
 };
@@ -493,15 +484,6 @@ var traitsignalPortfolio_images = {
   }
 };
 
-var traitsignalPortfolio_links = {
-  hd: {
-    href: "https://www.youtube.com/watch?v=DD-Bb_8Avto",
-    caption: "View Video >",
-    category: /* Default */0
-  },
-  tl: /* [] */0
-};
-
 var traitsignalPortfolio_body = React.createElement("div", undefined, React.createElement("p", undefined, "Trait Signal is a webapp that is built to help car dealers grasp their customer's opinions about cars they are trying to sell."));
 
 var traitsignalPortfolio = {
@@ -509,7 +491,7 @@ var traitsignalPortfolio = {
   category: traitsignalPortfolio_category,
   className: undefined,
   images: traitsignalPortfolio_images,
-  links: traitsignalPortfolio_links,
+  links: /* [] */0,
   technologies: /* [] */0,
   body: traitsignalPortfolio_body
 };
@@ -928,6 +910,15 @@ var traitsignalvideoPortfolio_images = {
   tl: /* [] */0
 };
 
+var traitsignalvideoPortfolio_links = {
+  hd: {
+    href: "https://www.youtube.com/watch?v=DD-Bb_8Avto",
+    caption: "View Video >",
+    category: /* Default */0
+  },
+  tl: /* [] */0
+};
+
 var traitsignalvideoPortfolio_technologies = {
   hd: "Video Editing",
   tl: {
@@ -946,7 +937,7 @@ var traitsignalvideoPortfolio = {
   category: traitsignalvideoPortfolio_category,
   className: undefined,
   images: traitsignalvideoPortfolio_images,
-  links: /* [] */0,
+  links: traitsignalvideoPortfolio_links,
   technologies: traitsignalvideoPortfolio_technologies,
   body: traitsignalvideoPortfolio_body
 };
@@ -961,6 +952,15 @@ var adsoupvideoPortfolio_images = {
     src: adsoupvideo,
     border: /* Desktop */4,
     className: "col-8 portimg-ketawa-desktop"
+  },
+  tl: /* [] */0
+};
+
+var adsoupvideoPortfolio_links = {
+  hd: {
+    href: "https://www.youtube.com/watch?v=1yW1P6MCj1I",
+    caption: "View Video >",
+    category: /* Default */0
   },
   tl: /* [] */0
 };
@@ -983,7 +983,7 @@ var adsoupvideoPortfolio = {
   category: adsoupvideoPortfolio_category,
   className: undefined,
   images: adsoupvideoPortfolio_images,
-  links: /* [] */0,
+  links: adsoupvideoPortfolio_links,
   technologies: adsoupvideoPortfolio_technologies,
   body: adsoupvideoPortfolio_body
 };
