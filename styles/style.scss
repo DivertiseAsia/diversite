@@ -1,4 +1,4 @@
-$font-size-small: 1rem;
+$font-size-small: 1.5rem;
 $font-size-medium: 2rem;
 $font-weight-normal: 300;
 $font-weight-medium: 400;
@@ -42,7 +42,7 @@ html, body, body>div, body>div>div {
   height: 100%;
 }
 html {
-  font-size: 14px;
+  font-size: 16px;
   color: $text-color1;
   font-family: $font-default;
   font-weight: $font-weight-normal;
@@ -232,12 +232,15 @@ a:hover { text-decoration: none; }
 }
 /* ------------- Navigation Bar ------------- */
 
+.nav.-text-right {
+  background: $bg-color2;
+}
 .nav {
   width: 100vw - $scrollbar-width;
   padding: 8px 15px;
   box-sizing: border-box;
   z-index: 99;
-  height: $header-height;
+  height: $header-height + 10px;
   background: $bg-color1;
 }
 nav.nav {
@@ -260,7 +263,7 @@ nav.nav {
   font-family: $font-header;
 }
 @media only screen and (max-width: 576px) {
-  .nav .nav-container > div.btn-line-color1 {
+  .page-children > div.btn-line-color1 {
     display: inline-block;
     position: fixed;
     right: 35px;
@@ -272,7 +275,7 @@ nav.nav {
     background-color: white;
     width: 150px;
   }
-  .nav .nav-container > div.btn-line-color1:hover {
+  .page-children > div.btn-line-color1:hover {
     background-color: $bg-color1;
   }
 }
@@ -396,7 +399,7 @@ nav .logo-link {
     position: absolute;
   }
   .nav {
-    background: transparent;
+    background: $bg-color2;
     a:not(.logo-link) {
       text-shadow: $text-shadow;
     }
@@ -1362,7 +1365,7 @@ and (max-width: 1200px) {
   .phone-portrait {
     max-width: 200px;
   }
-  .page-home .nav {background: transparent;}
+  .page-home .nav {background: $bg-color2;}
 }
 
 @media only screen
@@ -1380,7 +1383,7 @@ and (max-width: 992px) {
 and (max-width: 768px) {
   /* Tablet Nav*/
   .page-home {
-    .nav {background: #23a399d9;}
+    .nav {background: $bg-color2;}
     // .nav-container {background: $bg-color2;}
   }
   .nav a:not(.logo-link) {
