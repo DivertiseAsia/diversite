@@ -48,7 +48,7 @@ let bettercastPortfolio: t = {
   title: "Bettercast Website",
   className: None,
   category: list{All, AppPlatforms},
-  technologies: list{},
+  technologies: list{"Reason", "Python", "Docker", "Aws", "Web design", "Ux", "Ui"},
   images: list{
     {
       src: bettercastdesktop,

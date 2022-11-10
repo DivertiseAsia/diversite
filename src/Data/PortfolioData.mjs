@@ -106,6 +106,29 @@ var bettercastPortfolio_links = {
   tl: /* [] */0
 };
 
+var bettercastPortfolio_technologies = {
+  hd: "Reason",
+  tl: {
+    hd: "Python",
+    tl: {
+      hd: "Docker",
+      tl: {
+        hd: "Aws",
+        tl: {
+          hd: "Web design",
+          tl: {
+            hd: "Ux",
+            tl: {
+              hd: "Ui",
+              tl: /* [] */0
+            }
+          }
+        }
+      }
+    }
+  }
+};
+
 var bettercastPortfolio_body = React.createElement("div", undefined, React.createElement("p", undefined, "What would be better suited to the landscape of digital transformation of 2020 than BetterCast: a rising platform where people can meet, talk, discuss new ideas, ask questions, 100% online. From launchable MVP in 3 months to full production-scale implementation, we worked with BetterCast the entire way. We continued helping it grow, continuing to evaluate new features, and streamline the experience until we were able to help them cultivate an in-house team to take over the project.\r\n             "));
 
 var bettercastPortfolio = {
@@ -114,7 +137,7 @@ var bettercastPortfolio = {
   className: undefined,
   images: bettercastPortfolio_images,
   links: bettercastPortfolio_links,
-  technologies: /* [] */0,
+  technologies: bettercastPortfolio_technologies,
   body: bettercastPortfolio_body
 };
 
