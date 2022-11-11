@@ -6,13 +6,18 @@ import * as MainPage from "../Components/MainPage.mjs";
 
 function Page404(Props) {
   return React.createElement(MainPage.make, {
+              className: "page404",
               title: "404",
               keywords: "",
               description: "Not found on Divertise Asia",
               children: null
-            }, React.createElement(Logo.make, {}), React.createElement("h2", {
+            }, React.createElement("h2", {
+                  className: "text-404"
+                }, "404"), React.createElement("h2", {
                   className: "-text-space"
-                }, "404"));
+                }, "Page Not found on Divertise Asia"), React.createElement(Logo.make, {
+                  is404: true
+                }));
 }
 
 var make = Page404;
