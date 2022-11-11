@@ -41,7 +41,11 @@ function MainPage(Props) {
                               className: "page-children"
                             }, React.createElement("nav", {
                                   className: "nav -text-right"
-                                }, React.createElement(Logo.make, {}), React.createElement("div", {
+                                }, React.createElement(Logo.make, {}), React.createElement("input", {
+                                      type: "checkbox"
+                                    }), React.createElement("div", {
+                                      className: "nav-icon"
+                                    }, React.createElement("div", undefined), React.createElement("div", undefined), React.createElement("div", undefined)), React.createElement("div", {
                                       className: "nav-container"
                                     }, React.createElement(Link, {
                                           href: Links.home,
@@ -57,6 +61,13 @@ function MainPage(Props) {
                                           children: "Contact Us"
                                         }), React.createElement("div", {
                                           className: "btn btn-line-white d-none d-sm-inline-block",
+                                          onClick: (function (param) {
+                                              return Curry._1(setPopupOpen, (function (param) {
+                                                            return !isPopupOpen;
+                                                          }));
+                                            })
+                                        }, "Build Your Ideas"), React.createElement("div", {
+                                          className: "btn btn-line-color1 d-inline-block d-sm-none",
                                           onClick: (function (param) {
                                               return Curry._1(setPopupOpen, (function (param) {
                                                             return !isPopupOpen;

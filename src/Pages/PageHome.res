@@ -12,8 +12,6 @@ const Carousel = dynamic(() => import("../Components/Carousel.mjs").then(mod => 
 @react.component
 let make = () => {
   let carousel = %raw(`Carousel`)
-  let (isPopupBuildOpen, setPopupBuildOpen) = React.useState(() => false)
-
   <MainPage
     className="page-home"
     title="Get Launched with Divertise Asia"
@@ -21,26 +19,6 @@ let make = () => {
     description="Realize your technical project with Divertise Asia as your partner">
     {React.createElement(carousel, Js.Dict.empty())}
     <div className="homepage_menu-bg" />
-    <div
-      className="buildyourideas-btn btn btn-line-color1 d-inline-block d-sm-none"
-      onClick={_ => setPopupBuildOpen(_ => !isPopupBuildOpen)}>
-      {string("Build Your Ideas")}
-    </div>
-    <Popup
-      isOpen=isPopupBuildOpen
-      closeOnBgClick=false
-      closeFunc={() => setPopupBuildOpen(_ => false)}
-      className="buildyouridea-popup">
-      <div>
-        <h3> {string("Build Your Ideas")} </h3>
-        <p>
-          {string(
-            "Tell us about what you need. We will get back to you within 1 working day",
-          )}
-        </p>
-      </div>
-      <ContactForm />
-    </Popup>
     <div className="section-ourgoal -text-center">
       <div className="container">
         <h3 className="pt-5">

@@ -260,12 +260,11 @@ nav.nav {
   font-family: $font-header;
 }
 @media only screen and (max-width: 576px) {
-  .buildyourideas-btn.btn.btn-line-color1 {
-    z-index: 30;
+  .page-children > div.btn-line-color1 {
     display: inline-block;
     position: fixed;
     right: 35px;
-    bottom: 15px;
+    bottom: 80px;
     box-shadow: 0 0 10px 3px rgba(0,0,0,0.4);
     font-size: 16px;
     padding-left: 15px;
@@ -273,7 +272,7 @@ nav.nav {
     background-color: white;
     width: 150px;
   }
-  .buildyourideas-btn.btn.btn-line-color1:hover {
+  .page-children > div.btn-line-color1:hover {
     background-color: $bg-color1;
   }
 }
@@ -637,7 +636,7 @@ nav .logo-link {
   }
   .popup {
     width: 90%;
-    height: 80%;
+    height: 90%;
   }
   .popup-content {
     display: flex;
@@ -975,7 +974,7 @@ $email-height: 30px;
 .downloadport-btn {
   position: fixed;
   right: 35px;
-  bottom: 65px;
+  bottom: 10px;
   z-index: 99;
   box-shadow: 0 0 10px 3px rgba(0,0,0,0.4);
   font-size: 16px;
@@ -1554,9 +1553,6 @@ and (max-width: 576px) {
     border: none;
     padding: 0;
   }
-  .downloadport-popup .popup {
-    right: 0px;
-  }
   // .btn-google-play::before, .btn-app-store::before, .btn-mi-store::before {
   //   height: 80px;
   //   width: 100%;
@@ -1582,9 +1578,6 @@ and (max-width: 576px) {
 /* -------- Small Phones ---------*/
 @media only screen
 and (max-width: 400px) {
-  .nav a:not(.logo-link) {
-    padding: 7px 5px;
-  }
   .internship-program a .content-program h4 {
     padding-left: 10px;
     font-size: 16px;

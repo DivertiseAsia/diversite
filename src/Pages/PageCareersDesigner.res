@@ -2,8 +2,6 @@ open React
 
 @react.component
 let make = () => {
-  let (isPopupBuildOpen, setPopupBuildOpen) = React.useState(() => false)
-
   <MainPage
     title="Designer at Divertise Asia"
     keywords="Artificial Intelligence, Design, Fullstack, API, Server"
@@ -11,24 +9,6 @@ let make = () => {
     <PageHeader title="Careers" subtitle="Designer" className="bg-gradient-color1 pt-5" />
     <div className="container">
       <div className="row pt-5 d-block">
-        <div
-          className="buildyourideas-btn btn btn-line-color1 d-inline-block d-sm-none"
-          onClick={_ => setPopupBuildOpen(_ => !isPopupBuildOpen)}>
-          {string("Build Your Ideas")}
-        </div>
-        <Popup
-          isOpen=isPopupBuildOpen
-          closeOnBgClick=false
-          closeFunc={() => setPopupBuildOpen(_ => false)}
-          className="buildyouridea-popup">
-          <div>
-            <h3> {string("Build Your Ideas")} </h3>
-            <p>
-              {string("Tell us about what you need. We will get back to you within 1 working day")}
-            </p>
-          </div>
-          <ContactForm />
-        </Popup>
         <h3>
           <Icon className="mr-4" iconType=Icon.Pen /> {string("What are the requirements?")}
         </h3>
