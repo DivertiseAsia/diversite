@@ -3,7 +3,7 @@ open React
 @react.component
 let make = (~className: option<string>=?, ~onClick=?, ~is404: option<bool>=?) => {
   <Next.Link href=Links.home>
-    <a className="link logo-link">
+    <a className=("link logo-link " ++ {Js.Option.getWithDefault(false, is404) ? " btn btn-line-color1" : ""})>
       <img
         className={"logo " ++ Js.Option.getWithDefault("logo-default", className)}
         ?onClick

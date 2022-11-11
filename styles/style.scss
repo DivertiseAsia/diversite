@@ -62,7 +62,7 @@ h3 { font-size: 1.6em; }
 h4 { font-size: 1.4em; }
 h5 { font-size: 1.2em; }
 h6 { font-size: 1em; }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, pre {
   color: $text-color1;
   font-family: $font-header;
   font-weight: $font-weight-bold;
@@ -239,11 +239,16 @@ a:hover { text-decoration: none; }
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  h2.text-404 {
+  h2.text-404,
+  pre.text-404 {
     font-size: $font-size-medium + 1rem;
   }
   h2.go-home {
     font-size: $font-size-small + 0.5rem;
+  }
+  div {
+    display: flex;
+    flex-wrap: wrap;
   }
   * {
     margin: 0 auto;
@@ -254,6 +259,11 @@ a:hover { text-decoration: none; }
     align-content: center;
     flex-direction: column;
     margin-top: 25px;
+  }
+  a.link.logo-link:hover {
+    h2.go-home {
+      color: white;
+    }
   }
 }
 

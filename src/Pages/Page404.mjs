@@ -13,9 +13,11 @@ function Page404(Props) {
               children: null
             }, React.createElement("h2", {
                   className: "text-404"
-                }, "404"), React.createElement("h2", {
-                  className: "-text-space"
-                }, "Page Not found on Divertise Asia"), React.createElement(Logo.make, {
+                }, "404"), React.createElement("div", undefined, React.createElement("pre", {
+                      className: "text-404"
+                    }, "Page Not found "), React.createElement("h2", {
+                      className: "text-404"
+                    }, "on Divertise Asia")), React.createElement(Logo.make, {
                   is404: true
                 }));
 }
