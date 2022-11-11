@@ -6,6 +6,7 @@ import * as Popup from "../Components/Popup.mjs";
 import * as React from "react";
 import * as MainPage from "../Components/MainPage.mjs";
 import Link from "next/link";
+import * as ContactForm from "../Components/ContactForm.mjs";
 import * as PortfolioData from "../Data/PortfolioData.mjs";
 import * as PortfolioItem from "../Components/PortfolioItem.mjs";
 
@@ -14,8 +15,13 @@ function PageOurWork(Props) {
   var match = React.useState(function () {
         return false;
       });
-  var setPopupOpen = match[1];
-  var isPopupOpen = match[0];
+  var setPopupPortOpen = match[1];
+  var isPopupPortOpen = match[0];
+  var match$1 = React.useState(function () {
+        return false;
+      });
+  var setPopupBuildOpen = match$1[1];
+  var isPopupBuildOpen = match$1[0];
   var portfolioCategoryLink = function (category, text, tooltip) {
     var selectedClass = category === selectedCategory ? "selected" : "";
     return React.createElement(Link, {
@@ -69,19 +75,26 @@ function PageOurWork(Props) {
                 }), React.createElement("div", {
                   className: "downloadport-btn btn btn-line-color1",
                   onClick: (function (param) {
-                      return Curry._1(setPopupOpen, (function (param) {
-                                    return !isPopupOpen;
+                      return Curry._1(setPopupPortOpen, (function (param) {
+                                    return !isPopupPortOpen;
                                   }));
                     })
-                }, "Download Port"), React.createElement(Popup.make, {
-                  isOpen: isPopupOpen,
+                }, "Download Port"), React.createElement("div", {
+                  className: "buildyourideas-btn btn btn-line-color1 d-inline-block d-sm-none",
+                  onClick: (function (param) {
+                      return Curry._1(setPopupBuildOpen, (function (param) {
+                                    return !isPopupBuildOpen;
+                                  }));
+                    })
+                }, "Build Your Ideas"), React.createElement(Popup.make, {
+                  isOpen: isPopupPortOpen,
                   className: "downloadport-popup",
                   hasCloseBtn: true,
                   closeBtnText: "Not Now",
                   closeOnBgClick: true,
                   showX: false,
                   closeFunc: (function (param) {
-                      return Curry._1(setPopupOpen, (function (param) {
+                      return Curry._1(setPopupPortOpen, (function (param) {
                                     return false;
                                   }));
                     }),
@@ -98,7 +111,17 @@ function PageOurWork(Props) {
                         }), React.createElement("button", {
                           className: "btn btn-solid-color1",
                           type: "submit"
-                        }, "Submit"))), React.createElement("div", undefined, React.createElement(PortfolioItem.make, {
+                        }, "Submit"))), React.createElement(Popup.make, {
+                  isOpen: isPopupBuildOpen,
+                  className: "buildyouridea-popup",
+                  closeOnBgClick: false,
+                  closeFunc: (function (param) {
+                      return Curry._1(setPopupBuildOpen, (function (param) {
+                                    return false;
+                                  }));
+                    }),
+                  children: null
+                }, React.createElement("div", undefined, React.createElement("h3", undefined, "Build Your Ideas"), React.createElement("p", undefined, "Tell us about what you need. We will get back to you within 1 working day")), React.createElement(ContactForm.make, {})), React.createElement("div", undefined, React.createElement(PortfolioItem.make, {
                       item: PortfolioData.plateupPortfolio,
                       key: "plateup"
                     }), React.createElement(PortfolioItem.make, {

@@ -4,7 +4,8 @@ open PortfolioData
 
 @react.component
 let make = (~selectedCategory: category) => {
-  let (isPopupOpen, setPopupOpen) = React.useState(() => false)
+  let (isPopupPortOpen, setPopupPortOpen) = React.useState(() => false)
+  let (isPopupBuildOpen, setPopupBuildOpen) = React.useState(() => false)
 
   let portfolioCategoryLink = (category: category, text: string, tooltip: string) => {
     let selectedClass = category === selectedCategory ? "selected" : ""
@@ -40,7 +41,6 @@ let make = (~selectedCategory: category) => {
            </div>
            <div className="nav-container">
              <h6> {string("Category")} </h6> */
-
         <h3 className="text-white letter-spacing -text-uppercase -text-header-shadow">
           {string("Portfolio")}
         </h3>
@@ -55,22 +55,43 @@ let make = (~selectedCategory: category) => {
     <div className="buffer" />
     <div
       className="downloadport-btn btn btn-line-color1"
-      onClick={_ => setPopupOpen(_ => !isPopupOpen)}>
+      onClick={_ => setPopupPortOpen(_ => !isPopupPortOpen)}>
       {string("Download Port")}
-    </div> /* TODO: This should trigger a popup with an email field and a submit button. No need to add any other things or style it. I'll take care of those */
+    </div>
+    <div
+      className="buildyourideas-btn btn btn-line-color1 d-inline-block d-sm-none"
+      onClick={_ => setPopupBuildOpen(_ => !isPopupBuildOpen)}>
+      {string("Build Your Ideas")}
+    </div>
+    /* TODO: This should trigger a popup with an email field and a submit button. No need to add any other things or style it. I'll take care of those */
     <Popup
-      isOpen=isPopupOpen
+      isOpen=isPopupPortOpen
       className="downloadport-popup"
       hasCloseBtn=true
       closeBtnText="Not Now"
       closeOnBgClick=true
       showX=false
-      closeFunc={() => setPopupOpen(_ => false)}>
+      closeFunc={() => setPopupPortOpen(_ => false)}>
       <p> {React.string("Please add your email. We will send you our portfolio.")} </p>
       <form action="https://formspree.io/f/mbjpklyn" method="POST" className="downloadport-form">
         <input className="input-default" type_="email" placeholder="Your Email" name="email" />
         <button type_="submit" className="btn btn-solid-color1"> {React.string("Submit")} </button>
       </form>
+    </Popup>
+    <Popup
+      isOpen=isPopupBuildOpen
+      closeOnBgClick=false
+      closeFunc={() => setPopupBuildOpen(_ => false)}
+      className="buildyouridea-popup">
+      <div>
+        <h3> {string("Build Your Ideas")} </h3>
+        <p>
+          {string(
+            "Tell us about what you need. We will get back to you within 1 working day",
+          )}
+        </p>
+      </div>
+      <ContactForm />
     </Popup>
     <div>
       <PortfolioItem key="plateup" item=plateupPortfolio />
