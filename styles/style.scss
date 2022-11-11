@@ -239,8 +239,18 @@ a:hover { text-decoration: none; }
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  h2.text-404,
-  pre.text-404 {
+  .mobile {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    .mobile {
+      display: block;
+    }
+    .desktop {
+      display: none;
+    }
+  }
+  h2.text-404 {
     font-size: $font-size-medium + 1rem;
   }
   h2.go-home {
