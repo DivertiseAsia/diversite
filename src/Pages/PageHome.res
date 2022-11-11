@@ -12,6 +12,7 @@ const Carousel = dynamic(() => import("../Components/Carousel.mjs").then(mod => 
 @react.component
 let make = () => {
   let carousel = %raw(`Carousel`)
+
   <MainPage
     className="page-home"
     title="Get Launched with Divertise Asia"
