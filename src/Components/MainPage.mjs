@@ -16,6 +16,7 @@ function MainPage(Props) {
   var keywords = Props.keywords;
   var description = Props.description;
   var isPageOurWork = Props.isPageOurWork;
+  var isPageHome = Props.isPageHome;
   var children = Props.children;
   var match = React.useState(function () {
         return false;
@@ -67,7 +68,7 @@ function MainPage(Props) {
                                                             return !isPopupBuildOpen;
                                                           }));
                                             })
-                                        }, "Build Your Ideas"), Js_option.getWithDefault(false, isPageOurWork) ? React.createElement(React.Fragment, undefined) : React.createElement("div", {
+                                        }, "Build Your Ideas"), Js_option.getWithDefault(false, isPageOurWork) || Js_option.getWithDefault(false, isPageHome) ? React.createElement(React.Fragment, undefined) : React.createElement("div", {
                                             className: "buildyourideas-btn btn btn-line-color1 d-inline-block d-sm-none",
                                             onClick: (function (param) {
                                                 return Curry._1(setPopupBuildOpen, (function (param) {

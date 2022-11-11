@@ -1555,7 +1555,9 @@ and (max-width: 576px) {
     padding: 0;
   }
   .downloadport-popup .popup {
-    right: 0px;
+    left: 0;
+    right: 0;
+    margin: 0 10px;
   }
   // .btn-google-play::before, .btn-app-store::before, .btn-mi-store::before {
   //   height: 80px;

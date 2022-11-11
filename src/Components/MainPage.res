@@ -8,6 +8,7 @@ let make = (
   ~keywords: string,
   ~description: string,
   ~isPageOurWork: option<bool>=?,
+  ~isPageHome: option<bool>=?,
   ~children,
 ) => {
   let (isPopupBuildOpen, setPopupBuildOpen) = React.useState(() => false)
@@ -36,7 +37,7 @@ let make = (
                   onClick={_ => setPopupBuildOpen(_ => !isPopupBuildOpen)}>
                   {string("Build Your Ideas")}
                 </div>
-                {Js.Option.getWithDefault(false, isPageOurWork)
+                {Js.Option.getWithDefault(false, isPageOurWork) || Js.Option.getWithDefault(false, isPageHome)
                   ? <> </>
                   : <div
                       className="buildyourideas-btn btn btn-line-color1 d-inline-block d-sm-none"
