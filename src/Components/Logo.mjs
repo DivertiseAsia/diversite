@@ -21,7 +21,7 @@ function Logo(Props) {
               href: Links.home,
               children: React.createElement("a", {
                     className: "link logo-link " + (
-                      Js_option.getWithDefault(false, is404) ? " btn btn-line-color1" : ""
+                      Js_option.getWithDefault(false, is404) ? "btn btn-404 btn-line-color1" : ""
                     )
                   }, React.createElement("img", tmp), Js_option.getWithDefault(false, is404) ? React.createElement("h2", {
                           className: "go-home"
