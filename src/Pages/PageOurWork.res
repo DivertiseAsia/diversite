@@ -7,13 +7,11 @@ open Utils
 let make = (~selectedCategory: category) => {
   let (isPopupOpen, setPopupOpen) = React.useState(() => false)
 
-  let items = portfolioDataList->Belt.List.map(categoryList => {
-    if selectedCategory != All {
-      categoryList.category->Belt.List.some(category => category == selectedCategory)
-        ? <PortfolioItem key={categoryList.title} item={categoryList} />
-        : React.null
+  let items = portfolioDataList->Belt.List.keepMap(categoryList => {
+    if selectedCategory == All || (categoryList.category->Belt.List.some(category => category == selectedCategory)) {
+      Some(<PortfolioItem key={categoryList.title} item={categoryList} />)
     } else {
-      <PortfolioItem key={categoryList.title} item={categoryList} />
+      None
     }
   })
 

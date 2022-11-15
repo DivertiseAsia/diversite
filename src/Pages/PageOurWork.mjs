@@ -8,6 +8,7 @@ import * as React from "react";
 import * as MainPage from "../Components/MainPage.mjs";
 import * as Belt_List from "rescript/lib/es6/belt_List.js";
 import Link from "next/link";
+import * as Caml_option from "rescript/lib/es6/caml_option.js";
 import * as PortfolioData from "../Data/PortfolioData.mjs";
 import * as PortfolioItem from "../Components/PortfolioItem.mjs";
 
@@ -18,24 +19,16 @@ function PageOurWork(Props) {
       });
   var setPopupOpen = match[1];
   var isPopupOpen = match[0];
-  var items = Belt_List.map(PortfolioData.portfolioDataList, (function (categoryList) {
-          if (selectedCategory !== /* All */0) {
-            if (Belt_List.some(categoryList.category, (function (category) {
-                      return category === selectedCategory;
-                    }))) {
-              return React.createElement(PortfolioItem.make, {
-                          item: categoryList,
-                          key: categoryList.title
-                        });
-            } else {
-              return null;
-            }
-          } else {
-            return React.createElement(PortfolioItem.make, {
-                        item: categoryList,
-                        key: categoryList.title
-                      });
+  var items = Belt_List.keepMap(PortfolioData.portfolioDataList, (function (categoryList) {
+          if (selectedCategory === /* All */0 || Belt_List.some(categoryList.category, (function (category) {
+                    return category === selectedCategory;
+                  }))) {
+            return Caml_option.some(React.createElement(PortfolioItem.make, {
+                            item: categoryList,
+                            key: categoryList.title
+                          }));
           }
+          
         }));
   var portfolioCategoryLink = function (category, text, tooltip) {
     var selectedClass = category === selectedCategory ? "selected" : "";
