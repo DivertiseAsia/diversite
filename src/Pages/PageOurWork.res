@@ -2,6 +2,12 @@ open React
 open DataTypes.PortfolioItem
 open PortfolioData
 
+let scrollTop = %raw(`
+  function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+`)
+
 @react.component
 let make = (~selectedCategory: category) => {
   let (isPopupOpen, setPopupOpen) = React.useState(() => false)
@@ -9,7 +15,7 @@ let make = (~selectedCategory: category) => {
   let portfolioCategoryLink = (category: category, text: string, tooltip: string) => {
     let selectedClass = category === selectedCategory ? "selected" : ""
     <Next.Link key=text href={Links.ourwork_link(category)}>
-      <a className={"port-filter " ++ selectedClass}>
+      <a href="#container" className={"port-filter " ++ selectedClass} onClick={_ => scrollTop()}>
         <span className="hidden-md-down"> {string(text)} </span>
         <span className="hidden-lg-up"> {string(tooltip)} </span>
       </a>
@@ -25,6 +31,10 @@ let make = (~selectedCategory: category) => {
     | Design => "design"
     | Other => "other"
     }
+
+  Js.log(selectedCategory)
+  Js.log(plateupPortfolio.category->List.hd)
+  // Js.log(Js.List.countBy(category => category == selectedCategory, plateupPortfolio.category->List.hd))
 
   <MainPage
     className={"page-ourwork " ++ additional_classname}
@@ -72,8 +82,8 @@ let make = (~selectedCategory: category) => {
         <button type_="submit" className="btn btn-solid-color1"> {React.string("Submit")} </button>
       </form>
     </Popup>
-    <div>
-      <PortfolioItem key="plateup" item=plateupPortfolio />
+    <div className={additional_classname}>
+      // {plateupPortfolio.category->List.hd == selectedCategory ? <PortfolioItem key="plateup" item=plateupPortfolio /> : React.null}
       <PortfolioItem key="mintcrowd" item=mintcrowdPortfolio />
       <PortfolioItem key="safemode" item=safemodePortfolio />
       <PortfolioItem key="adsoup" item=adsoupPortfolio />
