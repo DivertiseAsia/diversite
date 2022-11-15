@@ -12,6 +12,10 @@ let scrollTop = %raw(`
 let make = (~selectedCategory: category) => {
   let (isPopupOpen, setPopupOpen) = React.useState(() => false)
 
+  let items = portfolioDataList->Belt.List.map(categoryList => {
+    <PortfolioItem key={categoryList.title} item={categoryList} />
+  })
+
   let portfolioCategoryLink = (category: category, text: string, tooltip: string) => {
     let selectedClass = category === selectedCategory ? "selected" : ""
     <Next.Link key=text href={Links.ourwork_link(category)}>
@@ -83,24 +87,26 @@ let make = (~selectedCategory: category) => {
       </form>
     </Popup>
     <div className={additional_classname}>
-      // {plateupPortfolio.category->List.hd == selectedCategory ? <PortfolioItem key="plateup" item=plateupPortfolio /> : React.null}
-      <PortfolioItem key="mintcrowd" item=mintcrowdPortfolio />
-      <PortfolioItem key="safemode" item=safemodePortfolio />
-      <PortfolioItem key="adsoup" item=adsoupPortfolio />
-      <PortfolioItem key="copanel" item=copanelPortfolio />
-      <PortfolioItem key="eventcomet" item=eventcometPortfolio />
-      <PortfolioItem key="boneage" item=boneagePortfolio />
-      <PortfolioItem key="traitsignal" item=traitsignalPortfolio />
-      <PortfolioItem key="vr" item=vrPortfolio />
-      <PortfolioItem key="ketawa" item=ketawaPortfolio />
-      <PortfolioItem key="alldaytattoo" item=alldaytattooPortfolio />
-      <PortfolioItem key="halalblockvideo" item=halalblockvideoPortfolio />
-      <PortfolioItem key="traitsignalvideo" item=traitsignalvideoPortfolio />
-      <PortfolioItem key="adsoupvideo" item=adsoupvideoPortfolio />
-      <PortfolioItem key="willamailn" item=wilaamalinPortfolio />
-      <PortfolioItem key="eastwest" item=eastwestPortfolio />
-      <PortfolioItem key="kikii" item=kikiiPortfolio />
-      <PortfolioItem key="micro" item=microgamesPortfolio />
+      {Belt.List.toArray(items)->React.array}
+        // {plateupPortfolio.category->List.hd == selectedCategory ? <PortfolioItem key="plateup" item=plateupPortfolio /> : React.null}
+        // {plateupPortfolio.category->Belt.List.has(selectedCategory, (category, selectedCategory) => category == selectedCategory) ? <PortfolioItem key="plateup" item=plateupPortfolio /> : React.null}
+        // <PortfolioItem key="mintcrowd" item=mintcrowdPortfolio />
+        // <PortfolioItem key="safemode" item=safemodePortfolio />
+        // <PortfolioItem key="adsoup" item=adsoupPortfolio />
+        // <PortfolioItem key="copanel" item=copanelPortfolio />
+        // <PortfolioItem key="eventcomet" item=eventcometPortfolio />
+        // <PortfolioItem key="boneage" item=boneagePortfolio />
+        // <PortfolioItem key="traitsignal" item=traitsignalPortfolio />
+        // <PortfolioItem key="vr" item=vrPortfolio />
+        // <PortfolioItem key="ketawa" item=ketawaPortfolio />
+        // <PortfolioItem key="alldaytattoo" item=alldaytattooPortfolio />
+        // <PortfolioItem key="halalblockvideo" item=halalblockvideoPortfolio />
+        // <PortfolioItem key="traitsignalvideo" item=traitsignalvideoPortfolio />
+        // <PortfolioItem key="adsoupvideo" item=adsoupvideoPortfolio />
+        // <PortfolioItem key="willamailn" item=wilaamalinPortfolio />
+        // <PortfolioItem key="eastwest" item=eastwestPortfolio />
+        // <PortfolioItem key="kikii" item=kikiiPortfolio />
+        // <PortfolioItem key="micro" item=microgamesPortfolio />
     </div>
   </MainPage>
 }

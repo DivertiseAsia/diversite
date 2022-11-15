@@ -6,6 +6,7 @@ import * as Links from "../Links.mjs";
 import * as Popup from "../Components/Popup.mjs";
 import * as React from "react";
 import * as MainPage from "../Components/MainPage.mjs";
+import * as Belt_List from "rescript/lib/es6/belt_List.js";
 import Link from "next/link";
 import * as PortfolioData from "../Data/PortfolioData.mjs";
 import * as PortfolioItem from "../Components/PortfolioItem.mjs";
@@ -21,6 +22,12 @@ function PageOurWork(Props) {
       });
   var setPopupOpen = match[1];
   var isPopupOpen = match[0];
+  var items = Belt_List.map(PortfolioData.portfolioDataList, (function (categoryList) {
+          return React.createElement(PortfolioItem.make, {
+                      item: categoryList,
+                      key: categoryList.title
+                    });
+        }));
   var portfolioCategoryLink = function (category, text, tooltip) {
     var selectedClass = category === selectedCategory ? "selected" : "";
     return React.createElement(Link, {
@@ -111,58 +118,7 @@ function PageOurWork(Props) {
                           type: "submit"
                         }, "Submit"))), React.createElement("div", {
                   className: additional_classname
-                }, React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.mintcrowdPortfolio,
-                      key: "mintcrowd"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.safemodePortfolio,
-                      key: "safemode"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.adsoupPortfolio,
-                      key: "adsoup"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.copanelPortfolio,
-                      key: "copanel"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.eventcometPortfolio,
-                      key: "eventcomet"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.boneagePortfolio,
-                      key: "boneage"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.traitsignalPortfolio,
-                      key: "traitsignal"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.vrPortfolio,
-                      key: "vr"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.ketawaPortfolio,
-                      key: "ketawa"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.alldaytattooPortfolio,
-                      key: "alldaytattoo"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.halalblockvideoPortfolio,
-                      key: "halalblockvideo"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.traitsignalvideoPortfolio,
-                      key: "traitsignalvideo"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.adsoupvideoPortfolio,
-                      key: "adsoupvideo"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.wilaamalinPortfolio,
-                      key: "willamailn"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.eastwestPortfolio,
-                      key: "eastwest"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.kikiiPortfolio,
-                      key: "kikii"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.microgamesPortfolio,
-                      key: "micro"
-                    })));
+                }, Belt_List.toArray(items)));
 }
 
 var make = PageOurWork;
