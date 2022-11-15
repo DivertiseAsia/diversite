@@ -1,19 +1,20 @@
 open React
 open DataTypes.PortfolioItem
 open PortfolioData
-
-let scrollTop = %raw(`
-  function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-`)
-
+open Utils
+ 
 @react.component
 let make = (~selectedCategory: category) => {
   let (isPopupOpen, setPopupOpen) = React.useState(() => false)
 
   let items = portfolioDataList->Belt.List.map(categoryList => {
-    <PortfolioItem key={categoryList.title} item={categoryList} />
+    if selectedCategory != All {
+      categoryList.category->Belt.List.some(category => category == selectedCategory)
+        ? <PortfolioItem key={categoryList.title} item={categoryList} />
+        : React.null
+    } else {
+      <PortfolioItem key={categoryList.title} item={categoryList} />
+    }
   })
 
   let portfolioCategoryLink = (category: category, text: string, tooltip: string) => {
@@ -35,10 +36,6 @@ let make = (~selectedCategory: category) => {
     | Design => "design"
     | Other => "other"
     }
-
-  Js.log(selectedCategory)
-  Js.log(plateupPortfolio.category->List.hd)
-  // Js.log(Js.List.countBy(category => category == selectedCategory, plateupPortfolio.category->List.hd))
 
   <MainPage
     className={"page-ourwork " ++ additional_classname}
@@ -88,25 +85,6 @@ let make = (~selectedCategory: category) => {
     </Popup>
     <div className={additional_classname}>
       {Belt.List.toArray(items)->React.array}
-        // {plateupPortfolio.category->List.hd == selectedCategory ? <PortfolioItem key="plateup" item=plateupPortfolio /> : React.null}
-        // {plateupPortfolio.category->Belt.List.has(selectedCategory, (category, selectedCategory) => category == selectedCategory) ? <PortfolioItem key="plateup" item=plateupPortfolio /> : React.null}
-        // <PortfolioItem key="mintcrowd" item=mintcrowdPortfolio />
-        // <PortfolioItem key="safemode" item=safemodePortfolio />
-        // <PortfolioItem key="adsoup" item=adsoupPortfolio />
-        // <PortfolioItem key="copanel" item=copanelPortfolio />
-        // <PortfolioItem key="eventcomet" item=eventcometPortfolio />
-        // <PortfolioItem key="boneage" item=boneagePortfolio />
-        // <PortfolioItem key="traitsignal" item=traitsignalPortfolio />
-        // <PortfolioItem key="vr" item=vrPortfolio />
-        // <PortfolioItem key="ketawa" item=ketawaPortfolio />
-        // <PortfolioItem key="alldaytattoo" item=alldaytattooPortfolio />
-        // <PortfolioItem key="halalblockvideo" item=halalblockvideoPortfolio />
-        // <PortfolioItem key="traitsignalvideo" item=traitsignalvideoPortfolio />
-        // <PortfolioItem key="adsoupvideo" item=adsoupvideoPortfolio />
-        // <PortfolioItem key="willamailn" item=wilaamalinPortfolio />
-        // <PortfolioItem key="eastwest" item=eastwestPortfolio />
-        // <PortfolioItem key="kikii" item=kikiiPortfolio />
-        // <PortfolioItem key="micro" item=microgamesPortfolio />
     </div>
   </MainPage>
 }

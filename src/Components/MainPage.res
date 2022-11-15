@@ -53,7 +53,7 @@ let make = (
           </div>
         </div>
       </div>
-      <div className={"page-content-container"} key="children">
+      <div className={"page-content-container"} id="content-container" key="children">
         <div className="page-content">
           <div className="main-content"> children </div>
           <div className="footer">
