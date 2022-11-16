@@ -22,16 +22,19 @@ let make = (
         <div className="page-end page-end-0">
           <div className="page-children">
             <nav className="nav -text-right">
-              <Logo />
-              <input type_="checkbox" />
-              <div className="nav-icon"> <div /> <div /> <div /> </div>
-              <div className="nav-container">
-                <Link href=Links.home> {string("Home")} </Link>
-                <Link href=Links.ourwork> {string("Our Work")} </Link>
-                <Link href=Links.careers> {string("Careers")} </Link>
-                <Link href=Links.contact> {string("Contact Us")} </Link>
-                <div className="btn btn-line-white" onClick={_ => setPopupOpen(_ => !isPopupOpen)}>
-                  {string("Build Your Ideas")}
+              <div className="container-lg">
+                <Logo />
+                <input type_="checkbox" />
+                <div className="nav-icon"> <div /> <div /> <div /> </div>
+                <div className="nav-container">
+                  <Link href=Links.home> {string("Home")} </Link>
+                  <Link href=Links.ourwork> {string("Our Work")} </Link>
+                  <Link href=Links.careers> {string("Careers")} </Link>
+                  <Link href=Links.contact> {string("Contact Us")} </Link>
+                  <div
+                    className="btn btn-line-white" onClick={_ => setPopupOpen(_ => !isPopupOpen)}>
+                    {string("Build Your Ideas")}
+                  </div>
                 </div>
               </div>
             </nav>
