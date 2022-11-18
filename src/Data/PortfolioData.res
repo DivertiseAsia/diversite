@@ -269,7 +269,13 @@ let traitsignalPortfolio: t = {
     },
     {src: traitsignaldesktop, border: Desktop, className: Some("col-8")},
   },
-  links: list{},
+  links: list{
+    {
+      category: Default,
+      href: "https://traitsignal.com/",
+      caption: "View Website >",
+    },
+  },
   category: list{AI, AppPlatforms},
   technologies: list{},
   body: <div>

@@ -484,6 +484,15 @@ var traitsignalPortfolio_images = {
   }
 };
 
+var traitsignalPortfolio_links = {
+  hd: {
+    href: "https://traitsignal.com/",
+    caption: "View Website >",
+    category: /* Default */0
+  },
+  tl: /* [] */0
+};
+
 var traitsignalPortfolio_body = React.createElement("div", undefined, React.createElement("p", undefined, "Trait Signal is a webapp that is built to help car dealers grasp their customer's opinions about cars they are trying to sell."));
 
 var traitsignalPortfolio = {
@@ -491,7 +500,7 @@ var traitsignalPortfolio = {
   category: traitsignalPortfolio_category,
   className: undefined,
   images: traitsignalPortfolio_images,
-  links: /* [] */0,
+  links: traitsignalPortfolio_links,
   technologies: /* [] */0,
   body: traitsignalPortfolio_body
 };
