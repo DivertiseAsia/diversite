@@ -9,7 +9,6 @@ import * as ImageBackground from "./ImageBackground.mjs";
 function InternshipProgram(Props) {
   var className = Props.className;
   var title = Props.title;
-  var time = Props.time;
   var imageURL = Props.imageURL;
   var href = Props.href;
   var iconType = Props.iconType;
@@ -26,11 +25,8 @@ function InternshipProgram(Props) {
                               }, React.createElement("div", {
                                     className: "d-flex justify-content-center align-items-center"
                                   }, React.createElement(Icon.make, {
-                                        iconType: iconType,
-                                        className: "mx-3"
-                                      }), React.createElement("div", {
-                                        className: "d-flex flex-column align-items-center"
-                                      }, React.createElement("h4", undefined, title), time !== "" ? React.createElement("h5", undefined, time) : null)), React.createElement("p", {
+                                        iconType: iconType
+                                      }), React.createElement("h4", undefined, title)), React.createElement("p", {
                                     className: "read-details"
                                   }, "Read details >")), React.createElement(ImageBackground.make, {
                                 src: imageURL

@@ -14,28 +14,24 @@ let make = () => {
           <InternshipProgram
             iconType=Icon.Code
             title="Developer"
-            time=""
             imageURL="/static/images/position-dev.jpg"
             href=Links.careersdeveloper
           />
           <InternshipProgram
             iconType=Icon.Pen
             title="Design Engineer"
-            time=""
             imageURL="/static/images/position-design.jpg"
             href=Links.careersdesigner
           />
           <InternshipProgram
             iconType=Icon.Code
             title="Software Project Manager"
-            time=""
             imageURL="/static/images/position-pm.png"
             href=Links.careersprojectmanager
           />
           <InternshipProgram
             iconType=Icon.Pen
             title="Sales Executive (Software)"
-            time="(3 months contract)"
             imageURL="/static/images/position-sales.png"
             href=Links.careerssales
           />
@@ -52,7 +48,6 @@ let make = () => {
           <InternshipProgram
             iconType=Icon.Code
             title="App & Ai Dev"
-            time=""
             imageURL="/static/images/position-game.jpg"
             href=Links.internshipdeveloper
             className="image-background"
@@ -60,7 +55,6 @@ let make = () => {
           <InternshipProgram
             iconType=Icon.Pen
             title="Art & Design"
-            time=""
             imageURL="/static/images/position-art.jpg"
             href=Links.internshipdesign
           />

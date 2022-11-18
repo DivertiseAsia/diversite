@@ -6,7 +6,7 @@ let make = () => {
     title="Designer at Divertise Asia"
     keywords="Artificial Intelligence, Design, Fullstack, API, Server"
     description="Be a professional Designer (3 months contract) at Divertise Asia">
-    <PageHeader title="Careers" subtitle="Sales Executive (Software)" className="bg-gradient-color1 pt-5" />
+    <PageHeader title="Careers" subtitle="Sales Executive (Software) (3 months contract)" className="bg-gradient-color1 pt-5" />
     <div className="container">
       <div className="row pt-5 d-block">
         <h3>

@@ -14,7 +14,7 @@ function PageCareersSales(Props) {
             }, React.createElement(PageHeader.make, {
                   className: "bg-gradient-color1 pt-5",
                   title: "Careers",
-                  subtitle: "Sales Executive (Software)"
+                  subtitle: "Sales Executive (Software) (3 months contract)"
                 }), React.createElement("div", {
                   className: "container"
                 }, React.createElement("div", {
