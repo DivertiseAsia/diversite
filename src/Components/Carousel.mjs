@@ -170,7 +170,7 @@ function Carousel(Props) {
                                         return !isPopupOpen;
                                       }));
                         })
-                    }, "Build Your Idea"), React.createElement(Popup.make, {
+                    }, "Build Your Ideas"), React.createElement(Popup.make, {
                       isOpen: isPopupOpen,
                       className: "buildyouridea-popup",
                       closeOnBgClick: false,
