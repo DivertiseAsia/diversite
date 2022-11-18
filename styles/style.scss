@@ -231,10 +231,10 @@ a:hover { text-decoration: none; }
   }
 }
 /* ------------- Page 404 ------------- */
-.page404 .main-content {
+.page404 .main-content .content {
   word-wrap: break-word;
   text-align: center;
-  height: 80vh;
+  min-height: calc(100vh - 130px - 150px);
   display: flex;
   justify-content: center;
   align-content: center;

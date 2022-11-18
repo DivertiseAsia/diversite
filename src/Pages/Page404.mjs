@@ -3,6 +3,7 @@
 import * as Logo from "../Components/Logo.mjs";
 import * as React from "react";
 import * as MainPage from "../Components/MainPage.mjs";
+import * as PageHeader from "../Components/PageHeader.mjs";
 
 function Page404(Props) {
   return React.createElement(MainPage.make, {
@@ -11,21 +12,24 @@ function Page404(Props) {
               keywords: "",
               description: "Not found on Divertise Asia",
               children: null
-            }, React.createElement("h2", {
-                  className: "text-404"
-                }, "404"), React.createElement("div", {
-                  className: "desktop"
-                }, React.createElement("h2", {
-                      className: "text-404"
-                    }, "Page Not found on Divertise Asia")), React.createElement("div", {
-                  className: "mobile"
-                }, React.createElement("h2", {
-                      className: "text-404"
-                    }, "Page Not found"), React.createElement("h2", {
-                      className: "text-404"
-                    }, "on Divertise Asia")), React.createElement(Logo.make, {
-                  is404: true
-                }));
+            }, React.createElement(PageHeader.make, {
+                  className: "bg-gradient-color1 pt-5 page-contacts",
+                  title: "Page 404"
+                }), React.createElement("div", {
+                  className: "content"
+                }, React.createElement("div", {
+                      className: "desktop"
+                    }, React.createElement("h2", {
+                          className: "text-404"
+                        }, "Page Not found on Divertise Asia")), React.createElement("div", {
+                      className: "mobile"
+                    }, React.createElement("h2", {
+                          className: "text-404"
+                        }, "Page Not found"), React.createElement("h2", {
+                          className: "text-404"
+                        }, "on Divertise Asia")), React.createElement(Logo.make, {
+                      is404: true
+                    })));
 }
 
 var make = Page404;
