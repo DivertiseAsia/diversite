@@ -14,10 +14,12 @@ function Page404(Props) {
               children: null
             }, React.createElement(PageHeader.make, {
                   className: "bg-gradient-color1 pt-5 page-contacts",
-                  title: "Page 404"
+                  title: ""
                 }), React.createElement("div", {
                   className: "content"
-                }, React.createElement("div", {
+                }, React.createElement("h2", {
+                      className: "text-404"
+                    }, "404"), React.createElement("div", {
                       className: "desktop"
                     }, React.createElement("h2", {
                           className: "text-404"
