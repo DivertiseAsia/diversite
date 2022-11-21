@@ -234,7 +234,7 @@ a:hover { text-decoration: none; }
 .page404 .main-content .content {
   word-wrap: break-word;
   text-align: center;
-  min-height: calc(100vh - 130px - 150px);
+  min-height: calc(100vh - 128px - 150px);
   display: flex;
   justify-content: center;
   align-content: center;
@@ -251,10 +251,10 @@ a:hover { text-decoration: none; }
     }
   }
   h2.text-404 {
-    font-size: $font-size-medium + 1rem;
+    font-size: $font-size-medium + 0.5rem;
   }
   h2.go-home {
-    font-size: $font-size-small + 0.5rem;
+    font-size: $font-size-small;
   }
   div {
     display: flex;
@@ -264,7 +264,7 @@ a:hover { text-decoration: none; }
     margin: 0 auto;
   }
   a.link.logo-link {
-    width: 130px;
+    width: 150px;
     display: flex;
     justify-content: center;
     align-content: center;
