@@ -30,7 +30,7 @@ function selectScene(currentScene) {
         return /* Network */3;
     case /* Network */3 :
         return /* Laser */0;
-
+    
   }
 }
 
@@ -44,7 +44,7 @@ function sceneToString(scene) {
         return "Ball";
     case /* Network */3 :
         return "Network";
-
+    
   }
 }
 
@@ -69,14 +69,14 @@ function animate(currentScene, camera, scene, renderer) {
                 if (WebGL.validElementById("webgl-canvas")) {
                   return animate(currentScene, camera, scene, renderer);
                 }
-
+                
               });
           var currentScene_localStorage = Dom_storage.getItem("current-scene", localStorage);
           if (currentScene_localStorage !== undefined && currentScene_localStorage !== sceneToString(currentScene)) {
             cancelAnimationFrame(idAnimationFrame);
             return ;
           }
-
+          
         }), 41);
   if (currentScene !== 2) {
     if (currentScene >= 3) {
@@ -88,7 +88,7 @@ function animate(currentScene, camera, scene, renderer) {
     BallWorld.BallWorldScene.animate(undefined);
   }
   renderer.render(scene, camera);
-
+  
 }
 
 function renderScene(scene) {
@@ -108,7 +108,7 @@ function renderScene(scene) {
                 scene >= 3 ? (Network.NetworkScene.initScene(element.offsetWidth, element.offsetHeight), Network.NetworkScene.setEventsMouse(element, element.offsetWidth, element.offsetHeight), Caml_array.get(Network.NetworkScene.scene, 0)) : (Pentagon.PentagonScene.initScene(element), Caml_array.get(Pentagon.PentagonScene.scene, 0))
               ) : (BallWorld.BallWorldScene.initScene(element.offsetWidth, element.offsetHeight), element.onmousemove = (function (e) {
                     BallWorld.BallWorldScene.onMouseMove(e, element.offsetWidth, element.offsetHeight);
-
+                    
                   }), Caml_array.get(BallWorld.BallWorldScene.scene, 0));
             if (WebGL.validElementById("webgl-canvas")) {
               var canvasElement = document.getElementById("webgl-canvas");
@@ -125,7 +125,7 @@ function renderScene(scene) {
           }), 500);
     return ;
   }
-
+  
 }
 
 function Carousel(Props) {
@@ -152,11 +152,11 @@ function Carousel(Props) {
     case /* Network */3 :
         sceneClassname = "network";
         break;
-
+    
   }
   React.useEffect((function () {
           renderScene(scene);
-
+          
         }), []);
   return React.createElement("div", {
               className: "hero " + sceneClassname,
@@ -194,6 +194,6 @@ export {
   animate ,
   renderScene ,
   make ,
-
+  
 }
 /* Popup Not a pure module */

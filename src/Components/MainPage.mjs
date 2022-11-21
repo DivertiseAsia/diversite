@@ -45,11 +45,7 @@ function MainPage(Props) {
                                   className: "nav -text-right"
                                 }, React.createElement("div", {
                                       className: "container-lg"
-                                    }, React.createElement(Logo.make, {}), React.createElement("input", {
-                                          type: "checkbox"
-                                        }), React.createElement("div", {
-                                          className: "nav-icon"
-                                        }, React.createElement("div", undefined), React.createElement("div", undefined), React.createElement("div", undefined)), React.createElement("div", {
+                                    }, React.createElement(Logo.make, {}), React.createElement("div", {
                                           className: "nav-container"
                                         }, React.createElement(Link, {
                                               href: Links.home,
@@ -64,14 +60,21 @@ function MainPage(Props) {
                                               href: Links.contact,
                                               children: "Contact Us"
                                             }), React.createElement("div", {
-                                              className: "btn btn-line-white",
+                                              className: "buildyourideas-btn btn btn-line-white",
                                               onClick: (function (param) {
-                                                  return Curry._1(setPopupOpen, (function (param) {
-                                                                return !isPopupOpen;
+                                                  return Curry._1(setPopupBuildOpen, (function (param) {
+                                                                return !isPopupBuildOpen;
                                                               }));
                                                 })
-                                            }, "Build Your Ideas")))), React.createElement(Popup.make, {
-                                  isOpen: isPopupOpen,
+                                            }, "Build Your Ideas")), Js_option.getWithDefault(false, isPageOurWork) || Js_option.getWithDefault(false, isPageHome) ? React.createElement(React.Fragment, undefined) : React.createElement("div", {
+                                            className: "buildyourideas-btn btn btn-line-color1 d-inline-block d-sm-none",
+                                            onClick: (function (param) {
+                                                return Curry._1(setPopupBuildOpen, (function (param) {
+                                                              return !isPopupBuildOpen;
+                                                            }));
+                                              })
+                                          }, "Build Your Ideas"))), React.createElement(Popup.make, {
+                                  isOpen: isPopupBuildOpen,
                                   className: "buildyouridea-popup",
                                   closeOnBgClick: false,
                                   closeFunc: (function (param) {

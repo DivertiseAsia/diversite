@@ -32,7 +32,7 @@ let make = (
                   <Link href=Links.careers> {string("Careers")} </Link>
                   <Link href=Links.contact> {string("Contact Us")} </Link>
                   <div
-                    className="btn btn-line-white" onClick={_ => setPopupOpen(_ => !isPopupOpen)}>
+                    className="buildyourideas-btn btn btn-line-white" onClick={_ => setPopupBuildOpen(_ => !isPopupBuildOpen)}>
                     {string("Build Your Ideas")}
                   </div>
                 </div>
