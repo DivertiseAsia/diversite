@@ -53,6 +53,10 @@ var careersdesigner = "/careers/designer";
 
 var careersdeveloper = "/careers/developer";
 
+var careersprojectmanager = "/careers/projectmanager";
+
+var careerssales = "/careers/sales";
+
 var internshipdesign = "/internships/design";
 
 var internshipdeveloper = "/internships/developer";
@@ -63,6 +67,8 @@ export {
   contact ,
   careersdesigner ,
   careersdeveloper ,
+  careersprojectmanager ,
+  careerssales ,
   internshipdesign ,
   internshipdeveloper ,
   ourwork ,
