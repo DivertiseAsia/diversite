@@ -7,9 +7,11 @@ let make = (
   ~title: string,
   ~keywords: string,
   ~description: string,
+  ~isPageOurWork: option<bool>=?,
+  ~isPageHome: option<bool>=?,
   ~children,
 ) => {
-  let (isPopupOpen, setPopupOpen) = React.useState(() => false)
+  let (isPopupBuildOpen, setPopupBuildOpen) = React.useState(() => false)
   <div>
     <Head>
       <title lang="en"> {string(title)} </title>
@@ -24,8 +26,6 @@ let make = (
             <nav className="nav -text-right">
               <div className="container-lg">
                 <Logo />
-                <input type_="checkbox" />
-                <div className="nav-icon"> <div /> <div /> <div /> </div>
                 <div className="nav-container">
                   <Link href=Links.home> {string("Home")} </Link>
                   <Link href=Links.ourwork> {string("Our Work")} </Link>
@@ -36,12 +36,19 @@ let make = (
                     {string("Build Your Ideas")}
                   </div>
                 </div>
+                {Js.Option.getWithDefault(false, isPageOurWork) || Js.Option.getWithDefault(false, isPageHome)
+                  ? <> </>
+                  : <div
+                      className="buildyourideas-btn btn btn-line-color1 d-inline-block d-sm-none"
+                      onClick={_ => setPopupBuildOpen(_ => !isPopupBuildOpen)}>
+                      {string("Build Your Ideas")}
+                    </div>}
               </div>
             </nav>
             <Popup
-              isOpen=isPopupOpen
+              isOpen=isPopupBuildOpen
               closeOnBgClick=false
-              closeFunc={() => setPopupOpen(_ => false)}
+              closeFunc={() => setPopupBuildOpen(_ => false)}
               className="buildyouridea-popup">
               <div>
                 <h3> {string("Build Your Ideas")} </h3>
@@ -56,7 +63,7 @@ let make = (
           </div>
         </div>
       </div>
-      <div className={"page-content-container"} key="children">
+      <div className={"page-content-container"} id="content-container" key="children">
         <div className="page-content">
           <div className="main-content"> children </div>
           <div className="footer">

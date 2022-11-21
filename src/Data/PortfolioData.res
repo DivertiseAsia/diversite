@@ -485,7 +485,13 @@ let traitsignalvideoPortfolio: t = {
       className: Some("col-8 portimg-ketawa-desktop"),
     },
   },
-  links: list{},
+  links: list{
+    {
+      category: Default,
+      href: "https://www.youtube.com/watch?v=DD-Bb_8Avto",
+      caption: "View Video >",
+    },
+  },
   technologies: list{"Video Editing", "2D Animation", "Story Board"},
   body: <div>
     <p>
@@ -507,7 +513,13 @@ let adsoupvideoPortfolio: t = {
       className: Some("col-8 portimg-ketawa-desktop"),
     },
   },
-  links: list{},
+  links: list{
+    {
+     category: Default,
+     href: "https://www.youtube.com/watch?v=1yW1P6MCj1I",
+     caption: "View Video >"
+   },
+  },
   technologies: list{"Video Editing", "2D Animation", "Story Board"},
   body: <div>
     <p>
@@ -632,3 +644,5 @@ let microgamesPortfolio: t = {
     </p>
   </div>,
 }
+
+let portfolioDataList: list<t> = list{adsoupPortfolio, copanelPortfolio, eventcometPortfolio, mintcrowdPortfolio, safemodePortfolio, plateupPortfolio, traitsignalPortfolio, boneagePortfolio, ketawaPortfolio, alldaytattooPortfolio, wilaamalinPortfolio, eastwestPortfolio, halalblockvideoPortfolio, traitsignalvideoPortfolio, adsoupvideoPortfolio, vrPortfolio, kikiiPortfolio, microgamesPortfolio}

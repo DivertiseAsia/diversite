@@ -12,11 +12,13 @@ const Carousel = dynamic(() => import("../Components/Carousel.mjs").then(mod => 
 @react.component
 let make = () => {
   let carousel = %raw(`Carousel`)
+
   <MainPage
     className="page-home"
     title="Get Launched with Divertise Asia"
     keywords="Artificial Intelligence, Design, Fullstack, API, Server"
-    description="Realize your technical project with Divertise Asia as your partner">
+    description="Realize your technical project with Divertise Asia as your partner"
+    isPageHome=true>
     {React.createElement(carousel, Js.Dict.empty())}
     <div className="homepage_menu-bg" />
     <div className="section-ourgoal -text-center">

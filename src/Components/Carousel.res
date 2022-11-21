@@ -152,7 +152,7 @@ let make = () => {
         )}
       </p>
       <div className="btn" onClick={_ => setPopupOpen(_ => !isPopupOpen)}>
-        {string("Build Your Idea")}
+        {string("Build Your Ideas")}
       </div>
       <Popup
         isOpen=isPopupOpen
