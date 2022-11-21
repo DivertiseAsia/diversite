@@ -1192,6 +1192,64 @@ var microgamesPortfolio = {
   body: microgamesPortfolio_body
 };
 
+var portfolioDataList_1 = {
+  hd: copanelPortfolio,
+  tl: {
+    hd: eventcometPortfolio,
+    tl: {
+      hd: mintcrowdPortfolio,
+      tl: {
+        hd: safemodePortfolio,
+        tl: {
+          hd: plateupPortfolio,
+          tl: {
+            hd: traitsignalPortfolio,
+            tl: {
+              hd: boneagePortfolio,
+              tl: {
+                hd: ketawaPortfolio,
+                tl: {
+                  hd: alldaytattooPortfolio,
+                  tl: {
+                    hd: wilaamalinPortfolio,
+                    tl: {
+                      hd: eastwestPortfolio,
+                      tl: {
+                        hd: halalblockvideoPortfolio,
+                        tl: {
+                          hd: traitsignalvideoPortfolio,
+                          tl: {
+                            hd: adsoupvideoPortfolio,
+                            tl: {
+                              hd: vrPortfolio,
+                              tl: {
+                                hd: kikiiPortfolio,
+                                tl: {
+                                  hd: microgamesPortfolio,
+                                  tl: /* [] */0
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+};
+
+var portfolioDataList = {
+  hd: adsoupPortfolio,
+  tl: portfolioDataList_1
+};
+
 var cvrl = "/static/projects/website-adsoup.jpg";
 
 export {
@@ -1254,6 +1312,7 @@ export {
   vrPortfolio ,
   kikiiPortfolio ,
   microgamesPortfolio ,
+  portfolioDataList ,
   
 }
 /* adsoupPortfolio Not a pure module */

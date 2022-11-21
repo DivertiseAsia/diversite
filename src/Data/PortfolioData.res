@@ -644,3 +644,5 @@ let microgamesPortfolio: t = {
     </p>
   </div>,
 }
+
+let portfolioDataList: list<t> = list{adsoupPortfolio, copanelPortfolio, eventcometPortfolio, mintcrowdPortfolio, safemodePortfolio, plateupPortfolio, traitsignalPortfolio, boneagePortfolio, ketawaPortfolio, alldaytattooPortfolio, wilaamalinPortfolio, eastwestPortfolio, halalblockvideoPortfolio, traitsignalvideoPortfolio, adsoupvideoPortfolio, vrPortfolio, kikiiPortfolio, microgamesPortfolio}

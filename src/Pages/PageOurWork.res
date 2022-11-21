@@ -1,16 +1,25 @@
 open React
 open DataTypes.PortfolioItem
 open PortfolioData
-
+open Utils
+ 
 @react.component
 let make = (~selectedCategory: category) => {
   let (isPopupPortOpen, setPopupPortOpen) = React.useState(() => false)
   let (isPopupBuildOpen, setPopupBuildOpen) = React.useState(() => false)
 
+  let items = portfolioDataList->Belt.List.keepMap(categoryList => {
+    if selectedCategory == All || (categoryList.category->Belt.List.some(category => category == selectedCategory)) {
+      Some(<PortfolioItem key={categoryList.title} item={categoryList} />)
+    } else {
+      None
+    }
+  })
+
   let portfolioCategoryLink = (category: category, text: string, tooltip: string) => {
     let selectedClass = category === selectedCategory ? "selected" : ""
     <Next.Link key=text href={Links.ourwork_link(category)}>
-      <a className={"port-filter " ++ selectedClass}>
+      <a href="#container" className={"port-filter " ++ selectedClass} onClick={_ => scrollTop()}>
         <span className="hidden-md-down"> {string(text)} </span>
         <span className="hidden-lg-up"> {string(tooltip)} </span>
       </a>
@@ -79,40 +88,8 @@ let make = (~selectedCategory: category) => {
         <button type_="submit" className="btn btn-solid-color1"> {React.string("Submit")} </button>
       </form>
     </Popup>
-    <Popup
-      isOpen=isPopupBuildOpen
-      closeOnBgClick=false
-      closeFunc={() => setPopupBuildOpen(_ => false)}
-      className="buildyouridea-popup">
-      <div>
-        <h3> {string("Build Your Ideas")} </h3>
-        <p>
-          {string(
-            "Tell us about what you need. We will get back to you within 1 working day",
-          )}
-        </p>
-      </div>
-      <ContactForm />
-    </Popup>
-    <div>
-      <PortfolioItem key="plateup" item=plateupPortfolio />
-      <PortfolioItem key="mintcrowd" item=mintcrowdPortfolio />
-      <PortfolioItem key="safemode" item=safemodePortfolio />
-      <PortfolioItem key="adsoup" item=adsoupPortfolio />
-      <PortfolioItem key="copanel" item=copanelPortfolio />
-      <PortfolioItem key="eventcomet" item=eventcometPortfolio />
-      <PortfolioItem key="boneage" item=boneagePortfolio />
-      <PortfolioItem key="traitsignal" item=traitsignalPortfolio />
-      <PortfolioItem key="vr" item=vrPortfolio />
-      <PortfolioItem key="ketawa" item=ketawaPortfolio />
-      <PortfolioItem key="alldaytattoo" item=alldaytattooPortfolio />
-      <PortfolioItem key="halalblockvideo" item=halalblockvideoPortfolio />
-      <PortfolioItem key="traitsignalvideo" item=traitsignalvideoPortfolio />
-      <PortfolioItem key="adsoupvideo" item=adsoupvideoPortfolio />
-      <PortfolioItem key="willamailn" item=wilaamalinPortfolio />
-      <PortfolioItem key="eastwest" item=eastwestPortfolio />
-      <PortfolioItem key="kikii" item=kikiiPortfolio />
-      <PortfolioItem key="micro" item=microgamesPortfolio />
+    <div className={additional_classname}>
+      {Belt.List.toArray(items)->React.array}
     </div>
   </MainPage>
 }

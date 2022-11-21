@@ -1013,7 +1013,7 @@ $email-height: 30px;
 }
 .downloadport-popup.popup-open .popup {box-shadow: 0 0 10px 2px rgba(0,0,0,0.5);}
 @mixin portitem-hide() {
-  transform: scale(0);
+  display: none;
   // overflow: hidden;
   height: 0;
   padding-top: 0;
@@ -1021,7 +1021,7 @@ $email-height: 30px;
   opacity: 0;
 }
 @mixin portitem-show() {
-  transform: scale(1);
+  display: flex;
   // overflow: auto;
   height: auto;
   padding-top: 60px;
@@ -1030,35 +1030,47 @@ $email-height: 30px;
 }
 .nav a:not(.logo-link):not(.btn).port-filter.selected::after {width: 35px;}
 .port-all {
-  .item-all,
   .item-ai,
   .item-appsandplatforms,
   .item-design,
-  .item-other {@include portitem-show()}
-}
-.port-ai {
+  .item-other {@include portitem-hide();}
+
+  .item-ai,
   .item-appsandplatforms,
   .item-design,
-  .item-other {@include portitem-hide()}
-  .item-ai {@include portitem-show()}
+  .item-other {@include portitem-show();}
+}
+.port-ai {
+  .item-ai,
+  .item-appsandplatforms,
+  .item-design,
+  .item-other {@include portitem-hide();}
+
+  .item-ai {@include portitem-show();}
 }
 .port-appsandplatforms {
   .item-ai,
+  .item-appsandplatforms,
   .item-design,
-  .item-other {@include portitem-hide()}
-  .item-appsandplatforms {@include portitem-show()}
+  .item-other {@include portitem-hide();}
+
+  .item-appsandplatforms {@include portitem-show();}
 }
 .port-design {
   .item-ai,
   .item-appsandplatforms,
-  .item-other {@include portitem-hide()}
-  .item-design {@include portitem-show()}
+  .item-design,
+  .item-other {@include portitem-hide();}
+
+  .item-design {@include portitem-show();}
 }
 .port-other {
   .item-ai,
   .item-appsandplatforms,
-  .item-design {@include portitem-hide()}
-  .item-other {@include portitem-show()}
+  .item-design,
+  .item-other {@include portitem-hide();}
+
+  .item-other {@include portitem-show();}
 }
 /* Default portimg-container style */
 .portimg-container {
