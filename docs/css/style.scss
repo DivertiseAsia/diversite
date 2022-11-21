@@ -62,7 +62,7 @@ h3 { font-size: 1.6em; }
 h4 { font-size: 1.4em; }
 h5 { font-size: 1.2em; }
 h6 { font-size: 1em; }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, pre {
   color: $text-color1;
   font-family: $font-header;
   font-weight: $font-weight-bold;
@@ -230,6 +230,53 @@ a:hover { text-decoration: none; }
     background: unset;
   }
 }
+/* ------------- Page 404 ------------- */
+.page404 .main-content {
+  word-wrap: break-word;
+  text-align: center;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  .mobile {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    .mobile {
+      display: block;
+    }
+    .desktop {
+      display: none;
+    }
+  }
+  h2.text-404 {
+    font-size: $font-size-medium + 1rem;
+  }
+  h2.go-home {
+    font-size: $font-size-small + 0.5rem;
+  }
+  div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  * {
+    margin: 0 auto;
+  }
+  a.link.logo-link {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin-top: 25px;
+  }
+  a.link.logo-link:hover {
+    h2.go-home {
+      color: white;
+    }
+  }
+}
+
 /* ------------- Navigation Bar ------------- */
 
 .nav {
@@ -1584,9 +1631,6 @@ and (max-width: 576px) {
 /* -------- Small Phones ---------*/
 @media only screen
 and (max-width: 400px) {
-  .nav a:not(.logo-link) {
-    padding: 7px 5px;
-  }
   .internship-program a .content-program h4 {
     padding-left: 10px;
     font-size: 16px;
