@@ -357,6 +357,13 @@ nav .logo-link {
 .nav a::after, .btn-drop::after {
   content: "";
 }
+@media (min-width: 1200px) {
+  .nav.-text-right > .container-lg {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
 /* ------ Navigation Link Animation ------ */
 
 .nav a:hover, .btn-drop:hover {

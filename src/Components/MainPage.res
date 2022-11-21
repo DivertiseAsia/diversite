@@ -24,18 +24,17 @@ let make = (
         <div className="page-end page-end-0">
           <div className="page-children">
             <nav className="nav -text-right">
-              <Logo />
-              <input type_="checkbox" />
-              <div className="nav-icon"> <div /> <div /> <div /> </div>
-              <div className="nav-container">
-                <Link href=Links.home> {string("Home")} </Link>
-                <Link href=Links.ourwork> {string("Our Work")} </Link>
-                <Link href=Links.careers> {string("Careers")} </Link>
-                <Link href=Links.contact> {string("Contact Us")} </Link>
-                <div
-                  className="buildyourideas-btn btn btn-line-white d-none d-sm-inline-block"
-                  onClick={_ => setPopupBuildOpen(_ => !isPopupBuildOpen)}>
-                  {string("Build Your Ideas")}
+              <div className="container-lg">
+                <Logo />
+                <div className="nav-container">
+                  <Link href=Links.home> {string("Home")} </Link>
+                  <Link href=Links.ourwork> {string("Our Work")} </Link>
+                  <Link href=Links.careers> {string("Careers")} </Link>
+                  <Link href=Links.contact> {string("Contact Us")} </Link>
+                  <div
+                    className="btn btn-line-white" onClick={_ => setPopupOpen(_ => !isPopupOpen)}>
+                    {string("Build Your Ideas")}
+                  </div>
                 </div>
                 {Js.Option.getWithDefault(false, isPageOurWork) || Js.Option.getWithDefault(false, isPageHome)
                   ? <> </>

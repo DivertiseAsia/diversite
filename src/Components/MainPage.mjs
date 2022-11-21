@@ -43,40 +43,35 @@ function MainPage(Props) {
                               className: "page-children"
                             }, React.createElement("nav", {
                                   className: "nav -text-right"
-                                }, React.createElement(Logo.make, {}), React.createElement("input", {
-                                      type: "checkbox"
-                                    }), React.createElement("div", {
-                                      className: "nav-icon"
-                                    }, React.createElement("div", undefined), React.createElement("div", undefined), React.createElement("div", undefined)), React.createElement("div", {
-                                      className: "nav-container"
-                                    }, React.createElement(Link, {
-                                          href: Links.home,
-                                          children: "Home"
-                                        }), React.createElement(Link, {
-                                          href: Links.ourwork,
-                                          children: "Our Work"
-                                        }), React.createElement(Link, {
-                                          href: Links.careers,
-                                          children: "Careers"
-                                        }), React.createElement(Link, {
-                                          href: Links.contact,
-                                          children: "Contact Us"
+                                }, React.createElement("div", {
+                                      className: "container-lg"
+                                    }, React.createElement(Logo.make, {}), React.createElement("input", {
+                                          type: "checkbox"
                                         }), React.createElement("div", {
-                                          className: "buildyourideas-btn btn btn-line-white d-none d-sm-inline-block",
-                                          onClick: (function (param) {
-                                              return Curry._1(setPopupBuildOpen, (function (param) {
-                                                            return !isPopupBuildOpen;
-                                                          }));
-                                            })
-                                        }, "Build Your Ideas"), Js_option.getWithDefault(false, isPageOurWork) || Js_option.getWithDefault(false, isPageHome) ? React.createElement(React.Fragment, undefined) : React.createElement("div", {
-                                            className: "buildyourideas-btn btn btn-line-color1 d-inline-block d-sm-none",
-                                            onClick: (function (param) {
-                                                return Curry._1(setPopupBuildOpen, (function (param) {
-                                                              return !isPopupBuildOpen;
-                                                            }));
-                                              })
-                                          }, "Build Your Ideas"))), React.createElement(Popup.make, {
-                                  isOpen: isPopupBuildOpen,
+                                          className: "nav-icon"
+                                        }, React.createElement("div", undefined), React.createElement("div", undefined), React.createElement("div", undefined)), React.createElement("div", {
+                                          className: "nav-container"
+                                        }, React.createElement(Link, {
+                                              href: Links.home,
+                                              children: "Home"
+                                            }), React.createElement(Link, {
+                                              href: Links.ourwork,
+                                              children: "Our Work"
+                                            }), React.createElement(Link, {
+                                              href: Links.careers,
+                                              children: "Careers"
+                                            }), React.createElement(Link, {
+                                              href: Links.contact,
+                                              children: "Contact Us"
+                                            }), React.createElement("div", {
+                                              className: "btn btn-line-white",
+                                              onClick: (function (param) {
+                                                  return Curry._1(setPopupOpen, (function (param) {
+                                                                return !isPopupOpen;
+                                                              }));
+                                                })
+                                            }, "Build Your Ideas")))), React.createElement(Popup.make, {
+                                  isOpen: isPopupOpen,
                                   className: "buildyouridea-popup",
                                   closeOnBgClick: false,
                                   closeFunc: (function (param) {
