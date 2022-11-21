@@ -15,12 +15,14 @@ function MainPage(Props) {
   var title = Props.title;
   var keywords = Props.keywords;
   var description = Props.description;
+  var isPageOurWork = Props.isPageOurWork;
+  var isPageHome = Props.isPageHome;
   var children = Props.children;
   var match = React.useState(function () {
         return false;
       });
-  var setPopupOpen = match[1];
-  var isPopupOpen = match[0];
+  var setPopupBuildOpen = match[1];
+  var isPopupBuildOpen = match[0];
   return React.createElement("div", undefined, React.createElement(Head, {
                   children: null
                 }, React.createElement("title", {
@@ -60,25 +62,33 @@ function MainPage(Props) {
                                           href: Links.contact,
                                           children: "Contact Us"
                                         }), React.createElement("div", {
-                                          className: "btn btn-line-white",
+                                          className: "buildyourideas-btn btn btn-line-white d-none d-sm-inline-block",
                                           onClick: (function (param) {
-                                              return Curry._1(setPopupOpen, (function (param) {
-                                                            return !isPopupOpen;
+                                              return Curry._1(setPopupBuildOpen, (function (param) {
+                                                            return !isPopupBuildOpen;
                                                           }));
                                             })
-                                        }, "Build Your Ideas"))), React.createElement(Popup.make, {
-                                  isOpen: isPopupOpen,
+                                        }, "Build Your Ideas"), Js_option.getWithDefault(false, isPageOurWork) || Js_option.getWithDefault(false, isPageHome) ? React.createElement(React.Fragment, undefined) : React.createElement("div", {
+                                            className: "buildyourideas-btn btn btn-line-color1 d-inline-block d-sm-none",
+                                            onClick: (function (param) {
+                                                return Curry._1(setPopupBuildOpen, (function (param) {
+                                                              return !isPopupBuildOpen;
+                                                            }));
+                                              })
+                                          }, "Build Your Ideas"))), React.createElement(Popup.make, {
+                                  isOpen: isPopupBuildOpen,
                                   className: "buildyouridea-popup",
                                   closeOnBgClick: false,
                                   closeFunc: (function (param) {
-                                      return Curry._1(setPopupOpen, (function (param) {
+                                      return Curry._1(setPopupBuildOpen, (function (param) {
                                                     return false;
                                                   }));
                                     }),
                                   children: null
                                 }, React.createElement("div", undefined, React.createElement("h3", undefined, "Build Your Ideas"), React.createElement("p", undefined, "Tell us about what you need. We will get back to you within 1 working day")), React.createElement(ContactForm.make, {}))))), React.createElement("div", {
                       key: "children",
-                      className: "page-content-container"
+                      className: "page-content-container",
+                      id: "content-container"
                     }, React.createElement("div", {
                           className: "page-content"
                         }, React.createElement("div", {

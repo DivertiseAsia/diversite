@@ -1,4 +1,4 @@
-$font-size-small: 1rem;
+$font-size-small: 1.5rem;
 $font-size-medium: 2rem;
 $font-weight-normal: 300;
 $font-weight-medium: 400;
@@ -42,7 +42,7 @@ html, body, body>div, body>div>div {
   height: 100%;
 }
 html {
-  font-size: 14px;
+  font-size: 16px;
   color: $text-color1;
   font-family: $font-default;
   font-weight: $font-weight-normal;
@@ -285,7 +285,7 @@ a:hover { text-decoration: none; }
   padding: 8px 15px;
   box-sizing: border-box;
   z-index: 99;
-  height: $header-height;
+  height: $header-height + 10px;
   background: $bg-color1;
 }
 nav.nav {
@@ -307,8 +307,23 @@ nav.nav {
   color: $text-white;
   font-family: $font-header;
 }
-.nav .nav-container > div {
-  display: inline-block;
+@media only screen and (max-width: 576px) {
+  .buildyourideas-btn.btn.btn-line-color1 {
+    z-index: 30;
+    display: inline-block;
+    position: fixed;
+    right: 35px;
+    bottom: 15px;
+    box-shadow: 0 0 10px 3px rgba(0,0,0,0.4);
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: white;
+    width: 150px;
+  }
+  .buildyourideas-btn.btn.btn-line-color1:hover {
+    background-color: $bg-color1;
+  }
 }
 .nav .btn {
   margin-top: 0;
@@ -437,7 +452,7 @@ nav .logo-link {
   }
 }
 .homepage_menu-bg {
-  height: $header-height;
+  height: $header-height + 10px;
   margin-top: - $header-height;
   width: 100%;
   background: $bg-color2;
@@ -670,7 +685,7 @@ nav .logo-link {
   }
   .popup {
     width: 90%;
-    height: 90%;
+    height: 80%;
   }
   .popup-content {
     display: flex;
@@ -1008,13 +1023,14 @@ $email-height: 30px;
 .downloadport-btn {
   position: fixed;
   right: 35px;
-  bottom: 35px;
+  bottom: 65px;
   z-index: 99;
   box-shadow: 0 0 10px 3px rgba(0,0,0,0.4);
-  font-size: 18px;
+  font-size: 16px;
   padding-left: 15px;
   padding-right: 15px;
   background-color: white;
+  width: 150px;
 }
 .downloadport-popup {
   .btn, .input-default {
@@ -1045,7 +1061,7 @@ $email-height: 30px;
 }
 .downloadport-popup.popup-open .popup {box-shadow: 0 0 10px 2px rgba(0,0,0,0.5);}
 @mixin portitem-hide() {
-  transform: scale(0);
+  display: none;
   // overflow: hidden;
   height: 0;
   padding-top: 0;
@@ -1053,7 +1069,7 @@ $email-height: 30px;
   opacity: 0;
 }
 @mixin portitem-show() {
-  transform: scale(1);
+  display: flex;
   // overflow: auto;
   height: auto;
   padding-top: 60px;
@@ -1062,35 +1078,47 @@ $email-height: 30px;
 }
 .nav a:not(.logo-link):not(.btn).port-filter.selected::after {width: 35px;}
 .port-all {
-  .item-all,
   .item-ai,
   .item-appsandplatforms,
   .item-design,
-  .item-other {@include portitem-show()}
-}
-.port-ai {
+  .item-other {@include portitem-hide();}
+
+  .item-ai,
   .item-appsandplatforms,
   .item-design,
-  .item-other {@include portitem-hide()}
-  .item-ai {@include portitem-show()}
+  .item-other {@include portitem-show();}
+}
+.port-ai {
+  .item-ai,
+  .item-appsandplatforms,
+  .item-design,
+  .item-other {@include portitem-hide();}
+
+  .item-ai {@include portitem-show();}
 }
 .port-appsandplatforms {
   .item-ai,
+  .item-appsandplatforms,
   .item-design,
-  .item-other {@include portitem-hide()}
-  .item-appsandplatforms {@include portitem-show()}
+  .item-other {@include portitem-hide();}
+
+  .item-appsandplatforms {@include portitem-show();}
 }
 .port-design {
   .item-ai,
   .item-appsandplatforms,
-  .item-other {@include portitem-hide()}
-  .item-design {@include portitem-show()}
+  .item-design,
+  .item-other {@include portitem-hide();}
+
+  .item-design {@include portitem-show();}
 }
 .port-other {
   .item-ai,
   .item-appsandplatforms,
-  .item-design {@include portitem-hide()}
-  .item-other {@include portitem-show()}
+  .item-design,
+  .item-other {@include portitem-hide();}
+
+  .item-other {@include portitem-show();}
 }
 /* Default portimg-container style */
 .portimg-container {
@@ -1586,6 +1614,11 @@ and (max-width: 576px) {
     border: none;
     padding: 0;
   }
+  .downloadport-popup .popup {
+    left: 0;
+    right: 0;
+    margin: 0 10px;
+  }
   // .btn-google-play::before, .btn-app-store::before, .btn-mi-store::before {
   //   height: 80px;
   //   width: 100%;
@@ -1611,6 +1644,9 @@ and (max-width: 576px) {
 /* -------- Small Phones ---------*/
 @media only screen
 and (max-width: 400px) {
+  .nav a:not(.logo-link) {
+    padding: 7px 5px;
+  }
   .internship-program a .content-program h4 {
     padding-left: 10px;
     font-size: 16px;
