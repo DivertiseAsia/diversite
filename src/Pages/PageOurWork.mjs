@@ -17,8 +17,13 @@ function PageOurWork(Props) {
   var match = React.useState(function () {
         return false;
       });
-  var setPopupOpen = match[1];
-  var isPopupOpen = match[0];
+  var setPopupPortOpen = match[1];
+  var isPopupPortOpen = match[0];
+  var match$1 = React.useState(function () {
+        return false;
+      });
+  var setPopupBuildOpen = match$1[1];
+  var isPopupBuildOpen = match$1[0];
   var items = Belt_List.keepMap(PortfolioData.portfolioDataList, (function (categoryList) {
           if (selectedCategory === /* All */0 || Belt_List.some(categoryList.category, (function (category) {
                     return category === selectedCategory;
