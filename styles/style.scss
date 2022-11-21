@@ -224,8 +224,9 @@ a:hover { text-decoration: none; }
   z-index: -10;
   position: relative;
   margin-top: -1px;
-  height: $section-header-height;
-  h1 { padding: 20px; }
+  height: auto;
+  h1 { padding: 20px 0px; }
+  h2 { padding-bottom: 20px; }
   .nav {
     background: unset;
   }
