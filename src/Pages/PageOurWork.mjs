@@ -3,9 +3,13 @@
 import * as Curry from "rescript/lib/es6/curry.js";
 import * as Links from "../Links.mjs";
 import * as Popup from "../Components/Popup.mjs";
+import * as Utils from "../Utils.mjs";
 import * as React from "react";
 import * as MainPage from "../Components/MainPage.mjs";
+import * as Belt_List from "rescript/lib/es6/belt_List.js";
 import Link from "next/link";
+import * as Caml_option from "rescript/lib/es6/caml_option.js";
+import * as ContactForm from "../Components/ContactForm.mjs";
 import * as PortfolioData from "../Data/PortfolioData.mjs";
 import * as PortfolioItem from "../Components/PortfolioItem.mjs";
 
@@ -14,14 +18,34 @@ function PageOurWork(Props) {
   var match = React.useState(function () {
         return false;
       });
-  var setPopupOpen = match[1];
-  var isPopupOpen = match[0];
+  var setPopupPortOpen = match[1];
+  var isPopupPortOpen = match[0];
+  var match$1 = React.useState(function () {
+        return false;
+      });
+  var setPopupBuildOpen = match$1[1];
+  var isPopupBuildOpen = match$1[0];
+  var items = Belt_List.keepMap(PortfolioData.portfolioDataList, (function (categoryList) {
+          if (selectedCategory === /* All */0 || Belt_List.some(categoryList.category, (function (category) {
+                    return category === selectedCategory;
+                  }))) {
+            return Caml_option.some(React.createElement(PortfolioItem.make, {
+                            item: categoryList,
+                            key: categoryList.title
+                          }));
+          }
+          
+        }));
   var portfolioCategoryLink = function (category, text, tooltip) {
     var selectedClass = category === selectedCategory ? "selected" : "";
     return React.createElement(Link, {
                 href: Links.ourwork_link(category),
                 children: React.createElement("a", {
-                      className: "port-filter " + selectedClass
+                      className: "port-filter " + selectedClass,
+                      href: "#container",
+                      onClick: (function (param) {
+                          return Utils.scrollTop(undefined);
+                        })
                     }, React.createElement("span", {
                           className: "hidden-md-down"
                         }, text), React.createElement("span", {
@@ -55,6 +79,7 @@ function PageOurWork(Props) {
               title: "Work of Divertise Asia",
               keywords: "portfolio, Artificial Intelligence, Design, Fullstack, API, Server",
               description: "AI, Apps & Platforms, and Design items created by us",
+              isPageOurWork: true,
               children: null
             }, React.createElement("div", {
                   className: "ourwork_section-header-content bg-gradient-color1"
@@ -69,19 +94,26 @@ function PageOurWork(Props) {
                 }), React.createElement("div", {
                   className: "downloadport-btn btn btn-line-color1",
                   onClick: (function (param) {
-                      return Curry._1(setPopupOpen, (function (param) {
-                                    return !isPopupOpen;
+                      return Curry._1(setPopupPortOpen, (function (param) {
+                                    return !isPopupPortOpen;
                                   }));
                     })
-                }, "Download Port"), React.createElement(Popup.make, {
-                  isOpen: isPopupOpen,
+                }, "Download Port"), React.createElement("div", {
+                  className: "buildyourideas-btn btn btn-line-color1 d-inline-block d-sm-none",
+                  onClick: (function (param) {
+                      return Curry._1(setPopupBuildOpen, (function (param) {
+                                    return !isPopupBuildOpen;
+                                  }));
+                    })
+                }, "Build Your Ideas"), React.createElement(Popup.make, {
+                  isOpen: isPopupPortOpen,
                   className: "downloadport-popup",
                   hasCloseBtn: true,
                   closeBtnText: "Not Now",
                   closeOnBgClick: true,
                   showX: false,
                   closeFunc: (function (param) {
-                      return Curry._1(setPopupOpen, (function (param) {
+                      return Curry._1(setPopupPortOpen, (function (param) {
                                     return false;
                                   }));
                     }),
@@ -98,64 +130,19 @@ function PageOurWork(Props) {
                         }), React.createElement("button", {
                           className: "btn btn-solid-color1",
                           type: "submit"
-                        }, "Submit"))), React.createElement("div", undefined, React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.bettercastPortfolio,
-                      key: "bettercast"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.plateupPortfolio,
-                      key: "plateup"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.mintcrowdPortfolio,
-                      key: "mintcrowd"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.safemodePortfolio,
-                      key: "safemode"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.adsoupPortfolio,
-                      key: "adsoup"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.copanelPortfolio,
-                      key: "copanel"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.eventcometPortfolio,
-                      key: "eventcomet"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.boneagePortfolio,
-                      key: "boneage"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.traitsignalPortfolio,
-                      key: "traitsignal"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.vrPortfolio,
-                      key: "vr"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.ketawaPortfolio,
-                      key: "ketawa"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.alldaytattooPortfolio,
-                      key: "alldaytattoo"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.halalblockvideoPortfolio,
-                      key: "halalblockvideo"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.traitsignalvideoPortfolio,
-                      key: "traitsignalvideo"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.adsoupvideoPortfolio,
-                      key: "adsoupvideo"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.wilaamalinPortfolio,
-                      key: "willamailn"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.eastwestPortfolio,
-                      key: "eastwest"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.kikiiPortfolio,
-                      key: "kikii"
-                    }), React.createElement(PortfolioItem.make, {
-                      item: PortfolioData.microgamesPortfolio,
-                      key: "micro"
-                    })));
+                        }, "Submit"))), React.createElement(Popup.make, {
+                  isOpen: isPopupBuildOpen,
+                  className: "buildyouridea-popup",
+                  closeOnBgClick: false,
+                  closeFunc: (function (param) {
+                      return Curry._1(setPopupBuildOpen, (function (param) {
+                                    return false;
+                                  }));
+                    }),
+                  children: null
+                }, React.createElement("div", undefined, React.createElement("h3", undefined, "Build Your Ideas"), React.createElement("p", undefined, "Tell us about what you need. We will get back to you within 1 working day")), React.createElement(ContactForm.make, {})), React.createElement("div", {
+                  className: additional_classname
+                }, Belt_List.toArray(items)));
 }
 
 var make = PageOurWork;

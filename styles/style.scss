@@ -1,4 +1,4 @@
-$font-size-small: 1rem;
+$font-size-small: 1.5rem;
 $font-size-medium: 2rem;
 $font-weight-normal: 300;
 $font-weight-medium: 400;
@@ -42,7 +42,7 @@ html, body, body>div, body>div>div {
   height: 100%;
 }
 html {
-  font-size: 14px;
+  font-size: 16px;
   color: $text-color1;
   font-family: $font-default;
   font-weight: $font-weight-normal;
@@ -62,7 +62,7 @@ h3 { font-size: 1.6em; }
 h4 { font-size: 1.4em; }
 h5 { font-size: 1.2em; }
 h6 { font-size: 1em; }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, pre {
   color: $text-color1;
   font-family: $font-header;
   font-weight: $font-weight-bold;
@@ -224,12 +224,61 @@ a:hover { text-decoration: none; }
   z-index: -10;
   position: relative;
   margin-top: -1px;
-  height: $section-header-height;
-  h1 { padding: 20px; }
+  height: auto;
+  h1 { padding: 20px 0px; }
+  h2 { padding-bottom: 20px; }
   .nav {
     background: unset;
   }
 }
+/* ------------- Page 404 ------------- */
+.page404 .main-content .content {
+  word-wrap: break-word;
+  text-align: center;
+  min-height: calc(100vh - 128px - 150px);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  .mobile {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    .mobile {
+      display: block;
+    }
+    .desktop {
+      display: none;
+    }
+  }
+  h2.text-404 {
+    font-size: $font-size-medium + 0.5rem;
+  }
+  h2.go-home {
+    font-size: $font-size-small;
+  }
+  div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  * {
+    margin: 0 auto;
+  }
+  a.link.logo-link {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin-top: 25px;
+  }
+  a.link.logo-link:hover {
+    h2.go-home {
+      color: white;
+    }
+  }
+}
+
 /* ------------- Navigation Bar ------------- */
 
 .nav {
@@ -237,7 +286,7 @@ a:hover { text-decoration: none; }
   padding: 8px 15px;
   box-sizing: border-box;
   z-index: 99;
-  height: $header-height;
+  height: $header-height + 10px;
   background: $bg-color1;
 }
 nav.nav {
@@ -259,8 +308,26 @@ nav.nav {
   color: $text-white;
   font-family: $font-header;
 }
-.nav .nav-container > div {
-  display: inline-block;
+@media only screen and (max-width: 576px) {
+  .buildyourideas-btn.btn.btn-line-white {
+    display: none;
+  }
+  .buildyourideas-btn.btn.btn-line-color1 {
+    z-index: 30;
+    display: inline-block;
+    position: fixed;
+    right: 35px;
+    bottom: 15px;
+    box-shadow: 0 0 10px 3px rgba(0,0,0,0.4);
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: white;
+    width: 150px;
+  }
+  .buildyourideas-btn.btn.btn-line-color1:hover {
+    background-color: $bg-color1;
+  }
 }
 .nav .btn {
   margin-top: 0;
@@ -294,6 +361,13 @@ nav .logo-link {
 .nav a::after, .btn-drop::after {
   content: "";
 }
+@media (min-width: 1200px) {
+  .nav.-text-right > .container-lg {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
 /* ------ Navigation Link Animation ------ */
 
 .nav a:hover, .btn-drop:hover {
@@ -389,8 +463,7 @@ nav .logo-link {
   }
 }
 .homepage_menu-bg {
-  height: $header-height;
-  margin-top: - $header-height;
+  height: $header-height + 10px;
   width: 100%;
   background: $bg-color2;
   position: sticky;
@@ -622,7 +695,7 @@ nav .logo-link {
   }
   .popup {
     width: 90%;
-    height: 90%;
+    height: 80%;
   }
   .popup-content {
     display: flex;
@@ -784,6 +857,9 @@ $email-height: 30px;
 }
 .contact-page_invisible-input {
   display: none;
+}
+.container > .contact-content {
+  min-height: calc(100vh - 86px - 150px - 130px);
 }
 /* ------------ Careers Page ------------*/
 .career_lookingfor .image-background {
@@ -963,13 +1039,14 @@ $email-height: 30px;
 .downloadport-btn {
   position: fixed;
   right: 35px;
-  bottom: 35px;
+  bottom: 65px;
   z-index: 99;
   box-shadow: 0 0 10px 3px rgba(0,0,0,0.4);
-  font-size: 18px;
+  font-size: 16px;
   padding-left: 15px;
   padding-right: 15px;
   background-color: white;
+  width: 150px;
 }
 .downloadport-popup {
   .btn, .input-default {
@@ -1000,7 +1077,7 @@ $email-height: 30px;
 }
 .downloadport-popup.popup-open .popup {box-shadow: 0 0 10px 2px rgba(0,0,0,0.5);}
 @mixin portitem-hide() {
-  transform: scale(0);
+  display: none;
   // overflow: hidden;
   height: 0;
   padding-top: 0;
@@ -1008,7 +1085,7 @@ $email-height: 30px;
   opacity: 0;
 }
 @mixin portitem-show() {
-  transform: scale(1);
+  display: flex;
   // overflow: auto;
   height: auto;
   padding-top: 60px;
@@ -1017,35 +1094,47 @@ $email-height: 30px;
 }
 .nav a:not(.logo-link):not(.btn).port-filter.selected::after {width: 35px;}
 .port-all {
-  .item-all,
   .item-ai,
   .item-appsandplatforms,
   .item-design,
-  .item-other {@include portitem-show()}
-}
-.port-ai {
+  .item-other {@include portitem-hide();}
+
+  .item-ai,
   .item-appsandplatforms,
   .item-design,
-  .item-other {@include portitem-hide()}
-  .item-ai {@include portitem-show()}
+  .item-other {@include portitem-show();}
+}
+.port-ai {
+  .item-ai,
+  .item-appsandplatforms,
+  .item-design,
+  .item-other {@include portitem-hide();}
+
+  .item-ai {@include portitem-show();}
 }
 .port-appsandplatforms {
   .item-ai,
+  .item-appsandplatforms,
   .item-design,
-  .item-other {@include portitem-hide()}
-  .item-appsandplatforms {@include portitem-show()}
+  .item-other {@include portitem-hide();}
+
+  .item-appsandplatforms {@include portitem-show();}
 }
 .port-design {
   .item-ai,
   .item-appsandplatforms,
-  .item-other {@include portitem-hide()}
-  .item-design {@include portitem-show()}
+  .item-design,
+  .item-other {@include portitem-hide();}
+
+  .item-design {@include portitem-show();}
 }
 .port-other {
   .item-ai,
   .item-appsandplatforms,
-  .item-design {@include portitem-hide()}
-  .item-other {@include portitem-show()}
+  .item-design,
+  .item-other {@include portitem-hide();}
+
+  .item-other {@include portitem-show();}
 }
 /* Default portimg-container style */
 .portimg-container {
@@ -1540,6 +1629,11 @@ and (max-width: 576px) {
   .btn-google-play, .btn-app-store, .btn-mi-store {
     border: none;
     padding: 0;
+  }
+  .downloadport-popup .popup {
+    left: 0;
+    right: 0;
+    margin: 0 10px;
   }
   // .btn-google-play::before, .btn-app-store::before, .btn-mi-store::before {
   //   height: 80px;
