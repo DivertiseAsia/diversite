@@ -9,6 +9,7 @@ import * as MainPage from "../Components/MainPage.mjs";
 import * as Belt_List from "rescript/lib/es6/belt_List.js";
 import Link from "next/link";
 import * as Caml_option from "rescript/lib/es6/caml_option.js";
+import * as ContactForm from "../Components/ContactForm.mjs";
 import * as PortfolioData from "../Data/PortfolioData.mjs";
 import * as PortfolioItem from "../Components/PortfolioItem.mjs";
 
@@ -129,7 +130,17 @@ function PageOurWork(Props) {
                         }), React.createElement("button", {
                           className: "btn btn-solid-color1",
                           type: "submit"
-                        }, "Submit"))), React.createElement("div", {
+                        }, "Submit"))), React.createElement(Popup.make, {
+                  isOpen: isPopupBuildOpen,
+                  className: "buildyouridea-popup",
+                  closeOnBgClick: false,
+                  closeFunc: (function (param) {
+                      return Curry._1(setPopupBuildOpen, (function (param) {
+                                    return false;
+                                  }));
+                    }),
+                  children: null
+                }, React.createElement("div", undefined, React.createElement("h3", undefined, "Build Your Ideas"), React.createElement("p", undefined, "Tell us about what you need. We will get back to you within 1 working day")), React.createElement(ContactForm.make, {})), React.createElement("div", {
                   className: additional_classname
                 }, Belt_List.toArray(items)));
 }

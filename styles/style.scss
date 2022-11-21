@@ -308,6 +308,9 @@ nav.nav {
   font-family: $font-header;
 }
 @media only screen and (max-width: 576px) {
+  .buildyourideas-btn.btn.btn-line-white {
+    display: none;
+  }
   .buildyourideas-btn.btn.btn-line-color1 {
     z-index: 30;
     display: inline-block;

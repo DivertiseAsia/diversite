@@ -2,14 +2,17 @@ open React
 open DataTypes.PortfolioItem
 open PortfolioData
 open Utils
- 
+
 @react.component
 let make = (~selectedCategory: category) => {
   let (isPopupPortOpen, setPopupPortOpen) = React.useState(() => false)
   let (isPopupBuildOpen, setPopupBuildOpen) = React.useState(() => false)
 
   let items = portfolioDataList->Belt.List.keepMap(categoryList => {
-    if selectedCategory == All || (categoryList.category->Belt.List.some(category => category == selectedCategory)) {
+    if (
+      selectedCategory == All ||
+        categoryList.category->Belt.List.some(category => category == selectedCategory)
+    ) {
       Some(<PortfolioItem key={categoryList.title} item={categoryList} />)
     } else {
       None
@@ -88,8 +91,19 @@ let make = (~selectedCategory: category) => {
         <button type_="submit" className="btn btn-solid-color1"> {React.string("Submit")} </button>
       </form>
     </Popup>
-    <div className={additional_classname}>
-      {Belt.List.toArray(items)->React.array}
-    </div>
+    <Popup
+      isOpen=isPopupBuildOpen
+      closeOnBgClick=false
+      closeFunc={() => setPopupBuildOpen(_ => false)}
+      className="buildyouridea-popup">
+      <div>
+        <h3> {string("Build Your Ideas")} </h3>
+        <p>
+          {string("Tell us about what you need. We will get back to you within 1 working day")}
+        </p>
+      </div>
+      <ContactForm />
+    </Popup>
+    <div className={additional_classname}> {Belt.List.toArray(items)->React.array} </div>
   </MainPage>
 }
