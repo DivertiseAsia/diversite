@@ -227,6 +227,10 @@ a:hover { text-decoration: none; }
   height: auto;
   h1 { padding: 20px 0px; }
   h2 { padding-bottom: 20px; }
+  h3 { 
+    padding-bottom: 30px; 
+    font-size: 1.2rem;
+  }
   .nav {
     background: unset;
   }
@@ -1577,6 +1581,10 @@ and (max-width: 768px) {
   }
   .port_btn-container .port_link_text {
     text-align: center;
+  }
+
+  .section-header {
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
   }
 }
 

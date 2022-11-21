@@ -6,12 +6,13 @@ let make = () => {
     title="Designer at Divertise Asia"
     keywords="Artificial Intelligence, Design, Fullstack, API, Server"
     description="Be a professional Designer (3 months contract) at Divertise Asia">
-    <PageHeader title="Careers" subtitle="Sales Executive (Software) (3 months contract)" className="bg-gradient-color1 pt-5" />
+    <PageHeader title="Careers" subtitle="Sales Executive (Software) " time="(3 months contract)" className="bg-gradient-color1 pt-5" />
     <div className="container">
       <div className="row pt-5 d-block">
-        <h3>
-          <Icon className="mr-4" iconType=Icon.Pen /> {string("What are the requirements?")}
-        </h3>
+        <div className="d-flex flex-row">
+          <Icon className="mr-4" iconType=Icon.Pen />
+          <h3 className="align-self-center"> {string("What are the requirements?")} </h3>
+        </div>
         <ul className="ul-li-padding-none ul-li-dash p-4 pl-5 -lineheight-large">
           <li>
             {string("1-2 years experiences in Sales IT Software")}
@@ -27,7 +28,10 @@ let make = () => {
         </ul>
       </div>
       <div className="row pt-5 d-block">
-        <h3> <Icon className="mr-4" iconType=Icon.Pen /> {string("What will I be doing?")} </h3>
+        <div className="d-flex flex-row">
+          <Icon className="mr-4" iconType=Icon.Pen />
+          <h3 className="align-self-center"> {string("What will I be doing?")} </h3>
+        </div>
         <ul className="ul-li-padding-none ul-li-dash p-4 pl-5 -lineheight-large">
           <li> {string("UX/UI design for website and applications")} </li>
           <li>
@@ -40,7 +44,10 @@ let make = () => {
         </ul>
       </div>
       <div className="row pt-5 d-block">
-        <h3> <Icon className="mr-4" iconType=Icon.Pen /> {string("When can I start?")} </h3>
+        <div className="d-flex flex-row">
+          <Icon className="mr-4" iconType=Icon.Pen />
+          <h3 className="align-self-center"> {string("When can I start?")} </h3>
+        </div>
         <div className="ul-li-padding-none p-4 pl-5">
           <p> {string("It is recommended to apply 1-2 months prior to start date.")} </p>
         </div>

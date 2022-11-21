@@ -19,24 +19,36 @@ function PageCareersProjectManager(Props) {
                   className: "container"
                 }, React.createElement("div", {
                       className: "row pt-5 d-block"
-                    }, React.createElement("h3", undefined, React.createElement(Icon.make, {
+                    }, React.createElement("div", {
+                          className: "d-flex flex-row"
+                        }, React.createElement(Icon.make, {
                               iconType: /* Pen */8,
                               className: "mr-4"
-                            }), "What are the requirements?"), React.createElement("ul", {
+                            }), React.createElement("h3", {
+                              className: "align-self-center"
+                            }, "What are the requirements?")), React.createElement("ul", {
                           className: "ul-li-padding-none ul-li-dash p-4 pl-5 -lineheight-large"
                         }, React.createElement("li", undefined, "Bachelors / University degree in related field"), React.createElement("li", undefined, "Having 1-3 years of relevant work experiences"), React.createElement("li", undefined, "Have a good working knowledge of project estimation techniques"), React.createElement("li", undefined, "Coordination and planning of project activities to ensure smooth execution"), React.createElement("li", undefined, "Must possess excellent communication skills in Thai and English"), React.createElement("li", undefined, "Strong communication skill, ability to perform formal communication and reporting, and lead meetings with creditability"), React.createElement("li", undefined, "Strong analytical skills and interpersonal skills, good in people management skill and team supervisory"))), React.createElement("div", {
                       className: "row pt-5 d-block"
-                    }, React.createElement("h3", undefined, React.createElement(Icon.make, {
+                    }, React.createElement("div", {
+                          className: "d-flex flex-row"
+                        }, React.createElement(Icon.make, {
                               iconType: /* Pen */8,
                               className: "mr-4"
-                            }), "What will I be doing?"), React.createElement("ul", {
+                            }), React.createElement("h3", {
+                              className: "align-self-center"
+                            }, "What will I be doing?")), React.createElement("ul", {
                           className: "ul-li-padding-none ul-li-dash p-4 pl-5 -lineheight-large"
                         }, React.createElement("li", undefined, "Ensure that project-lifecycle deliverables consistently completed to agreed budget and schedule constraints"), React.createElement("li", undefined, "Develop and manage a detailed project schedule and work plan"), React.createElement("li", undefined, "Work closely with your team to understand motivation drivers, morale and job contribution/satisfaction levels in order to enhance your team engagement"), React.createElement("li", undefined, "Coordination and planning of project activities to ensure smooth execution"), React.createElement("li", undefined, "Partner with leaders to evaluate tools, processes and workflows and introduce techniques and best practices to improve efficiency"))), React.createElement("div", {
                       className: "row pt-5 d-block"
-                    }, React.createElement("h3", undefined, React.createElement(Icon.make, {
+                    }, React.createElement("div", {
+                          className: "d-flex flex-row"
+                        }, React.createElement(Icon.make, {
                               iconType: /* Pen */8,
                               className: "mr-4"
-                            }), "When can I start?"), React.createElement("div", {
+                            }), React.createElement("h3", {
+                              className: "align-self-center"
+                            }, "When can I start?")), React.createElement("div", {
                           className: "ul-li-padding-none p-4 pl-5"
                         }, React.createElement("p", undefined, "It is recommended to apply 1-2 months prior to start date.")))), React.createElement("div", {
                   className: "footer-intern bg-gradient-color2"

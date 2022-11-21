@@ -7,10 +7,15 @@ function PageHeader(Props) {
   var className = Props.className;
   var title = Props.title;
   var subtitle = Props.subtitle;
+  var time = Props.time;
   var tmp;
   tmp = subtitle !== undefined && subtitle !== "" ? React.createElement("h2", {
           className: "text-white letter-spacing -text-header-shadow"
-        }, "-  " + subtitle) : null;
+        }, " - " + subtitle) : null;
+  var tmp$1;
+  tmp$1 = time !== undefined && time !== "" ? React.createElement("h3", {
+          className: "text-white letter-spacing -text-header-shadow"
+        }, time) : null;
   return React.createElement("div", {
               className: "section-header " + Js_option.getWithDefault("", className)
             }, React.createElement("div", {
@@ -19,7 +24,7 @@ function PageHeader(Props) {
                       className: "row d-flex align-items-baseline -text-uppercase"
                     }, React.createElement("h1", {
                           className: "text-white letter-spacing -text-header-shadow"
-                        }, title), tmp)));
+                        }, title), tmp, tmp$1)));
 }
 
 var make = PageHeader;
