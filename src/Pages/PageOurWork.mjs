@@ -73,6 +73,7 @@ function PageOurWork(Props) {
               title: "Work of Divertise Asia",
               keywords: "portfolio, Artificial Intelligence, Design, Fullstack, API, Server",
               description: "AI, Apps & Platforms, and Design items created by us",
+              isPageOurWork: true,
               children: null
             }, React.createElement("div", {
                   className: "ourwork_section-header-content bg-gradient-color1"
@@ -87,19 +88,26 @@ function PageOurWork(Props) {
                 }), React.createElement("div", {
                   className: "downloadport-btn btn btn-line-color1",
                   onClick: (function (param) {
-                      return Curry._1(setPopupOpen, (function (param) {
-                                    return !isPopupOpen;
+                      return Curry._1(setPopupPortOpen, (function (param) {
+                                    return !isPopupPortOpen;
                                   }));
                     })
-                }, "Download Port"), React.createElement(Popup.make, {
-                  isOpen: isPopupOpen,
+                }, "Download Port"), React.createElement("div", {
+                  className: "buildyourideas-btn btn btn-line-color1 d-inline-block d-sm-none",
+                  onClick: (function (param) {
+                      return Curry._1(setPopupBuildOpen, (function (param) {
+                                    return !isPopupBuildOpen;
+                                  }));
+                    })
+                }, "Build Your Ideas"), React.createElement(Popup.make, {
+                  isOpen: isPopupPortOpen,
                   className: "downloadport-popup",
                   hasCloseBtn: true,
                   closeBtnText: "Not Now",
                   closeOnBgClick: true,
                   showX: false,
                   closeFunc: (function (param) {
-                      return Curry._1(setPopupOpen, (function (param) {
+                      return Curry._1(setPopupPortOpen, (function (param) {
                                     return false;
                                   }));
                     }),

@@ -7,9 +7,11 @@ let make = (
   ~title: string,
   ~keywords: string,
   ~description: string,
+  ~isPageOurWork: option<bool>=?,
+  ~isPageHome: option<bool>=?,
   ~children,
 ) => {
-  let (isPopupOpen, setPopupOpen) = React.useState(() => false)
+  let (isPopupBuildOpen, setPopupBuildOpen) = React.useState(() => false)
   <div>
     <Head>
       <title lang="en"> {string(title)} </title>
@@ -30,15 +32,24 @@ let make = (
                 <Link href=Links.ourwork> {string("Our Work")} </Link>
                 <Link href=Links.careers> {string("Careers")} </Link>
                 <Link href=Links.contact> {string("Contact Us")} </Link>
-                <div className="btn btn-line-white" onClick={_ => setPopupOpen(_ => !isPopupOpen)}>
+                <div
+                  className="buildyourideas-btn btn btn-line-white d-none d-sm-inline-block"
+                  onClick={_ => setPopupBuildOpen(_ => !isPopupBuildOpen)}>
                   {string("Build Your Ideas")}
                 </div>
+                {Js.Option.getWithDefault(false, isPageOurWork) || Js.Option.getWithDefault(false, isPageHome)
+                  ? <> </>
+                  : <div
+                      className="buildyourideas-btn btn btn-line-color1 d-inline-block d-sm-none"
+                      onClick={_ => setPopupBuildOpen(_ => !isPopupBuildOpen)}>
+                      {string("Build Your Ideas")}
+                    </div>}
               </div>
             </nav>
             <Popup
-              isOpen=isPopupOpen
+              isOpen=isPopupBuildOpen
               closeOnBgClick=false
-              closeFunc={() => setPopupOpen(_ => false)}
+              closeFunc={() => setPopupBuildOpen(_ => false)}
               className="buildyouridea-popup">
               <div>
                 <h3> {string("Build Your Ideas")} </h3>
