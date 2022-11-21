@@ -1256,40 +1256,43 @@ var microgamesPortfolio = {
 };
 
 var portfolioDataList_1 = {
-  hd: copanelPortfolio,
+  hd: adsoupPortfolio,
   tl: {
-    hd: eventcometPortfolio,
+    hd: copanelPortfolio,
     tl: {
-      hd: mintcrowdPortfolio,
+      hd: eventcometPortfolio,
       tl: {
-        hd: safemodePortfolio,
+        hd: mintcrowdPortfolio,
         tl: {
-          hd: plateupPortfolio,
+          hd: safemodePortfolio,
           tl: {
-            hd: traitsignalPortfolio,
+            hd: plateupPortfolio,
             tl: {
-              hd: boneagePortfolio,
+              hd: traitsignalPortfolio,
               tl: {
-                hd: ketawaPortfolio,
+                hd: boneagePortfolio,
                 tl: {
-                  hd: alldaytattooPortfolio,
+                  hd: ketawaPortfolio,
                   tl: {
-                    hd: wilaamalinPortfolio,
+                    hd: alldaytattooPortfolio,
                     tl: {
-                      hd: eastwestPortfolio,
+                      hd: wilaamalinPortfolio,
                       tl: {
-                        hd: halalblockvideoPortfolio,
+                        hd: eastwestPortfolio,
                         tl: {
-                          hd: traitsignalvideoPortfolio,
+                          hd: halalblockvideoPortfolio,
                           tl: {
-                            hd: adsoupvideoPortfolio,
+                            hd: traitsignalvideoPortfolio,
                             tl: {
-                              hd: vrPortfolio,
+                              hd: adsoupvideoPortfolio,
                               tl: {
-                                hd: kikiiPortfolio,
+                                hd: vrPortfolio,
                                 tl: {
-                                  hd: microgamesPortfolio,
-                                  tl: /* [] */0
+                                  hd: kikiiPortfolio,
+                                  tl: {
+                                    hd: microgamesPortfolio,
+                                    tl: /* [] */0
+                                  }
                                 }
                               }
                             }
@@ -1309,7 +1312,7 @@ var portfolioDataList_1 = {
 };
 
 var portfolioDataList = {
-  hd: adsoupPortfolio,
+  hd: bettercastPortfolio,
   tl: portfolioDataList_1
 };
 
