@@ -1328,7 +1328,13 @@ $email-height: 30px;
 
 /* -------- Big Desktops --------*/
 @media only screen
-and (min-width: 1800px) {}
+and (min-width: 1800px) {
+  .hero {
+    .container {
+      margin: 0 auto;
+    }
+  }
+}
 
 /* -------- Tablets Landscape & Small Desktops ---------*/
 @media only screen
