@@ -227,8 +227,8 @@ a:hover { text-decoration: none; }
   height: auto;
   h1 { padding: 20px 0px; }
   h2 { padding-bottom: 20px; }
-  h3 { 
-    padding-bottom: 30px; 
+  h3 {
+    padding-bottom: 30px;
     font-size: 1.2rem;
   }
   .nav {
@@ -468,6 +468,7 @@ nav .logo-link {
 }
 .homepage_menu-bg {
   height: $header-height + 10px;
+  margin-top: -60px;
   width: 100%;
   background: $bg-color2;
   position: sticky;
