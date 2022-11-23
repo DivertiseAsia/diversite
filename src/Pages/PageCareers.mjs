@@ -33,6 +33,16 @@ function PageCareers(Props) {
                               imageURL: "/static/images/position-design.jpg",
                               href: Links.careersdesigner,
                               iconType: /* Pen */8
+                            }), React.createElement(InternshipProgram.make, {
+                              title: "Software Project Manager",
+                              imageURL: "/static/images/position-pm.png",
+                              href: Links.careersprojectmanager,
+                              iconType: /* Code */2
+                            }), React.createElement(InternshipProgram.make, {
+                              title: "Sales Executive (Software)",
+                              imageURL: "/static/images/position-sales.png",
+                              href: Links.careerssales,
+                              iconType: /* Pen */8
                             }))), React.createElement("div", {
                       className: "row d-block text-center"
                     }, React.createElement("h3", {
@@ -89,7 +99,7 @@ function PageCareers(Props) {
                                   iconType: /* Laptop */9
                                 }), React.createElement("h6", {
                                   className: "icon-title"
-                                }, "Personal Laptop")), React.createElement("div", {
+                                }, "Hybrid Work")), React.createElement("div", {
                               className: "col-6 col-md pb-3 team-benefits"
                             }, React.createElement(Icon.make, {
                                   iconType: /* Clock */1

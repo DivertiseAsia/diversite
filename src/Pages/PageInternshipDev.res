@@ -9,9 +9,10 @@ let make = () => {
     <PageHeader title="Internship" subtitle="Developer" className="bg-gradient-color1 pt-5" />
     <div className="container">
       <div className="row pt-5 d-block">
-        <h3>
-          <Icon className="mr-4" iconType=Icon.Pen /> {string("What are the requirements?")}
-        </h3>
+        <div className="d-flex flex-row">
+          <Icon className="mr-4" iconType=Icon.Pen />
+          <h3 className="align-self-center"> {string("What are the requirements?")} </h3>
+        </div>
         <ul className="ul-li-padding-none ul-li-dash p-4 pl-5 -lineheight-large">
           <li> {string("Strong communication skills")} </li>
           <li> {string("Minimum 2.50 GPA")} </li>
@@ -21,7 +22,10 @@ let make = () => {
         </ul>
       </div>
       <div className="row pt-5 d-block">
-        <h3> <Icon className="mr-4" iconType=Icon.Pen /> {string("What will I be doing?")} </h3>
+        <div className="d-flex flex-row">
+          <Icon className="mr-4" iconType=Icon.Pen />
+          <h3 className="align-self-center"> {string("What will I be doing?")} </h3>
+        </div>
         <ul className="ul-li-padding-none ul-li-dash p-4 pl-5 -lineheight-large">
           <li> {string("Working in application/ai projects")} </li>
           <li> {string("Full Stack Development")} </li>
@@ -32,7 +36,10 @@ let make = () => {
         </ul>
       </div>
       <div className="row pt-5 d-block">
-        <h3> <Icon className="mr-4" iconType=Icon.Pen /> {string("When can I start?")} </h3>
+        <div className="d-flex flex-row">
+          <Icon className="mr-4" iconType=Icon.Pen />
+          <h3 className="align-self-center"> {string("When can I start?")} </h3>
+        </div>
         <div className="ul-li-padding-none p-4 pl-5">
           <p> {string("It is recommended to apply 1-2 months prior to start date.")} </p>
           <p> {string("You are required to intern for minimum of 2 months")} </p>

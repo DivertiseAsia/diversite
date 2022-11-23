@@ -17,7 +17,8 @@ let make = (
         <div className="program-list-container -border-radius -bg-color1">
           <div className="content-program">
             <div className="d-flex justify-content-center align-items-center">
-              <Icon iconType /> <h4> {string(title)} </h4>
+              <Icon iconType />
+              <h4> {string(title)} </h4>
             </div>
             <p className="read-details"> {string("Read details >")} </p>
           </div>

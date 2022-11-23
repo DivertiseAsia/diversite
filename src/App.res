@@ -22,6 +22,8 @@ let default = (props: props): React.element => {
   | "/careers" => <PageCareers />
   | "/careers/developer" => <PageCareersDeveloper />
   | "/careers/designer" => <PageCareersDesigner />
+  | "/careers/projectmanager" => <PageCareersProjectManager />
+  | "/careers/sales" => <PageCareersSales />
   | "/internships/developer" => <PageInternshipDev />
   | "/internships/design" => <PageInternshipDesign />
   | "/contact" => <PageContact />

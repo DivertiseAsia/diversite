@@ -10,3 +10,9 @@ module Navigator = {
 
 let copyToClipboard: string => Js.Promise.t<unit> = s =>
   navigator->Navigator.getClipboard->Navigator.writeText(s)
+
+let scrollTop = %raw(`
+  function() {
+    document.getElementById('content-container').scrollTop = 0;
+  }
+`)

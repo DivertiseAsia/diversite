@@ -19,24 +19,36 @@ function PageInternshipDev(Props) {
                   className: "container"
                 }, React.createElement("div", {
                       className: "row pt-5 d-block"
-                    }, React.createElement("h3", undefined, React.createElement(Icon.make, {
+                    }, React.createElement("div", {
+                          className: "d-flex flex-row"
+                        }, React.createElement(Icon.make, {
                               iconType: /* Pen */8,
                               className: "mr-4"
-                            }), "What are the requirements?"), React.createElement("ul", {
+                            }), React.createElement("h3", {
+                              className: "align-self-center"
+                            }, "What are the requirements?")), React.createElement("ul", {
                           className: "ul-li-padding-none ul-li-dash p-4 pl-5 -lineheight-large"
                         }, React.createElement("li", undefined, "Strong communication skills"), React.createElement("li", undefined, "Minimum 2.50 GPA"), React.createElement("li", undefined, "Programming-related major / Logic background"), React.createElement("li", undefined, "Some experience with Python, OCaml, or other language"), React.createElement("li", undefined, "Skills in GIT would be helpful, but not required"))), React.createElement("div", {
                       className: "row pt-5 d-block"
-                    }, React.createElement("h3", undefined, React.createElement(Icon.make, {
+                    }, React.createElement("div", {
+                          className: "d-flex flex-row"
+                        }, React.createElement(Icon.make, {
                               iconType: /* Pen */8,
                               className: "mr-4"
-                            }), "What will I be doing?"), React.createElement("ul", {
+                            }), React.createElement("h3", {
+                              className: "align-self-center"
+                            }, "What will I be doing?")), React.createElement("ul", {
                           className: "ul-li-padding-none ul-li-dash p-4 pl-5 -lineheight-large"
                         }, React.createElement("li", undefined, "Working in application/ai projects"), React.createElement("li", undefined, "Full Stack Development"), React.createElement("li", undefined, "Functional Programming"), React.createElement("li", undefined, "AWS"), React.createElement("li", undefined, "Learn new skills and implement them into your projects."), React.createElement("li", undefined, "Work at our office at BTS Chidlom station Monday-Friday 10:00-18:00"))), React.createElement("div", {
                       className: "row pt-5 d-block"
-                    }, React.createElement("h3", undefined, React.createElement(Icon.make, {
+                    }, React.createElement("div", {
+                          className: "d-flex flex-row"
+                        }, React.createElement(Icon.make, {
                               iconType: /* Pen */8,
                               className: "mr-4"
-                            }), "When can I start?"), React.createElement("div", {
+                            }), React.createElement("h3", {
+                              className: "align-self-center"
+                            }, "When can I start?")), React.createElement("div", {
                           className: "ul-li-padding-none p-4 pl-5"
                         }, React.createElement("p", undefined, "It is recommended to apply 1-2 months prior to start date."), React.createElement("p", undefined, "You are required to intern for minimum of 2 months")))), React.createElement("div", {
                   className: "footer-intern bg-gradient-color2"

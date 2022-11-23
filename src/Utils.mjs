@@ -7,9 +7,14 @@ function copyToClipboard(s) {
   return navigator.clipboard.writeText(s);
 }
 
+var scrollTop = (function() {
+    document.getElementById('content-container').scrollTop = 0;
+  });
+
 export {
   $$Navigator ,
   copyToClipboard ,
+  scrollTop ,
   
 }
 /* No side effect */
