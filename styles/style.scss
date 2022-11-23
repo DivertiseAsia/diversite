@@ -421,7 +421,7 @@ nav .logo-link {
 
   .container {
     max-width: 600px;
-    margin-left: 50px;
+    margin-left: 5%;
     animation: slidFromLeft ease 1.5s;
     -webkit-animation: slidFromLeft ease 1.5s;
     -moz-animation: slidFromLeft ease 1.5s;
@@ -1331,7 +1331,7 @@ $email-height: 30px;
 and (min-width: 1800px) {
   .hero {
     .container {
-      margin: 0 auto;
+      margin-left: 10%;
     }
   }
 }
