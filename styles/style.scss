@@ -1038,22 +1038,27 @@ $email-height: 30px;
 }
 @media screen and (min-width: 1200px) {
   .port_img-container.row {
-    height: 550px;
+    height: 530px;
   }
 }
-@media screen and (min-width: 800px) and (max-width: 1200px) {
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
   .port_img-container.row {
-    height: 475px;
+    height: 430px;
   }
 }
-@media screen and (min-width: 400px) and (max-width: 800px) {
+@media screen and (min-width: 775px) and (max-width: 1000px) {
   .port_img-container.row {
-    height: 300px;
+    height: 325px;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (min-width: 450px) and (max-width: 775px) {
   .port_img-container.row {
-    height: 200px;
+    height: 230px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .port_img-container.row {
+    height: 175px;
   }
 }
 .scroll-long { transition: all 15s; }
