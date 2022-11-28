@@ -481,8 +481,7 @@ nav .logo-link {
   background-color: #469FA3;
   background-size: cover;
 
-  height: 100vh;
-  min-height: 480px;
+  height: 75vh;
   padding-top: 50px;
   display: flex;
   align-items: center;
@@ -500,7 +499,7 @@ nav .logo-link {
 
   .container {
     max-width: 600px;
-    margin-left: 50px;
+    margin-left: 5%;
     animation: slidFromLeft ease 1.5s;
     -webkit-animation: slidFromLeft ease 1.5s;
     -moz-animation: slidFromLeft ease 1.5s;
@@ -1426,7 +1425,13 @@ $email-height: 30px;
 
 /* -------- Big Desktops --------*/
 @media only screen
-and (min-width: 1800px) {}
+and (min-width: 1800px) {
+  .hero {
+    .container {
+      margin-left: 10%;
+    }
+  }
+}
 
 /* -------- Tablets Landscape & Small Desktops ---------*/
 @media only screen
