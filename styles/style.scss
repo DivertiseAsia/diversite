@@ -1035,6 +1035,31 @@ $email-height: 30px;
   justify-content: space-around;
   align-items: center;
 }
+@media screen and (min-width: 1200px) {
+  .port_img-container.row {
+    height: 530px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .port_img-container.row {
+    height: 430px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .port_img-container.row {
+    height: 325px;
+  }
+}
+@media screen and (min-width: 450px) and (max-width: 767px) {
+  .port_img-container.row {
+    height: 230px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .port_img-container.row {
+    height: 175px;
+  }
+}
 .scroll-long { transition: all 15s; }
 .scroll-25 .scroll-long { transition: all 25s; }
 .scroll-30 .scroll-long { transition: all 30s; }
