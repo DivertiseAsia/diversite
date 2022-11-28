@@ -379,15 +379,6 @@ var mintcrowdPortfolio_images = {
   }
 };
 
-var mintcrowdPortfolio_links = {
-  hd: {
-    href: "",
-    caption: "(Website Coming Soon)",
-    category: /* Text */2
-  },
-  tl: /* [] */0
-};
-
 var mintcrowdPortfolio_technologies = {
   hd: "Reason",
   tl: {
@@ -418,7 +409,7 @@ var mintcrowdPortfolio = {
   category: mintcrowdPortfolio_category,
   className: undefined,
   images: mintcrowdPortfolio_images,
-  links: mintcrowdPortfolio_links,
+  links: /* [] */0,
   technologies: mintcrowdPortfolio_technologies,
   body: mintcrowdPortfolio_body
 };

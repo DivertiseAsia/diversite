@@ -228,7 +228,7 @@ let mintcrowdPortfolio: t = {
     },
     {src: mintcrowddesktop, border: Desktop, className: Some("col-8")},
   },
-  links: list{{category: Text, href: "", caption: "(Website Coming Soon)"}},
+  links: list{},
   category: list{AppPlatforms},
   technologies: list{"Reason", "Python", "Docker", "Aws", "Web design", "Ux", "Ui"},
   body: <div>
