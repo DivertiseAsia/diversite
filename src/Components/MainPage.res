@@ -49,7 +49,8 @@ let make = (
                     </div>}
               </div>
             </nav>
-            {Js.Option.getWithDefault(false, isPageHome)
+            {Js.Option.getWithDefault(false, isPageOurWork) ||
+            Js.Option.getWithDefault(false, isPageHome)
               ? <> </>
               : <Popup
                   isOpen=isPopupBuildOpen

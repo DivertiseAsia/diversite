@@ -73,7 +73,7 @@ function MainPage(Props) {
                                                               return !isPopupBuildOpen;
                                                             }));
                                               })
-                                          }, "Build Your Ideas"))), Js_option.getWithDefault(false, isPageHome) ? React.createElement(React.Fragment, undefined) : React.createElement(Popup.make, {
+                                          }, "Build Your Ideas"))), Js_option.getWithDefault(false, isPageOurWork) || Js_option.getWithDefault(false, isPageHome) ? React.createElement(React.Fragment, undefined) : React.createElement(Popup.make, {
                                     isOpen: isPopupBuildOpen,
                                     className: "buildyouridea-popup",
                                     closeOnBgClick: false,
