@@ -12,6 +12,7 @@ function Logo(Props) {
   var is404 = Props.is404;
   var tmp = {
     className: "logo " + Js_option.getWithDefault("logo-default", className),
+    alt: "Divertise Asia's logo",
     src: "/static/images/logo.png"
   };
   if (onClick !== undefined) {

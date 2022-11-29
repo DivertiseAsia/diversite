@@ -59,14 +59,14 @@ function MainPage(Props) {
                                             }), React.createElement(Link, {
                                               href: Links.contact,
                                               children: "Contact Us"
-                                            }), React.createElement("div", {
-                                              className: "buildyourideas-btn btn btn-line-white",
-                                              onClick: (function (param) {
-                                                  return Curry._1(setPopupBuildOpen, (function (param) {
-                                                                return !isPopupBuildOpen;
-                                                              }));
-                                                })
-                                            }, "Build Your Ideas")), Js_option.getWithDefault(false, isPageOurWork) || Js_option.getWithDefault(false, isPageHome) ? React.createElement(React.Fragment, undefined) : React.createElement("div", {
+                                            }), Js_option.getWithDefault(false, isPageHome) ? React.createElement(React.Fragment, undefined) : React.createElement("div", {
+                                                className: "buildyourideas-btn btn btn-line-white",
+                                                onClick: (function (param) {
+                                                    return Curry._1(setPopupBuildOpen, (function (param) {
+                                                                  return !isPopupBuildOpen;
+                                                                }));
+                                                  })
+                                              }, "Build Your Ideas")), Js_option.getWithDefault(false, isPageOurWork) || Js_option.getWithDefault(false, isPageHome) ? React.createElement(React.Fragment, undefined) : React.createElement("div", {
                                             className: "buildyourideas-btn btn btn-line-color1 d-inline-block d-sm-none",
                                             onClick: (function (param) {
                                                 return Curry._1(setPopupBuildOpen, (function (param) {
@@ -102,17 +102,20 @@ function MainPage(Props) {
                                       href: "https://www.facebook.com/DivertiseAsia/",
                                       target: "_blank"
                                     }, React.createElement("img", {
+                                          alt: "Facebook's logo",
                                           src: "/static/images/facebook.svg"
                                         })), React.createElement("a", {
                                       className: "icon-social",
                                       href: "https://www.linkedin.com/company/divertiseasia",
                                       target: "_blank"
                                     }, React.createElement("img", {
+                                          alt: "LinkedIn's logo",
                                           src: "/static/images/linkedin.svg"
                                         })), React.createElement("a", {
                                       className: "icon-social",
                                       href: "mailto:contact@divertise.asia"
                                     }, React.createElement("img", {
+                                          alt: "Mail logo",
                                           src: "/static/images/email.svg"
                                         }))), React.createElement("p", undefined, "ⓒ 2017-2022 Divertise Asia Co.,Ltd."))))));
 }
