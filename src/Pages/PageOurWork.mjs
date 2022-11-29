@@ -118,13 +118,15 @@ function PageOurWork(Props) {
                                   }));
                     }),
                   children: null
-                }, React.createElement("p", undefined, "Please add your email. We will send you our portfolio."), React.createElement("form", {
+                }, React.createElement("label", {
+                      htmlFor: "port_email"
+                    }, "Please add your email. We will send you our portfolio."), React.createElement("form", {
                       className: "downloadport-form",
                       action: "https://formspree.io/f/mbjpklyn",
                       method: "POST"
                     }, React.createElement("input", {
                           className: "input-default",
-                          name: "email",
+                          id: "port_email",
                           placeholder: "Your Email",
                           type: "email"
                         }), React.createElement("button", {

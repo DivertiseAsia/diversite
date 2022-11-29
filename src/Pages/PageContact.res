@@ -11,7 +11,6 @@ let make = () => {
       <div className="contact-content">
         <div className="row py-5 d-block">
           <h3> {string("Looking for technological experts to help you with your product?")} </h3>
-          <input id="emailInput" className="contact-page_invisible-input" />
           <p>
             {string("Please contact us via ")}
             <a

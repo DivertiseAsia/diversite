@@ -22,9 +22,11 @@ function PageHeader(Props) {
                   className: "container"
                 }, React.createElement("div", {
                       className: "row d-flex align-items-baseline -text-uppercase"
-                    }, React.createElement("h1", {
-                          className: "text-white letter-spacing -text-header-shadow"
-                        }, title), tmp, tmp$1)));
+                    }, title !== "" ? React.createElement("h1", {
+                            className: "text-white letter-spacing -text-header-shadow"
+                          }, title) : React.createElement("div", {
+                            className: "empty"
+                          }), tmp, tmp$1)));
 }
 
 var make = PageHeader;
