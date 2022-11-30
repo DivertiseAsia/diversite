@@ -10,7 +10,9 @@ function FrontPageSection(Props) {
   var title = Props.title;
   var imageURL = Props.imageURL;
   var href = Props.href;
+  var prefixAlt = Props.prefixAlt;
   var children = Props.children;
+  var altText = Js_option.getWithDefault("", prefixAlt) + " see all projects";
   return React.createElement("div", {
               className: "frontpage-section " + Js_option.getWithDefault("frontpage-section-default", className)
             }, React.createElement("div", undefined, React.createElement("div", {
@@ -26,7 +28,8 @@ function FrontPageSection(Props) {
                             }, children), React.createElement(Link, {
                               href: href,
                               children: React.createElement("a", {
-                                    className: "btn"
+                                    className: "btn",
+                                    alt: altText
                                   }, "See All Projects")
                             })))));
 }

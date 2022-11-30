@@ -56,7 +56,8 @@ let make = () => {
       <FrontPageSection
         title="Application and Platforms"
         imageURL="/static/images/home-app.png"
-        href={Links.ourwork_link(DataTypes.PortfolioItem.AppPlatforms)}>
+        href={Links.ourwork_link(DataTypes.PortfolioItem.AppPlatforms)}
+        prefixAlt="app">
         {string(
           "We create entire platforms and services from the ground up. These platforms typically live in a combination of places from app stores to the cloud.",
         )}
@@ -64,7 +65,8 @@ let make = () => {
       <FrontPageSection
         title="Artificial Intelligence"
         imageURL="/static/images/home-ai-3.png"
-        href={Links.ourwork_link(DataTypes.PortfolioItem.AI)}>
+        href={Links.ourwork_link(DataTypes.PortfolioItem.AI)}
+        prefixAlt="ai">
         {string(
           "Newer applications and services should always be considering AI into their product. Everyone at Divertise Asia learns how to use AI and we make sure we offer it to everyone we work with.",
         )}
@@ -72,7 +74,8 @@ let make = () => {
       <FrontPageSection
         title="Websites"
         imageURL="/static/images/home-website.png"
-        href={Links.ourwork_link(DataTypes.PortfolioItem.Other)}>
+        href={Links.ourwork_link(DataTypes.PortfolioItem.Design)}
+        prefixAlt="web">
         {string(
           "The world runs on the web and we can produce any website needed for it. We aim to create a balance between user content management and speed of development.",
         )}
@@ -80,7 +83,8 @@ let make = () => {
       <FrontPageSection
         title="Virtual Reality"
         imageURL="/static/images/home-vr.png"
-        href={Links.ourwork_link(DataTypes.PortfolioItem.Other)}>
+        href={Links.ourwork_link(DataTypes.PortfolioItem.Other)}
+        prefixAlt="vr">
         {string(
           "Creating applications in VR/AR will be one of the next big things. We are looking for ways to be at the forefront of the technology and have partnered with other companies in Asia to bring VR applications to life.",
         )}
@@ -88,7 +92,8 @@ let make = () => {
       <FrontPageSection
         title="Games"
         imageURL="/static/images/home-game.png"
-        href={Links.ourwork_link(DataTypes.PortfolioItem.Other)}>
+        href={Links.ourwork_link(DataTypes.PortfolioItem.Other)}
+        prefixAlt="game">
         {string(
           "We love bringing more fun into the world! We have made two of our own games and occasionally have internal game jams",
         )}
