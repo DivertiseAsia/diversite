@@ -482,7 +482,7 @@ nav .logo-link {
   background-size: cover;
 
   height: 75vh;
-  padding-top: 50px;
+  padding-top: 60px;
   display: flex;
   align-items: center;
   /* For Nav Menu Background */
@@ -1543,7 +1543,7 @@ and (max-width: 768px) {
 
   /*Tablet - Home Page*/
   .hero {
-    height: 60vh;
+    min-height: 60vh;
     h1 { font-size: 2rem }
     .container { margin: auto; }
   }
