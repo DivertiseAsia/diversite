@@ -10,21 +10,24 @@ function InputText(Props) {
   var inputLabel = Props.inputLabel;
   var isTextareaOpt = Props.isTextarea;
   var name = Props.name;
+  var prefixIdOpt = Props.prefixId;
   var isTextarea = isTextareaOpt !== undefined ? isTextareaOpt : false;
+  var prefixId = prefixIdOpt !== undefined ? prefixIdOpt : "";
+  var inputId = prefixId + "-" + Js_option.getWithDefault("", name);
   return React.createElement("div", {
               className: "inputtext " + Js_option.getWithDefault("", className) + (
                 isTextarea ? " inputtext-textarea" : ""
               )
             }, React.createElement("label", {
                   className: "inputtext_label",
-                  htmlFor: Js_option.getWithDefault("", name)
+                  htmlFor: inputId
                 }, Js_option.getWithDefault("", inputLabel)), isTextarea ? React.createElement("textarea", {
                     defaultValue: Js_option.getWithDefault("", placeholder),
                     className: "input-default",
-                    id: Js_option.getWithDefault("", name)
+                    id: inputId
                   }) : React.createElement("input", {
                     className: "input-default",
-                    id: Js_option.getWithDefault("", name),
+                    id: inputId,
                     placeholder: Js_option.getWithDefault("", placeholder),
                     type: Js_option.getWithDefault("text", type_)
                   }));
