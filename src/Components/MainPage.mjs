@@ -59,14 +59,14 @@ function MainPage(Props) {
                                             }), React.createElement(Link, {
                                               href: Links.contact,
                                               children: "Contact Us"
-                                            }), Js_option.getWithDefault(false, isPageHome) ? React.createElement(React.Fragment, undefined) : React.createElement("div", {
-                                                className: "buildyourideas-btn btn btn-line-white",
-                                                onClick: (function (param) {
-                                                    return Curry._1(setPopupBuildOpen, (function (param) {
-                                                                  return !isPopupBuildOpen;
-                                                                }));
-                                                  })
-                                              }, "Build Your Ideas")), Js_option.getWithDefault(false, isPageOurWork) || Js_option.getWithDefault(false, isPageHome) ? React.createElement(React.Fragment, undefined) : React.createElement("div", {
+                                            }), React.createElement("div", {
+                                              className: "buildyourideas-btn btn btn-line-white",
+                                              onClick: (function (param) {
+                                                  return Curry._1(setPopupBuildOpen, (function (param) {
+                                                                return !isPopupBuildOpen;
+                                                              }));
+                                                })
+                                            }, "Build Your Ideas")), Js_option.getWithDefault(false, isPageOurWork) || Js_option.getWithDefault(false, isPageHome) ? React.createElement(React.Fragment, undefined) : React.createElement("div", {
                                             className: "buildyourideas-btn btn btn-line-color1 d-inline-block d-sm-none",
                                             onClick: (function (param) {
                                                 return Curry._1(setPopupBuildOpen, (function (param) {

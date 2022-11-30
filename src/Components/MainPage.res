@@ -31,13 +31,11 @@ let make = (
                   <Link href=Links.ourwork> {string("Our Work")} </Link>
                   <Link href=Links.careers> {string("Careers")} </Link>
                   <Link href=Links.contact> {string("Contact Us")} </Link>
-                  {Js.Option.getWithDefault(false, isPageHome)
-                    ? <> </>
-                    : <div
-                        className="buildyourideas-btn btn btn-line-white"
-                        onClick={_ => setPopupBuildOpen(_ => !isPopupBuildOpen)}>
-                        {string("Build Your Ideas")}
-                      </div>}
+                  <div
+                    className="buildyourideas-btn btn btn-line-white"
+                    onClick={_ => setPopupBuildOpen(_ => !isPopupBuildOpen)}>
+                    {string("Build Your Ideas")}
+                  </div>
                 </div>
                 {Js.Option.getWithDefault(false, isPageOurWork) ||
                 Js.Option.getWithDefault(false, isPageHome)
