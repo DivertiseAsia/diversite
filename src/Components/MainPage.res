@@ -58,7 +58,7 @@ let make = (
                   )}
                 </p>
               </div>
-              <ContactForm />
+              <ContactForm prefixId="navbar" />
             </Popup>
           </div>
         </div>
