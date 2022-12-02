@@ -40,7 +40,7 @@ function PageCareersSales(Props) {
                               className: "align-self-center"
                             }, "What will I be doing?")), React.createElement("ul", {
                           className: "ul-li-padding-none ul-li-dash p-4 pl-5 -lineheight-large"
-                        }, React.createElement("li", undefined, "UX/UI design for website and applications"), React.createElement("li", undefined, "Wireframe development and create prototypes (Using Adobe XD, InVision etc.)"), React.createElement("li", undefined, "Work closely with developers"), React.createElement("li", undefined, "Graphic design"), React.createElement("li", undefined, "Helping implement designs in HTML/CSS"), React.createElement("li", undefined, "Attend client meeting in both Thai and English"))), React.createElement("div", {
+                        }, React.createElement("li", undefined, "UX/UI design for website and applications"), React.createElement("li", undefined, "Wireframe development and create prototypes (Using Adobe XD, InVision etc.)"), React.createElement("li", undefined, "Work closely with developers"), React.createElement("li", undefined, "Graphic design"), React.createElement("li", undefined, "Helping implement designs in HTML/CSS"), React.createElement("li", undefined, "Attend client meeting in both Thai and English"), React.createElement("li", undefined, "Hybrid work at BTS Chidlom station once/two times a week 10:00-18:00"))), React.createElement("div", {
                       className: "row pt-5 d-block"
                     }, React.createElement("div", {
                           className: "d-flex flex-row"

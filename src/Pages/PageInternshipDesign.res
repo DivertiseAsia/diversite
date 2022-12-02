@@ -36,7 +36,7 @@ let make = () => {
           <li> {string("Working on application/AI projects for UI/UX")} </li>
           <li> {string("Working in Adobe XD, Photoshop, and Illustrator.")} </li>
           <li> {string("Implementing designs in HTML/CSS")} </li>
-          <li> {string("Work at our office at BTS Chidlom station Monday-Friday 10:00-18:00")} </li>
+          <li> {string("Hybrid work at BTS Chidlom station once/two times a week 10:00-18:00")} </li>
         </ul>
       </div>
       <div className="row pt-5 d-block">

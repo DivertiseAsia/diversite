@@ -38,6 +38,7 @@ let make = () => {
           <li> {string("Work closely with your team to understand motivation drivers, morale and job contribution/satisfaction levels in order to enhance your team engagement")} </li>
           <li> {string("Coordination and planning of project activities to ensure smooth execution")} </li>
           <li> {string("Partner with leaders to evaluate tools, processes and workflows and introduce techniques and best practices to improve efficiency")} </li>
+          <li> {string("Hybrid work at BTS Chidlom station once/two times a week 10:00-18:00")} </li>
         </ul>
       </div>
       <div className="row pt-5 d-block">

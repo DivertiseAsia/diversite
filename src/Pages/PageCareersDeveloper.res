@@ -36,7 +36,7 @@ let make = () => {
               "Working in fullstack development from deployment on AWS, frontend in Reason, and backend in Python/Django",
             )}
           </li>
-          <li> {string("Work at our office at BTS Chidlom station Monday-Friday 10:00-18:00")} </li>
+          <li> {string("Hybrid work at BTS Chidlom station once/two times a week 10:00-18:00")} </li>
         </ul>
       </div>
       <div className="row pt-5 d-block">

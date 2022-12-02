@@ -39,7 +39,7 @@ function PageInternshipDesign(Props) {
                               className: "align-self-center"
                             }, "What will I be doing?")), React.createElement("ul", {
                           className: "ul-li-padding-none ul-li-dash p-4 pl-5 -lineheight-large"
-                        }, React.createElement("li", undefined, "Working on application/AI projects for UI/UX"), React.createElement("li", undefined, "Working in Adobe XD, Photoshop, and Illustrator."), React.createElement("li", undefined, "Implementing designs in HTML/CSS"), React.createElement("li", undefined, "Work at our office at BTS Chidlom station Monday-Friday 10:00-18:00"))), React.createElement("div", {
+                        }, React.createElement("li", undefined, "Working on application/AI projects for UI/UX"), React.createElement("li", undefined, "Working in Adobe XD, Photoshop, and Illustrator."), React.createElement("li", undefined, "Implementing designs in HTML/CSS"), React.createElement("li", undefined, "Hybrid work at BTS Chidlom station once/two times a week 10:00-18:00"))), React.createElement("div", {
                       className: "row pt-5 d-block"
                     }, React.createElement("div", {
                           className: "d-flex flex-row"
