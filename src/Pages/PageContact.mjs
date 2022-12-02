@@ -21,10 +21,7 @@ function PageContact(Props) {
                       className: "contact-content"
                     }, React.createElement("div", {
                           className: "row py-5 d-block"
-                        }, React.createElement("h3", undefined, "Looking for technological experts to help you with your product?"), React.createElement("input", {
-                              className: "contact-page_invisible-input",
-                              id: "emailInput"
-                            }), React.createElement("p", undefined, "Please contact us via ", React.createElement("a", {
+                        }, React.createElement("h3", undefined, "Looking for technological experts to help you with your product?"), React.createElement("p", undefined, "Please contact us via ", React.createElement("a", {
                                   className: "contact-link text-color-2",
                                   href: "mailto:contact@divertise.asia",
                                   target: "_blank"

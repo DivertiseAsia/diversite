@@ -85,9 +85,9 @@ let make = (~selectedCategory: category) => {
       closeOnBgClick=true
       showX=false
       closeFunc={() => setPopupPortOpen(_ => false)}>
-      <p> {React.string("Please add your email. We will send you our portfolio.")} </p>
+      <label htmlFor="port_email"> {React.string("Please add your email. We will send you our portfolio.")} </label>
       <form action="https://formspree.io/f/mbjpklyn" method="POST" className="downloadport-form">
-        <input className="input-default" type_="email" placeholder="Your Email" name="email" />
+        <input className="input-default" type_="email" placeholder="Your Email" id="port_email" />
         <button type_="submit" className="btn btn-solid-color1"> {React.string("Submit")} </button>
       </form>
     </Popup>
@@ -102,7 +102,7 @@ let make = (~selectedCategory: category) => {
           {string("Tell us about what you need. We will get back to you within 1 working day")}
         </p>
       </div>
-      <ContactForm />
+      <ContactForm prefixId="ourwork" />
     </Popup>
     <div className={additional_classname}> {Belt.List.toArray(items)->React.array} </div>
   </MainPage>

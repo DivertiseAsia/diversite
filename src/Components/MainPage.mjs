@@ -83,7 +83,9 @@ function MainPage(Props) {
                                                   }));
                                     }),
                                   children: null
-                                }, React.createElement("div", undefined, React.createElement("h3", undefined, "Build Your Ideas"), React.createElement("p", undefined, "Tell us about what you need. We will get back to you within 1 working day")), React.createElement(ContactForm.make, {}))))), React.createElement("div", {
+                                }, React.createElement("div", undefined, React.createElement("h3", undefined, "Build Your Ideas"), React.createElement("p", undefined, "Tell us about what you need. We will get back to you within 1 working day")), React.createElement(ContactForm.make, {
+                                      prefixId: "navbar"
+                                    }))))), React.createElement("div", {
                       key: "children",
                       className: "page-content-container",
                       id: "content-container"
@@ -100,17 +102,20 @@ function MainPage(Props) {
                                       href: "https://www.facebook.com/DivertiseAsia/",
                                       target: "_blank"
                                     }, React.createElement("img", {
+                                          alt: "Facebook's logo",
                                           src: "/static/images/facebook.svg"
                                         })), React.createElement("a", {
                                       className: "icon-social",
                                       href: "https://www.linkedin.com/company/divertiseasia",
                                       target: "_blank"
                                     }, React.createElement("img", {
+                                          alt: "LinkedIn's logo",
                                           src: "/static/images/linkedin.svg"
                                         })), React.createElement("a", {
                                       className: "icon-social",
                                       href: "mailto:contact@divertise.asia"
                                     }, React.createElement("img", {
+                                          alt: "Mail logo",
                                           src: "/static/images/email.svg"
                                         }))), React.createElement("p", undefined, "ⓒ 2017-2022 Divertise Asia Co.,Ltd."))))));
 }
