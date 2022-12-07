@@ -23,6 +23,18 @@ let make = () => {
             imageURL="/static/images/position-design.jpg"
             href=Links.careersdesigner
           />
+          <InternshipProgram
+            iconType=Icon.Code
+            title="Software Project Manager"
+            imageURL="/static/images/position-pm.png"
+            href=Links.careersprojectmanager
+          />
+          <InternshipProgram
+            iconType=Icon.Pen
+            title="Sales Executive (Software)"
+            imageURL="/static/images/position-sales.png"
+            href=Links.careerssales
+          />
         </div>
       </div>
       <div className="row d-block text-center">
@@ -83,7 +95,7 @@ let make = () => {
         <div className="row py-5 justify-content-center">
           <div className="col-6 col-md pb-3 team-benefits">
             <Icon iconType=Icon.Laptop />
-            <h6 className="icon-title"> {string("Personal Laptop")} </h6>
+            <h6 className="icon-title"> {string("Hybrid Work")} </h6>
           </div>
           <div className="col-6 col-md pb-3 team-benefits">
             <Icon iconType=Icon.Clock />

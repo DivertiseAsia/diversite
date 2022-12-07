@@ -170,7 +170,7 @@ function Carousel(Props) {
                                         return !isPopupOpen;
                                       }));
                         })
-                    }, "Build Your Idea"), React.createElement(Popup.make, {
+                    }, "Build Your Ideas"), React.createElement(Popup.make, {
                       isOpen: isPopupOpen,
                       className: "buildyouridea-popup",
                       closeOnBgClick: false,
@@ -180,7 +180,9 @@ function Carousel(Props) {
                                       }));
                         }),
                       children: null
-                    }, React.createElement("div", undefined, React.createElement("h3", undefined, "Build Your Ideas"), React.createElement("p", undefined, "Tell us about what you need. We will get back to you within 1 working day")), React.createElement(ContactForm.make, {}))));
+                    }, React.createElement("div", undefined, React.createElement("h3", undefined, "Build Your Ideas"), React.createElement("p", undefined, "Tell us about what you need. We will get back to you within 1 working day")), React.createElement(ContactForm.make, {
+                          prefixId: "carousel"
+                        }))));
 }
 
 var make = Carousel;

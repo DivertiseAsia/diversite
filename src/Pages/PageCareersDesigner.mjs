@@ -19,24 +19,36 @@ function PageCareersDesigner(Props) {
                   className: "container"
                 }, React.createElement("div", {
                       className: "row pt-5 d-block"
-                    }, React.createElement("h3", undefined, React.createElement(Icon.make, {
+                    }, React.createElement("div", {
+                          className: "d-flex flex-row"
+                        }, React.createElement(Icon.make, {
                               iconType: /* Pen */8,
                               className: "mr-4"
-                            }), "What are the requirements?"), React.createElement("ul", {
+                            }), React.createElement("h3", {
+                              className: "align-self-center"
+                            }, "What are the requirements?")), React.createElement("ul", {
                           className: "ul-li-padding-none ul-li-dash p-4 pl-5 -lineheight-large"
                         }, React.createElement("li", undefined, "1-3 years experienced with visual designs (Preferably web/UI designs)"), React.createElement("li", undefined, "Proficient with Photoshop and Illustrator"), React.createElement("li", undefined, "Keeping up with latest design trends"), React.createElement("li", undefined, "Enjoy learning and willing to take on challenging tasks"), React.createElement("li", undefined, "Good problem-solving skills"), React.createElement("li", undefined, "Presentation skill"), React.createElement("li", undefined, "Intermediate level of English or higher"))), React.createElement("div", {
                       className: "row pt-5 d-block"
-                    }, React.createElement("h3", undefined, React.createElement(Icon.make, {
+                    }, React.createElement("div", {
+                          className: "d-flex flex-row"
+                        }, React.createElement(Icon.make, {
                               iconType: /* Pen */8,
                               className: "mr-4"
-                            }), "What will I be doing?"), React.createElement("ul", {
+                            }), React.createElement("h3", {
+                              className: "align-self-center"
+                            }, "What will I be doing?")), React.createElement("ul", {
                           className: "ul-li-padding-none ul-li-dash p-4 pl-5 -lineheight-large"
-                        }, React.createElement("li", undefined, "UX/UI design for website and applications"), React.createElement("li", undefined, "Wireframe development and create prototypes (Using Adobe XD, InVision etc.)"), React.createElement("li", undefined, "Work closely with developers"), React.createElement("li", undefined, "Graphic design"), React.createElement("li", undefined, "Helping implement designs in HTML/CSS"), React.createElement("li", undefined, "Attend client meeting in both Thai and English"))), React.createElement("div", {
+                        }, React.createElement("li", undefined, "UX/UI design for website and applications"), React.createElement("li", undefined, "Wireframe development and create prototypes (Using Adobe XD, InVision etc.)"), React.createElement("li", undefined, "Work closely with developers"), React.createElement("li", undefined, "Graphic design"), React.createElement("li", undefined, "Helping implement designs in HTML/CSS"), React.createElement("li", undefined, "Attend client meeting in both Thai and English"), React.createElement("li", undefined, "Hybrid work at BTS Chidlom station once/two times a week 10:00-18:00"))), React.createElement("div", {
                       className: "row pt-5 d-block"
-                    }, React.createElement("h3", undefined, React.createElement(Icon.make, {
+                    }, React.createElement("div", {
+                          className: "d-flex flex-row"
+                        }, React.createElement(Icon.make, {
                               iconType: /* Pen */8,
                               className: "mr-4"
-                            }), "When can I start?"), React.createElement("div", {
+                            }), React.createElement("h3", {
+                              className: "align-self-center"
+                            }, "When can I start?")), React.createElement("div", {
                           className: "ul-li-padding-none p-4 pl-5"
                         }, React.createElement("p", undefined, "It is recommended to apply 1-2 months prior to start date.")))), React.createElement("div", {
                   className: "footer-intern bg-gradient-color2"

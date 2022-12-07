@@ -19,24 +19,36 @@ function PageCareersDeveloper(Props) {
                   className: "container"
                 }, React.createElement("div", {
                       className: "row pt-5 d-block"
-                    }, React.createElement("h3", undefined, React.createElement(Icon.make, {
+                    }, React.createElement("div", {
+                          className: "d-flex flex-row"
+                        }, React.createElement(Icon.make, {
                               iconType: /* Pen */8,
                               className: "mr-4"
-                            }), "What are the requirements?"), React.createElement("ul", {
+                            }), React.createElement("h3", {
+                              className: "align-self-center"
+                            }, "What are the requirements?")), React.createElement("ul", {
                           className: "ul-li-padding-none ul-li-dash p-4 pl-5 -lineheight-large"
                         }, React.createElement("li", undefined, "Intermediate English (verbal)"), React.createElement("li", undefined, "Basic programming knowledge (Python/ReasonML is preferred)"), React.createElement("li", undefined, "Proficiency in one of modern programming languages"), React.createElement("li", undefined, "IDE familiarity"), React.createElement("li", undefined, "Basic problem solving skills"), React.createElement("li", undefined, "Git/SVN knowledge is a plus but not required"), React.createElement("li", undefined, "Can take criticism and responsive to feedback"), React.createElement("li", undefined, "Interest in latest trends"))), React.createElement("div", {
                       className: "row pt-5 d-block"
-                    }, React.createElement("h3", undefined, React.createElement(Icon.make, {
+                    }, React.createElement("div", {
+                          className: "d-flex flex-row"
+                        }, React.createElement(Icon.make, {
                               iconType: /* Pen */8,
                               className: "mr-4"
-                            }), "What will I be doing?"), React.createElement("ul", {
+                            }), React.createElement("h3", {
+                              className: "align-self-center"
+                            }, "What will I be doing?")), React.createElement("ul", {
                           className: "ul-li-padding-none ul-li-dash p-4 pl-5 -lineheight-large"
-                        }, React.createElement("li", undefined, "Working in application/AI projects"), React.createElement("li", undefined, "Working in fullstack development from deployment on AWS, frontend in Reason, and backend in Python/Django"), React.createElement("li", undefined, "Work at our office at BTS Chidlom station Monday-Friday 10:00-18:00"))), React.createElement("div", {
+                        }, React.createElement("li", undefined, "Working in application/AI projects"), React.createElement("li", undefined, "Working in fullstack development from deployment on AWS, frontend in Reason, and backend in Python/Django"), React.createElement("li", undefined, "Hybrid work at BTS Chidlom station once/two times a week 10:00-18:00"))), React.createElement("div", {
                       className: "row pt-5 d-block"
-                    }, React.createElement("h3", undefined, React.createElement(Icon.make, {
+                    }, React.createElement("div", {
+                          className: "d-flex flex-row"
+                        }, React.createElement(Icon.make, {
                               iconType: /* Pen */8,
                               className: "mr-4"
-                            }), "When can I start?"), React.createElement("div", {
+                            }), React.createElement("h3", {
+                              className: "align-self-center"
+                            }, "When can I start?")), React.createElement("div", {
                           className: "ul-li-padding-none p-4 pl-5"
                         }, React.createElement("p", undefined, "It is recommended to apply 1-2 months prior to start date.")))), React.createElement("div", {
                   className: "footer-intern bg-gradient-color2"

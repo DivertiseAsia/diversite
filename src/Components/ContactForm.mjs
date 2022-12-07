@@ -7,6 +7,8 @@ import * as EmailPopover from "./EmailPopover.mjs";
 
 function ContactForm(Props) {
   var className = Props.className;
+  var prefixIdOpt = Props.prefixId;
+  var prefixId = prefixIdOpt !== undefined ? prefixIdOpt : "";
   return React.createElement("div", {
               className: "contactform-container"
             }, React.createElement("form", {
@@ -17,17 +19,20 @@ function ContactForm(Props) {
                       type_: "text",
                       placeholder: "What should we call you?",
                       inputLabel: "Your Name",
-                      name: "name"
+                      name: "name",
+                      prefixId: prefixId
                     }), React.createElement(InputText.make, {
                       type_: "email",
                       placeholder: "Your Email",
                       inputLabel: "Your Email",
-                      name: "email"
+                      name: "email",
+                      prefixId: prefixId
                     }), React.createElement(InputText.make, {
                       placeholder: "Hi! I have a project I'd like you to help with.",
                       inputLabel: "Tell us a bit more",
                       isTextarea: true,
-                      name: "content"
+                      name: "content",
+                      prefixId: prefixId
                     }), React.createElement("button", {
                       className: "btn btn-solid-color1",
                       type: "submit"

@@ -9,8 +9,10 @@ import * as Caml_option from "rescript/lib/es6/caml_option.js";
 function Logo(Props) {
   var className = Props.className;
   var onClick = Props.onClick;
+  var is404 = Props.is404;
   var tmp = {
     className: "logo " + Js_option.getWithDefault("logo-default", className),
+    alt: "Divertise Asia's logo",
     src: "/static/images/logo.png"
   };
   if (onClick !== undefined) {
@@ -19,8 +21,12 @@ function Logo(Props) {
   return React.createElement(Link, {
               href: Links.home,
               children: React.createElement("a", {
-                    className: "link logo-link"
-                  }, React.createElement("img", tmp))
+                    className: "link logo-link " + (
+                      Js_option.getWithDefault(false, is404) ? "btn btn-404 btn-line-color1" : ""
+                    )
+                  }, React.createElement("img", tmp), Js_option.getWithDefault(false, is404) ? React.createElement("h2", {
+                          className: "go-home"
+                        }, "Go Home") : null)
             });
 }
 

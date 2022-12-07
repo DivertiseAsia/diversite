@@ -1,6 +1,7 @@
 open React
 open DataTypes.PortfolioItem
 
+let bettercastdesktop: string = "/static/projects/website-bettercast.jpg"
 let ketawadesktop: string = "/static/projects/website-ketawa-d.jpg"
 let ketawaapp: string = "/static/projects/app-ketawa.png"
 let alldaytattoo: string = "/static/projects/alldaytattoo.png"
@@ -43,6 +44,32 @@ let adsoupvideo: string = "/static/projects/adsoup-video.png"
 
 /* --------------------- Apps -------------------------- */
 
+let bettercastPortfolio: t = {
+  title: "Bettercast Website",
+  className: None,
+  category: list{All, AppPlatforms},
+  technologies: list{"Reason", "Python", "Docker", "Aws", "Web design", "Ux", "Ui"},
+  images: list{
+    {
+      src: bettercastdesktop,
+      border: Desktop,
+      className: Some("col-8 portimg-ketawa-desktop"),
+    },
+  },
+  links: list{
+    {
+      category: Default,
+      href: "https://bettercast.io/",
+      caption: "View Website >",
+    },
+  },
+  body: <div>
+    <p>
+      {string("What would be better suited to the landscape of digital transformation of 2020 than BetterCast: a rising platform where people can meet, talk, discuss new ideas, ask questions, 100% online. From launchable MVP in 3 months to full production-scale implementation, we worked with BetterCast the entire way. We continued helping it grow, continuing to evaluate new features, and streamline the experience until we were able to help them cultivate an in-house team to take over the project.
+             ")}
+    </p>
+  </div>,
+}
 let adsoupPortfolio: t = {
   title: "Adsoup",
   className: None,
@@ -201,7 +228,7 @@ let mintcrowdPortfolio: t = {
     },
     {src: mintcrowddesktop, border: Desktop, className: Some("col-8")},
   },
-  links: list{{category: Text, href: "", caption: "(Website Coming Soon)"}},
+  links: list{},
   category: list{AppPlatforms},
   technologies: list{"Reason", "Python", "Docker", "Aws", "Web design", "Ux", "Ui"},
   body: <div>
@@ -456,7 +483,7 @@ let eastwestPortfolio: t = {
 let halalblockvideoPortfolio: t = {
   title: "Halal Blockchain Promotional Video",
   className: None,
-  category: list{Other},
+  category: list{Design},
   images: list{
     {
       src: halalblockvideo,
@@ -477,7 +504,7 @@ let halalblockvideoPortfolio: t = {
 let traitsignalvideoPortfolio: t = {
   title: "Trait Signal Promotional Video",
   className: None,
-  category: list{Other},
+  category: list{Design},
   images: list{
     {
       src: traitsignalvideo,
@@ -485,7 +512,13 @@ let traitsignalvideoPortfolio: t = {
       className: Some("col-8 portimg-ketawa-desktop"),
     },
   },
-  links: list{},
+  links: list{
+    {
+      category: Default,
+      href: "https://www.youtube.com/watch?v=DD-Bb_8Avto",
+      caption: "View Video >",
+    },
+  },
   technologies: list{"Video Editing", "2D Animation", "Story Board"},
   body: <div>
     <p>
@@ -499,7 +532,7 @@ let traitsignalvideoPortfolio: t = {
 let adsoupvideoPortfolio: t = {
   title: "Adsoup Promotional Video",
   className: None,
-  category: list{Other},
+  category: list{Design},
   images: list{
     {
       src: adsoupvideo,
@@ -507,7 +540,13 @@ let adsoupvideoPortfolio: t = {
       className: Some("col-8 portimg-ketawa-desktop"),
     },
   },
-  links: list{},
+  links: list{
+    {
+     category: Default,
+     href: "https://www.youtube.com/watch?v=1yW1P6MCj1I",
+     caption: "View Video >"
+   },
+  },
   technologies: list{"Video Editing", "2D Animation", "Story Board"},
   body: <div>
     <p>
@@ -632,3 +671,5 @@ let microgamesPortfolio: t = {
     </p>
   </div>,
 }
+
+let portfolioDataList: list<t> = list{bettercastPortfolio, adsoupPortfolio, copanelPortfolio, eventcometPortfolio, mintcrowdPortfolio, safemodePortfolio, plateupPortfolio, traitsignalPortfolio, boneagePortfolio, ketawaPortfolio, alldaytattooPortfolio, wilaamalinPortfolio, eastwestPortfolio, halalblockvideoPortfolio, traitsignalvideoPortfolio, adsoupvideoPortfolio, vrPortfolio, kikiiPortfolio, microgamesPortfolio}

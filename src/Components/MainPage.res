@@ -7,9 +7,11 @@ let make = (
   ~title: string,
   ~keywords: string,
   ~description: string,
+  ~isPageOurWork: option<bool>=?,
+  ~isPageHome: option<bool>=?,
   ~children,
 ) => {
-  let (isPopupOpen, setPopupOpen) = React.useState(() => false)
+  let (isPopupBuildOpen, setPopupBuildOpen) = React.useState(() => false)
   <div>
     <Head>
       <title lang="en"> {string(title)} </title>
@@ -22,23 +24,33 @@ let make = (
         <div className="page-end page-end-0">
           <div className="page-children">
             <nav className="nav -text-right">
-              <Logo />
-              <input type_="checkbox" />
-              <div className="nav-icon"> <div /> <div /> <div /> </div>
-              <div className="nav-container">
-                <Link href=Links.home> {string("Home")} </Link>
-                <Link href=Links.ourwork> {string("Our Work")} </Link>
-                <Link href=Links.careers> {string("Careers")} </Link>
-                <Link href=Links.contact> {string("Contact Us")} </Link>
-                <div className="btn btn-line-white" onClick={_ => setPopupOpen(_ => !isPopupOpen)}>
-                  {string("Build Your Ideas")}
+              <div className="container-lg">
+                <Logo />
+                <div className="nav-container">
+                  <Link href=Links.home> {string("Home")} </Link>
+                  <Link href=Links.ourwork> {string("Our Work")} </Link>
+                  <Link href=Links.careers> {string("Careers")} </Link>
+                  <Link href=Links.contact> {string("Contact Us")} </Link>
+                  <div
+                    className="buildyourideas-btn btn btn-line-white"
+                    onClick={_ => setPopupBuildOpen(_ => !isPopupBuildOpen)}>
+                    {string("Build Your Ideas")}
+                  </div>
                 </div>
+                {Js.Option.getWithDefault(false, isPageOurWork) ||
+                Js.Option.getWithDefault(false, isPageHome)
+                  ? <> </>
+                  : <div
+                      className="buildyourideas-btn btn btn-line-color1 d-inline-block d-sm-none"
+                      onClick={_ => setPopupBuildOpen(_ => !isPopupBuildOpen)}>
+                      {string("Build Your Ideas")}
+                    </div>}
               </div>
             </nav>
             <Popup
-              isOpen=isPopupOpen
+              isOpen=isPopupBuildOpen
               closeOnBgClick=false
-              closeFunc={() => setPopupOpen(_ => false)}
+              closeFunc={() => setPopupBuildOpen(_ => false)}
               className="buildyouridea-popup">
               <div>
                 <h3> {string("Build Your Ideas")} </h3>
@@ -48,12 +60,12 @@ let make = (
                   )}
                 </p>
               </div>
-              <ContactForm />
+              <ContactForm prefixId="navbar" />
             </Popup>
           </div>
         </div>
       </div>
-      <div className={"page-content-container"} key="children">
+      <div className={"page-content-container"} id="content-container" key="children">
         <div className="page-content">
           <div className="main-content"> children </div>
           <div className="footer">
@@ -62,19 +74,19 @@ let make = (
                 target="_blank"
                 href="https://www.facebook.com/DivertiseAsia/"
                 className="icon-social social-fb">
-                <img src="/static/images/facebook.svg" />
+                <img src="/static/images/facebook.svg" alt="Facebook's logo" />
               </a>
               <a
                 target="_blank"
                 href="https://www.linkedin.com/company/divertiseasia"
                 className="icon-social">
-                <img src="/static/images/linkedin.svg" />
+                <img src="/static/images/linkedin.svg" alt="LinkedIn's logo" />
               </a>
               <a href="mailto:contact@divertise.asia" className="icon-social">
-                <img src="/static/images/email.svg" />
+                <img src="/static/images/email.svg" alt="Mail logo" />
               </a>
             </div>
-            <p> {string(`ⓒ 2017-2021 Divertise Asia Co.,Ltd.`)} </p>
+            <p> {string(`ⓒ 2017-2022 Divertise Asia Co.,Ltd.`)} </p>
           </div>
         </div>
       </div>

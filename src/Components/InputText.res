@@ -5,21 +5,27 @@ let make = (
   ~placeholder: option<string>=?,
   ~inputLabel: option<string>=?,
   ~isTextarea=false,
-  ~name="",
+  ~name: option<string>=?,
+  ~prefixId: string="",
 ) => {
+  let inputId = prefixId ++ "-" ++ Js.Option.getWithDefault("", name)
   <div
     className={"inputtext " ++
     Js.Option.getWithDefault("", className) ++ {
       isTextarea ? " inputtext-textarea" : ""
     }}>
-    <p className="inputtext_label"> {React.string(Js.Option.getWithDefault("", inputLabel))} </p>
+    <label className="inputtext_label" htmlFor=inputId>
+      {React.string(Js.Option.getWithDefault("", inputLabel))}
+    </label>
     {isTextarea
       ? <textarea
-          className="input-default" name defaultValue={Js.Option.getWithDefault("", placeholder)}
+          className="input-default"
+          id=inputId
+          defaultValue={Js.Option.getWithDefault("", placeholder)}
         />
       : <input
           className="input-default"
-          name
+          id=inputId
           type_={Js.Option.getWithDefault("text", type_)}
           placeholder={Js.Option.getWithDefault("", placeholder)}
         />}
