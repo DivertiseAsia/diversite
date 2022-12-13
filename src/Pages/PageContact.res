@@ -17,7 +17,7 @@ let make = () => {
               className="contact-link text-color-2"
               href="mailto:contact@divertise.asia"
               target="_blank">
-              {string("this email")}
+              {string("contact@divertise.asia")}
             </a>
           </p>
           <h3 className="pt-5"> {string("Looking to join our team?")} </h3>
@@ -31,7 +31,7 @@ let make = () => {
               className="contact-link text-color-2"
               href="mailto:careers@divertise.asia"
               target="_blank">
-              {string("this email")}
+              {string("careers@divertise.asia")}
             </a>
           </p>
         </div>

@@ -25,7 +25,7 @@ function PageContact(Props) {
                                   className: "contact-link text-color-2",
                                   href: "mailto:contact@divertise.asia",
                                   target: "_blank"
-                                }, "this email")), React.createElement("h3", {
+                                }, "contact@divertise.asia")), React.createElement("h3", {
                               className: "pt-5"
                             }, "Looking to join our team?"), React.createElement("p", undefined, "Please read our job descriptions ", React.createElement(Link, {
                                   href: Links.careers,
@@ -36,7 +36,7 @@ function PageContact(Props) {
                                   className: "contact-link text-color-2",
                                   href: "mailto:careers@divertise.asia",
                                   target: "_blank"
-                                }, "this email"))))), React.createElement("div", {
+                                }, "careers@divertise.asia"))))), React.createElement("div", {
                   className: "footer-title bg-gradient-color2"
                 }, React.createElement("p", undefined, "If you are interested in joining our team, just send your portfolio to", React.createElement("a", {
                           className: "text-contact",
