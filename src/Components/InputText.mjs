@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import * as Js_option from "rescript/lib/es6/js_option.js";
+import * as Caml_option from "rescript/lib/es6/caml_option.js";
 
 function InputText(Props) {
   var className = Props.className;
@@ -10,10 +11,41 @@ function InputText(Props) {
   var inputLabel = Props.inputLabel;
   var isTextareaOpt = Props.isTextarea;
   var name = Props.name;
+  var requiredOpt = Props.required;
   var prefixIdOpt = Props.prefixId;
   var isTextarea = isTextareaOpt !== undefined ? isTextareaOpt : false;
+  var required = requiredOpt !== undefined ? requiredOpt : false;
   var prefixId = prefixIdOpt !== undefined ? prefixIdOpt : "";
   var inputId = prefixId + "-" + Js_option.getWithDefault("", name);
+  var tmp;
+  if (isTextarea) {
+    var tmp$1 = {
+      className: "input-default",
+      id: inputId,
+      required: required
+    };
+    if (name !== undefined) {
+      tmp$1.name = Caml_option.valFromOption(name);
+    }
+    if (placeholder !== undefined) {
+      tmp$1.placeholder = Caml_option.valFromOption(placeholder);
+    }
+    tmp = React.createElement("textarea", tmp$1);
+  } else {
+    var tmp$2 = {
+      className: "input-default",
+      id: inputId,
+      required: required,
+      type: Js_option.getWithDefault("text", type_)
+    };
+    if (name !== undefined) {
+      tmp$2.name = Caml_option.valFromOption(name);
+    }
+    if (placeholder !== undefined) {
+      tmp$2.placeholder = Caml_option.valFromOption(placeholder);
+    }
+    tmp = React.createElement("input", tmp$2);
+  }
   return React.createElement("div", {
               className: "inputtext " + Js_option.getWithDefault("", className) + (
                 isTextarea ? " inputtext-textarea" : ""
@@ -21,16 +53,7 @@ function InputText(Props) {
             }, React.createElement("label", {
                   className: "inputtext_label",
                   htmlFor: inputId
-                }, Js_option.getWithDefault("", inputLabel)), isTextarea ? React.createElement("textarea", {
-                    defaultValue: Js_option.getWithDefault("", placeholder),
-                    className: "input-default",
-                    id: inputId
-                  }) : React.createElement("input", {
-                    className: "input-default",
-                    id: inputId,
-                    placeholder: Js_option.getWithDefault("", placeholder),
-                    type: Js_option.getWithDefault("text", type_)
-                  }));
+                }, Js_option.getWithDefault("", inputLabel)), tmp);
 }
 
 var make = InputText;

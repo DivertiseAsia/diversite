@@ -20,18 +20,21 @@ function ContactForm(Props) {
                       placeholder: "What should we call you?",
                       inputLabel: "Your Name",
                       name: "name",
+                      required: true,
                       prefixId: prefixId
                     }), React.createElement(InputText.make, {
                       type_: "email",
                       placeholder: "Your Email",
                       inputLabel: "Your Email",
                       name: "email",
+                      required: true,
                       prefixId: prefixId
                     }), React.createElement(InputText.make, {
                       placeholder: "Hi! I have a project I'd like you to help with.",
                       inputLabel: "Tell us a bit more",
                       isTextarea: true,
                       name: "content",
+                      required: true,
                       prefixId: prefixId
                     }), React.createElement("button", {
                       className: "btn btn-solid-color1",
