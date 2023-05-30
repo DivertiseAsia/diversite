@@ -333,7 +333,8 @@ function setPosition(obj, oldPivotVectors, refPivotVectors, x, y, z, size) {
 }
 
 function createPentagon(radius) {
-  var geometry = new (Three.CylinderGeometry)(radius, radius, 36, 5);
+  var scaledPentagonThickness = width / 1024 * 36;
+  var geometry = new (Three.CylinderGeometry)(radius, radius, scaledPentagonThickness, 5);
   geometry.translate = [
     0,
     0,

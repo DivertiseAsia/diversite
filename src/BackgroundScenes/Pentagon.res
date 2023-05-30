@@ -327,7 +327,8 @@ module PentagonScene = {
   }
 
   let createPentagon = radius => {
-    let geometry = Three.cylinderGeometry(radius, radius, 36., 5.)
+    let scaledPentagonThickness = width /. 1024. *. 36.
+    let geometry = Three.cylinderGeometry(radius, radius, scaledPentagonThickness, 5.)
     Three.set_translate(geometry, (0., 0., shift_pivot_z *. radius))
 
     let paramColor = Three.parseIntoParameters("{\"color\": \"#ffffff\"}")
