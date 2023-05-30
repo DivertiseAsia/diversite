@@ -86,7 +86,7 @@ let make = (
                 <img src="/static/images/email.svg" alt="Mail logo" />
               </a>
             </div>
-            <p> {string(`ⓒ 2017-2022 Divertise Asia Co.,Ltd.`)} </p>
+            <p> {string(`ⓒ 2017-2023 Divertise Asia Co.,Ltd.`)} </p>
           </div>
         </div>
       </div>

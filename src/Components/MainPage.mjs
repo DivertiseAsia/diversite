@@ -117,7 +117,7 @@ function MainPage(Props) {
                                     }, React.createElement("img", {
                                           alt: "Mail logo",
                                           src: "/static/images/email.svg"
-                                        }))), React.createElement("p", undefined, "ⓒ 2017-2022 Divertise Asia Co.,Ltd."))))));
+                                        }))), React.createElement("p", undefined, "ⓒ 2017-2023 Divertise Asia Co.,Ltd."))))));
 }
 
 var make = MainPage;
