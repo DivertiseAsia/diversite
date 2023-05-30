@@ -3,7 +3,6 @@
 import * as React from "react";
 import * as InputText from "./InputText.mjs";
 import * as Js_option from "rescript/lib/es6/js_option.js";
-import * as EmailPopover from "./EmailPopover.mjs";
 
 function ContactForm(Props) {
   var className = Props.className;
@@ -30,8 +29,8 @@ function ContactForm(Props) {
                       required: true,
                       prefixId: prefixId
                     }), React.createElement(InputText.make, {
-                      placeholder: "Hi! I have a project I'd like you to help with.",
-                      inputLabel: "Tell us a bit more",
+                      placeholder: "I really want ..",
+                      inputLabel: "What do you want to build?",
                       isTextarea: true,
                       name: "content",
                       required: true,
@@ -39,9 +38,7 @@ function ContactForm(Props) {
                     }), React.createElement("button", {
                       className: "btn btn-solid-color1",
                       type: "submit"
-                    }, "Submit")), React.createElement("div", {
-                  className: "contactform_email"
-                }, React.createElement("p", undefined, "or email us at"), React.createElement(EmailPopover.make, {})));
+                    }, "Submit")));
 }
 
 var make = ContactForm;
