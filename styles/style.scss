@@ -1684,6 +1684,12 @@ and (max-width: 576px) {
 and (max-width: 400px) {
   .nav a:not(.logo-link) {
     padding: 7px 5px;
+    font-size: 15px;
+  }
+  .nav .btn {
+    padding: 6px;
+    min-width: 60px;
+    font-size: 15px;
   }
   .internship-program a .content-program {
     margin-top: 15px;
