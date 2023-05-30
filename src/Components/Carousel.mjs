@@ -92,7 +92,7 @@ function animate(currentScene, camera, scene, renderer) {
 }
 
 function renderScene(scene) {
-  if (!WebGL.isNotSupportedWebGl(undefined)) {
+  if (WebGL.isSupportingWebGl(undefined)) {
     setTimeout((function (param) {
             var element = document.getElementById("webgl-background");
             var camera = WebGL.Three.getCamera(element);

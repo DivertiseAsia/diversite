@@ -68,7 +68,7 @@ let rec animate = (currentScene, camera, scene, renderer) => {
 }
 
 let renderScene = scene =>
-  if !isNotSupportedWebGl() {
+  if isSupportingWebGl() {
     Document.setTimeout(() => {
       let _ = three
       let element = Document.getElementById(Document.doc, "webgl-background")
