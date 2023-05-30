@@ -9,7 +9,6 @@ import * as MainPage from "../Components/MainPage.mjs";
 import * as Belt_List from "rescript/lib/es6/belt_List.js";
 import Link from "next/link";
 import * as Caml_option from "rescript/lib/es6/caml_option.js";
-import * as ContactForm from "../Components/ContactForm.mjs";
 import * as PortfolioData from "../Data/PortfolioData.mjs";
 import * as PortfolioItem from "../Components/PortfolioItem.mjs";
 
@@ -20,11 +19,6 @@ function PageOurWork(Props) {
       });
   var setPopupPortOpen = match[1];
   var isPopupPortOpen = match[0];
-  var match$1 = React.useState(function () {
-        return false;
-      });
-  var setPopupBuildOpen = match$1[1];
-  var isPopupBuildOpen = match$1[0];
   var items = Belt_List.keepMap(PortfolioData.portfolioDataList, (function (categoryList) {
           if (selectedCategory === /* All */0 || Belt_List.some(categoryList.category, (function (category) {
                     return category === selectedCategory;
@@ -79,7 +73,6 @@ function PageOurWork(Props) {
               title: "Work of Divertise Asia",
               keywords: "portfolio, Artificial Intelligence, Design, Fullstack, API, Server",
               description: "AI, Apps & Platforms, and Design items created by us",
-              isPageOurWork: true,
               children: null
             }, React.createElement("div", {
                   className: "ourwork_section-header-content bg-gradient-color1"
@@ -98,14 +91,7 @@ function PageOurWork(Props) {
                                     return !isPopupPortOpen;
                                   }));
                     })
-                }, "Download Port"), React.createElement("div", {
-                  className: "buildyourideas-btn btn btn-line-color1 d-inline-block d-sm-none",
-                  onClick: (function (param) {
-                      return Curry._1(setPopupBuildOpen, (function (param) {
-                                    return !isPopupBuildOpen;
-                                  }));
-                    })
-                }, "Build Your Ideas"), React.createElement(Popup.make, {
+                }, "Download Port"), React.createElement(Popup.make, {
                   isOpen: isPopupPortOpen,
                   className: "downloadport-popup",
                   hasCloseBtn: true,
@@ -132,19 +118,7 @@ function PageOurWork(Props) {
                         }), React.createElement("button", {
                           className: "btn btn-solid-color1",
                           type: "submit"
-                        }, "Submit"))), React.createElement(Popup.make, {
-                  isOpen: isPopupBuildOpen,
-                  className: "buildyouridea-popup",
-                  closeOnBgClick: false,
-                  closeFunc: (function (param) {
-                      return Curry._1(setPopupBuildOpen, (function (param) {
-                                    return false;
-                                  }));
-                    }),
-                  children: null
-                }, React.createElement("div", undefined, React.createElement("h3", undefined, "Build Your Ideas"), React.createElement("p", undefined, "Tell us about what you need. We will get back to you within 1 working day")), React.createElement(ContactForm.make, {
-                      prefixId: "ourwork"
-                    })), React.createElement("div", {
+                        }, "Submit"))), React.createElement("div", {
                   className: additional_classname
                 }, Belt_List.toArray(items)));
 }

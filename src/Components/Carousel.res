@@ -129,7 +129,6 @@ let renderScene = scene =>
 
 @react.component
 let make = () => {
-  let (isPopupOpen, setPopupOpen) = React.useState(() => false)
   let (scene, setScene) = React.useState(() => Pentagon)
   let sceneClassname = switch scene {
   | Laser => "laser"
@@ -151,22 +150,6 @@ let make = () => {
           "specializing in Artificial Intelligence, VR, and other cutting-edge technologies.",
         )}
       </p>
-      <div className="btn" onClick={_ => setPopupOpen(_ => !isPopupOpen)}>
-        {string("Build Your Ideas")}
-      </div>
-      <Popup
-        isOpen=isPopupOpen
-        closeOnBgClick=false
-        closeFunc={() => setPopupOpen(_ => false)}
-        className="buildyouridea-popup">
-        <div>
-          <h3> {string("Build Your Ideas")} </h3>
-          <p>
-            {string("Tell us about what you need. We will get back to you within 1 working day")}
-          </p>
-        </div>
-        <ContactForm prefixId="carousel" />
-      </Popup>
     </div>
   </div>
 }

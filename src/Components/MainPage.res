@@ -7,11 +7,8 @@ let make = (
   ~title: string,
   ~keywords: string,
   ~description: string,
-  ~isPageOurWork: option<bool>=?,
-  ~isPageHome: option<bool>=?,
   ~children,
 ) => {
-  let (isPopupBuildOpen, setPopupBuildOpen) = React.useState(() => false)
   <div>
     <Head>
       <title lang="en"> {string(title)} </title>
@@ -30,38 +27,12 @@ let make = (
                   <Link href=Links.home> {string("Home")} </Link>
                   <Link href=Links.ourwork> {string("Our Work")} </Link>
                   <Link href=Links.careers> {string("Careers")} </Link>
-                  <Link href=Links.contact> {string("Contact Us")} </Link>
-                  <div
-                    className="buildyourideas-btn btn btn-line-white"
-                    onClick={_ => setPopupBuildOpen(_ => !isPopupBuildOpen)}>
-                    {string("Build Your Ideas")}
-                  </div>
+                  <Link href=Links.contact>
+                    <span className="btn btn-line-white"> {string("Let's Talk ")} </span>
+                  </Link>
                 </div>
-                {Js.Option.getWithDefault(false, isPageOurWork) ||
-                Js.Option.getWithDefault(false, isPageHome)
-                  ? <> </>
-                  : <div
-                      className="buildyourideas-btn btn btn-line-color1 d-inline-block d-sm-none"
-                      onClick={_ => setPopupBuildOpen(_ => !isPopupBuildOpen)}>
-                      {string("Build Your Ideas")}
-                    </div>}
               </div>
             </nav>
-            <Popup
-              isOpen=isPopupBuildOpen
-              closeOnBgClick=false
-              closeFunc={() => setPopupBuildOpen(_ => false)}
-              className="buildyouridea-popup">
-              <div>
-                <h3> {string("Build Your Ideas")} </h3>
-                <p>
-                  {string(
-                    "Tell us about what you need. We will get back to you within 1 working day",
-                  )}
-                </p>
-              </div>
-              <ContactForm prefixId="navbar" />
-            </Popup>
           </div>
         </div>
       </div>

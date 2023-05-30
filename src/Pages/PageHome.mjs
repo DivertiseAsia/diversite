@@ -21,7 +21,6 @@ function PageHome(Props) {
               title: "Get Launched with Divertise Asia",
               keywords: "Artificial Intelligence, Design, Fullstack, API, Server",
               description: "Realize your technical project with Divertise Asia as your partner",
-              isPageHome: true,
               children: null
             }, React.createElement(carousel, {}), React.createElement("div", {
                   className: "homepage_menu-bg"

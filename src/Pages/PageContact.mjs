@@ -5,6 +5,7 @@ import * as React from "react";
 import * as MainPage from "../Components/MainPage.mjs";
 import Link from "next/link";
 import * as PageHeader from "../Components/PageHeader.mjs";
+import * as ContactForm from "../Components/ContactForm.mjs";
 
 function PageContact(Props) {
   return React.createElement(MainPage.make, {
@@ -21,11 +22,7 @@ function PageContact(Props) {
                       className: "contact-content"
                     }, React.createElement("div", {
                           className: "row py-5 d-block"
-                        }, React.createElement("h3", undefined, "Looking for technological experts to help you with your product?"), React.createElement("p", undefined, "Please contact us via ", React.createElement("a", {
-                                  className: "contact-link text-color-2",
-                                  href: "mailto:contact@divertise.asia",
-                                  target: "_blank"
-                                }, "contact@divertise.asia")), React.createElement("h3", {
+                        }, React.createElement("h3", undefined, "Need help with your project?"), React.createElement(ContactForm.make, {}), React.createElement("h3", {
                               className: "pt-5"
                             }, "Looking to join our team?"), React.createElement("p", undefined, "Please read our job descriptions ", React.createElement(Link, {
                                   href: Links.careers,
@@ -36,13 +33,7 @@ function PageContact(Props) {
                                   className: "contact-link text-color-2",
                                   href: "mailto:careers@divertise.asia",
                                   target: "_blank"
-                                }, "careers@divertise.asia"))))), React.createElement("div", {
-                  className: "footer-title bg-gradient-color2"
-                }, React.createElement("p", undefined, "If you are interested in joining our team, just send your portfolio to", React.createElement("a", {
-                          className: "text-contact",
-                          href: "mailto:careers@divertise.asia",
-                          target: "_blank"
-                        }, "careers@divertise.asia"))));
+                                }, "careers@divertise.asia"))))));
 }
 
 var make = PageContact;
