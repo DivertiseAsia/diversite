@@ -21,7 +21,6 @@ function PageHome(Props) {
               title: "Get Launched with Divertise Asia",
               keywords: "Artificial Intelligence, Design, Fullstack, API, Server",
               description: "Realize your technical project with Divertise Asia as your partner",
-              isPageHome: true,
               children: null
             }, React.createElement(carousel, {}), React.createElement("div", {
                   className: "homepage_menu-bg"
@@ -40,17 +39,17 @@ function PageHome(Props) {
                             }, React.createElement(ImageBackground.make, {
                                   className: "mb-3",
                                   src: "/static/images/icon-platforms.png"
-                                }), React.createElement("h6", undefined, "Applications & Platforms")), React.createElement("div", {
+                                }), React.createElement("h6", undefined, "Application & Web Platform Development")), React.createElement("div", {
                               className: "col-sm-4 pb-5 -text-center"
                             }, React.createElement(ImageBackground.make, {
                                   className: "mb-3",
                                   src: "/static/images/icon-ai.png"
-                                }), React.createElement("h6", undefined, "Artificial Intelligence")), React.createElement("div", {
+                                }), React.createElement("h6", undefined, "Data Driven Services including Artificial Intelligence")), React.createElement("div", {
                               className: "col-sm-4 pb-5 -text-center"
                             }, React.createElement(ImageBackground.make, {
                                   className: "mb-3",
                                   src: "/static/images/icon-vr.png"
-                                }), React.createElement("h6", undefined, "Virtual Reality"))))), React.createElement("div", {
+                                }), React.createElement("h6", undefined, "Digital Experiences including Virtual Reality"))))), React.createElement("div", {
                   className: "section-ourwork-header"
                 }, React.createElement("div", {
                       className: "container -text-center -text-uppercase pb-5 pt-5"

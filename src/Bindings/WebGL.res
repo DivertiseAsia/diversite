@@ -282,20 +282,16 @@ module Three = {
   }
 }
 
-let isNotSupportedWebGl: unit => bool = %raw(`
+let isSupportingWebGl: unit => bool = %raw(`
     function(a) {
-        var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
-        var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-
-        var ua = navigator.userAgent.toLowerCase();
-        var isIE = (ua.indexOf('msie') > -1);
-        if ((isSafari && iOS) || isIE) {
-            return true;
-        } else if(isSafari || isIE) {
-            return true;
-        } else {
-            return false;
-        }
+      //via https://stackoverflow.com/questions/11871077/proper-way-to-detect-webgl-support
+      try {
+        var canvas = document.createElement('canvas'); 
+        return !!window.WebGLRenderingContext &&
+          (canvas.getContext('webgl') || canvas.getContext('experimental-webgl'));
+      } catch(e) {
+        return false;
+      }
     }
   `)
 

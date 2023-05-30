@@ -10,16 +10,8 @@ let make = () => {
     <div className="container">
       <div className="contact-content">
         <div className="row py-5 d-block">
-          <h3> {string("Looking for technological experts to help you with your product?")} </h3>
-          <p>
-            {string("Please contact us via ")}
-            <a
-              className="contact-link text-color-2"
-              href="mailto:contact@divertise.asia"
-              target="_blank">
-              {string("contact@divertise.asia")}
-            </a>
-          </p>
+          <h3> {string("Need help with your project?")} </h3>
+          <ContactForm />
           <h3 className="pt-5"> {string("Looking to join our team?")} </h3>
           <p>
             {string("Please read our job descriptions ")}
@@ -36,14 +28,6 @@ let make = () => {
           </p>
         </div>
       </div>
-    </div>
-    <div className="footer-title bg-gradient-color2">
-      <p>
-        {string("If you are interested in joining our team, just send your portfolio to")}
-        <a target="_blank" href="mailto:careers@divertise.asia" className="text-contact">
-          {string("careers@divertise.asia")}
-        </a>
-      </p>
     </div>
   </MainPage>
 }

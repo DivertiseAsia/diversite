@@ -6,7 +6,6 @@ open Utils
 @react.component
 let make = (~selectedCategory: category) => {
   let (isPopupPortOpen, setPopupPortOpen) = React.useState(() => false)
-  let (isPopupBuildOpen, setPopupBuildOpen) = React.useState(() => false)
 
   let items = portfolioDataList->Belt.List.keepMap(categoryList => {
     if (
@@ -43,8 +42,7 @@ let make = (~selectedCategory: category) => {
     className={"page-ourwork " ++ additional_classname}
     title="Work of Divertise Asia"
     keywords="portfolio, Artificial Intelligence, Design, Fullstack, API, Server"
-    description="AI, Apps & Platforms, and Design items created by us"
-    isPageOurWork=true>
+    description="AI, Apps & Platforms, and Design items created by us">
     <div className="ourwork_section-header-content bg-gradient-color1">
       <div className="container page-ourwork_nav nav">
         /* <input type_="checkbox" />
@@ -71,11 +69,6 @@ let make = (~selectedCategory: category) => {
       onClick={_ => setPopupPortOpen(_ => !isPopupPortOpen)}>
       {string("Download Port")}
     </div>
-    <div
-      className="buildyourideas-btn btn btn-line-color1 d-inline-block d-sm-none"
-      onClick={_ => setPopupBuildOpen(_ => !isPopupBuildOpen)}>
-      {string("Build Your Ideas")}
-    </div>
     /* TODO: This should trigger a popup with an email field and a submit button. No need to add any other things or style it. I'll take care of those */
     <Popup
       isOpen=isPopupPortOpen
@@ -85,24 +78,13 @@ let make = (~selectedCategory: category) => {
       closeOnBgClick=true
       showX=false
       closeFunc={() => setPopupPortOpen(_ => false)}>
-      <label htmlFor="port_email"> {React.string("Please add your email. We will send you our portfolio.")} </label>
+      <label htmlFor="port_email">
+        {React.string("Please add your email. We will send you our portfolio.")}
+      </label>
       <form action="https://formspree.io/f/mbjpklyn" method="POST" className="downloadport-form">
         <input className="input-default" type_="email" placeholder="Your Email" id="port_email" />
         <button type_="submit" className="btn btn-solid-color1"> {React.string("Submit")} </button>
       </form>
-    </Popup>
-    <Popup
-      isOpen=isPopupBuildOpen
-      closeOnBgClick=false
-      closeFunc={() => setPopupBuildOpen(_ => false)}
-      className="buildyouridea-popup">
-      <div>
-        <h3> {string("Build Your Ideas")} </h3>
-        <p>
-          {string("Tell us about what you need. We will get back to you within 1 working day")}
-        </p>
-      </div>
-      <ContactForm prefixId="ourwork" />
     </Popup>
     <div className={additional_classname}> {Belt.List.toArray(items)->React.array} </div>
   </MainPage>

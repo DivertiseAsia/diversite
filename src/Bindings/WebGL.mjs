@@ -51,19 +51,15 @@ var Three$2 = {
   onResize: onResize
 };
 
-var isNotSupportedWebGl = (function(a) {
-        var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
-        var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-
-        var ua = navigator.userAgent.toLowerCase();
-        var isIE = (ua.indexOf('msie') > -1);
-        if ((isSafari && iOS) || isIE) {
-            return true;
-        } else if(isSafari || isIE) {
-            return true;
-        } else {
-            return false;
-        }
+var isSupportingWebGl = (function(a) {
+      //via https://stackoverflow.com/questions/11871077/proper-way-to-detect-webgl-support
+      try {
+        var canvas = document.createElement('canvas'); 
+        return !!window.WebGLRenderingContext &&
+          (canvas.getContext('webgl') || canvas.getContext('experimental-webgl'));
+      } catch(e) {
+        return false;
+      }
     });
 
 var setCanvasStyle = (function(canvas) {
@@ -106,7 +102,7 @@ var changeClassName = (function(element, className) {
 export {
   $$Document ,
   Three$2 as Three,
-  isNotSupportedWebGl ,
+  isSupportingWebGl ,
   setCanvasStyle ,
   validElementById ,
   setIdToElement ,

@@ -17,8 +17,7 @@ let make = () => {
     className="page-home"
     title="Get Launched with Divertise Asia"
     keywords="Artificial Intelligence, Design, Fullstack, API, Server"
-    description="Realize your technical project with Divertise Asia as your partner"
-    isPageHome=true>
+    description="Realize your technical project with Divertise Asia as your partner">
     {React.createElement(carousel, Js.Dict.empty())}
     <div className="homepage_menu-bg" />
     <div className="section-ourgoal -text-center">
@@ -34,15 +33,15 @@ let make = () => {
         <div className="row flex-wrap justify-content-center">
           <div className="col-sm-4 pb-5 -text-center">
             <ImageBackground className="mb-3" src="/static/images/icon-platforms.png" />
-            <h6> {string("Applications & Platforms")} </h6>
+            <h6> {string("Application & Web Platform Development")} </h6>
           </div>
           <div className="col-sm-4 pb-5 -text-center">
             <ImageBackground className="mb-3" src="/static/images/icon-ai.png" />
-            <h6> {string("Artificial Intelligence")} </h6>
+            <h6> {string("Data Driven Services including Artificial Intelligence")} </h6>
           </div>
           <div className="col-sm-4 pb-5 -text-center">
             <ImageBackground className="mb-3" src="/static/images/icon-vr.png" />
-            <h6> {string("Virtual Reality")} </h6>
+            <h6> {string("Digital Experiences including Virtual Reality")} </h6>
           </div>
         </div>
       </div>

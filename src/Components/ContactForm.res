@@ -23,16 +23,13 @@ let make = (~className: option<string>=?, ~prefixId: string="") => {
       />
       <InputText
         isTextarea=true
-        inputLabel="Tell us a bit more"
-        placeholder="Hi! I have a project I'd like you to help with."
+        inputLabel="What do you want to build?"
+        placeholder="I really want .."
         name="content"
         prefixId
         required=true
       />
       <button type_="submit" className="btn btn-solid-color1"> {React.string("Submit")} </button>
     </form>
-    <div className="contactform_email">
-      <p> {React.string("or email us at")} </p> <EmailPopover />
-    </div>
   </div>
 }

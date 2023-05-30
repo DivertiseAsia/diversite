@@ -315,27 +315,6 @@ nav.nav {
   color: $text-white;
   font-family: $font-header;
 }
-@media only screen and (max-width: 576px) {
-  .buildyourideas-btn.btn.btn-line-white {
-    display: none;
-  }
-  .buildyourideas-btn.btn.btn-line-color1 {
-    z-index: 30;
-    display: inline-block;
-    position: fixed;
-    right: 35px;
-    bottom: 15px;
-    box-shadow: 0 0 10px 3px rgba(0,0,0,0.4);
-    font-size: 16px;
-    padding-left: 15px;
-    padding-right: 15px;
-    background-color: white;
-    width: 150px;
-  }
-  .buildyourideas-btn.btn.btn-line-color1:hover {
-    background-color: $bg-color1;
-  }
-}
 .nav .btn {
   margin-top: 0;
   margin-bottom: 0;
@@ -464,7 +443,7 @@ nav .logo-link {
   }
   .nav {
     background: transparent;
-    a:not(.logo-link) {
+    a:not(.logo-link), .btn {
       text-shadow: $text-shadow;
     }
   }
@@ -1414,6 +1393,7 @@ $email-height: 30px;
   flex-grow: 1;
   max-height: 40px;
   position: relative;
+  min-width: fit-content;
   bottom: -0.3em;
 }
 .port_btn-container .btn-line-color1 {
@@ -1704,6 +1684,12 @@ and (max-width: 576px) {
 and (max-width: 400px) {
   .nav a:not(.logo-link) {
     padding: 7px 5px;
+    font-size: 15px;
+  }
+  .nav .btn {
+    padding: 6px;
+    min-width: 60px;
+    font-size: 15px;
   }
   .internship-program a .content-program {
     margin-top: 15px;
