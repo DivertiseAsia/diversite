@@ -33,15 +33,16 @@ let make = () => {
           <h3 className="align-self-center"> {string("What will I be doing?")} </h3>
         </div>
         <ul className="ul-li-padding-none ul-li-dash p-4 pl-5 -lineheight-large">
-          <li> {string("UX/UI design for website and applications")} </li>
+          <li> {string("Identify and analyze market for potential customers and find new customers to generate income for the company")} </li>
           <li>
-            {string("Wireframe development and create prototypes (Using Adobe XD, InVision etc.)")}
+            {string("Negotiating the terms of an agreement and closing sales")}
           </li>
-          <li> {string("Work closely with developers")} </li>
-          <li> {string("Graphic design")} </li>
-          <li> {string("Helping implement designs in HTML/CSS")} </li>
-          <li> {string("Attend client meeting in both Thai and English")} </li>
-          <li> {string("Hybrid work at BTS Chidlom station once/two times a week 10:00-18:00")} </li>
+          <li> {string("Gain a clear understanding of customer's businesses and requirements")} </li>
+          <li> {string("Strong networking in sales or able to contact with potential customers to promote the services of the company")} </li>
+          <li> {string("Perform business research and ideate the right approach to use for a multitude of business opportunities. ")} </li>
+          <li> {string("Understand and speak to trends in startups and technology")} </li>
+          <li> {string("Develop and implement sales strategies and plans to drive customer needs to achieve sales goals")} </li>
+          <li> {string("Conduct business and foster relationships with prospects and customers")} </li>
         </ul>
       </div>
       <div className="row pt-5 d-block">
