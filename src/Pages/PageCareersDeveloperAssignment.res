@@ -9,44 +9,33 @@ let make = () => {
     <PageHeader title="Careers" subtitle="Developer" className="bg-gradient-color1 pt-5" />
     <div className="container">
       <div className="row pt-5 d-block">
-        <div className="d-flex flex-row">
-          <Icon className="mr-4" iconType=Icon.Pen />
-          <h3 className="align-self-center"> {string("Your Assignment")} </h3>
+        <div id="assignment" className="d-flex flex-wrap">
+          <div className="col-12 col-md-6">
+            <h3> {string("Your Assignment")} </h3>
+            <ul className="ul-li-padding-none ul-li-dash p-4 pl-5 -lineheight-large">
+              <li> {string("Ask any questions within first 7 days of assignment ")} </li>
+              <li> {string("Submit your GIT repository url within 14 days of assignment")} </li>
+              <li> {string("Feel free to add any feature you want")} </li>
+              <li> {string("Be ready to answer any question about your code and to edit it")} </li>
+            </ul>
+            <h3> {string("Requirements")} </h3>
+            <ul className="ul-li-padding-none ul-li-dash p-4 pl-5 -lineheight-large">
+              <li> {string("Host the project on a public git repository")} </li>
+              <li> {string("Make the webpage and its components using Rescript")} </li>
+              <li> {string("Show a header that contains \"Name: YourName\"")} </li>
+              <li> {string("Show 9 random colored squares")} </li>
+            </ul>
+          </div>
+          <div className="col-12 col-md-6">
+            <h3> {string("Possible Output")} </h3>
+            <ol className="ul-li-padding-none ul-li-dash p-4 pl-3 -lineheight-large">
+              <img className="md-3" width="100%" src="/static/images/possible_output.png" />
+            </ol>
+          </div>
         </div>
-        <ul className="ul-li-padding-none ul-li-dash p-4 pl-5 -lineheight-large">
-          <li> {string("Intermediate English (verbal)")} </li>
-          <li> {string("Basic programming knowledge (Python/ReasonML is preferred)")} </li>
-          <li> {string("Proficiency in one of modern programming languages")} </li>
-          <li> {string("IDE familiarity")} </li>
-          <li> {string("Basic problem solving skills")} </li>
-          <li> {string("Git/SVN knowledge is a plus but not required")} </li>
-          <li> {string("Can take criticism and responsive to feedback")} </li>
-          <li> {string("Interest in latest trends")} </li>
-        </ul>
       </div>
-      <div className="row pt-5 d-block">
-        <div className="d-flex flex-row">
-          <Icon className="mr-4" iconType=Icon.Pen />
-          <h3 className="align-self-center"> {string("What will I be doing?")} </h3>
-        </div>
-        <ul className="ul-li-padding-none ul-li-dash p-4 pl-5 -lineheight-large">
-          <li> {string("Working in application/AI projects")} </li>
-          <li>
-            {string(
-              "Working in fullstack development from deployment on AWS, frontend in Reason, and backend in Python/Django",
-            )}
-          </li>
-          <li> {string("Hybrid work at BTS Chidlom station once/two times a week 10:00-18:00")} </li>
-        </ul>
-      </div>
-      <div className="row pt-5 d-block">
-        <div className="d-flex flex-row">
-          <Icon className="mr-4" iconType=Icon.Pen />
-          <h3 className="align-self-center"> {string("When can I start?")} </h3>
-        </div>
-        <div className="ul-li-padding-none p-4 pl-5">
-          <p> {string("It is recommended to apply 1-2 months prior to start date.")} </p>
-        </div>
+      <div className="text-center">
+        <a href="mailto:careers@divertise.asia" className="btn"> {string("Submit")} </a>
       </div>
     </div>
     <div className="footer-intern bg-gradient-color2">
