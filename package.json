@@ -2,7 +2,7 @@
   "name": "divertise-asia-site",
   "version": "0.9.0",
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env NODE_OPTIONS='--openssl-legacy-provider' next dev",
     "debug": "NODE_OPTIONS='--inspect' next",
     "build": "rescript && next build",
     "now-build": "rescript && next build",

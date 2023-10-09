@@ -16,6 +16,7 @@ import * as PageCareersDesigner from "./Pages/PageCareersDesigner.mjs";
 import * as PageCareersDeveloper from "./Pages/PageCareersDeveloper.mjs";
 import * as PageInternshipDesign from "./Pages/PageInternshipDesign.mjs";
 import * as PageCareersProjectManager from "./Pages/PageCareersProjectManager.mjs";
+import * as PageCareersDeveloperAssignment from "./Pages/PageCareersDeveloperAssignment.mjs";
 
 function $$default(props) {
   var router = Router.useRouter();
@@ -23,6 +24,8 @@ function $$default(props) {
   switch (match) {
     case "/" :
         return React.createElement(PageHome.make, {});
+    case "/assignments/developer" :
+        return React.createElement(PageCareersDeveloperAssignment.make, {});
     case "/careers" :
         return React.createElement(PageCareers.make, {});
     case "/careers/designer" :
