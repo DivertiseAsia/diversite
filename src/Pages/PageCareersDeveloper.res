@@ -33,10 +33,12 @@ let make = () => {
           <li> {string("Working in application/AI projects")} </li>
           <li>
             {string(
-              "Working in fullstack development from deployment on AWS, frontend in Reason, and backend in Python/Django",
+              "Working in fullstack development from deployment on AWS, frontend in Rescript, and backend in Python/Django",
             )}
           </li>
-          <li> {string("Hybrid work at BTS Chidlom station once/two times a week 10:00-18:00")} </li>
+          <li>
+            {string("Hybrid work at BTS Chidlom station once/two times a week at 10:00-18:00 hr.")}
+          </li>
         </ul>
       </div>
       <div className="row pt-5 d-block">
@@ -47,6 +49,11 @@ let make = () => {
         <div className="ul-li-padding-none p-4 pl-5">
           <p> {string("It is recommended to apply 1-2 months prior to start date.")} </p>
         </div>
+      </div>
+      <div className="text-center">
+        <a href="https://divertise.co.th/assignments/developer" className="btn">
+          {string("Apply")}
+        </a>
       </div>
     </div>
     <div className="footer-intern bg-gradient-color2">
